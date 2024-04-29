@@ -111,7 +111,7 @@ export default function BoardOptions() {
           label="Case Finish"
           selected={material}
           options={[
-            { label: "전기염동", value: "matte" },
+            { label: "스프레이", value: "matte" },
             { label: "무광", value: "brushed" },
             { label: "유광", value: "glossy" },
           ]}
