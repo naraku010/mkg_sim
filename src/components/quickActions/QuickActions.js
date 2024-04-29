@@ -9,14 +9,14 @@ export default function QuickActions() {
     <div className={styles.actionBar}>
       <Permalink />
       <ScreenShot />
-      <a
-        className={styles.action}
-        href="https://github.com/crsnbrt/keysim"
-        aria-label="keyboard simulator on github"
-        target="_blank"
-      >
-        <GithubIcon />
-      </a>
+      {/*<a*/}
+      {/*  className={styles.action}*/}
+      {/*  href="https://github.com/crsnbrt/keysim"*/}
+      {/*  aria-label="keyboard simulator on github"*/}
+      {/*  target="_blank"*/}
+      {/*>*/}
+      {/*  <GithubIcon />*/}
+      {/*</a>*/}
     </div>
   );
 }
