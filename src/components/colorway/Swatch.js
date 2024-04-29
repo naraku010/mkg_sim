@@ -36,7 +36,7 @@ export default function Swatch(props) {
         {!isRequired && (
           <Button
             isText={true}
-            title="Remove Swatch"
+            title="삭제"
             handler={() => {
               props.remove(props.name);
             }}

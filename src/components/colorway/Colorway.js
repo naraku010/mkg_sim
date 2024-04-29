@@ -44,7 +44,7 @@ export default function Colorway(props) {
       >
         <div className={styles.info}>
           <p className={styles.title}>
-            {props.colorway?.label || "New Colorway"}
+            {props.colorway?.label || "신상 컬러"}
           </p>
           {props.custom && (
             <div className={styles.actions}>
@@ -56,7 +56,7 @@ export default function Colorway(props) {
                   aria-label={"Remove" + props.colorway?.label}
                   onClick={removeColorway}
                 >
-                  Remove Colorway
+                  삭제
                 </p>
               )}
             </div>

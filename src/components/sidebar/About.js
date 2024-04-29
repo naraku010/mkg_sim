@@ -9,48 +9,29 @@ export default function About() {
       <div className={styles.about}>
         <p>
           <a
-            href="https://github.com/crsnbrt/keysim"
-            rel="noopener noreferrer"
-            target="_blank"
-            className={styles.github}
+              href="https://gall.dcinside.com/mgallery/board/lists/?id=mechanicalkeyboard"
+              rel="noopener noreferrer"
+              target="_blank"
+              className={styles.github}
           >
-            <GithubIcon /> Keyboard Simulator on Github
+            기계식 키보드 갤러리
           </a>
         </p>
         <p>
-          Keyboard Simulator is built using{" "}
+          참고 사이트:{" "}
           <a
-            href="https://threejs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
+              href="https://keyboardsimulator.xyz/"
+              rel="noopener noreferrer"
+              target="_blank"
           >
-            three js
-          </a>
-        </p>
-        <p>
-          Note: precise color values are not always available for community
-          colorways and therefore colorways may use approximate values.
-        </p>
-        <p>
-          additional credit:{" "}
-          <a
-            href="https://freepbr.com/materials/brushed-metal1/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            material
-          </a>
-          ,{" "}
-          <a
-            href="https://hdrihaven.com/hdri/?c=indoor&h=paul_lobe_haus"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            material
+            https://keyboardsimulator.xyz
           </a>
         </p>
         <div className={styles.legal}>
           site design &copy;2020 keyboard simulator
+        </div>
+        <div className={styles.legal}>
+          커스텀: 비글이
         </div>
       </div>
     </CollapsibleSection>

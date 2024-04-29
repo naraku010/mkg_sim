@@ -23,9 +23,9 @@ export default function Sidebar() {
       </div>
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>
-          <Tab tabIndex="0">Options</Tab>
-          <Tab tabIndex="0">Editor</Tab>
-          <Tab tabIndex="0">Test</Tab>
+          <Tab tabIndex="0">기본</Tab>
+          <Tab tabIndex="0">커스텀</Tab>
+          <Tab tabIndex="0">테스트</Tab>
         </TabList>
         <TabPanel>
           <OptionsPane setTab={setTabIndex} />

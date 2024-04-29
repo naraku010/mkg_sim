@@ -45,7 +45,7 @@ export default function ColorwayList(props) {
   };
 
   return (
-    <CollapsibleSection title="Colorways" open={true}>
+    <CollapsibleSection title="하우징 색깔놀이" open={true}>
       <div>
         <div className={styles.group}>
           <SearchField
@@ -61,12 +61,12 @@ export default function ColorwayList(props) {
             tabIndex="0"
           >
             <PlusIcon />
-            <span>Add New Colorway</span>
+            <span>새 색상 추가</span>
           </Button>
         </div>
         {customColorwayTiles.length ? (
           <div aria-hidden="true" className={styles.listLabel}>
-            <span>My Colorways</span>
+            <span>나의 컬러</span>
           </div>
         ) : null}
         <ul className={styles.list} aria-label="my custom colorways list">
@@ -74,7 +74,7 @@ export default function ColorwayList(props) {
         </ul>
         {customColorwayTiles.length ? (
           <div aria-hidden="true" className={styles.listLabel}>
-            <span>Community Colorways</span>
+            <span>내가 만든 색상</span>
           </div>
         ) : null}
         {colorwayTiles.length ? (
@@ -90,7 +90,7 @@ export default function ColorwayList(props) {
               width: "100%",
             }}
           >
-            No matching colorways
+            읍다
           </p>
         )}{" "}
       </div>

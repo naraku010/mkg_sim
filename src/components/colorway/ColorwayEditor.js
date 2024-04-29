@@ -118,12 +118,12 @@ export default function ColorwayEditor() {
 
   return (
     <>
-      <CollapsibleSection title="Colorway Editor" open={true}>
+      <CollapsibleSection title="커스텀 컬링" open={true}>
         <div className={styles.editor}>
           <ToggleField
             value={paintWithKeys}
-            label={"Apply swatches on keypress"}
-            help={"Apply the selected swatch to a each key pressed."}
+            label={"키보드 색바뀜 설정"}
+            help={"이거 선택시 키누를때 색바뀜 아래 참고"}
             handler={() => dispatch(togglePaintWithKeys())}
           />
 
@@ -141,9 +141,9 @@ export default function ColorwayEditor() {
           </div>
 
           <fieldset>
-            <legend className={styles.label}>Swatches</legend>
+            <legend className={styles.label}>기본</legend>
             <p className={styles.description}>
-              A swatch consists of a background color and a legend color.
+              밑에는 기본임
             </p>
 
             <ul>{editableSwatchElements}</ul>
@@ -152,9 +152,9 @@ export default function ColorwayEditor() {
         </div>
       </CollapsibleSection>
 
-      <CollapsibleSection title="Advanced">
+      <CollapsibleSection title="기키갤 업로드용">
         <div className={styles.json}>
-          <label htmlFor="colorway_json">Colorway JSON (readonly)</label>
+          <label htmlFor="colorway_json">이거 복사해서 갤에 올리면 추가해드림</label>
           <textarea
             readOnly
             id="colorway_json"

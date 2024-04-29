@@ -38,9 +38,9 @@ export default function BoardOptions() {
 
   return (
     <>
-      <CollapsibleSection title="General" open={true}>
+      <CollapsibleSection title="기본설정" open={true}>
         <SelectField
-          label="Layout"
+          label="하우징"
           selected={layout}
           options={[
             { label: "10% numpad", value: "numpad", img: icon10 },
@@ -55,7 +55,7 @@ export default function BoardOptions() {
             { label: "60% TSANGAN", value: "60tsangan", img: icon60 },
             { label: "65%", value: "65", img: icon65 },
             { label: "75%", value: "75", img: icon75 },
-            { label: "80%", value: "80", img: icon80 },
+            { label: "80% TKL", value: "80", img: icon80 },
             { label: "95%", value: "95", img: icon95 },
             { label: "100%", value: "100", img: icon100 },
           ]}
@@ -65,10 +65,10 @@ export default function BoardOptions() {
         />
 
         <SelectField
-          label="Legend Style"
+          label="키캡"
           selected={legendPrimaryStyle}
           options={[
-            { label: "Cherry", value: "cherry" },
+            { label: "체리", value: "cherry" },
             { label: "SA", value: "sa", secondaryLabel: "(no subs)" },
           ]}
           handler={(val) => {
@@ -77,20 +77,15 @@ export default function BoardOptions() {
         />
 
         <SelectField
-          label="Sub Legends"
+          label="언어"
           selected={legendSecondaryStyle}
           options={[
             { label: "None", value: "" },
-            { label: "Arabic", value: "arabic" },
-            { label: "Chinese", value: "chinese" },
-            { label: "Cyrillic", value: "cyrillic" },
-            { label: "Czech", value: "czech" },
-            { label: "Devanagari", value: "devanagari" },
-            { label: "Greek", value: "greek" },
-            { label: "Hangul", value: "hangul" },
-            { label: "Hebrew", value: "hebrew" },
-            { label: "Hiragana", value: "hiragana" },
-            { label: "Katakana", value: "katakana" },
+            { label: "English", value: "arabic" },
+            { label: "쭝꾺어", value: "chinese" },
+            { label: "한글", value: "hangul" },
+            { label: "히라가나", value: "hiragana" },
+            { label: "가타카나", value: "katakana" },
           ]}
           handler={(val) => {
             dispatch(keyActions.setLegendSecondaryStyle(val));
@@ -98,14 +93,14 @@ export default function BoardOptions() {
         />
       </CollapsibleSection>
 
-      <CollapsibleSection title="Case Options">
+      <CollapsibleSection title="하우징 옵션">
         <RadioField
           name="case_style"
-          label="Case Style"
+          label="하우징 스따일!"
           selected={style}
           options={[
-            { label: "Rounded", value: "CASE_1" },
-            { label: "Angular", value: "CASE_2" },
+            { label: "둥근놈", value: "CASE_1" },
+            { label: "각진놈", value: "CASE_2" },
           ]}
           handler={(val) => {
             dispatch(caseActions.setStyle(val));
@@ -117,9 +112,9 @@ export default function BoardOptions() {
           label="Case Finish"
           selected={material}
           options={[
-            { label: "Matte", value: "matte" },
-            { label: "Brushed", value: "brushed" },
-            { label: "Glossy", value: "glossy" },
+            { label: "전기염동", value: "matte" },
+            { label: "무광", value: "brushed" },
+            { label: "유광", value: "glossy" },
           ]}
           handler={(val) => {
             dispatch(caseActions.setMaterial(val));
@@ -128,7 +123,7 @@ export default function BoardOptions() {
 
         <div className={styles.row}>
           <div className={styles.fieldColor}>
-            <label>Case Color</label>
+            <label>하우징 색상</label>
             <ColorPicker
               color={primaryColor}
               handler={(color) => {
@@ -139,7 +134,7 @@ export default function BoardOptions() {
           </div>
 
           <div className={styles.fieldColor}>
-            <label>Scene Color</label>
+            <label>배경 색상</label>
             <ColorPicker
               color={sceneColor}
               handler={(color) => {

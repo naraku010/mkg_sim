@@ -2,7 +2,7 @@ import * as THREE from "three";
 import store from "../../store/store";
 import holes from "./holes";
 
-export  default (layout, color) => {
+export default (layout, color) => {
   color = color || "#cccccc";
   let cornerRadius = 0;
   let bevel = 0.04;
@@ -65,7 +65,7 @@ export  default (layout, color) => {
   //create mesh
   mesh = new THREE.Mesh(
     geometry,
-    new THREE.MeshBasicMaterial({ color: color })
+    new THREE.MeshLambertMaterial({ color: color })
   );
   mesh.name = "CASE";
   mesh.rotation.x = Math.PI / 2;
