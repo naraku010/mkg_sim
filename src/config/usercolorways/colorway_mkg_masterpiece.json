@@ -1,12 +1,11 @@
 {
-  "id": "masterpiece",
-  "label": "Masterpiece (엘기현고경표)",
-  "manufacturer": "",
-  "designer": "",
+  "id": "mkg_masterpiece",
+  "label": "Masterpiece",
+  "designer": "엘기현고경표",
   "swatches": {
     "base": {
-      "background": "#0084c2",
-      "color": "#f7f2ea"
+      "background": "#512179",
+      "color": "#a7a4e0"
     },
     "mods": {
       "background": "#0084c2",

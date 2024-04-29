@@ -1,0 +1,27 @@
+{
+  "id": "mkg_beta",
+  "label": "Beta",
+  "manufacturer": "",
+  "designer": "엘기현고경표",
+  "swatches": {
+    "base": {
+      "background": "#d8d2c3",
+      "color": "#171718"
+    },
+    "mods": {
+      "background": "#727474",
+      "color": "#171718"
+    },
+    "accent": {
+      "background": "#ee6900",
+      "color": "#171718"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent"
+  }
+}
+
+

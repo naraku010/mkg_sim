@@ -70,14 +70,9 @@ import colorway_nuclear_data from "./colorway_nuclear_data.json";
 import colorway_finer_things from "./colorway_finer_things.json";
 import colorway_gregory from "./colorway_gregory.json";
 import colorway_pluto from "./colorway_pluto.json";
-//기키갤
-import mkg_ntd from "./colorway_mkg_ntd.json";
-import mkg_m1 from "./colorway_mkg_masterpeace.json";
 
 const COLORWAYS = {
   //APPEND
-  ntd: mkg_ntd,
-  m1: mkg_m1,
   aurora_polaris: colorway_aurora_polaris,
   port: colorway_port,
   night_sakura: colorway_night_sakura,

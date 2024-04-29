@@ -4,6 +4,7 @@ import Button from "../elements/Button";
 import styles from "./ColorwayList.module.scss";
 import { useSelector, useDispatch } from "react-redux";
 import COLORWAYS from "../../config/colorways/colorways";
+import USERCOLORWAYS from "../../config/usercolorways/colorways";
 import CollapsibleSection from "../containers/CollapsibleSection";
 import SearchField from "../elements/SearchField";
 import ColorUtil from "../../util/color";
@@ -20,8 +21,8 @@ export default function ColorwayList(props) {
   const customColorways = useSelector(selectColorways);
   const [filter, setFilter] = useState("");
 
-  const filteredColorways = () => {
-    return Object.keys(COLORWAYS)
+  const filteredColorways = (obj) => {
+    return Object.keys(obj)
       .sort()
       .filter((cw) => {
         return filter.length
@@ -30,12 +31,17 @@ export default function ColorwayList(props) {
       });
   };
 
+
   const customColorwayTiles = customColorways.map((s) => (
     <Colorway key={s.id} colorway={s} custom={true} setTab={props.setTab} />
   ));
 
-  const colorwayTiles = filteredColorways().map((s) => (
-    <Colorway key={COLORWAYS[s].id} colorway={COLORWAYS[s]} />
+  const colorwayTiles = filteredColorways(COLORWAYS).map((s) => (
+    <Colorway key={COLORWAYS[s]?.id} colorway={COLORWAYS[s]} />
+  ));
+
+  const userColorwayTiles = filteredColorways(USERCOLORWAYS).map((s) => (
+    <Colorway key={USERCOLORWAYS[s]?.id} colorway={USERCOLORWAYS[s]} />
   ));
 
   const addColorway = (e) => {
@@ -49,49 +55,55 @@ export default function ColorwayList(props) {
       <div>
         <div className={styles.group}>
           <SearchField
-            filter={(val) => {
-              setFilter(val);
-            }}
+              filter={(val) => {
+                setFilter(val);
+              }}
           />
           <Button
-            title="Add"
-            icon={<PlusIcon />}
-            className={styles.add}
-            handler={addColorway}
-            tabIndex="0"
+              title="Add"
+              icon={<PlusIcon/>}
+              className={styles.add}
+              handler={addColorway}
+              tabIndex="0"
           >
-            <PlusIcon />
+            <PlusIcon/>
             <span>새 색상 추가</span>
           </Button>
         </div>
         {customColorwayTiles.length ? (
-          <div aria-hidden="true" className={styles.listLabel}>
-            <span>나의 컬러</span>
-          </div>
+            <div aria-hidden="true" className={styles.listLabel}>
+              <span>나의 컬러</span>
+            </div>
         ) : null}
         <ul className={styles.list} aria-label="my custom colorways list">
           {customColorwayTiles}
         </ul>
+        <div aria-hidden="true" className={styles.listLabel}>
+          <span>기키갤 색상</span>
+        </div>
+        <ul className={styles.list} aria-label="기키갤 제공 색상">
+          {userColorwayTiles}
+        </ul>
         {customColorwayTiles.length ? (
-          <div aria-hidden="true" className={styles.listLabel}>
-            <span>내가 만든 색상</span>
-          </div>
+            <div aria-hidden="true" className={styles.listLabel}>
+              <span>기존 색상</span>
+            </div>
         ) : null}
         {colorwayTiles.length ? (
-          <ul className={styles.list} aria-label="community colorways list">
-            {colorwayTiles}
-          </ul>
+            <ul className={styles.list} aria-label="community colorways list">
+              {colorwayTiles}
+            </ul>
         ) : (
-          <p
-            style={{
-              fontSize: "16px",
-              padding: "1em",
-              margin: "0",
-              width: "100%",
-            }}
-          >
-            읍다
-          </p>
+            <p
+                style={{
+                  fontSize: "16px",
+                  padding: "1em",
+                  margin: "0",
+                  width: "100%",
+                }}
+            >
+              이거 병신임
+            </p>
         )}{" "}
       </div>
     </CollapsibleSection>

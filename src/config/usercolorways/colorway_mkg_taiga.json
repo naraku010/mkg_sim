@@ -1,0 +1,25 @@
+{
+  "id": "mkg_taiga",
+  "label": "Taiga",
+  "manufacturer": "",
+  "designer": "엘기현고경표",
+  "swatches": {
+    "base": {
+      "background": "#005042",
+      "color": "#f7f2ea"
+    },
+    "mods": {
+      "background": "#00352c",
+      "color": "#f7f2ea"
+    },
+    "accent": {
+      "background": "#00352c",
+      "color": "#f7f2ea"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent"
+  }
+}

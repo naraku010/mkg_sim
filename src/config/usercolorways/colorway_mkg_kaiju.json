@@ -1,0 +1,29 @@
+{
+  "id": "kaiju",
+  "label": "Kaiju",
+  "manufacturer": "",
+  "designer": "엘기현고경표",
+  "swatches": {
+    "base": {
+      "background": "#d8d2c3",
+      "color": "#fa4616"
+    },
+    "mods": {
+      "background": "#356554",
+      "color": "#d8d2c3"
+    },
+    "accent": {
+      "background": "#356554",
+      "color": "#d8d2c3"
+    },
+    "swatch-1": {
+      "background": "#fa4616",
+      "color": "#d8d2c3"
+    }
+  },
+  "override": {
+    "KC_GESC": "accent",
+    "KC_ESC": "swatch-1",
+    "KC_ENT": "swatch-1"
+  }
+}

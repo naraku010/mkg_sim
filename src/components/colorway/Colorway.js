@@ -46,6 +46,11 @@ export default function Colorway(props) {
           <p className={styles.title}>
             {props.colorway?.label || "신상 컬러"}
           </p>
+          {props.colorway?.designer ?
+          <p className={styles.subtitle}>
+            {props.colorway?.designer}
+          </p> : null
+          }
           {props.custom && (
             <div className={styles.actions}>
               {!isActive && (
