@@ -80,8 +80,7 @@ export default function BoardOptions() {
           label="언어"
           selected={legendSecondaryStyle}
           options={[
-            { label: "None", value: "" },
-            { label: "English", value: "arabic" },
+            { label: "기본", value: "" },
             { label: "쭝꾺어", value: "chinese" },
             { label: "한글", value: "hangul" },
             { label: "히라가나", value: "hiragana" },
