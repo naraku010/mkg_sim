@@ -17,7 +17,7 @@ import mkg_m15 from "./colorway_mkg_darling.json";
 import mkg_m16 from "./colorway_mkg_evil_eye.json";
 import mkg_m17 from "./colorway_mkg_foundation.json";
 import mkg_m18 from "./colorway_mkg_dualshot.json";
-
+import mkg_m19 from "./colorway_mkg_symbiote.json";
 
 const USERCOLORWAYS = {
   //APPEND
@@ -38,7 +38,8 @@ const USERCOLORWAYS = {
   mkg_darling: mkg_m15,
   mkg_evil_eye: mkg_m16,
   mkg_foundation: mkg_m17,
-  mkg_dualshot: mkg_m18
+  mkg_dualshot: mkg_m18,
+  mkg_symbiote: mkg_m19
 };
 
 export default USERCOLORWAYS;

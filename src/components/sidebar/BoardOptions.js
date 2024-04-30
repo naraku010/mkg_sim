@@ -108,7 +108,7 @@ export default function BoardOptions() {
 
         <RadioField
           name="case_finish"
-          label="Case Finish"
+          label="하우징 재질"
           selected={material}
           options={[
             { label: "전기영동", value: "matte" },
