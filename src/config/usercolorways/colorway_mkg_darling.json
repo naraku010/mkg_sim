@@ -1,20 +1,20 @@
 {
-  "id": "mkg_js",
-  "label": "Js",
+  "id": "mkg_darling",
+  "label": "Darling",
   "manufacturer": "",
   "designer": "엘기현고경표",
   "swatches": {
     "base": {
-      "background": "#d8d2c3",
-      "color": "#171718"
+      "background": "#f4cdd4",
+      "color": "#bb1e10"
     },
     "mods": {
-      "background": "#727474",
-      "color": "#171718"
+      "background": "#861a22",
+      "color": "#f4cdd4"
     },
     "accent": {
-      "background": "#dd1126",
-      "color": "#171718"
+      "background": "#f7f2ea",
+      "color": "#bb1e10"
     }
   },
   "override": {
@@ -24,4 +24,3 @@
     "KC_SPC": "base"
   }
 }
-

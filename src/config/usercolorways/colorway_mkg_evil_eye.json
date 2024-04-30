@@ -1,20 +1,20 @@
 {
-  "id": "mkg_js",
-  "label": "Js",
+  "id": "mkg_evil_eye",
+  "label": "Evil Eye",
   "manufacturer": "",
   "designer": "엘기현고경표",
   "swatches": {
     "base": {
-      "background": "#d8d2c3",
+      "background": "#f7f2ea",
       "color": "#171718"
     },
     "mods": {
-      "background": "#727474",
-      "color": "#171718"
+      "background": "#00589f",
+      "color": "#f7f2ea"
     },
     "accent": {
-      "background": "#dd1126",
-      "color": "#171718"
+      "background": "#0084c2",
+      "color": "#f7f2ea"
     }
   },
   "override": {
@@ -24,4 +24,5 @@
     "KC_SPC": "base"
   }
 }
+
 

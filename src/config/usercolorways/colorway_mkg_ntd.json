@@ -39,6 +39,8 @@
     "KC_UP": "swatch-4",
     "KC_LEFT": "swatch-3",
     "KC_DOWN": "swatch-2",
-    "KC_RGHT": "swatch-1"
+    "KC_RGHT": "swatch-1",
+    "KC_SPC": "base"
   }
 }
+

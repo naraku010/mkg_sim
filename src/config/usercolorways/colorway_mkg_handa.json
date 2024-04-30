@@ -103,6 +103,8 @@
     "KC_PGUP": "swatch-7",
     "KC_INS": "swatch-8",
     "KC_DEL": "swatch-8",
-    "KC_UP": "swatch-8"
+    "KC_UP": "swatch-8",
+    "KC_SPC": "base"
   }
 }
+

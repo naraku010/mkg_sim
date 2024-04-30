@@ -24,6 +24,8 @@
   "override": {
     "KC_GESC": "accent",
     "KC_ESC": "swatch-1",
-    "KC_ENT": "swatch-1"
+    "KC_ENT": "swatch-1",
+    "KC_SPC": "base"
   }
 }
+

@@ -11,6 +11,13 @@ import mkg_m9 from "./colorway_mkg_dracula.json";
 import mkg_m10 from "./colorway_mkg_js.json";
 import mkg_m11 from "./colorway_mkg_beta.json";
 import mkg_m12 from "./colorway_mkg_beloved.json";
+import mkg_m13 from "./colorway_mkg_redalert.json";
+import mkg_m14 from "./colorway_mkg_art.json";
+import mkg_m15 from "./colorway_mkg_darling.json";
+import mkg_m16 from "./colorway_mkg_evil_eye.json";
+import mkg_m17 from "./colorway_mkg_foundation.json";
+import mkg_m18 from "./colorway_mkg_dualshot.json";
+
 
 const USERCOLORWAYS = {
   //APPEND
@@ -26,6 +33,12 @@ const USERCOLORWAYS = {
   mkg_js: mkg_m10,
   mkg_beta: mkg_m11,
   mkg_beloved: mkg_m12,
+  mkg_red_alert: mkg_m13,
+  mkg_art: mkg_m14,
+  mkg_darling: mkg_m15,
+  mkg_evil_eye: mkg_m16,
+  mkg_foundation: mkg_m17,
+  mkg_dualshot: mkg_m18
 };
 
 export default USERCOLORWAYS;
