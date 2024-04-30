@@ -2,8 +2,11 @@ import * as THREE from "three";
 import Collection from "./collection";
 import { subscribe } from "redux-subscriber";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { GLTFLoader  } from "three/examples/jsm/loaders/GLTFLoader";
 import { enableHighlight, disableHighlight } from "./key/materials";
 import ThreeUtil from "../util/three";
+import DestmatModel from "../assets/models/deskmat.glb";
+import DestmatImg from "../assets/models/deskmat-graphic.png";
 //import { CSS3DRenderer } from "three/examples/jsm/renderers/CSS3DRenderer.js";
 
 export default class SceneManager extends Collection {
@@ -28,6 +31,7 @@ export default class SceneManager extends Collection {
     this.renderer.localClippingEnabled = true;
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.el.appendChild(this.renderer.domElement);
+
     //css renderer for dom elements in the scene
     // this.cssRenderer = new CSS3DRenderer();
     // this.el.appendChild(this.cssRenderer.domElement);
@@ -130,8 +134,43 @@ export default class SceneManager extends Collection {
     shadowLight.position.set(-4, 3, -10);
     shadowLight.target.position.set(0, 0, 0);
     shadowLight.target.updateMatrixWorld();
-    this.scene.add(shadowLight, shadowLight.target);
+    var textureLoader = new THREE.TextureLoader();
+    var texture = textureLoader.load( DestmatImg );
 
+    this.scene.add(shadowLight, shadowLight.target);
+    const sen = this.scene;
+    const loader = new GLTFLoader();
+    loader.load(
+        DestmatModel,
+        (gltf) =>
+        {
+          const d = gltf.scene;
+          d.position.z = 2;
+          d.scale.set(30, 30, 30);
+          const texture = new THREE.TextureLoader().load(DestmatImg);
+          texture.flipY = false;
+          d.traverse ( ( child ) => {
+            if ( child.isMesh ) {
+              child.castShadow = true;
+              child.receiveShadow = true;
+              child.material.map = texture;
+              child.material.map.anisotropy = 16;
+              // note: for a multi-material mesh, `o.material` may be an array,
+              // in which case you'd need to set `.map` on each value.
+            }
+          } );
+          this.scene.add(d);
+
+        },
+        ( xhr ) => {
+          // called while loading is progressing
+          console.log( `${( xhr.loaded / xhr.total * 100 )}% loaded` );
+        },
+        ( error ) => {
+          // called when loading has errors
+          console.error( 'An error happened', error );
+        },
+    )
     //lighthelpers
     // let slh = new THREE.DirectionalLightHelper(shadowLight, 2);
     // let plh = new THREE.DirectionalLightHelper(primaryLight, 2);
