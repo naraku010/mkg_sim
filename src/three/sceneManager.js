@@ -1,17 +1,21 @@
 import * as THREE from "three";
 import Collection from "./collection";
-import { subscribe } from "redux-subscriber";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { GLTFLoader  } from "three/examples/jsm/loaders/GLTFLoader";
-import { enableHighlight, disableHighlight } from "./key/materials";
+import {subscribe} from "redux-subscriber";
+import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js";
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import {disableHighlight, enableHighlight} from "./key/materials";
 import ThreeUtil from "../util/three";
-import DestmatModel from "../assets/models/deskmat.glb";
-import DestmatImg from "../assets/models/deskmat-graphic.png";
+import DestmatModel from "../assets/models/scene.glb";
+import DestmatImg from "../assets/models/deskmatGraphic.png";
+import ColorUtil from "../util/color";
+import KeyUtil from "../util/keyboard";
+import LAYOUTS from "../config/layouts/layouts";
 //import { CSS3DRenderer } from "three/examples/jsm/renderers/CSS3DRenderer.js";
 
 export default class SceneManager extends Collection {
   constructor(options) {
     super();
+    this.deskmat = null;
     this.takeScreenshot = false;
     this.options = options || {};
     this.editing = false;
@@ -87,6 +91,13 @@ export default class SceneManager extends Collection {
     subscribe("colorways.editing", (state) => {
       this.editing = state.colorways.editing;
     });
+
+    subscribe("colorways.active", (state) => {
+      this.updateDeskMatColor();
+    });
+    subscribe("case.layout", (state) => {
+      this.updateDeskMatLayout(state.case.layout);
+    });
   }
   get w() {
     return this.el.offsetWidth;
@@ -118,7 +129,7 @@ export default class SceneManager extends Collection {
     this.controls.maxDistance = 40;
     this.controls.target = new THREE.Vector3(0, 0, 0);
   }
-  setupLights() {
+  async setupLights() {
     let ambiant = new THREE.AmbientLight("#ffffff", 0.5);
     this.scene.add(ambiant);
 
@@ -134,49 +145,113 @@ export default class SceneManager extends Collection {
     shadowLight.position.set(-4, 3, -10);
     shadowLight.target.position.set(0, 0, 0);
     shadowLight.target.updateMatrixWorld();
-    var textureLoader = new THREE.TextureLoader();
-    var texture = textureLoader.load( DestmatImg );
+
 
     this.scene.add(shadowLight, shadowLight.target);
-    const sen = this.scene;
+    const curr = this;
     const loader = new GLTFLoader();
-    loader.load(
-        DestmatModel,
-        (gltf) =>
-        {
-          const d = gltf.scene;
-          d.position.z = 2;
-          d.scale.set(30, 30, 30);
-          const texture = new THREE.TextureLoader().load(DestmatImg);
-          texture.flipY = false;
-          d.traverse ( ( child ) => {
-            if ( child.isMesh ) {
-              child.castShadow = true;
-              child.receiveShadow = true;
-              child.material.map = texture;
-              child.material.map.anisotropy = 16;
-              // note: for a multi-material mesh, `o.material` may be an array,
-              // in which case you'd need to set `.map` on each value.
-            }
-          } );
-          this.scene.add(d);
+    loader.load(DestmatModel, async function ( gltf ) {
+      const textureLoader = new THREE.TextureLoader();
+      const texture = await textureLoader.loadAsync(DestmatImg);
+      texture.flipY = false;
+      texture.needsUpdate = true;
 
-        },
-        ( xhr ) => {
-          // called while loading is progressing
-          console.log( `${( xhr.loaded / xhr.total * 100 )}% loaded` );
-        },
-        ( error ) => {
-          // called when loading has errors
-          console.error( 'An error happened', error );
-        },
-    )
+      const d = gltf.scene;
+      d.traverse((child) => {
+        const nc = ColorUtil.colorway;
+        if (child.isMesh) {
+          child.material.map = texture;
+          // child.material.map.encoding = THREE.sRGBEncoding;
+          child.material.map.flipY = false;
+          child.material.needsUpdate = false;
+          if(child.name === 'Deskmat_-_Mat')
+            child.material.color.set(nc.swatches.base.background);
+          else
+            child.material.color.set(nc.swatches.base.color);
+          // child.material.map.needsUpdate = true;
+        }
+      });
+      d.position.z = 2;
+      d.scale.set(30, 30, 30);
+      curr.deskmat = d;
+      curr.scene.add(d);
+    } );
     //lighthelpers
     // let slh = new THREE.DirectionalLightHelper(shadowLight, 2);
     // let plh = new THREE.DirectionalLightHelper(primaryLight, 2);
     // slh.update();
     // plh.update();
     // this.scene.add(slh, plh);
+  }
+  updateDeskMatLayout(layout) {
+    let sf = 10;
+    let z = 2;
+    switch(layout) {
+      default:
+      case 'numpad':
+        sf = 15; z = 2;
+        this.deskmat.position.z = z;
+        this.deskmat.scale.set(sf, sf, 30);
+        break;
+      case "40":
+      case "40ortho":
+        sf = 23; z = 2;
+        this.deskmat.position.z = z;
+        this.deskmat.scale.set(sf, sf, sf);
+        break;
+      case "50":
+      case "leftnum":
+      case "50ortho":
+        sf = 24; z = 2;
+        this.deskmat.position.z = z;
+        this.deskmat.scale.set(sf, sf, sf);
+        break;
+      case "60":      case "60hhkb":
+      case "60iso":   case "60tsangan":
+      case "60wkl":   case "65":
+        sf = 25; z = 2;
+        this.deskmat.position.z = z;
+        this.deskmat.scale.set(sf, sf, sf);
+        break;
+      case "75":      case "80":
+        sf = 30; z = 3;
+        this.deskmat.position.z = z;
+        this.deskmat.scale.set(sf, sf, sf);
+        break;
+      case "95":
+        sf = 35; z = 3;
+        this.deskmat.position.z = z;
+        this.deskmat.scale.set(sf, sf, sf);
+        break;
+      case "100":
+        sf = 40; z = 3;
+        this.deskmat.position.z = z;
+        this.deskmat.scale.set(sf, sf, sf);
+        break;
+
+    }
+
+    this.deskmat.needsUpdate = true;
+    // if (layout == LAYOUTS.)
+    // this.deskmat.traverse((child) => {
+    //   if (child.isMesh) {
+    //     if(child.name === 'Deskmat_-_Mat')
+    //       child.material.color.set(nc.swatches.base.background);
+    //     else
+    //       child.material.color.set(nc.swatches.base.color);
+    //   }
+    // });
+  }
+  updateDeskMatColor() {
+    const nc = ColorUtil.colorway;
+    this.deskmat.traverse((child) => {
+      if (child.isMesh) {
+        if(child.name === 'Deskmat_-_Mat')
+          child.material.color.set(nc.swatches.base.background);
+        else
+          child.material.color.set(nc.swatches.base.color);
+      }
+    });
   }
   mouseClick(e) {
     if (!this.editing) return;

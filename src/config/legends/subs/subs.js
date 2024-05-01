@@ -10,16 +10,10 @@ import devanagari from "./devanagari.json";
 import czech from "./czech.json";
 
 const SUBS = {
-  arabic: arabic,
-  cyrillic: cyrillic,
   chinese: chinese,
-  greek: greek,
   hangul: hangul,
-  hebrew: hebrew,
   hiragana: hiragana,
   katakana: katakana,
-  devanagari: devanagari,
-  czech: czech,
 };
 
 export default SUBS;

@@ -18,6 +18,8 @@ import mkg_m16 from "./colorway_mkg_evil_eye.json";
 import mkg_m17 from "./colorway_mkg_foundation.json";
 import mkg_m18 from "./colorway_mkg_dualshot.json";
 import mkg_m19 from "./colorway_mkg_symbiote.json";
+import mkg_m20 from "./colorway_mkg_nachtarbeit.json";
+import mkg_m21 from "./colorway_mkg_dark_olivia.json";
 
 const USERCOLORWAYS = {
   //APPEND
@@ -39,7 +41,9 @@ const USERCOLORWAYS = {
   mkg_evil_eye: mkg_m16,
   mkg_foundation: mkg_m17,
   mkg_dualshot: mkg_m18,
-  mkg_symbiote: mkg_m19
+  mkg_symbiote: mkg_m19,
+  mkg_nachtarbeit: mkg_m20,
+  mkg_dark_olivia: mkg_m21
 };
 
 export default USERCOLORWAYS;

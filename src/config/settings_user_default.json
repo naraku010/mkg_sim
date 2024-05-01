@@ -24,7 +24,7 @@
     "visible": true,
     "profile": "mx",
     "legendPrimaryStyle": "cherry",
-    "legendSecondaryStyle": "",
+    "legendSecondaryStyle": "hangul",
     "activeBackground": "#51cf59",
     "activeColor": "#ffffff"
   },
