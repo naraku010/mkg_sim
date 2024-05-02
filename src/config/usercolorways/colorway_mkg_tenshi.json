@@ -1,0 +1,30 @@
+{
+  "id": "mkg_tenshi",
+  "label": "Tenshi",
+  "manufacturer": "",
+  "designer": "엘기현고경표",
+  "swatches": {
+    "base": {
+      "background": "#ced6e6",
+      "color": "#4d404f"
+    },
+    "mods": {
+      "background": "#4d404f",
+      "color": "#ced6e6"
+    },
+    "accent": {
+      "background": "#d8d2c3",
+      "color": "#4d404f"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_SPC": "base",
+    "KC_F5": "mods",
+    "KC_F7": "mods",
+    "KC_F6": "mods",
+    "KC_F8": "mods"
+  }
+}

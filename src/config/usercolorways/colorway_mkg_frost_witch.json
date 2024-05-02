@@ -1,0 +1,26 @@
+{
+  "id": "mkg_frost_witch",
+  "label": "Frost Witch",
+  "manufacturer": "",
+  "designer": "엘기현고경표",
+  "swatches": {
+    "base": {
+      "background": "#c9c2dd",
+      "color": "#a1a6d6"
+    },
+    "mods": {
+      "background": "#a1a6d6",
+      "color": "#c9c2dd"
+    },
+    "accent": {
+      "background": "#776ea2",
+      "color": "#c9c2dd"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_SPC": "base"
+  }
+}

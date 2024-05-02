@@ -21,6 +21,22 @@ import mkg_m19 from "./colorway_mkg_symbiote.json";
 import mkg_m20 from "./colorway_mkg_nachtarbeit.json";
 import mkg_m21 from "./colorway_mkg_dark_olivia.json";
 
+import mkg_a1  from "./colorway_mkg_arctic.json";
+import mkg_a2  from "./colorway_mkg_birch.json";
+import mkg_a3  from "./colorway_mkg_cinder.json";
+import mkg_a4  from "./colorway_mkg_coral.json";
+import mkg_a5  from "./colorway_mkg_fleuriste.json";
+import mkg_a6  from "./colorway_mkg_frost_witch.json";
+import mkg_a7  from "./colorway_mkg_galaxy.json";
+import mkg_a8  from "./colorway_mkg_grand_prix.json";
+import mkg_a9  from "./colorway_mkg_maroon.json";
+import mkg_a10 from "./colorway_mkg_matsu.json";
+import mkg_a11 from "./colorway_mkg_regal.json";
+import mkg_a12 from "./colorway_mkg_soyamilk.json";
+import mkg_a13 from "./colorway_mkg_tenshi.json";
+import mkg_a14 from "./colorway_mkg_vamp.json";
+
+
 const USERCOLORWAYS = {
   //APPEND
   mkg_ntd: mkg_ntd,
@@ -43,7 +59,22 @@ const USERCOLORWAYS = {
   mkg_dualshot: mkg_m18,
   mkg_symbiote: mkg_m19,
   mkg_nachtarbeit: mkg_m20,
-  mkg_dark_olivia: mkg_m21
+  mkg_dark_olivia: mkg_m21,
+
+  mkg_arctic	  : mkg_a1,
+  mkg_birch       : mkg_a2,
+  mkg_cinder      : mkg_a3,
+  mkg_coral       : mkg_a4,
+  mkg_fleuriste   : mkg_a5,
+  mkg_frost_witch : mkg_a6,
+  mkg_galaxy      : mkg_a7,
+  mkg_grand_prix  : mkg_a8,
+  mkg_maroon      : mkg_a9,
+  mkg_matsu       : mkg_a10,
+  mkg_regal       : mkg_a11,
+  mkg_soyamilk    : mkg_a12,
+  mkg_tenshi      : mkg_a13,
+  mkg_vamp        : mkg_a14,
 };
 
 export default USERCOLORWAYS;

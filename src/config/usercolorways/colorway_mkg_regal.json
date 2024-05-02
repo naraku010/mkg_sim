@@ -1,0 +1,29 @@
+{
+  "id": "mkg_regal",
+  "label": "Regal",
+  "manufacturer": "",
+  "designer": "엘기현고경표",
+  "swatches": {
+    "base": {
+      "background": "#2d2b3a",
+      "color": "#e2e1e4"
+    },
+    "mods": {
+      "background": "#2d2b3a",
+      "color": "#e2e1e4"
+    },
+    "accent": {
+      "background": "#2d2b3a",
+      "color": "#e2e1e4"
+    },
+    "swatch-1": {
+      "background": "#e2e1e4",
+      "color": "#2e2d40"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent"
+  }
+}
