@@ -35,6 +35,9 @@ import mkg_a11 from "./colorway_mkg_regal.json";
 import mkg_a12 from "./colorway_mkg_soyamilk.json";
 import mkg_a13 from "./colorway_mkg_tenshi.json";
 import mkg_a14 from "./colorway_mkg_vamp.json";
+import mkg_a15 from "./colorway_mkg_alhambra.json";
+import mkg_a16 from "./colorway_mkg_british_racing_green_b.json"
+import mkg_a17 from "./colorway_mkg_british_racing_green_r.json"
 
 
 const USERCOLORWAYS = {
@@ -75,6 +78,9 @@ const USERCOLORWAYS = {
   mkg_soyamilk    : mkg_a12,
   mkg_tenshi      : mkg_a13,
   mkg_vamp        : mkg_a14,
+  mkg_alhambra    : mkg_a15,
+  mkg_british_racing_green_b : mkg_a16,
+  mkg_british_racing_green_r : mkg_a17
 };
 
 export default USERCOLORWAYS;
