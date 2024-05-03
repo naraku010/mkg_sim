@@ -213,7 +213,7 @@ export default class SceneManager extends Collection {
         this.deskmat.position.z = z;
         this.deskmat.scale.set(sf, sf, sf);
         break;
-      case "75":      case "80":
+      case "70": case "75":      case "80":
         sf = 30; z = 3;
         this.deskmat.position.z = z;
         this.deskmat.scale.set(sf, sf, sf);

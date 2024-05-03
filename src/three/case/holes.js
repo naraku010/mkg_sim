@@ -114,6 +114,12 @@ export default (layoutName, layoutJson, bezel) => {
       holes.push(esc, f1, f5, f9, print, nav, arrows);
       holes.push(getSquarePath(sx, sy + 1.25, 15, 5, gutter));
       break;
+    case "70":
+      holes.push(
+          getPathNav(sx + 15.25, sy, gutter),
+          getPathArrows(sx + 15.25, sy + 4.9, gutter),
+          getSquarePath(sx, sy, 15, 5, gutter));
+      break;
     case "65":
       holes.push(
         getPathFromPoints(sx - gutter, sy - gutter, [

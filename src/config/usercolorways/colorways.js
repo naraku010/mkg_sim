@@ -49,6 +49,7 @@ import mkg_b7 from "./colorway_mkg_fishing.json"
 import mkg_b8 from "./colorway_mkg_Illusion.json"
 import mkg_b9 from "./colorway_mkg_manhattan_cafe.json"
 import mkg_b10 from "./colorway_mkg_marmoreal.json"
+import mkg_b11 from "./colorway_mkg_winterglow.json"
 
 const USERCOLORWAYS = {
   //APPEND
@@ -102,6 +103,7 @@ const USERCOLORWAYS = {
   mkg_illusion: mkg_b8,
   mkg_manhattan_cafe: mkg_b9,
   mkg_marmoreal: mkg_b10,
+  mkg_winterglow: mkg_b11
 };
 
 export default USERCOLORWAYS;

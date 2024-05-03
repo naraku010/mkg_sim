@@ -1,0 +1,45 @@
+{
+  "id": "mkg_winterglow",
+  "label": "Winter Glow",
+  "manufacturer": "",
+  "designer": "",
+  "swatches": {
+    "base": {
+      "background": "#c8d6dc",
+      "color": "#4c525d"
+    },
+    "mods": {
+      "background": "#f5f7f7",
+      "color": "#4c525d"
+    },
+    "accent": {
+      "background": "#f8dcc9",
+      "color": "#4c525d"
+    },
+    "swatch-1": {
+      "background": "#f0e2cd",
+      "color": "#4c525d"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_Q": "base",
+    "KC_W": "base",
+    "KC_E": "base",
+    "KC_A": "base",
+    "KC_S": "base",
+    "KC_D": "base",
+    "KC_7": "base",
+    "KC_T": "base",
+    "KC_C": "base",
+    "KC_BSPC": "mods",
+    "KC_TAB": "mods",
+    "KC_CAPS": "mods",
+    "KC_LSFT": "mods",
+    "KC_1": "base",
+    "KC_SPC": "swatch-1",
+    "KC_2": "base"
+  }
+}
