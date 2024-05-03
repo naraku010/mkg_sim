@@ -115,7 +115,7 @@ export default (layoutName, layoutJson, bezel) => {
       holes.push(getSquarePath(sx, sy + 1.25, 15, 5, gutter));
       break;
     case "80wkl":
-      holes.push(esc, f1, f5, f9, print, arrows);
+      holes.push(esc, f1, f5, f9, print, nav, arrows);
       holes.push(
           getPathFromPoints(sx, sy + 1.25, [
               { x: 15, y: 0 },
