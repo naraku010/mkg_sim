@@ -15,6 +15,10 @@
       "KC_F10",
       "KC_F11",
       "KC_F12",
+      "KC_INS",
+      "KC_HOME",
+      "KC_PGUP",
+      "KC_PGDN",
       "KC_GRV",
       "KC_1",
       "KC_2",
@@ -50,7 +54,7 @@
       "KC_P7",
       "KC_P8",
       "KC_P9",
-      "KC_PGUP",
+      "KC_PPLS",
       "KC_CAPS",
       "KC_A",
       "KC_S",
@@ -67,7 +71,6 @@
       "KC_P4",
       "KC_P5",
       "KC_P6",
-      "KC_PGDN",
       "KC_LSFT",
       "KC_Z",
       "KC_X",
@@ -84,7 +87,7 @@
       "KC_P1",
       "KC_P2",
       "KC_P3",
-      "KC_PPLS",
+      "KC_PENT",
       "KC_LCTL",
       "KC_LGUI",
       "KC_LALT",
@@ -96,8 +99,7 @@
       "KC_DOWN",
       "KC_RGHT",
       "KC_P0",
-      "KC_PDOT",
-      "KC_PENT"
+      "KC_PDOT"
     ]
   ]
 }

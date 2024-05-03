@@ -52,7 +52,7 @@
     "KC_UP",
     "KC_PSCR",
     "KC_SLCK",
-    "KC_PAUS",
+    "KC_PAUSE",
     "KC_PGUP",
     "KC_PGDN",
     "KC_HOME",
@@ -122,7 +122,7 @@
     "KC_F5",
     "KC_PSCR",
     "KC_SLCK",
-    "KC_PAUS"
+    "KC_PAUSE"
   ],
   "nav": ["KC_INS", "KC_DEL", "KC_HOME", "KC_END", "KC_PGUP", "KC_PGDN"],
   "arrows": ["KC_LEFT", "KC_RGHT", "KC_DOWN", "KC_UP"],

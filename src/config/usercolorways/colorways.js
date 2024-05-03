@@ -39,6 +39,16 @@ import mkg_a15 from "./colorway_mkg_alhambra.json";
 import mkg_a16 from "./colorway_mkg_british_racing_green_b.json"
 import mkg_a17 from "./colorway_mkg_british_racing_green_r.json"
 
+import mkg_b1 from "./colorway_mkg_rome.json"
+import mkg_b2 from "./colorway_mkg_hanok.json"
+import mkg_b3 from "./colorway_mkg_barista.json"
+import mkg_b4 from "./colorway_mkg_apollo.json"
+import mkg_b5 from "./colorway_mkg_camping_burgundy.json"
+import mkg_b6 from "./colorway_mkg_first_love.json"
+import mkg_b7 from "./colorway_mkg_fishing.json"
+import mkg_b8 from "./colorway_mkg_Illusion.json"
+import mkg_b9 from "./colorway_mkg_manhattan_cafe.json"
+import mkg_b10 from "./colorway_mkg_marmoreal.json"
 
 const USERCOLORWAYS = {
   //APPEND
@@ -80,7 +90,18 @@ const USERCOLORWAYS = {
   mkg_vamp        : mkg_a14,
   mkg_alhambra    : mkg_a15,
   mkg_british_racing_green_b : mkg_a16,
-  mkg_british_racing_green_r : mkg_a17
+  mkg_british_racing_green_r : mkg_a17,
+
+  mkg_rome: mkg_b1,
+  mkg_hanok: mkg_b2,
+  mkg_barista: mkg_b3,
+  mkg_apollo: mkg_b4,
+  mkg_camping_burgundy: mkg_b5,
+  mkg_first_love: mkg_b6,
+  mkg_fishing: mkg_b7,
+  mkg_illusion: mkg_b8,
+  mkg_manhattan_cafe: mkg_b9,
+  mkg_marmoreal: mkg_b10,
 };
 
 export default USERCOLORWAYS;

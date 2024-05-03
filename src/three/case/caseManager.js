@@ -112,7 +112,7 @@ export default class CaseManager {
     this.loadTextures();
     this.createEnvCubeMap();
     this.createCaseShadow();
-    this.createBadge();
+    // this.createBadge();
     this.createPlate();
     this.createCase();
 
@@ -141,7 +141,7 @@ export default class CaseManager {
       this.layout = LAYOUTS[state.case.layout];
       this.updateCaseGeometry();
       this.createCaseShadow();
-      this.createBadge();
+      // this.createBadge();
       this.createPlate();
     });
 

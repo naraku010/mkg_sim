@@ -39,6 +39,12 @@ const getPathF5 = (sx, sy, gutter) => {
 const getPathF9 = (sx, sy, gutter) => {
   return getSquarePath(sx, sy, 4, 1, gutter);
 };
+const getPathF13 = (sx, sy, gutter) => {
+    return getSquarePath(sx, sy, 1, 1, gutter);
+};
+const getPathPrint = (sx, sy, gutter) => {
+    return getSquarePath(sx, sy, 3, 1, gutter);
+};
 const getPathNav = (sx, sy, gutter) => {
   return getSquarePath(sx, sy, 3, 2, gutter);
 };
@@ -68,6 +74,8 @@ export default (layoutName, layoutJson, bezel) => {
   let f1 = getPathF1(sx + 2, sy, gutter);
   let f5 = getPathF5(sx + 6.5, sy, gutter);
   let f9 = getPathF9(sx + 11, sy, gutter);
+  let f13 = getPathF13(sx + 15.5, sy, gutter);
+  let print = getPathPrint(sx + 15.25, sy, gutter);
   let nav = getPathNav(sx + 15.25, sy + 1.25, gutter);
   let arrows = getPathArrows(sx + 15.25, sy + 6.2, gutter);
 
@@ -79,10 +87,8 @@ export default (layoutName, layoutJson, bezel) => {
       break;
     case "95":
       holes.push(
-        getPathEsc(sx, sy, gutter),
-        getPathF1(sx + 1.25, sy, gutter),
-        getPathF5(sx + 5.5, sy, gutter),
-        getPathF9(sx + 9.75, sy, gutter),
+        esc, f1, f5, f9,
+        getPathF9(sx + 15.5, sy, gutter),
         getPathArrows(sx + 13.25, sy + 6.4, gutter),
         getPathFromPoints(sx + 15.5, sy + 1.25, [
           { x: 4, y: 0 },
@@ -105,7 +111,7 @@ export default (layoutName, layoutJson, bezel) => {
       );
       break;
     case "80":
-      holes.push(esc, f1, f5, f9, nav, arrows);
+      holes.push(esc, f1, f5, f9, print, nav, arrows);
       holes.push(getSquarePath(sx, sy + 1.25, 15, 5, gutter));
       break;
     case "65":

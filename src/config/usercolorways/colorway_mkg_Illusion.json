@@ -1,0 +1,35 @@
+{
+  "id": "mkg_illusion",
+  "label": "Illusion",
+  "manufacturer": "",
+  "designer": "",
+  "swatches": {
+    "base": {
+      "background": "#c9cdd6",
+      "color": "#7f9ab7"
+    },
+    "mods": {
+      "background": "#8aa7c3",
+      "color": "#c9cdd6"
+    },
+    "accent": {
+      "background": "#a4a4d1",
+      "color": "#c9cdd6"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods",
+    "KC_SPC": "accent",
+    "KC_UP": "accent",
+    "KC_DOWN": "accent",
+    "KC_LEFT": "accent",
+    "KC_RGHT": "accent",
+    "KC_PENT": "accent"
+  }
+}

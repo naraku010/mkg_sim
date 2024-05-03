@@ -1,0 +1,35 @@
+{
+  "id": "mkg_camping_burgundy",
+  "label": "Camping Burgundy",
+  "manufacturer": "",
+  "swatches": {
+    "base": {
+      "background": "rgb(238, 226, 208)",
+      "color": "#713f3e"
+    },
+    "mods": {
+      "background": "#713f3e",
+      "color": "rgb(238, 226, 208)"
+    },
+    "accent": {
+      "background": "#5b7c5b",
+      "color": "rgb(238, 226, 208)"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_SPC": "base",
+    "KC_LEFT": "mods",
+    "KC_DOWN": "mods",
+    "KC_RGHT": "mods",
+    "KC_UP": "mods",
+    "KC_PENT": "accent",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods"
+  }
+}
+
