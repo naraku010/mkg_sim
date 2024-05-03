@@ -55,8 +55,10 @@ export default function BoardOptions() {
             { label: "60% TSANGAN", value: "60tsangan", img: icon60 },
             { label: "65%", value: "65", img: icon65 },
             { label: "70%", value: "70", img: icon75 },
+            { label: "70% WKL", value: "70wkl", img: icon75 },
             { label: "75%", value: "75", img: icon75 },
-            { label: "80% TKL", value: "80", img: icon80 },
+            { label: "80%", value: "80", img: icon80 },
+            { label: "80% WKL", value: "80wkl", img: icon75 },
             { label: "95%", value: "95", img: icon95 },
             { label: "100%", value: "100", img: icon100 },
           ]}

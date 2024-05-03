@@ -91,7 +91,7 @@
     "KC_F12": "F12",
     "KC_ESC": "ESC",
     "KC_GESC": "ESC",
-    "KC_GRV": {
+    "KC_GRAVE": {
       "top": "~",
       "bottom": "`"
     },

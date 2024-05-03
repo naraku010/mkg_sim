@@ -2,7 +2,7 @@
   "fontFamily": "\"Shree Devanagari 714\",system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif",
   "fontSizeMultiplier": 1.2,
   "chars": {
-    "KC_GRV": {
+    "KC_GRAVE": {
       "top": "ऒ",
       "bottom": "ॊ"
     },

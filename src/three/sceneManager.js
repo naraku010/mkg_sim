@@ -7,9 +7,11 @@ import {disableHighlight, enableHighlight} from "./key/materials";
 import ThreeUtil from "../util/three";
 import DestmatModel from "../assets/models/scene.glb";
 import DestmatImg from "../assets/models/deskmatGraphic.png";
+import LIGHT_IMG from "../assets/texture/disturb.jpg"
 import ColorUtil from "../util/color";
 import KeyUtil from "../util/keyboard";
 import LAYOUTS from "../config/layouts/layouts";
+import {SpotLightHelper} from "three";
 //import { CSS3DRenderer } from "three/examples/jsm/renderers/CSS3DRenderer.js";
 
 export default class SceneManager extends Collection {
@@ -213,7 +215,8 @@ export default class SceneManager extends Collection {
         this.deskmat.position.z = z;
         this.deskmat.scale.set(sf, sf, sf);
         break;
-      case "70": case "75":      case "80":
+      case "70": case "70wkl": case "75":
+      case "80": case "80wkl":
         sf = 30; z = 3;
         this.deskmat.position.z = z;
         this.deskmat.scale.set(sf, sf, sf);
