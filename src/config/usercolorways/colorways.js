@@ -107,7 +107,6 @@ const USERCOLORWAYS = {
   mkg_symbiote: mkg_m19,
   mkg_nachtarbeit: mkg_m20,
   mkg_dark_olivia: mkg_m21,
-
   mkg_arctic	  : mkg_a1,
   mkg_birch       : mkg_a2,
   mkg_cinder      : mkg_a3,
@@ -125,7 +124,6 @@ const USERCOLORWAYS = {
   mkg_alhambra    : mkg_a15,
   mkg_british_racing_green_b : mkg_a16,
   mkg_british_racing_green_r : mkg_a17,
-
   mkg_rome: mkg_b1,
   mkg_hanok: mkg_b2,
   mkg_barista: mkg_b3,
@@ -137,7 +135,6 @@ const USERCOLORWAYS = {
   mkg_manhattan_cafe: mkg_b9,
   mkg_marmoreal: mkg_b10,
   mkg_winterglow: mkg_b11,
-
   mkg_stamp          : mkg_c1,
   mkg_wavez          : mkg_c2,
   mkg_rudy           : mkg_c3,
@@ -159,7 +156,6 @@ const USERCOLORWAYS = {
   mkg_iceberg        : mkg_c19,
   mkg_lavender       : mkg_c20,
   mkg_lavender_violet: mkg_c21,
-
   mkg_mint_chocolate      :mkg_d1,
   mkg_noel                :mkg_d2,
   mkg_phantom             :mkg_d3,
