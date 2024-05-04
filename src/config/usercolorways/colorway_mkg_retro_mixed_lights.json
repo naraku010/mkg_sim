@@ -1,0 +1,72 @@
+{
+  "id": "mkg_retro_mixed_lights",
+  "label": "Retro Mixed Lights",
+  "manufacturer": "",
+  "designer": "",
+  "swatches": {
+    "base": {
+      "background": "#cfcbc0",
+      "color": "#383838"
+    },
+    "mods": {
+      "background": "#454545",
+      "color": "#dadbd2"
+    },
+    "accent": {
+      "background": "#a59162",
+      "color": "#383838"
+    },
+    "swatch-1": {
+      "background": "#743736",
+      "color": "#dadbd2"
+    },
+    "swatch-2": {
+      "background": "#425d5a",
+      "color": "#dadbd2"
+    },
+    "swatch-3": {
+      "background": "#624641",
+      "color": "#dadbd2"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_F1": "swatch-1",
+    "KC_F2": "swatch-1",
+    "KC_F3": "swatch-1",
+    "KC_F4": "swatch-1",
+    "KC_LGUI": "swatch-1",
+    "KC_DOT": "swatch-1",
+    "KC_SLSH": "swatch-1",
+    "KC_SCLN": "swatch-1",
+    "KC_QUOT": "swatch-1",
+    "KC_LBRC": "swatch-1",
+    "KC_RBRC": "swatch-1",
+    "KC_BSLS": "swatch-1",
+    "KC_EQL": "swatch-1",
+    "KC_BSPC": "swatch-1",
+    "KC_F11": "swatch-1",
+    "KC_F12": "swatch-1",
+    "KC_LALT": "accent",
+    "KC_NLCK": "accent",
+    "KC_PENT": "accent",
+    "KC_PSLS": "swatch-1",
+    "KC_PSCR": "accent",
+    "KC_LCTL": "swatch-2",
+    "KC_SLCK": "swatch-2",
+    "KC_UP": "swatch-2",
+    "KC_DOWN": "swatch-2",
+    "KC_LEFT": "swatch-2",
+    "KC_RGHT": "swatch-2",
+    "KC_F7": "accent",
+    "KC_PAST": "swatch-2",
+    "KC_CAPS": "base",
+    "KC_TAB": "base",
+    "KC_PAUSE": "swatch-3",
+    "KC_RALT": "swatch-3",
+    "KC_SPC": "accent",
+    "KC_PMNS": "swatch-3"
+  }
+}

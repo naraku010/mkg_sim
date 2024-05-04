@@ -17,22 +17,15 @@ export default (layout, color) => {
   //create geometry
   let shape = new THREE.Shape();
 
-
   //basic outline
-  // shape.moveTo(0, 0);
-  // shape.lineTo(width, 0);
-  // shape.lineTo(width, depth);
-  // shape.lineTo(width*.7, depth);
-  // shape.lineTo(width*.5, depth+.5);
-  // shape.lineTo(width*.3, depth);
-  // shape.lineTo(0, depth);
-  // shape.lineTo(0, 0);
-  //
-  shape.moveTo(0, cornerRadius);
-  shape.lineTo(width - cornerRadius, 0);
-  shape.lineTo(width, depth - cornerRadius);
-  shape.lineTo(cornerRadius, depth);
-  shape.lineTo(0, cornerRadius);
+  shape.moveTo(0, 0);
+  shape.lineTo(width, 0);
+  shape.lineTo(width, depth);
+  shape.lineTo(width*.7, depth);
+  shape.lineTo(width*.5, depth+.7);
+  shape.lineTo(width*.3, depth);
+  shape.lineTo(0, depth);
+  shape.lineTo(0, 0);
 
   shape.holes = holes(size, layout, bezel);
 

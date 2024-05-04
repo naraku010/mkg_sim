@@ -106,7 +106,7 @@ export default class KeyManager extends Collection {
   removeAllOldKeys() {
     this.components = this.components.filter((x) => {
       let keep = this.keymap.includes(x.code);
-      if (!keep) x.destroy();
+      x.destroy();
       return keep;
     });
   }
@@ -124,11 +124,11 @@ export default class KeyManager extends Collection {
       );
       let existingKey = this.getKey(code);
       if (existingKey && !seen.includes(code)) {
-        if (this.matchesSize(existingKey, dimensions)) {
-          existingKey.move(dimensions);
-          seen.push(code);
-          continue;
-        }
+        // if (this.matchesSize(existingKey, dimensions)) {
+        //   existingKey.move(dimensions);
+        //   seen.push(code);
+        //   continue;
+        // }
         this.removeKey(existingKey);
       }
       let K = new Key({

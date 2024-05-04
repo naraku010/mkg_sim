@@ -17,8 +17,8 @@
     }
   },
   "override": {
-    "KC_ENT": "base",
-    "KC_ESC": "base",
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
     "KC_GESC": "accent",
     "KC_SPC": "base",
     "KC_A": "base",
@@ -44,6 +44,14 @@
     "KC_DEL": "base",
     "KC_INS": "base",
     "KC_SLCK": "base",
-    "KC_PSCR": "base"
+    "KC_PSCR": "base",
+    "KC_PAUSE": "base",
+    "KC_F2": "base",
+    "KC_F1": "base",
+    "KC_HOME": "base",
+    "KC_END": "base",
+    "KC_RGUI": "base",
+    "KC_APP": "base",
+    "MO(1)": "base"
   }
 }

@@ -1,0 +1,36 @@
+{
+  "id": "mkg_hyperfuse",
+  "label": "Hyperfuse",
+  "manufacturer": "",
+  "designer": "",
+  "swatches": {
+    "base": {
+      "background": "#b7b7b9",
+      "color": "#753984"
+    },
+    "mods": {
+      "background": "#637075",
+      "color": "#76d8c3"
+    },
+    "accent": {
+      "background": "#76d8c3",
+      "color": "#753984"
+    },
+    "swatch-1": {
+      "background": "#753984",
+      "color": "#76d8c3"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods",
+    "KC_SPC": "base",
+    "KC_LGUI": "swatch-1",
+    "KC_RGUI": "swatch-1"
+  }
+}

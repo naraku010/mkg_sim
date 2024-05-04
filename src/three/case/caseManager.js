@@ -5,7 +5,8 @@ import LAYOUTS from "../../config/layouts/layouts";
 import Util from "../../util/math";
 import case_1 from "./case_1";
 import case_2 from "./case_2";
-import badge from "./badge";
+import case_3 from "./case_3";
+// import badge from "./badge";
 import ColorUtil from "../../util/color";
 import { lightTexture } from "./lightTexture";
 
@@ -210,21 +211,21 @@ export default class CaseManager {
     this.group.add(this.plate);
   }
 
-  createBadge() {
-    if (this.badgeMesh) this.group.remove(this.badgeMesh);
-    if (this.layout.width > 18) {
-      let w = this.layout.width;
-      let bw = 3;
-      bw = w > 19 ? 4 : bw;
-      bw = w > 21 ? 4 : bw;
-      let bx = 15.25;
-      bx = w > 19 ? 15.5 : bx;
-      bx = w > 21 ? 18.5 : bx;
-      this.badgeMesh = badge(bw, this.cubemap);
-      this.badgeMesh.position.x += bx;
-      this.group.add(this.badgeMesh);
-    }
-  }
+  // createBadge() {
+  //   if (this.badgeMesh) this.group.remove(this.badgeMesh);
+  //   if (this.layout.width > 18) {
+  //     let w = this.layout.width;
+  //     let bw = 3;
+  //     bw = w > 19 ? 4 : bw;
+  //     bw = w > 21 ? 4 : bw;
+  //     let bx = 15.25;
+  //     bx = w > 19 ? 15.5 : bx;
+  //     bx = w > 21 ? 18.5 : bx;
+  //     this.badgeMesh = badge(bw, this.cubemap);
+  //     this.badgeMesh.position.x += bx;
+  //     this.group.add(this.badgeMesh);
+  //   }
+  // }
 
   createEnvCubeMap() {
     this.cubemap = new THREE.CubeTextureLoader().load([py, ny, pz, nz, px, nx]);
@@ -254,10 +255,14 @@ export default class CaseManager {
 
   getCaseMesh(layout = this.layout, style = this.style) {
     let mesh;
-    if (style === "CASE_1") {
-      mesh = case_1(layout, this.color);
+    if(this.layoutName.indexOf('ergo') > -1) {
+      mesh = case_3(layout, this.color);
     } else {
-      mesh = case_2(layout, this.color);
+      if (style === "CASE_1") {
+        mesh = case_1(layout, this.color);
+      } else {
+        mesh = case_2(layout, this.color);
+      }
     }
     return mesh;
   }

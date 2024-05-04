@@ -1,0 +1,30 @@
+{
+  "id": "mkg_mint_chocolate",
+  "label": "Mint Chocolate",
+  "manufacturer": "",
+  "designer": "",
+  "swatches": {
+    "base": {
+      "background": "#aee9e8",
+      "color": "#653c25"
+    },
+    "mods": {
+      "background": "#653c25",
+      "color": "#00a4a9"
+    },
+    "accent": {
+      "background": "#653c25",
+      "color": "#00a4a9"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_SPC": "base",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods"
+  }
+}

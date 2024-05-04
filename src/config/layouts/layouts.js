@@ -6,6 +6,7 @@ import layout_60_tsangan from "./layout_60_tsangan.json";
 import layout_60_wkl from "./layout_60_wkl.json";
 import layout_65 from "./layout_65_default.json";
 import layout_70 from "./layout_70_default.json";
+import layout_65_ergo from "./layout_65_ergo.json";
 import layout_70_wkl from "./layout_70_wkl.json";
 import layout_75 from "./layout_75_default.json";
 import layout_80 from "./layout_80_default.json";
@@ -21,6 +22,7 @@ const LAYOUTS = {
   40: layout_40,
   60: layout_60,
   65: layout_65,
+  "65ergo": layout_65_ergo,
   70: layout_70,
   "70wkl": layout_70_wkl,
   75: layout_75,

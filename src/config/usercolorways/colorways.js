@@ -51,6 +51,39 @@ import mkg_b9 from "./colorway_mkg_manhattan_cafe.json"
 import mkg_b10 from "./colorway_mkg_marmoreal.json"
 import mkg_b11 from "./colorway_mkg_winterglow.json"
 
+import mkg_c1 from "./colorway_mkg_stamp.json"
+import mkg_c2 from "./colorway_mkg_wavez.json"
+import mkg_c3 from "./colorway_mkg_rudy.json"
+import mkg_c4 from "./colorway_mkg_merlin.json"
+import mkg_c5 from "./colorway_mkg_mars_green.json"
+import mkg_c6 from "./colorway_mkg_aegyptus.json"
+import mkg_c7 from "./colorway_mkg_3run.json"
+import mkg_c8 from "./colorway_mkg_amethyst.json"
+import mkg_c9 from "./colorway_mkg_amethyst_dark.json"
+import mkg_c10 from "./colorway_mkg_analog_dreams.json"
+import mkg_c11 from "./colorway_mkg_black_pink.json"
+import mkg_c12 from "./colorway_mkg_calm_depths.json"
+import mkg_c13 from "./colorway_mkg_daifuku.json"
+import mkg_c14 from "./colorway_mkg_deku.json"
+import mkg_c15 from "./colorway_mkg_dolch_reborn.json"
+import mkg_c16 from "./colorway_mkg_evil_dolch.json"
+import mkg_c17 from "./colorway_mkg_hydro.json"
+import mkg_c18 from "./colorway_mkg_hyperfuse.json"
+import mkg_c19 from "./colorway_mkg_iceberg.json"
+import mkg_c20 from "./colorway_mkg_lavender.json"
+import mkg_c21 from "./colorway_mkg_lavender_violet.json"
+
+
+import mkg_d1 from "./colorway_mkg_mint_chocolate.json"
+import mkg_d2 from "./colorway_mkg_noel.json"
+import mkg_d3 from "./colorway_mkg_phantom.json"
+import mkg_d4 from "./colorway_mkg_plum.json"
+import mkg_d5 from "./colorway_mkg_retro_mixed_lights.json"
+
+
+
+
+
 const USERCOLORWAYS = {
   //APPEND
   mkg_ntd: mkg_ntd,
@@ -103,7 +136,35 @@ const USERCOLORWAYS = {
   mkg_illusion: mkg_b8,
   mkg_manhattan_cafe: mkg_b9,
   mkg_marmoreal: mkg_b10,
-  mkg_winterglow: mkg_b11
+  mkg_winterglow: mkg_b11,
+
+  mkg_stamp          : mkg_c1,
+  mkg_wavez          : mkg_c2,
+  mkg_rudy           : mkg_c3,
+  mkg_merlin         : mkg_c4,
+  mkg_mars_green     : mkg_c5,
+  mkg_aegyptus       : mkg_c6,
+  mkg_3run           : mkg_c7,
+  mkg_amethyst       : mkg_c8,
+  mkg_amethyst_dark  : mkg_c9,
+  mkg_analog_dreams  : mkg_c10,
+  mkg_black_pink     : mkg_c11,
+  mkg_calm_depths    : mkg_c12,
+  mkg_daifuku        : mkg_c13,
+  mkg_deku           : mkg_c14,
+  mkg_dolch_reborn   : mkg_c15,
+  mkg_evil_dolch     : mkg_c16,
+  mkg_hydro          : mkg_c17,
+  mkg_hyperfuse      : mkg_c18,
+  mkg_iceberg        : mkg_c19,
+  mkg_lavender       : mkg_c20,
+  mkg_lavender_violet: mkg_c21,
+
+  mkg_mint_chocolate      :mkg_d1,
+  mkg_noel                :mkg_d2,
+  mkg_phantom             :mkg_d3,
+  mkg_plum                :mkg_d4,
+  mkg_retro_mixed_lights  :mkg_d5
 };
 
 export default USERCOLORWAYS;

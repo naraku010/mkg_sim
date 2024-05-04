@@ -11,6 +11,7 @@ import keymap_60_iso from "./keymap_60_ISO.json";
 import keymap_65 from "./keymap_65_default.json";
 import keymap_70 from "./keymap_70_default.json";
 import keymap_70_wkl from "./keymap_70_wkl.json";
+import keymap_65_ergo from "./keymap_65_ergo.json";
 import keymap_75 from "./keymap_75_default.json";
 import keymap_80 from "./keymap_80_default.json";
 import keymap_80_wkl from "./keymap_80_wkl.json";
@@ -29,6 +30,7 @@ const KEYMAPS = {
   40: keymap_40,
   60: keymap_60,
   65: keymap_65,
+  "65ergo": keymap_65_ergo,
   70: keymap_70,
   "70wkl": keymap_70_wkl,
   75: keymap_75,

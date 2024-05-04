@@ -48,16 +48,24 @@ export class Key {
       h: this.h,
       x: 1,
       y: 1,
+      angle: this.angle
     };
 
     let geometry = this.is_iso_enter
       ? keyGeometryISOEnter(this.geometryOptions)
       : keyGeometry(this.geometryOptions);
+    // if(this.geometryOptions.angle === 1) {
+    //   geometry.rotateY(1);
+    // } else {
+    //   geometry.rotateY(this.geometryOptions.angle);
+    // }
     let materials = keyMaterials(this.materialOptions);
-
     this.cap = new THREE.Mesh(geometry, materials);
     this.cap.name = this.options.code;
     KeyUtil.setKeyLayers(this.options.code, this.cap);
+    if(this.cap.rotation._y == 0 && Math.abs(this.geometryOptions.angle) > 0) {
+      this.cap.rotateY(this.geometryOptions.angle);
+    }
     setKeyMaterialState(
       this.cap,
       KEY_MATERIAL_STATES.DEFAULT,
@@ -107,6 +115,9 @@ export class Key {
   }
   get row() {
     return this.options.dimensions.row || 1;
+  }
+  get angle() {
+    return this.options.dimensions.a || 0;
   }
   // cap color
   get backgroundColor() {

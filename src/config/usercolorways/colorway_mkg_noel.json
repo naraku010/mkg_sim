@@ -1,0 +1,35 @@
+{
+  "id": "mkg_noel",
+  "label": "Noel",
+  "manufacturer": "",
+  "designer": "",
+  "swatches": {
+    "base": {
+      "background": "#dee0e4",
+      "color": "#5daac9"
+    },
+    "mods": {
+      "background": "#b5dbe3",
+      "color": "#5daac9"
+    },
+    "accent": {
+      "background": "#e5bac4",
+      "color": "#dee0e4"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods",
+    "KC_SPC": "accent",
+    "KC_LEFT": "accent",
+    "KC_DOWN": "accent",
+    "KC_UP": "accent",
+    "KC_RGHT": "accent",
+    "KC_PENT": "accent"
+  }
+}

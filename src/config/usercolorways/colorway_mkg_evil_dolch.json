@@ -1,0 +1,35 @@
+{
+  "id": "mkg_evil_dolch",
+  "label": "Evil Dolch",
+  "manufacturer": "",
+  "designer": "",
+  "swatches": {
+    "base": {
+      "background": "#393b3b",
+      "color": "#f7f2ea"
+    },
+    "mods": {
+      "background": "#171718",
+      "color": "#8d242f"
+    },
+    "accent": {
+      "background": "#8d242f",
+      "color": "#171718"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods",
+    "KC_LEFT": "accent",
+    "KC_DOWN": "accent",
+    "KC_UP": "accent",
+    "KC_RGHT": "accent",
+    "KC_PENT": "accent",
+    "KC_SPC": "accent"
+  }
+}
