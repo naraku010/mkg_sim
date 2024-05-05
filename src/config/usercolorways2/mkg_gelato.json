@@ -17,7 +17,7 @@
       "color": "#fcffff"
     },
     "swatch-1": {
-      "background": "#e6aaa6",
+      "background": "#e7b0ac",
       "color": "#fcffff"
     },
     "swatch-2": {
@@ -58,7 +58,16 @@
     "KC_CAPS": "swatch-3",
     "KC_LSFT": "swatch-4",
     "KC_UP": "swatch-4",
-    "KC_GRAVE": "swatch-2"
+    "KC_GRAVE": "swatch-2",
+    "KC_NLCK": "swatch-2",
+    "KC_PSLS": "swatch-2",
+    "KC_PAST": "swatch-2",
+    "KC_PMNS": "swatch-2",
+    "KC_PPLS": "swatch-1",
+    "KC_PENT": "swatch-4",
+    "KC_P9": "base"
   }
 }
+
+
 
