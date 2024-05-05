@@ -1,11 +1,25 @@
 import * as THREE from "three";
+import store from "../../store/store";
 import { keyTexture } from "./texture";
 import { initial_settings } from "../../store/startup";
 import { TextureLoader } from "three/src/loaders/TextureLoader.js";
 import ambiantOcclusionPath from "../../assets/dist/shadow-key-noise.png";
 import lightMapPath from "../../assets/materials/white.png";
+// import baseMap from "../../assets/texture/plastic/basecolor.jpg";
+import absNormalMapPath from "../../assets/texture/normal/abs.jpg";
+import pbtNormalMapPath from "../../assets/texture/normal/pbt.jpg";
+import {Vector2} from "three/src/math/Vector2";
+import {TangentSpaceNormalMap} from "three/src/constants";
+// import heightMap from "../../assets/texture/plastic/height.png";
+// import roughnessMap from "../../assets/texture/plastic/roughness.jpg";
+// import ambientOcclusionMap from "../../assets/texture/plastic/ambientOcclusion.jpg";
+
+
 
 const loader = new TextureLoader();
+const absNormalMap = loader.load(absNormalMapPath);
+const pbtNormalMap = loader.load(pbtNormalMapPath);
+
 const ambiantOcclusionMap = loader.load(ambiantOcclusionPath);
 ambiantOcclusionMap.wrapS = THREE.RepeatWrapping;
 ambiantOcclusionMap.wrapT = THREE.RepeatWrapping;
@@ -45,26 +59,32 @@ const setMaterialIndexes = (mesh, side, top, isoent) => {
 
 //generate top and side materials for a single color set
 const getMaterialSet = (opts, offset) => {
+  let currentState = store.getState();
   let key = `mat${opts.background}`;
-
   let legendTexture = keyTexture(opts);
-  let top = new THREE.MeshLambertMaterial({
+  let normalMap = currentState.keys.legendType === 'pbt' ? pbtNormalMap : absNormalMap;
+  let top = new THREE.MeshStandardMaterial({
     map: legendTexture,
+    normalMap: normalMap,
+    normalMapType: 1,
     lightMap: lightMap,
     lightMapIntensity: 0,
   });
   top.map.minFilter = THREE.LinearFilter;
 
-  if (computed_materials[key]) {
-    return [computed_materials[key].clone(), top];
-  }
+  // if (computed_materials[key]) {
+  //   return [computed_materials[key].clone(), top];
+  // }
   let side = new THREE.MeshStandardMaterial({
+    normalMap: normalMap,
+    normalMapType: 1,
     aoMap: ambiantOcclusionMap,
-    color: opts.background,
-    aoMapIntensity: 0.4,
+    aoMapIntensity: .4,
     lightMap: lightMap,
     lightMapIntensity: 0,
+    color: opts.background
   });
+  side.needsUpdate = true;
   computed_materials[key] = side;
   return [side, top];
 };

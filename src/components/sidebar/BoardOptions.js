@@ -27,7 +27,9 @@ export default function BoardOptions() {
   const dispatch = useDispatch();
 
   const layout = useSelector(caseActions.selectLayout);
+  const legendType = useSelector(keyActions.selectLegendType);
   const legendPrimaryStyle = useSelector(keyActions.selectLegendPrimaryStyle);
+
   const legendSecondaryStyle = useSelector(
     keyActions.selectLegendSecondaryStyle
   );
@@ -79,7 +81,17 @@ export default function BoardOptions() {
             dispatch(keyActions.setLegendPrimaryStyle(val));
           }}
         />
-
+        <SelectField
+            label="키캡 재질"
+            selected={legendType}
+            options={[
+                { label: "PBT", value: "pbt" },
+                { label: "ABS", value: "abs" },
+            ]}
+            handler={(val) => {
+                dispatch(keyActions.setLegendType(val));
+            }}
+        />
         <SelectField
           label="언어"
           selected={legendSecondaryStyle}
@@ -96,7 +108,7 @@ export default function BoardOptions() {
         />
       </CollapsibleSection>
 
-      <CollapsibleSection title="하우징 옵션" open={true}>>
+      <CollapsibleSection title="하우징 옵션" open={true}>
         <RadioField
           name="case_style"
           label="하우징 스따일!"

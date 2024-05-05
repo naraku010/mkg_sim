@@ -1,0 +1,25 @@
+{
+  "id": "mkg_kitsune",
+  "label": "Kitsune",
+  "manufacturer": "",
+  "designer": "KGJun",
+  "swatches": {
+    "base": {
+      "background": "#2c304b",
+      "color": "#d3a19a"
+    },
+    "mods": {
+      "background": "#2c304b",
+      "color": "#d3a19a"
+    },
+    "accent": {
+      "background": "#d3a19a",
+      "color": "#171718"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent"
+  }
+}

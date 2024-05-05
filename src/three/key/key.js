@@ -35,6 +35,7 @@ export class Key {
     this.start_y = -0.05; // initial y position and reset after releasing key
     this.dist_pressed = 0.25; // max vertical distance the key can be pressed down
     this.press_velocity = 0.1; // speed of press, smaller = smoother slower motion
+    this.legendType = currentState.keys.legendType || "pbt";
     this.legend = currentState.keys.legendPrimaryStyle || "cherry";
     this.sub = currentState.keys.legendSecondaryStyle || "";
     this.testing = initial_settings.settings.testing || false;
@@ -81,6 +82,11 @@ export class Key {
 
     subscribe("settings.testing", (state) => {
       this.testing = state.settings.testing;
+    });
+
+    subscribe("keys.legendType", (state) => {
+      this.legendType = state.keys.legendType;
+      this.updateColors();
     });
 
     subscribe("keys.legendSecondaryStyle", (state) => {

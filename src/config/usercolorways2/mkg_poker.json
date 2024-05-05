@@ -1,0 +1,70 @@
+{
+  "id": "mkg_poker",
+  "label": "MW-Poker",
+  "manufacturer": "",
+  "designer": "",
+  "swatches": {
+    "base": {
+      "background": "#cfcbbf",
+      "color": "#1f1d1d"
+    },
+    "mods": {
+      "background": "#575550",
+      "color": "#b5b2a8"
+    },
+    "accent": {
+      "background": "#4a3438",
+      "color": "#b5b2a8"
+    },
+    "swatch-1": {
+      "background": "#242422",
+      "color": "#b5b2a8"
+    },
+    "swatch-2": {
+      "background": "#b6ac9c",
+      "color": "#eeeeee"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "swatch-2",
+    "KC_GESC": "accent",
+    "KC_PSCR": "swatch-2",
+    "KC_PMNS": "swatch-2",
+    "KC_APP": "accent",
+    "KC_LGUI": "swatch-2",
+    "KC_BSPC": "swatch-2",
+    "KC_CAPS": "swatch-1",
+    "KC_LALT": "swatch-1",
+    "KC_RCTL": "swatch-1",
+    "KC_RSFT": "swatch-1",
+    "KC_SLCK": "swatch-1",
+    "KC_PSLS": "swatch-1",
+    "KC_LCTL": "accent",
+    "KC_RGUI": "swatch-2",
+    "KC_PENT": "accent",
+    "KC_NLCK": "accent",
+    "KC_PAUSE": "accent",
+    "KC_DEL": "accent",
+    "KC_F5": "base",
+    "KC_F6": "base",
+    "KC_F7": "base",
+    "KC_F1": "mods",
+    "KC_F2": "mods",
+    "KC_F3": "mods",
+    "KC_F4": "mods",
+    "KC_EQL": "mods",
+    "KC_LBRC": "mods",
+    "KC_RBRC": "mods",
+    "KC_BSLS": "mods",
+    "KC_QUOT": "mods",
+    "KC_SCLN": "mods",
+    "KC_COMM": "mods",
+    "KC_DOT": "mods",
+    "KC_SLSH": "mods",
+    "KC_TAB": "base",
+    "KC_F12": "mods",
+    "KC_F11": "mods",
+    "KC_SPC": "base"
+  }
+}

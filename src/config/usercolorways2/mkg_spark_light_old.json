@@ -1,20 +1,20 @@
 {
-  "id": "mkg_spark_light",
-  "label": "Spark light",
+  "id": "mkg_spark_light_old",
+  "label": "Spark Light(OLD)",
   "manufacturer": "",
   "designer": "귤마시따",
   "swatches": {
     "base": {
-      "background": "#f3fdf2",
+      "background": "#ebf5ff",
       "color": "#313948"
     },
     "mods": {
-      "background": "#ecf5fd",
+      "background": "#cdd8f9",
       "color": "#313948"
     },
     "accent": {
       "background": "#313948",
-      "color": "#f3fdf2"
+      "color": "#ebf5ff"
     },
     "swatch-1": {
       "background": "#ff5252",

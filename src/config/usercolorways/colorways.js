@@ -86,7 +86,28 @@ import mkg_d9  from "./colorway_mkg_spark.json"
 import mkg_d10 from "./colorway_mkg_violet_alert.json"
 
 
-
+import mkg_f1  from "../usercolorways2/mkg_bank_account.json"
+import mkg_f2  from "../usercolorways2/mkg_kabukicho.json"
+import mkg_f3  from "../usercolorways2/mkg_kitsune.json"
+import mkg_f4  from "../usercolorways2/mkg_love_story.json"
+import mkg_f5  from "../usercolorways2/mkg_mictlan.json"
+import mkg_f6  from "../usercolorways2/mkg_pelican.json"
+import mkg_f7  from "../usercolorways2/mkg_poker.json"
+import mkg_f8  from "../usercolorways2/mkg_ronin.json"
+import mkg_f9  from "../usercolorways2/mkg_salmon.json"
+import mkg_f10 from "../usercolorways2/mkg_silent_forest.json"
+import mkg_f11 from "../usercolorways2/mkg_skidata.json"
+import mkg_f12 from "../usercolorways2/mkg_sky_dolch.json"
+import mkg_f13 from "../usercolorways2/mkg_soju.json"
+import mkg_f14 from "../usercolorways2/mkg_soju_green_grape.json"
+import mkg_f15 from "../usercolorways2/mkg_soju_peach.json"
+import mkg_f16 from "../usercolorways2/mkg_spark_light_v2.json"
+import mkg_f17 from "../usercolorways2/mkg_spark_light_old.json"
+import mkg_f18 from "../usercolorways2/mkg_ta.json"
+import mkg_f19 from "../usercolorways2/mkg_tenshi_v2.json"
+import mkg_f20 from "../usercolorways2/mkg_triumph_adler.json"
+import mkg_f21 from "../usercolorways2/mkg_tuzi.json"
+import mkg_f22 from "../usercolorways2/mkg_vibrato.json"
 
 const USERCOLORWAYS = {
   //APPEND
@@ -169,7 +190,30 @@ const USERCOLORWAYS = {
   mkg_panels: mkg_d7,
   mkg_spark_light: mkg_d8,
   mkg_spark: mkg_d9,
-  mkg_violet_alert: mkg_d10
+  mkg_violet_alert: mkg_d10,
+
+  mkg_bank_account             : mkg_f1,
+  mkg_kabukicho                : mkg_f2,
+  mkg_kitsune                  : mkg_f3,
+  mkg_love_story               : mkg_f4,
+  mkg_mictlan                  : mkg_f5,
+  mkg_pelican                  : mkg_f6,
+  mkg_poker                    : mkg_f7,
+  mkg_ronin                    : mkg_f8,
+  mkg_salmon                   : mkg_f9,
+  mkg_silent_forest            : mkg_f10,
+  mkg_skidata                  : mkg_f11,
+  mkg_skyt_dolch               : mkg_f12,
+  mkg_soju                     : mkg_f13,
+  mkg_soju_green_grape         : mkg_f14,
+  mkg_soju_peach               : mkg_f15,
+  mkg_spark_light_v2           : mkg_f16,
+  mkg_spark_light_old          : mkg_f17,
+  mkg_ta_royal_alpha_typewriter: mkg_f18,
+  mkg_tenshi_v2                : mkg_f19,
+  mkg_triumph_adler            : mkg_f20,
+  mkg_tuzi                     : mkg_f21,
+  mkg_vibrato                  : mkg_f22
 };
 
 export default USERCOLORWAYS;

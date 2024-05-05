@@ -23,6 +23,7 @@
   "keys": {
     "visible": true,
     "profile": "mx",
+    "legendType": "abs",
     "legendPrimaryStyle": "cherry",
     "legendSecondaryStyle": "hangul",
     "activeBackground": "#51cf59",

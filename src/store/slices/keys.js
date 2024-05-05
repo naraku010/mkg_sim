@@ -17,6 +17,9 @@ export const keysSlice = createSlice({
     setLegendSecondaryStyle: (state, action) => {
       state.legendSecondaryStyle = action.payload;
     },
+    setLegendType: (state, action) => {
+      state.legendType = action.payload;
+    },
   },
 });
 
@@ -25,6 +28,7 @@ export const {
   setProfile,
   setLegendPrimaryStyle,
   setLegendSecondaryStyle,
+  setLegendType,
 } = keysSlice.actions;
 
 export const selectVisible = (state) => state.keys.visible;
@@ -33,5 +37,7 @@ export const selectLegendPrimaryStyle = (state) =>
   state.keys.legendPrimaryStyle;
 export const selectLegendSecondaryStyle = (state) =>
   state.keys.legendSecondaryStyle;
+export const selectLegendType = (state) =>
+  state.keys.legendType;
 
 export default keysSlice.reducer;

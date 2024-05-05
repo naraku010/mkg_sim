@@ -1,0 +1,32 @@
+{
+  "id": "mkg_tenshi_v2",
+  "label": "Tenshi",
+  "manufacturer": "",
+  "designer": "",
+  "swatches": {
+    "base": {
+      "background": "#d1d4da",
+      "color": "#5d545e"
+    },
+    "mods": {
+      "background": "#5d545e",
+      "color": "#d1d4da"
+    },
+    "accent": {
+      "background": "#d8d2c3",
+      "color": "#5d545e"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods",
+    "KC_SPC": "accent",
+    "KC_PENT": "accent"
+  }
+}
+

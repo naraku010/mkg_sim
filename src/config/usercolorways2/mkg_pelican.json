@@ -1,0 +1,53 @@
+{
+  "id": "mkg_pelican",
+  "label": "Pelican",
+  "designer": "라너구",
+  "manufacturer": "",
+  "swatches": {
+    "base": {
+      "background": "#f3dbba",
+      "color": "#353237"
+    },
+    "mods": {
+      "background": "#353237",
+      "color": "#cd9789"
+    },
+    "accent": {
+      "background": "#e4ac4f",
+      "color": "#e6d9d2"
+    }
+  },
+  "override": {
+    "KC_ENT": "mods",
+    "KC_ESC": "accent",
+    "KC_SPC": "base",
+    "KC_GESC": "accent",
+    "KC_F1": "base",
+    "KC_1": "accent",
+    "KC_2": "accent",
+    "KC_3": "accent",
+    "KC_4": "accent",
+    "KC_5": "accent",
+    "KC_6": "accent",
+    "KC_7": "accent",
+    "KC_8": "accent",
+    "KC_9": "accent",
+    "KC_0": "accent",
+    "KC_MINS": "accent",
+    "KC_EQL": "accent",
+    "KC_BSPC": "accent",
+    "KC_GRAVE": "mods",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods",
+    "KC_LEFT": "accent",
+    "KC_DOWN": "accent",
+    "KC_RGHT": "accent",
+    "KC_UP": "accent",
+    "KC_INS": "mods",
+    "KC_HOME": "mods",
+    "KC_PGUP": "mods"
+  }
+}
+

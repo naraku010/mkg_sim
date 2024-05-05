@@ -1,0 +1,36 @@
+{
+  "id": "mkg_soju",
+  "label": "Soju",
+  "manufacturer": "",
+  "designer": "",
+  "swatches": {
+    "base": {
+      "background": "#fcf8e5",
+      "color": "#3f3d3d"
+    },
+    "mods": {
+      "background": "#40a750",
+      "color": "#b7fc1d"
+    },
+    "accent": {
+      "background": "#0f742d",
+      "color": "#b7fc1d"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_F5": "accent",
+    "KC_F6": "accent",
+    "KC_F7": "accent",
+    "KC_F8": "accent",
+    "KC_SPC": "accent",
+    "KC_LEFT": "accent",
+    "KC_DOWN": "accent",
+    "KC_RGHT": "accent",
+    "KC_UP": "accent",
+    "KC_PENT": "accent"
+  }
+}
+
