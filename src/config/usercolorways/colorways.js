@@ -1,4 +1,3 @@
-//기키갤
 import mkg_ntd from "./colorway_mkg_ntd.json";
 import mkg_m1 from "./colorway_mkg_masterpiece.json";
 import mkg_m2 from "./colorway_mkg_kaiju.json";
@@ -20,7 +19,6 @@ import mkg_m18 from "./colorway_mkg_dualshot.json";
 import mkg_m19 from "./colorway_mkg_symbiote.json";
 import mkg_m20 from "./colorway_mkg_nachtarbeit.json";
 import mkg_m21 from "./colorway_mkg_dark_olivia.json";
-
 import mkg_a1  from "./colorway_mkg_arctic.json";
 import mkg_a2  from "./colorway_mkg_birch.json";
 import mkg_a3  from "./colorway_mkg_cinder.json";
@@ -38,7 +36,6 @@ import mkg_a14 from "./colorway_mkg_vamp.json";
 import mkg_a15 from "./colorway_mkg_alhambra.json";
 import mkg_a16 from "./colorway_mkg_british_racing_green_b.json"
 import mkg_a17 from "./colorway_mkg_british_racing_green_r.json"
-
 import mkg_b1 from "./colorway_mkg_rome.json"
 import mkg_b2 from "./colorway_mkg_hanok.json"
 import mkg_b3 from "./colorway_mkg_barista.json"
@@ -50,7 +47,6 @@ import mkg_b8 from "./colorway_mkg_Illusion.json"
 import mkg_b9 from "./colorway_mkg_manhattan_cafe.json"
 import mkg_b10 from "./colorway_mkg_marmoreal.json"
 import mkg_b11 from "./colorway_mkg_winterglow.json"
-
 import mkg_c1 from "./colorway_mkg_stamp.json"
 import mkg_c2 from "./colorway_mkg_wavez.json"
 import mkg_c3 from "./colorway_mkg_rudy.json"
@@ -72,8 +68,6 @@ import mkg_c18 from "./colorway_mkg_hyperfuse.json"
 import mkg_c19 from "./colorway_mkg_iceberg.json"
 import mkg_c20 from "./colorway_mkg_lavender.json"
 import mkg_c21 from "./colorway_mkg_lavender_violet.json"
-
-
 import mkg_d1 from "./colorway_mkg_mint_chocolate.json"
 import mkg_d2 from "./colorway_mkg_noel.json"
 import mkg_d3 from "./colorway_mkg_phantom.json"
@@ -84,8 +78,6 @@ import mkg_d7  from "./colorway_mkg_panels.json"
 import mkg_d8  from "./colorway_mkg_spark_light.json"
 import mkg_d9  from "./colorway_mkg_spark.json"
 import mkg_d10 from "./colorway_mkg_violet_alert.json"
-
-
 import mkg_f1  from "../usercolorways2/mkg_bank_account.json"
 import mkg_f2  from "../usercolorways2/mkg_kabukicho.json"
 import mkg_f3  from "../usercolorways2/mkg_kitsune.json"
