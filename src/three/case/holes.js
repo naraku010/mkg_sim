@@ -153,15 +153,52 @@ export default (layoutName, layoutJson, bezel) => {
                 ])
             );
             break;
+        case "75":
+            holes.push(
+                esc,
+                getPathF1(sx + 1.5, sy, gutter),
+                getPathF1(sx + 6, sy, gutter),
+                getPathF1(sx + 10.5, sy, gutter),
+                getPathEsc(sx + 15, sy, gutter)
+            );
+            holes.push(
+                getPathFromPoints(sx, sy+1.25, [
+                    {x: 16, y: 0},
+                    {x: 0, y: 3},
+                    {x: -1, y: 0},
+                    {x: 0, y: 1},
+                    {x: 1, y: 0},
+                    {x: 0, y: 1},
+                    {x: -3, y: 0},
+                    {x: 0, y: -1},
+                    {x: -.5, y: 0},
+                    {x: 0, y: 1},
+                    {x: -12.5, y: 0},
+                    {x: 0, y: -4.25},
+                ])
+            );
+            break;
+        case "70":
+            holes.push(
+                getPathNav(sx + 15.25, sy, gutter),
+                getPathArrows(sx + 15.25, sy + 4.9, gutter),
+                getSquarePath(sx, sy, 15, 5, gutter));
+            break;
+        case "65":
+            holes.push(
+                getPathFromPoints(sx - gutter, sy - gutter, [
+                    {x: w + gutter * 2, y: 0},
+                    {x: 0, y: h + gutter * 2},
+                    {x: -3 - gutter * 2, y: 0},
+                    {x: 0, y: -1},
+                    {x: -0.5 + gutter * 2, y: 0},
+                    {x: 0, y: 1},
+                    {x: -(w - 3.5) - gutter * 2, y: 0},
+                    {x: 0, y: -h - gutter * 2},
+                ])
+            );
+            break;
         case "65ergo":
-            // shape.moveTo(0, 0);
-            // shape.lineTo(width, 0);
-            // shape.lineTo(width, depth);
-            // shape.lineTo(width*.7, depth);
-            // shape.lineTo(width*.5, depth+.5);
-            // shape.lineTo(width*.3, depth);
-            // shape.lineTo(0, depth);
-            // shape.lineTo(0, 0);
             holes.push(
                 getSquarePath(sx+0.3, sy, 1, 1, gutter),
                 getSquarePath(sx+0.2, sy+1, 1, 1, gutter),
@@ -218,27 +255,6 @@ export default (layoutName, layoutJson, bezel) => {
                     {x: 0, y: -1},
                     {x: 0.1, y: 0},
                     {x: 0, y: -1},
-                ])
-            );
-            break;
-
-        case "70":
-            holes.push(
-                getPathNav(sx + 15.25, sy, gutter),
-                getPathArrows(sx + 15.25, sy + 4.9, gutter),
-                getSquarePath(sx, sy, 15, 5, gutter));
-            break;
-        case "65":
-            holes.push(
-                getPathFromPoints(sx - gutter, sy - gutter, [
-                    {x: w + gutter * 2, y: 0},
-                    {x: 0, y: h + gutter * 2},
-                    {x: -3 - gutter * 2, y: 0},
-                    {x: 0, y: -1},
-                    {x: -0.5 + gutter * 2, y: 0},
-                    {x: 0, y: 1},
-                    {x: -(w - 3.5) - gutter * 2, y: 0},
-                    {x: 0, y: -h - gutter * 2},
                 ])
             );
             break;

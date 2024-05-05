@@ -96,7 +96,7 @@ export default function BoardOptions() {
         />
       </CollapsibleSection>
 
-      <CollapsibleSection title="하우징 옵션">
+      <CollapsibleSection title="하우징 옵션" open={true}>>
         <RadioField
           name="case_style"
           label="하우징 스따일!"

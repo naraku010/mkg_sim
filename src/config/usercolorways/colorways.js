@@ -79,7 +79,11 @@ import mkg_d2 from "./colorway_mkg_noel.json"
 import mkg_d3 from "./colorway_mkg_phantom.json"
 import mkg_d4 from "./colorway_mkg_plum.json"
 import mkg_d5 from "./colorway_mkg_retro_mixed_lights.json"
-
+import mkg_d6  from "./colorway_mkg_carpenter.json"
+import mkg_d7  from "./colorway_mkg_panels.json"
+import mkg_d8  from "./colorway_mkg_spark_light.json"
+import mkg_d9  from "./colorway_mkg_spark.json"
+import mkg_d10 from "./colorway_mkg_violet_alert.json"
 
 
 
@@ -160,7 +164,12 @@ const USERCOLORWAYS = {
   mkg_noel                :mkg_d2,
   mkg_phantom             :mkg_d3,
   mkg_plum                :mkg_d4,
-  mkg_retro_mixed_lights  :mkg_d5
+  mkg_retro_mixed_lights  :mkg_d5,
+  mkg_carpenter: mkg_d6,
+  mkg_panels: mkg_d7,
+  mkg_spark_light: mkg_d8,
+  mkg_spark: mkg_d9,
+  mkg_violet_alert: mkg_d10
 };
 
 export default USERCOLORWAYS;
