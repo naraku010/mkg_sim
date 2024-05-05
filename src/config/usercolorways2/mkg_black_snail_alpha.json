@@ -1,0 +1,46 @@
+{
+  "id": "mkg_black_snail_alpha",
+  "label": "Black Snail alpha",
+  "manufacturer": "GMK",
+  "designer": "Yeony",
+  "swatches": {
+    "base": {
+      "background": "#d8d2c3",
+      "color": "#171718"
+    },
+    "mods": {
+      "background": "#171718",
+      "color": "#d8d2c3"
+    },
+    "accent": {
+      "background": "#171718",
+      "color": "#d8d2c3"
+    },
+    "swatch-1": {
+      "background": "#d8d2c3",
+      "color": "#171718"
+    }
+  },
+  "override": {
+    "KC_ENT": "mods",
+    "KC_ESC": "mods",
+    "KC_GESC": "accent",
+    "KC_SPC": "base",
+    "KC_1": "base",
+    "KC_2": "base",
+    "KC_3": "base",
+    "KC_4": "base",
+    "KC_5": "base",
+    "KC_6": "base",
+    "KC_7": "base",
+    "KC_8": "base",
+    "KC_9": "base",
+    "KC_0": "base",
+    "KC_MINS": "base",
+    "KC_EQL": "base",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods"
+  }
+}

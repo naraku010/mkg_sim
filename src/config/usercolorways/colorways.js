@@ -119,6 +119,19 @@ import mkg_f40 from "../usercolorways2/mkg_basin.json"
 import mkg_f41 from "../usercolorways2/mkg_valhalla.json"
 
 
+import mkg_g1  from "../usercolorways2/mkg_black_snail_alpha.json"
+import mkg_g2  from "../usercolorways2/mkg_cube.json"
+import mkg_g3  from "../usercolorways2/mkg_emma.json"
+import mkg_g4  from "../usercolorways2/mkg_emma_base.json"
+import mkg_g5  from "../usercolorways2/mkg_nori.json"
+import mkg_g6  from "../usercolorways2/mkg_nori_alpha.json"
+import mkg_g7  from "../usercolorways2/mkg_parcel.json"
+import mkg_g8  from "../usercolorways2/mkg_poko.json"
+import mkg_g9  from "../usercolorways2/mkg_sandstorm.json"
+import mkg_g10 from "../usercolorways2/mkg_soul_blossom.json"
+import mkg_g11 from "../usercolorways2/mkg_spark_mod.json"
+import mkg_g12 from "../usercolorways2/mkg_yeeti.json"
+
 const USERCOLORWAYS = {
   //APPEND
   mkg_ntd: mkg_ntd,
@@ -240,7 +253,19 @@ const USERCOLORWAYS = {
   mkg_davy_jones            : mkg_f38,
   mkg_blot                  : mkg_f39,
   mkg_basin                 : mkg_f40,
-  mkg_valhalla              : mkg_f41
+  mkg_valhalla              : mkg_f41,
+  mkg_black_snail_alpha : mkg_g1,
+  mkg_cube              : mkg_g2,
+  mkg_emma              : mkg_g3,
+  mkg_emma_base         : mkg_g4,
+  mkg_nori              : mkg_g5,
+  mkg_nori_alpha        : mkg_g6,
+  mkg_parcel            : mkg_g7,
+  mkg_poko              : mkg_g8,
+  mkg_sandstorm         : mkg_g9,
+  mkg_soul_blossom      : mkg_g10,
+  mkg_spark_mod         : mkg_g11,
+  mkg_yeeti             : mkg_g12,
 };
 
 export default USERCOLORWAYS;

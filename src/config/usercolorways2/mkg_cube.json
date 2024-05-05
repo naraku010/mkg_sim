@@ -1,0 +1,60 @@
+{
+  "id": "mkg_cube",
+  "label": "Cube",
+  "manufacturer": "GMK",
+  "designer": "Verdi",
+  "swatches": {
+    "base": {
+      "background": "#4e4570",
+      "color": "#c3c3ba"
+    },
+    "mods": {
+      "background": "#4e4570",
+      "color": "#c3c3ba"
+    },
+    "accent": {
+      "background": "#c3c3ba",
+      "color": "#171718"
+    },
+    "swatch-1": {
+      "background": "#171718",
+      "color": "#c3c3ba"
+    },
+    "swatch-2": {
+      "background": "#4e4570",
+      "color": "#f8c200"
+    },
+    "swatch-3": {
+      "background": "#4e4570",
+      "color": "#dd1126"
+    },
+    "swatch-4": {
+      "background": "#4e4570",
+      "color": "#05998c"
+    },
+    "swatch-5": {
+      "background": "#4e4570",
+      "color": "#512cc6"
+    }
+  },
+  "override": {
+    "KC_ENT": "swatch-1",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_LSFT": "swatch-2",
+    "KC_RSFT": "swatch-2",
+    "KC_CAPS": "swatch-3",
+    "KC_LALT": "swatch-2",
+    "KC_RALT": "swatch-2",
+    "KC_TAB": "swatch-4",
+    "KC_LCTL": "swatch-5",
+    "KC_RCTL": "swatch-4",
+    "KC_BSPC": "swatch-5",
+    "KC_LGUI": "swatch-3",
+    "KC_RGUI": "swatch-3",
+    "KC_APP": "swatch-5",
+    "KC_A": "swatch-5",
+    "KC_C": "swatch-5"
+  }
+}
+
