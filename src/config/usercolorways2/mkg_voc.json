@@ -1,16 +1,16 @@
 {
-  "id": "cw_oqh9g",
+  "id": "mkg_voc",
   "label": "Voc",
   "manufacturer": "",
   "designer": "KGJun",
   "swatches": {
     "base": {
-      "background": "#fef5eb",
+      "background": "#feeed9",
       "color": "#682d64"
     },
     "mods": {
       "background": "#682d64",
-      "color": "#fef5eb"
+      "color": "#feeed9"
     },
     "accent": {
       "background": "#e3229f",
