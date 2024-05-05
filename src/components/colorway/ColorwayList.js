@@ -102,7 +102,7 @@ export default function ColorwayList(props) {
                   width: "100%",
                 }}
             >
-              이거 병신임
+              데이터 없음
             </p>
         )}{" "}
       </div>
