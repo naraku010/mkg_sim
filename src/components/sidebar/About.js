@@ -33,6 +33,15 @@ export default function About() {
         <div className={styles.legal}>
           커스텀: 비글이
         </div>
+        <div className={styles.legal}>
+          문의: <a
+            href="mailto:naraku010@gmail.com"
+            rel="noopener noreferrer"
+            target="_blank"
+        >
+          naraku010@gmail.com
+        </a>
+        </div>
       </div>
     </CollapsibleSection>
   );

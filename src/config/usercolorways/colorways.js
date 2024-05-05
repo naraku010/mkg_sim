@@ -229,6 +229,7 @@ const USERCOLORWAYS = {
   mkg_gladiator             : mkg_f33,
   mkg_gladiator_novelty     : mkg_f34,
   mkg_gelato                : mkg_f35,
+
 };
 
 export default USERCOLORWAYS;
