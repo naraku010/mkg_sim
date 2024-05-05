@@ -67,8 +67,8 @@ const getMaterialSet = (opts, offset) => {
     map: legendTexture,
     normalMap: normalMap,
     normalMapType: 1,
-    lightMap: lightMap,
-    lightMapIntensity: 0,
+    // lightMap: lightMap,
+    // lightMapIntensity: 0,
   });
   top.map.minFilter = THREE.LinearFilter;
 
@@ -80,8 +80,8 @@ const getMaterialSet = (opts, offset) => {
     normalMapType: 1,
     aoMap: ambiantOcclusionMap,
     aoMapIntensity: .4,
-    lightMap: lightMap,
-    lightMapIntensity: 0,
+    // lightMap: lightMap,
+    // lightMapIntensity: 0,
     color: opts.background
   });
   side.needsUpdate = true;
