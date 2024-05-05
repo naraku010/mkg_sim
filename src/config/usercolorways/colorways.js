@@ -108,6 +108,13 @@ import mkg_f19 from "../usercolorways2/mkg_tenshi_v2.json"
 import mkg_f20 from "../usercolorways2/mkg_triumph_adler.json"
 import mkg_f21 from "../usercolorways2/mkg_tuzi.json"
 import mkg_f22 from "../usercolorways2/mkg_vibrato.json"
+import mkg_f23 from "../usercolorways2/mkg_aler.json"
+import mkg_f24 from "../usercolorways2/mkg_dandy.json"
+import mkg_f25 from "../usercolorways2/mkg_fairy.json"
+import mkg_f26 from "../usercolorways2/mkg_mictlan_noche_negra.json"
+import mkg_f27 from "../usercolorways2/mkg_olive_blanc.json"
+import mkg_f28 from "../usercolorways2/mkg_retro100.json"
+import mkg_f29 from "../usercolorways2/mkg_voc.json"
 
 const USERCOLORWAYS = {
   //APPEND
@@ -213,7 +220,14 @@ const USERCOLORWAYS = {
   mkg_tenshi_v2                : mkg_f19,
   mkg_triumph_adler            : mkg_f20,
   mkg_tuzi                     : mkg_f21,
-  mkg_vibrato                  : mkg_f22
+  mkg_vibrato                  : mkg_f22,
+  mkg_aler                : mkg_f23,
+  mkg_dandy               : mkg_f24,
+  mkg_fairy               : mkg_f25,
+  mkg_mictlan_noche_negra : mkg_f26,
+  mkg_olive_blanc         : mkg_f27,
+  mkg_retro100            : mkg_f28,
+  mkg_voc                 : mkg_f29,
 };
 
 export default USERCOLORWAYS;

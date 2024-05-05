@@ -18,7 +18,7 @@
     }
   },
   "override": {
-    "KC_SPC": "mods",
+    "KC_SPC": "base",
     "KC_F5": "mods",
     "KC_F6": "mods",
     "KC_F7": "mods",

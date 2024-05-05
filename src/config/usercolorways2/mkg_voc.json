@@ -1,0 +1,30 @@
+{
+  "id": "cw_oqh9g",
+  "label": "Voc",
+  "manufacturer": "",
+  "designer": "KGJun",
+  "swatches": {
+    "base": {
+      "background": "#fef5eb",
+      "color": "#682d64"
+    },
+    "mods": {
+      "background": "#682d64",
+      "color": "#fef5eb"
+    },
+    "accent": {
+      "background": "#e3229f",
+      "color": "#ffe600"
+    }
+  },
+  "override": {
+    "KC_ENT": "mods",
+    "KC_ESC": "mods",
+    "KC_GESC": "accent",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods",
+    "KC_SPC": "base"
+  }
+}

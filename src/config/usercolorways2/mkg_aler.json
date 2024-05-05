@@ -1,0 +1,85 @@
+{
+  "id": "mkg_aler",
+  "label": "Aler",
+  "manufacturer": "",
+  "designer": "KGJun",
+  "swatches": {
+    "base": {
+      "background": "#c7c2b8",
+      "color": "#a76350"
+    },
+    "mods": {
+      "background": "#bdb6a9",
+      "color": "#a76350"
+    },
+    "accent": {
+      "background": "#a76350",
+      "color": "#f7f2ea"
+    },
+    "swatch-1": {
+      "background": "#939ba2",
+      "color": "#eeeeee"
+    },
+    "swatch-2": {
+      "background": "#8a9588",
+      "color": "#eeeeee"
+    },
+    "swatch-3": {
+      "background": "#a49f81",
+      "color": "#eeeeee"
+    },
+    "swatch-4": {
+      "background": "#c19684",
+      "color": "#f7f2ea"
+    },
+    "swatch-5": {
+      "background": "#828a92",
+      "color": "#f7f2ea"
+    },
+    "swatch-6": {
+      "background": "#8b748e",
+      "color": "#f7f2ea"
+    },
+    "swatch-7": {
+      "background": "#ba8658",
+      "color": "#f7f2ea"
+    },
+    "swatch-8": {
+      "background": "#4e664c",
+      "color": "#f7f2ea"
+    },
+    "swatch-9": {
+      "background": "#997d74",
+      "color": "#f7f2ea"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_UP": "accent",
+    "KC_DOWN": "accent",
+    "KC_LEFT": "accent",
+    "KC_RGHT": "accent",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods",
+    "KC_BSLS": "swatch-1",
+    "KC_4": "swatch-1",
+    "KC_SLSH": "swatch-2",
+    "KC_DOT": "swatch-1",
+    "KC_GRAVE": "swatch-3",
+    "KC_PSCR": "swatch-3",
+    "KC_5": "swatch-4",
+    "KC_6": "swatch-5",
+    "KC_COMM": "swatch-6",
+    "KC_0": "swatch-6",
+    "KC_QUOT": "swatch-7",
+    "KC_SCLN": "swatch-8",
+    "KC_SLCK": "swatch-7",
+    "KC_PAUSE": "swatch-8",
+    "KC_9": "swatch-9",
+    "KC_SPC": "base"
+  }
+}
