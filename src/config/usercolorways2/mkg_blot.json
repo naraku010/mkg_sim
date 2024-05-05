@@ -1,0 +1,25 @@
+{
+  "id": "mkg_blot",
+  "label": "Blot",
+  "manufacturer": "",
+  "designer": "KGJun",
+  "swatches": {
+    "base": {
+      "background": "#60242c",
+      "color": "#f7f2ea"
+    },
+    "mods": {
+      "background": "#60242c",
+      "color": "#f7f2ea"
+    },
+    "accent": {
+      "background": "#60242c",
+      "color": "#f7f2ea"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent"
+  }
+}
