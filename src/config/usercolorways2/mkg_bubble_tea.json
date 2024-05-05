@@ -1,0 +1,70 @@
+{
+  "id": "mkg_bubble_tea",
+  "label": "Bubble Tea",
+  "manufacturer": "",
+  "designer": "Yeony",
+  "swatches": {
+    "base": {
+      "background": "#fff7e3",
+      "color": "#13120f"
+    },
+    "mods": {
+      "background": "#fce9cf",
+      "color": "#13120f"
+    },
+    "accent": {
+      "background": "#edab89",
+      "color": "#13120f"
+    },
+    "swatch-1": {
+      "background": "#cff1df",
+      "color": "#13120f"
+    },
+    "swatch-2": {
+      "background": "#fdf1be",
+      "color": "#13120f"
+    },
+    "swatch-3": {
+      "background": "#a8bbd0",
+      "color": "#13120f"
+    }
+  },
+  "override": {
+    "KC_SPC": "swatch-2",
+    "KC_F5": "base",
+    "KC_F6": "base",
+    "KC_F7": "base",
+    "KC_F8": "base",
+    "KC_ESC": "accent",
+    "KC_ENT": "accent",
+    "KC_PENT": "accent",
+    "KC_Z": "base",
+    "KC_X": "base",
+    "KC_A": "base",
+    "KC_S": "swatch-3",
+    "KC_O": "swatch-2",
+    "KC_J": "base",
+    "KC_I": "base",
+    "KC_R": "accent",
+    "KC_N": "swatch-1",
+    "KC_UP": "swatch-3",
+    "KC_LEFT": "swatch-1",
+    "KC_DOWN": "swatch-2",
+    "KC_RGHT": "accent",
+    "KC_PSCR": "accent",
+    "KC_SLCK": "swatch-2",
+    "KC_PAUSE": "swatch-3",
+    "KC_PGDN": "swatch-1",
+    "KC_LSFT": "swatch-1",
+    "KC_CAPS": "swatch-1",
+    "KC_F1": "mods",
+    "KC_F2": "mods",
+    "KC_F3": "mods",
+    "KC_F4": "mods",
+    "KC_F9": "mods",
+    "KC_F10": "mods",
+    "KC_F11": "mods",
+    "KC_F12": "mods"
+  }
+}
+
