@@ -101,7 +101,6 @@ import mkg_f12 from "../usercolorways2/mkg_sky_dolch.json"
 import mkg_f13 from "../usercolorways2/mkg_soju.json"
 import mkg_f14 from "../usercolorways2/mkg_soju_green_grape.json"
 import mkg_f15 from "../usercolorways2/mkg_soju_peach.json"
-import mkg_f16 from "../usercolorways2/mkg_spark_light_v2.json"
 import mkg_f17 from "../usercolorways2/mkg_spark_light_old.json"
 import mkg_f18 from "../usercolorways2/mkg_ta.json"
 import mkg_f19 from "../usercolorways2/mkg_tenshi_v2.json"
@@ -214,7 +213,6 @@ const USERCOLORWAYS = {
   mkg_soju                     : mkg_f13,
   mkg_soju_green_grape         : mkg_f14,
   mkg_soju_peach               : mkg_f15,
-  mkg_spark_light_v2           : mkg_f16,
   mkg_spark_light_old          : mkg_f17,
   mkg_ta_royal_alpha_typewriter: mkg_f18,
   mkg_tenshi_v2                : mkg_f19,
