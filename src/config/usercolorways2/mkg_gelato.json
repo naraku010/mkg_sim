@@ -1,0 +1,64 @@
+{
+  "id": "mkg_gelato",
+  "label": "Gelato",
+  "manufacturer": "",
+  "designer": "라너구",
+  "swatches": {
+    "base": {
+      "background": "#fcffff",
+      "color": "#4e342b"
+    },
+    "mods": {
+      "background": "#bfca88",
+      "color": "#fcffff"
+    },
+    "accent": {
+      "background": "#c8f0ec",
+      "color": "#fcffff"
+    },
+    "swatch-1": {
+      "background": "#e6aaa6",
+      "color": "#fcffff"
+    },
+    "swatch-2": {
+      "background": "#dec7da",
+      "color": "#fcffff"
+    },
+    "swatch-3": {
+      "background": "#edc69f",
+      "color": "#fcffff"
+    },
+    "swatch-4": {
+      "background": "#ebd688",
+      "color": "#eeeeee"
+    }
+  },
+  "override": {
+    "KC_ENT": "swatch-3",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_SPC": "base",
+    "KC_F5": "accent",
+    "KC_F6": "accent",
+    "KC_F7": "accent",
+    "KC_F8": "accent",
+    "KC_SCLN": "base",
+    "KC_TAB": "swatch-1",
+    "KC_DEL": "swatch-1",
+    "KC_END": "swatch-1",
+    "KC_PGDN": "swatch-1",
+    "KC_BSPC": "swatch-2",
+    "KC_INS": "swatch-2",
+    "KC_HOME": "swatch-2",
+    "KC_PGUP": "swatch-2",
+    "KC_PSCR": "accent",
+    "KC_SLCK": "accent",
+    "KC_PAUSE": "accent",
+    "KC_RSFT": "swatch-4",
+    "KC_CAPS": "swatch-3",
+    "KC_LSFT": "swatch-4",
+    "KC_UP": "swatch-4",
+    "KC_GRAVE": "swatch-2"
+  }
+}
+
