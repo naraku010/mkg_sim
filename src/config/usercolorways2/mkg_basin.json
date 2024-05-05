@@ -1,0 +1,105 @@
+{
+  "id": "mkg_basin",
+  "label": "Basin",
+  "manufacturer": "",
+  "designer": "",
+  "swatches": {
+    "base": {
+      "background": "#bbbbbb",
+      "color": "#333333"
+    },
+    "mods": {
+      "background": "#303948",
+      "color": "#cccccc"
+    },
+    "accent": {
+      "background": "#0fae98",
+      "color": "#eeeeee"
+    },
+    "swatch-1": {
+      "background": "#3c6f95",
+      "color": "#0fae98"
+    },
+    "swatch-2": {
+      "background": "#41638b",
+      "color": "#0fae98"
+    },
+    "swatch-3": {
+      "background": "#3c5978",
+      "color": "#0fae98"
+    },
+    "swatch-4": {
+      "background": "#31445b",
+      "color": "#0fae98"
+    },
+    "swatch-5": {
+      "background": "#303b4a",
+      "color": "#0fae98"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_F1": "swatch-1",
+    "KC_F2": "swatch-1",
+    "KC_F3": "swatch-1",
+    "KC_F4": "swatch-1",
+    "KC_F5": "swatch-1",
+    "KC_F6": "swatch-1",
+    "KC_F7": "swatch-1",
+    "KC_F8": "swatch-1",
+    "KC_F9": "swatch-1",
+    "KC_F10": "swatch-1",
+    "KC_F11": "swatch-1",
+    "KC_F12": "swatch-1",
+    "KC_GRAVE": "swatch-2",
+    "KC_1": "swatch-2",
+    "KC_2": "swatch-2",
+    "KC_3": "swatch-2",
+    "KC_4": "swatch-2",
+    "KC_5": "swatch-2",
+    "KC_6": "swatch-2",
+    "KC_7": "swatch-2",
+    "KC_8": "swatch-2",
+    "KC_9": "swatch-2",
+    "KC_MINS": "swatch-2",
+    "KC_0": "swatch-2",
+    "KC_EQL": "swatch-2",
+    "KC_Q": "swatch-3",
+    "KC_W": "swatch-3",
+    "KC_E": "swatch-3",
+    "KC_R": "swatch-3",
+    "KC_T": "swatch-3",
+    "KC_Y": "swatch-3",
+    "KC_U": "swatch-3",
+    "KC_I": "swatch-3",
+    "KC_O": "swatch-3",
+    "KC_P": "swatch-3",
+    "KC_LBRC": "swatch-3",
+    "KC_RBRC": "swatch-3",
+    "KC_BSLS": "swatch-3",
+    "KC_A": "swatch-4",
+    "KC_S": "swatch-4",
+    "KC_D": "swatch-4",
+    "KC_F": "swatch-4",
+    "KC_G": "swatch-4",
+    "KC_H": "swatch-4",
+    "KC_J": "swatch-4",
+    "KC_K": "swatch-4",
+    "KC_L": "swatch-4",
+    "KC_SCLN": "swatch-4",
+    "KC_QUOT": "swatch-4",
+    "KC_Z": "swatch-5",
+    "KC_X": "swatch-5",
+    "KC_C": "swatch-5",
+    "KC_V": "swatch-5",
+    "KC_B": "swatch-5",
+    "KC_N": "swatch-5",
+    "KC_M": "swatch-5",
+    "KC_COMM": "swatch-5",
+    "KC_DOT": "swatch-5",
+    "KC_RSFT": "mods",
+    "KC_SLSH": "swatch-5"
+  }
+}
