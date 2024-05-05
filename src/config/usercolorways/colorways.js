@@ -108,6 +108,8 @@ import mkg_f29 from "../usercolorways2/mkg_voc.json"
 import mkg_f30 from "../usercolorways2/mkg_prussian_alert.json"
 import mkg_f31 from "../usercolorways2/mkg_retro_dark_lights.json"
 import mkg_f32 from "../usercolorways2/mkg_bubble_tea.json"
+import mkg_f33 from "../usercolorways2/mkg_gladiator.json"
+
 
 const USERCOLORWAYS = {
   //APPEND
@@ -219,9 +221,10 @@ const USERCOLORWAYS = {
   mkg_olive_blanc         : mkg_f27,
   mkg_retro100            : mkg_f28,
   mkg_voc                 : mkg_f29,
-  mkg_prussian_alert        :  mkg_f30,
-  mkg_retro_dark_lights     :  mkg_f31,
-  mkg_bubble_tea            :  mkg_f32,
+  mkg_prussian_alert        : mkg_f30,
+  mkg_retro_dark_lights     : mkg_f31,
+  mkg_bubble_tea            : mkg_f32,
+  mkg_gladiator             : mkg_f33
 };
 
 export default USERCOLORWAYS;

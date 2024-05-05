@@ -42,7 +42,7 @@ export default function BoardOptions() {
     <>
       <CollapsibleSection title="기본설정" open={true}>
         <SelectField
-          label="하우징"
+          label="배열"
           selected={layout}
           options={[
             { label: "10% numpad", value: "numpad", img: icon10 },
@@ -71,7 +71,7 @@ export default function BoardOptions() {
         />
 
         <SelectField
-          label="키캡"
+          label="키캡 종류"
           selected={legendPrimaryStyle}
           options={[
             { label: "체리", value: "cherry" },
@@ -111,7 +111,7 @@ export default function BoardOptions() {
       <CollapsibleSection title="하우징 옵션" open={true}>
         <RadioField
           name="case_style"
-          label="하우징 스따일!"
+          label="하우징 타입"
           selected={style}
           options={[
             { label: "둥근놈", value: "CASE_1" },
@@ -136,29 +136,29 @@ export default function BoardOptions() {
           }}
         />
 
-        <div className={styles.row}>
-          <div className={styles.fieldColor}>
-            <label>하우징 색상</label>
-            <ColorPicker
-              color={primaryColor}
-              handler={(color) => {
-                dispatch(caseActions.setPrimaryColor(color.hex));
-                dispatch(caseActions.setAutoColor(false));
-              }}
-            />
-          </div>
+          <div className={styles.row}>
+              <div className={styles.fieldColor}>
+                  <label>하우징 색상</label>
+                  <ColorPicker
+                      color={primaryColor}
+                      handler={(color) => {
+                          dispatch(caseActions.setPrimaryColor(color.hex));
+                          dispatch(caseActions.setAutoColor(false));
+                      }}
+                  />
+              </div>
 
-          <div className={styles.fieldColor}>
-            <label>배경 색상</label>
-            <ColorPicker
-              color={sceneColor}
-              handler={(color) => {
-                dispatch(settingsActions.setSceneColor(color.hex));
-                dispatch(settingsActions.setSceneAutoColor(false));
-              }}
-            />
+              <div className={styles.fieldColor}>
+                  <label>배경 색상</label>
+                  <ColorPicker
+                      color={sceneColor}
+                      handler={(color) => {
+                          dispatch(settingsActions.setSceneColor(color.hex));
+                          dispatch(settingsActions.setSceneAutoColor(false));
+                      }}
+                  />
+              </div>
           </div>
-        </div>
       </CollapsibleSection>
     </>
   );
