@@ -113,6 +113,7 @@ import mkg_f34 from "../usercolorways2/mkg_gladiator_novelty.json"
 import mkg_f35 from "../usercolorways2/mkg_gelato.json"
 import mkg_f36 from "../usercolorways2/mkg_analog_dreams_dark.json"
 import mkg_f37 from "../usercolorways2/mkg_dreamscape.json"
+import mkg_f38 from "../usercolorways2/mkg_davy_jones.json"
 
 
 const USERCOLORWAYS = {
@@ -233,7 +234,7 @@ const USERCOLORWAYS = {
   mkg_gelato                : mkg_f35,
   mkg_analog_dreams_dark    : mkg_f36,
   mkg_dreamscape            : mkg_f37,
-
+  mkg_davy_jones            : mkg_f38,
 };
 
 export default USERCOLORWAYS;
