@@ -231,7 +231,7 @@ const USERCOLORWAYS = {
   mkg_soju_green_grape         : mkg_f14,
   mkg_soju_peach               : mkg_f15,
   mkg_spark_light_old          : mkg_f17,
-  mkg_ta_royal_alpha_typewriter: mkg_f18,
+  mkg_ta                       : mkg_f18,
   mkg_triumph_adler            : mkg_f20,
   mkg_tuzi                     : mkg_f21,
   mkg_vibrato                  : mkg_f22,
