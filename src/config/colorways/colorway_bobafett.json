@@ -4,25 +4,41 @@
   "manufacturer": "",
   "swatches": {
     "base": {
-      "background": "#dcdbd5",
+      "background": "#f7f2ea",
       "color": "#171718"
     },
     "mods": {
-      "background": "#798b79",
+      "background": "#849585",
       "color": "#171718"
     },
     "accent": {
-      "background": "#b85764",
+      "background": "#6c2830",
       "color": "#171718"
     },
     "accent2": {
-      "background": "#d3ae2c",
+      "background": "#f2cf21",
       "color": "#171718"
     }
   },
   "override": {
     "KC_ENT": "accent",
-    "KC_ESC": "accent2",
-    "KC_GESC": "accent2"
+    "KC_ESC": "accent",
+    "KC_GESC": "accent2",
+    "KC_F1": "accent2",
+    "KC_F2": "accent2",
+    "KC_F3": "accent2",
+    "KC_F4": "accent2",
+    "KC_F9": "accent2",
+    "KC_F10": "accent2",
+    "KC_F11": "accent2",
+    "KC_F12": "accent2",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods",
+    "KC_LEFT": "accent",
+    "KC_RGHT": "accent",
+    "KC_DOWN": "accent",
+    "KC_UP": "accent"
   }
 }

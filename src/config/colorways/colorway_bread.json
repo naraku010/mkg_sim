@@ -13,13 +13,17 @@
       "color": "#e6d2b5"
     },
     "accent": {
-      "background": "#af804f",
+      "background": "#724a24",
       "color": "#e6d2b5"
     }
   },
   "override": {
     "KC_ENT": "accent",
     "KC_ESC": "accent",
-    "KC_GESC": "accent"
+    "KC_GESC": "accent",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods"
   }
 }
