@@ -43,7 +43,6 @@ import colorway_pastel from "./colorway_pastel.json";
 import colorway_lunar from "./colorway_lunar.json";
 import colorway_islander from "./colorway_islander.json";
 import colorway_oblivion from "./colorway_oblivion.json";
-import colorway_deku from "./colorway_deku.json";
 import colorway_prepress from "./colorway_prepress.json";
 import colorway_sumi from "./colorway_sumi.json";
 import colorway_blue_samurai from "./colorway_blue_samurai.json";
@@ -117,7 +116,6 @@ const COLORWAYS = {
   lunar: colorway_lunar,
   islander: colorway_islander,
   oblivion: colorway_oblivion,
-  deku: colorway_deku,
   prepress: colorway_prepress,
   sumi: colorway_sumi,
   blue_samurai: colorway_blue_samurai,
