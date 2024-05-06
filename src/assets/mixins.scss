@@ -7,6 +7,13 @@
   text-transform: uppercase;
 }
 
+@mixin newSmallcaps() {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 @mixin button($background: $base, $color: black) {
   background: $background;
   color: $color;

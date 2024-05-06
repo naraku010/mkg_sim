@@ -4,7 +4,7 @@ import Button from "../elements/Button";
 import styles from "./ColorwayList.module.scss";
 import { useSelector, useDispatch } from "react-redux";
 import COLORWAYS from "../../config/colorways/colorways";
-import USERCOLORWAYS from "../../config/usercolorways/colorways";
+import { USERCOLORWAYS, USERCOLORWAYS_NEW } from "../../config/colorwayList";
 import CollapsibleSection from "../containers/CollapsibleSection";
 import SearchField from "../elements/SearchField";
 import ColorUtil from "../../util/color";
@@ -44,6 +44,11 @@ export default function ColorwayList(props) {
     <Colorway key={USERCOLORWAYS[s]?.id} colorway={USERCOLORWAYS[s]} />
   ));
 
+  const userNewColorwayTiles = filteredColorways(USERCOLORWAYS_NEW).map((s) => (
+    <Colorway key={USERCOLORWAYS_NEW[s]?.id} colorway={USERCOLORWAYS_NEW[s]} />
+  ));
+
+
   const addColorway = (e) => {
     let cw = ColorUtil.getColorwayTemplate(customColorways?.length + 1 || 1);
     dispatch(addCustomColorway(cw));
@@ -78,8 +83,14 @@ export default function ColorwayList(props) {
         <ul className={styles.list} aria-label="my custom colorways list">
           {customColorwayTiles}
         </ul>
+        <div aria-hidden="true" className={styles.newListLabel}>
+          <span>신상 색상</span>
+        </div>
+        <ul className={styles.list} aria-label="기키갤 제공 색상">
+          {userNewColorwayTiles}
+        </ul>
         <div aria-hidden="true" className={styles.listLabel}>
-          <span>기키갤 색상</span>
+          <span>업로드 색상</span>
         </div>
         <ul className={styles.list} aria-label="기키갤 제공 색상">
           {userColorwayTiles}

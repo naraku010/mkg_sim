@@ -95,7 +95,7 @@ export default class SceneManager extends Collection {
     });
 
     subscribe("colorways.active", (state) => {
-      this.updateDeskMatColor();
+      this.updateDeskMatColor(state);
     });
     subscribe("case.layout", (state) => {
       this.updateDeskMatLayout(state.case.layout);
@@ -244,7 +244,7 @@ export default class SceneManager extends Collection {
     //   }
     // });
   }
-  updateDeskMatColor() {
+  updateDeskMatColor(st) {
     const nc = ColorUtil.colorway;
     this.deskmat.traverse((child) => {
       if (child.isMesh) {
@@ -254,6 +254,7 @@ export default class SceneManager extends Collection {
           child.material.color.set(nc.swatches.base.color);
       }
     });
+    this.deskmat.needsUpdate = true;
   }
   mouseClick(e) {
     if (!this.editing) return;

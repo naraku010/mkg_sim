@@ -1,5 +1,5 @@
 import COLORWAYS from "../config/colorways/colorways";
-import USERCOLORWAYS from "../config/usercolorways/colorways";
+import {USERCOLORWAYS,USERCOLORWAYS_NEW} from "../config/colorwayList";
 import initial_settings from "../config/settings_user_default.json";
 import { updateCustomColorway } from "../store/slices/colorways";
 import * as colorConvert from "color-convert";
@@ -62,7 +62,7 @@ export default class ColorUtil {
 
   static getColorway(cw_name) {
     cw_name = cw_name || initial_settings.colorways.active;
-    let cw = COLORWAYS[cw_name] || USERCOLORWAYS[cw_name];
+    let cw = COLORWAYS[cw_name] || USERCOLORWAYS[cw_name] || USERCOLORWAYS_NEW[cw_name];
     return cw || this.getUserColorway(cw_name) || "";
   }
 
