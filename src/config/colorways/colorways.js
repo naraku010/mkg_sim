@@ -62,7 +62,6 @@ import colorway_modern_dolch_light from "./colorway_modern_dolch_light.json";
 import colorway_miami from "./colorway_miami.json";
 import colorway_muted from "./colorway_muted.json";
 import colorway_laser from "./colorway_laser.json";
-import colorway_hyperfuse from "./colorway_hyperfuse.json";
 import colorway_honeywell from "./colorway_honeywell.json";
 import colorway_demonic from "./colorway_demonic.json";
 import colorway_nuclear_data from "./colorway_nuclear_data.json";
@@ -135,7 +134,6 @@ const COLORWAYS = {
   miami: colorway_miami,
   muted: colorway_muted,
   laser: colorway_laser,
-  hyperfuse: colorway_hyperfuse,
   honeywell: colorway_honeywell,
   demonic: colorway_demonic,
   nuclear_data: colorway_nuclear_data,
