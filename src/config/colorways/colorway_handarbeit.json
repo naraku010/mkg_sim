@@ -114,6 +114,9 @@
     "KC_F7": "accent6",
     "KC_F8": "accent6",
     "KC_PENT": "accent7",
-    "KC_PDOT": "accent8"
+    "KC_PDOT": "accent8",
+    "KC_LGUI": "base",
+    "KC_RGUI": "base",
+    "KC_APP": "base"
   }
 }

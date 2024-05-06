@@ -1,6 +1,7 @@
 {
   "id": "sa",
   "fontFamily": "Varela Round",
+  "subFontFamily": "Varela Round",
   "subsSupported": false,
   "centered": true,
   "encoded": false,

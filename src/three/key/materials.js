@@ -63,13 +63,18 @@ const getMaterialSet = (opts, offset) => {
   let key = `mat${opts.background}`;
   let legendTexture = keyTexture(opts);
   let normalMap = currentState.keys.legendType === 'pbt' ? pbtNormalMap : absNormalMap;
+  normalMap.wrapS = normalMap.wrapT = THREE.RepeatWrapping;
+
   let top = new THREE.MeshStandardMaterial({
     map: legendTexture,
     normalMap: normalMap,
     normalMapType: 1,
+    aoMap: ambiantOcclusionMap,
+    aoMapIntensity: .4,
     // lightMap: lightMap,
     // lightMapIntensity: 0,
   });
+  top.needsUpdate = true
   top.map.minFilter = THREE.LinearFilter;
 
   // if (computed_materials[key]) {

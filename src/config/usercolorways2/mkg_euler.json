@@ -1,0 +1,30 @@
+{
+  "id": "mkg_euler",
+  "label": "Euler",
+  "manufacturer": "",
+  "designer": "Verdi",
+  "swatches": {
+    "base": {
+      "background": "#2a292a",
+      "color": "#f7f2ea"
+    },
+    "mods": {
+      "background": "#171718",
+      "color": "#f7f2ea"
+    },
+    "accent": {
+      "background": "#858583",
+      "color": "#f7f2ea"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods"
+  }
+}
+

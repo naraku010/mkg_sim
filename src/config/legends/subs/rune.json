@@ -1,0 +1,32 @@
+{
+  "fontFamily": "rune",
+  "fontSizeMultiplier": 0.9,
+  "chars": {
+    "KC_A": "A",
+    "KC_B": "B",
+    "KC_C": "C",
+    "KC_D": "D",
+    "KC_E": "E",
+    "KC_F": "F",
+    "KC_G": "G",
+    "KC_H": "H",
+    "KC_I": "I",
+    "KC_J": "J",
+    "KC_K": "K",
+    "KC_L": "L",
+    "KC_M": "M",
+    "KC_N": "N",
+    "KC_O": "O",
+    "KC_P": "P",
+    "KC_Q": "Q",
+    "KC_R": "R",
+    "KC_S": "S",
+    "KC_T": "T",
+    "KC_U": "U",
+    "KC_V": "V",
+    "KC_W": "W",
+    "KC_X": "X",
+    "KC_Y": "Y",
+    "KC_Z": "Z"
+  }
+}

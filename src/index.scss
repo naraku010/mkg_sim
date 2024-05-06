@@ -2,9 +2,15 @@
 
 @font-face {
   font-family: "legends";
-  src: url("/fonts/legends.woff") format("woff");
+  src: url("./assets/fonts/legends.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+@font-face {
+  font-family: "rune";
+  src: url("./assets/fonts/rune.woff") format("woff");
+  //font-weight: normal;
+  //font-style: normal;
 }
 *,
 *:before,

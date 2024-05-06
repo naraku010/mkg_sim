@@ -97,6 +97,7 @@ export default function BoardOptions() {
           selected={legendSecondaryStyle}
           options={[
             { label: "기본", value: "" },
+            { label: "룬문자", value: "rune" },
             { label: "쭝꾺어", value: "chinese" },
             { label: "한글", value: "hangul" },
             { label: "히라가나", value: "hiragana" },

@@ -1,6 +1,7 @@
 {
   "id": "cherry",
   "fontFamily": "legends",
+  "subFontFamily": "legends",
   "subsSupported": true,
   "centered": false,
   "encoded": true,

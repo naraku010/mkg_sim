@@ -29,6 +29,17 @@
     "KC_LALT": "accent2",
     "KC_LGUI": "accent2",
     "KC_LCTL": "accent2",
-    "KC_LSFT": "accent2"
+    "KC_LSFT": "accent2",
+    "KC_LEFT": "accent",
+    "KC_DOWN": "accent",
+    "KC_UP": "accent",
+    "KC_RGHT": "accent",
+    "KC_PENT": "accent",
+    "KC_ENT": "accent",
+    "KC_SPC": "accent",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods"
   }
 }

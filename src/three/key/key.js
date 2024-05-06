@@ -64,7 +64,7 @@ export class Key {
     this.cap = new THREE.Mesh(geometry, materials);
     this.cap.name = this.options.code;
     KeyUtil.setKeyLayers(this.options.code, this.cap);
-    if(this.cap.rotation._y == 0 && Math.abs(this.geometryOptions.angle) > 0) {
+    if(this.cap.rotation._y === 0 && Math.abs(this.geometryOptions.angle) > 0) {
       this.cap.rotateY(this.geometryOptions.angle);
     }
     setKeyMaterialState(

@@ -133,6 +133,7 @@ import mkg_g11 from "../usercolorways2/mkg_spark_mod.json"
 import mkg_g12 from "../usercolorways2/mkg_yeeti.json"
 import mkg_g13 from "../usercolorways2/mkg_olive_noir.json"
 import mkg_g14 from "../usercolorways2/mkg_classic_beige.json"
+import mkg_g15 from "../usercolorways2/mkg_euler.json"
 
 
 const USERCOLORWAYS = {
@@ -271,6 +272,7 @@ const USERCOLORWAYS = {
   mkg_yeeti             : mkg_g12,
   mkg_olive_noir        : mkg_g13,
   mkg_classic_beige     : mkg_g14,
+  mkg_euler             : mkg_g15,
 };
 
 export default USERCOLORWAYS;
