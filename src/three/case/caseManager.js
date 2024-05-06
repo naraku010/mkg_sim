@@ -57,6 +57,14 @@ const shadow_paths = {
 };
 
 const MATERIAL_OPTIONS = {
+  tra: {
+    metalness: 0,
+    roughness: 1,
+    clearcoat: 0,
+    aoMapIntensity: 0.1,
+    clearcoatRoughness: 1,
+    lightMapIntensity: 0.2,
+  },
   matte: {
     metalness: 0,
     roughness: 1,
@@ -293,6 +301,10 @@ export default class CaseManager {
       options.envMap = this.cubemap;
       options.roughnessMap = this.roughnessMap;
       options.map = this.albedoMap;
+    }
+    if (finish === "tra") {
+      options.transparent = true;
+      options.opacity = 0.93;
     }
     //create materials
     let materialPrimary = new THREE.MeshPhysicalMaterial(

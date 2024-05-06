@@ -129,7 +129,8 @@ export default function BoardOptions() {
           label="하우징 재질"
           selected={material}
           options={[
-            { label: "전기영동", value: "matte" },
+            { label: "PC", value: "tra" },
+            { label: "매트", value: "matte" },
             { label: "무광", value: "brushed" },
             { label: "유광", value: "glossy" },
           ]}
