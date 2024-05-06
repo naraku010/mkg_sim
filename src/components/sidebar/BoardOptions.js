@@ -87,6 +87,7 @@ export default function BoardOptions() {
             options={[
                 { label: "PBT", value: "pbt" },
                 { label: "ABS", value: "abs" },
+                { label: "투명", value: "trn" },
             ]}
             handler={(val) => {
                 dispatch(keyActions.setLegendType(val));

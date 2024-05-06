@@ -74,6 +74,7 @@ const getMaterialSet = (opts, offset) => {
     // lightMap: lightMap,
     // lightMapIntensity: 0,
   });
+
   top.needsUpdate = true
   top.map.minFilter = THREE.LinearFilter;
 
@@ -89,7 +90,11 @@ const getMaterialSet = (opts, offset) => {
     // lightMapIntensity: 0,
     color: opts.background
   });
-  side.needsUpdate = true;
+  if( currentState.keys.legendType === 'trn') {
+    top.transparent = side.transparent = true;
+    top.opacity = side.opacity = 0.93;
+  }
+  // side.needsUpdate = true;
   computed_materials[key] = side;
   return [side, top];
 };
