@@ -150,11 +150,11 @@ export default class CaseManager {
       // this.createBadge();
       this.createPlate();
     });
-    subscribe("colorways.active", (state) => {
-      const nc = ColorUtil.colorway;
-      this.color = nc.swatches.base.background;
-      this.updateCaseMaterial();
-    });
+    // subscribe("colorways.active", (state) => {
+    //   const nc = ColorUtil.colorway;
+    //   this.color = nc.swatches.base.background;
+    //   this.updateCaseMaterial();
+    // });
     subscribe("colorways.active", () => {
       this.updateLightMap();
     });
