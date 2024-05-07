@@ -136,9 +136,16 @@ import mkg_g15 from "./usercolorways2/mkg_euler.json"
 import mkg_g16 from "./usercolorways2/mkg_pc_neon_lights.json"
 import mkg_g17 from "./usercolorways2/mkg_rubrehose.json"
 
+import mkg_h1 from "./usercolorways2/mkg_deepwell.json"
+import mkg_h2 from "./usercolorways2/mkg_nerve_acero.json"
+import mkg_h3 from "./usercolorways2/mkg_nerve_neon.json"
+
 export const USERCOLORWAYS_NEW = {
   mkg_beloved           : mkg_m12,
   mkg_rubrehose         : mkg_g17,
+  mkg_deepwell         : mkg_h1,
+  mkg_nerve_acero         : mkg_h2,
+  mkg_nerve_neon         : mkg_h3,
 }
 
 export const USERCOLORWAYS = {
