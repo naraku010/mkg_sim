@@ -22,10 +22,16 @@ import icon60hhkb from "../../assets/icons/icon-60-hhkb.png";
 import * as caseActions from "../../store/slices/case";
 import * as settingsActions from "../../store/slices/settings";
 import * as keyActions from "../../store/slices/keys";
-
+import {selectPaintWithKeys, togglePaintWithKeys} from "../../store/slices/settings";
+import ToggleField from "../elements/ToggleField";
+import {
+    toggleMat,
+    selectMat
+} from "../../store/slices/settings";
 export default function BoardOptions() {
     const dispatch = useDispatch();
 
+    const hasMat = useSelector(selectMat);
     const layout = useSelector(caseActions.selectLayout);
     const legendType = useSelector(keyActions.selectLegendType);
     const legendPrimaryStyle = useSelector(keyActions.selectLegendPrimaryStyle);
@@ -69,7 +75,6 @@ export default function BoardOptions() {
                         dispatch(caseActions.setLayout(val));
                     }}
                 />
-
                 <SelectField
                     label="키캡 종류"
                     selected={legendPrimaryStyle}
@@ -107,6 +112,11 @@ export default function BoardOptions() {
                     handler={(val) => {
                         dispatch(keyActions.setLegendSecondaryStyle(val));
                     }}
+                />
+                <ToggleField
+                    value={hasMat}
+                    label={"장패드 토글"}
+                    handler={() => dispatch(toggleMat())}
                 />
             </CollapsibleSection>
 

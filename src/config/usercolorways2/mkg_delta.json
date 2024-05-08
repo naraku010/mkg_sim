@@ -1,0 +1,29 @@
+{
+  "id": "mkg_delta",
+  "label": "Delta",
+  "manufacturer": "",
+  "designer": "KGJun",
+  "swatches": {
+    "base": {
+      "background": "#f7f2ea",
+      "color": "#171718"
+    },
+    "mods": {
+      "background": "#171718",
+      "color": "#8cd7ce"
+    },
+    "accent": {
+      "background": "#8cd7ce",
+      "color": "#171718"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods"
+  }
+}

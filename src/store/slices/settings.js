@@ -5,6 +5,9 @@ export const settingsSlice = createSlice({
   name: "settings",
   initialState: initial_settings.settings,
   reducers: {
+    toggleMat: (state, action) => {
+      state.mat = !state.mat;
+    },
     setMode: (state, action) => {
       state.mode = action.payload;
     },
@@ -39,6 +42,7 @@ export const settingsSlice = createSlice({
 });
 
 export const {
+  toggleMat,
   setMode,
   toggleMute,
   toggleDebug,
@@ -50,7 +54,7 @@ export const {
   toggleSceneAutoColor,
   setSceneAutoColor,
 } = settingsSlice.actions;
-
+export const selectMat = (state) => state.settings.mat;
 export const selectMode = (state) => state.settings.mode;
 export const selectMute = (state) => state.settings.mute;
 export const selectDebug = (state) => state.settings.debug;

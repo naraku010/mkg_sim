@@ -100,6 +100,9 @@ export default class SceneManager extends Collection {
     subscribe("case.layout", (state) => {
       this.updateDeskMatLayout(state.case.layout);
     });
+    subscribe("settings.mat", (state) => {
+      this.updateDeskMat(state);
+    });
   }
   get w() {
     return this.el.offsetWidth;
@@ -183,6 +186,15 @@ export default class SceneManager extends Collection {
     // slh.update();
     // plh.update();
     // this.scene.add(slh, plh);
+  }
+  updateDeskMat(state) {
+    console.log(state.settings.mat);
+    this.deskmat.traverse((child) => {
+      if (child.isMesh) {
+        child.visible = state.settings.mat;
+      }
+    });
+    this.deskmat.needsUpdate = true;
   }
   updateDeskMatLayout(layout) {
     let sf = 10;

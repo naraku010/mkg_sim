@@ -1,5 +1,6 @@
 {
   "settings": {
+    "mat": true,
     "mute": true,
     "debug": false,
     "testing": false,
