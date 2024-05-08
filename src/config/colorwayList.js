@@ -139,6 +139,9 @@ import mkg_g17 from "./usercolorways2/mkg_rubrehose.json"
 import mkg_h1 from "./usercolorways2/mkg_deepwell.json"
 import mkg_h2 from "./usercolorways2/mkg_nerve_acero.json"
 import mkg_h3 from "./usercolorways2/mkg_nerve_neon.json"
+import mkg_h4 from "./usercolorways2/mkg_aifei_love_story.json"
+import mkg_h5 from "./usercolorways2/mkg_black_snail_beige_alert.json"
+import mkg_h6 from "./usercolorways2/mkg_domikey_astronaut.json"
 
 export const USERCOLORWAYS_NEW = {
   mkg_beloved           : mkg_m12,
@@ -146,6 +149,9 @@ export const USERCOLORWAYS_NEW = {
   mkg_deepwell         : mkg_h1,
   mkg_nerve_acero         : mkg_h2,
   mkg_nerve_neon         : mkg_h3,
+  mkg_aifei_love_story   : mkg_h4,
+  mkg_black_snail_beige_alert   : mkg_h5,
+  mkg_domikey_astronaut   : mkg_h6,
 }
 
 export const USERCOLORWAYS = {

@@ -1,0 +1,46 @@
+{
+  "id": "mkg_black_snail_beige_alert",
+  "label": "Black Snail (Beige Alert)",
+  "manufacturer": "",
+  "designer": "KGJun",
+  "swatches": {
+    "base": {
+      "background": "#171718",
+      "color": "#d9d2c0"
+    },
+    "mods": {
+      "background": "#171718",
+      "color": "#d9d2c0"
+    },
+    "accent": {
+      "background": "#171718",
+      "color": "#d9d2c0"
+    },
+    "swatch-1": {
+      "background": "#d9d2c0",
+      "color": "#171718"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_GRAVE": "swatch-1",
+    "KC_1": "swatch-1",
+    "KC_2": "swatch-1",
+    "KC_3": "swatch-1",
+    "KC_4": "swatch-1",
+    "KC_5": "swatch-1",
+    "KC_6": "swatch-1",
+    "KC_7": "swatch-1",
+    "KC_8": "swatch-1",
+    "KC_9": "swatch-1",
+    "KC_0": "swatch-1",
+    "KC_MINS": "swatch-1",
+    "KC_EQL": "swatch-1",
+    "KC_BSPC": "swatch-1",
+    "KC_INS": "swatch-1",
+    "KC_HOME": "swatch-1",
+    "KC_PGUP": "swatch-1"
+  }
+}
