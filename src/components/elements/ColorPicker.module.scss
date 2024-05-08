@@ -26,7 +26,8 @@
 
 .cardSwatch {
   overflow: hidden;
-  min-width: 5em;
+  max-width: 4em;
+  min-width: 4em;
   &:focus {
     text-decoration: underline;
   }

@@ -130,8 +130,11 @@ export class Key {
     return this.swatch.background;
   }
   // color of legend on cap
-  get foregroundColor() {
+  get legendColor() {
     return this.swatch.color;
+  }
+  get subLegendColor() {
+    return this.swatch.subColor || this.swatch.color;
   }
   // get the color group for this key (base, mods, accent, etc)
   get swatch() {
@@ -155,7 +158,8 @@ export class Key {
       sub: this.sub,
       legend: this.legend,
       code: this.options.code,
-      color: this.foregroundColor,
+      color: this.legendColor,
+      subColor: this.subLegendColor,
       background: this.backgroundColor,
       isIsoEnt: this.is_iso_enter,
     };

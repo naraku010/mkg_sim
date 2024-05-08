@@ -47,23 +47,34 @@ export default function Swatch(props) {
       <div className={styles.colors}>
         <div className={styles.color}>
           <ColorPicker
-            isSwatch={true}
-            label="Background"
-            color={props.swatch.background}
-            handler={(color) => {
-              handelChange(color, "background");
-            }}
+              isSwatch={true}
+              label="Back ground"
+              color={props.swatch.background}
+              handler={(color) => {
+                handelChange(color, "background");
+              }}
           />
         </div>
 
         <div className={styles.color}>
           <ColorPicker
-            isSwatch={true}
-            label="Legend"
-            color={props.swatch.color}
-            handler={(color) => {
-              handelChange(color, "color");
-            }}
+              isSwatch={true}
+              label="Legend"
+              color={props.swatch.color}
+              handler={(color) => {
+                handelChange(color, "color");
+              }}
+          />
+        </div>
+
+        <div className={styles.color}>
+          <ColorPicker
+              isSwatch={true}
+              label="Sub Legend"
+              color={props.swatch.subColor || props.swatch.color}
+              handler={(color) => {
+                handelChange(color, "subColor");
+              }}
           />
         </div>
       </div>

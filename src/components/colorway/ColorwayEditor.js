@@ -76,7 +76,7 @@ export default function ColorwayEditor() {
 
   const addSwatch = () => {
     let updatedColorway = JSON.parse(JSON.stringify(colorway));
-    let new_swatch_id = "swatch-" + (Object.keys(colorway.swatches).length - 2);
+    let new_swatch_id = "swatch" + (Object.keys(colorway.swatches).length - 2);
     updatedColorway.swatches[new_swatch_id] = ColorUtil.getRandomAccent();
     dispatch(updateCustomColorway(updatedColorway));
     dispatch(setActiveSwatch(new_swatch_id));
@@ -147,7 +147,7 @@ export default function ColorwayEditor() {
             </p>
 
             <ul>{editableSwatchElements}</ul>
-            <Button isText={false} title="Add Swatch" handler={addSwatch} />
+            <Button isText={false} title="추가" handler={addSwatch} />
           </fieldset>
         </div>
       </CollapsibleSection>
