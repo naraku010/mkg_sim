@@ -1,0 +1,29 @@
+{
+  "id": "gmk_ascii",
+  "label": "Ascii",
+  "manufacturer": "GMK",
+  "designer": "홋치",
+  "swatches": {
+    "base": {
+      "background": "#5f676a",
+      "color": "#e1e0e1"
+    },
+    "mods": {
+      "background": "#5f676a",
+      "color": "#e1e0e1"
+    },
+    "accent": {
+      "background": "#5f676a",
+      "color": "#e1e0e1"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_LEFT": "mods",
+    "KC_UP": "mods",
+    "KC_DOWN": "mods",
+    "KC_RGHT": "mods"
+  }
+}
