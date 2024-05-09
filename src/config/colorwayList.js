@@ -157,6 +157,7 @@ import mkg_i10 from "./usercolorways3/mkg_retro_dark_lights_r2.json"
 import mkg_i11 from "./usercolorways3/mkg_tempest.json"
 import mkg_i12 from "./usercolorways3/mkg_lofi.json"
 import mkg_i13 from "./usercolorways3/mkg_crosshair.json"
+import mkg_i14 from "./usercolorways3/mkg_cocogoat.json"
 
 
 export const USERCOLORWAYS_NEW = {
@@ -172,6 +173,7 @@ export const USERCOLORWAYS_NEW = {
     mkg_tempest: mkg_i11,
     mkg_lofi: mkg_i12,
     mkg_crosshair: mkg_i13,
+    mkg_cocogoat: mkg_i14,
 }
 
 export const USERCOLORWAYS = {
