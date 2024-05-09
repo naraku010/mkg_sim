@@ -68,7 +68,7 @@ export default (layout, color) => {
   //create mesh
   mesh = new THREE.Mesh(
     geometry,
-    new THREE.MeshLambertMaterial({ color: color })
+    new THREE.MeshBasicMaterial({ color: color })
   );
   mesh.name = "CASE";
   mesh.rotation.x = Math.PI / 2;

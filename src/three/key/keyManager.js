@@ -4,9 +4,10 @@ import KeyUtil from "../../util/keyboard";
 import ColorUtil from "../../util/color";
 import KEYMAPS from "../../config/keymaps/keymaps";
 import LAYOUTS from "../../config/layouts/layouts";
-import { subscribe } from "redux-subscriber";
-import { initial_settings } from "../../store/startup";
-import { Key, KEYSTATES } from "./key";
+import {subscribe} from "redux-subscriber";
+import {initial_settings} from "../../store/startup";
+import {Key, KEYSTATES} from "./key";
+import {Switch, SWITCHSTATE} from "./switch";
 import Collection from "../collection";
 
 export default class KeyManager extends Collection {
@@ -73,16 +74,20 @@ export default class KeyManager extends Collection {
     document.addEventListener("keydown", (e) => {
       let code = KeyUtil.getKeyCode(e.code);
       let key = this.getKey(code);
+      let s = this.getKey(code + "_s");
       if (!key) return;
       if (this.editing && this.paintWithKeys) {
         this.paintKey(code);
       }
+      s.setState(SWITCHSTATE.MOVING_DOWN);
       key.setState(KEYSTATES.MOVING_DOWN);
     });
     document.addEventListener("keyup", (e) => {
       let code = KeyUtil.getKeyCode(e.code);
       let key = this.getKey(code);
+      let s = this.getKey(code + "_s");
       if (!key) return;
+      s.setState(SWITCHSTATE.MOVING_UP);
       key.setState(KEYSTATES.MOVING_UP);
     });
   }
@@ -94,8 +99,12 @@ export default class KeyManager extends Collection {
   }
 
   paintKey(code) {
-    ColorUtil.addCodeToOverride(code);
-    this.getKey(code).updateColors();
+    this.components.forEach((x) => {
+      if(x.code === code) {
+        ColorUtil.addCodeToOverride(x.code);
+        x.updateColors();
+      }
+    });
   }
 
   removeKey(key) {
@@ -139,13 +148,20 @@ export default class KeyManager extends Collection {
         code: code,
       });
       this.add(K);
+      let S = new Switch({
+        dimensions: dimensions,
+        container: this.group,
+        isIso: this.layoutFull?.is_iso,
+        colorway: this.colorway,
+        code: code + "_s",
+      });
+      this.add(S);
       seen.push(code);
     }
   }
 
   getKey(code) {
-    let k = this.components.find((x) => x.code === code);
-    return k;
+    return this.components.find((x) => x.code === code);
   }
 
   matchesSize(k, dimensions) {

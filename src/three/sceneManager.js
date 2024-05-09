@@ -2,16 +2,11 @@ import * as THREE from "three";
 import Collection from "./collection";
 import {subscribe} from "redux-subscriber";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js";
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 import {disableHighlight, enableHighlight} from "./key/materials";
 import ThreeUtil from "../util/three";
 import DestmatModel from "../assets/models/scene.glb";
-import DestmatImg from "../assets/models/deskmatGraphic.png";
-import LIGHT_IMG from "../assets/texture/disturb.jpg"
 import ColorUtil from "../util/color";
-import KeyUtil from "../util/keyboard";
-import LAYOUTS from "../config/layouts/layouts";
-import {SpotLightHelper} from "three";
 //import { CSS3DRenderer } from "three/examples/jsm/renderers/CSS3DRenderer.js";
 
 export default class SceneManager extends Collection {
@@ -155,19 +150,11 @@ export default class SceneManager extends Collection {
     const curr = this;
     const loader = new GLTFLoader();
     loader.load(DestmatModel, async function ( gltf ) {
-      const textureLoader = new THREE.TextureLoader();
-      const texture = await textureLoader.loadAsync(DestmatImg);
-      texture.flipY = false;
-      texture.needsUpdate = true;
-
       const d = gltf.scene;
       d.traverse((child) => {
         const nc = ColorUtil.colorway;
         if (child.isMesh) {
-          child.material.map = texture;
           // child.material.map.encoding = THREE.sRGBEncoding;
-          child.material.map.flipY = false;
-          child.material.needsUpdate = false;
           if(child.name === 'Deskmat_-_Mat')
             child.material.color.set(nc.swatches.base.background);
           else

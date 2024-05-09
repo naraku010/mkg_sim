@@ -92,7 +92,7 @@ const getMaterialSet = (opts, offset) => {
   });
   if( currentState.keys.legendType === 'trn') {
     top.transparent = side.transparent = true;
-    top.opacity = side.opacity = 0.93;
+    top.opacity = side.opacity = 0.75;
   }
   // side.needsUpdate = true;
   computed_materials[key] = side;
