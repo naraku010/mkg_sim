@@ -18,7 +18,7 @@ export default class ThreeUtil {
   //merge geometries of meshes
   static mergeMeshes(meshes) {
     let material = meshes[0].material;
-    let combined = new THREE.Geometry();
+    let combined = new THREE.BufferGeometry();
     for (var i = 0; i < meshes.length; i++) {
       meshes[i].updateMatrix();
       combined.merge(meshes[i].geometry, meshes[i].matrix);

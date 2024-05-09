@@ -145,7 +145,36 @@ import mkg_h6 from "./usercolorways2/mkg_domikey_astronaut.json"
 import mkg_h7 from "./usercolorways2/mkg_delta.json"
 import mkg_h8 from "./usercolorways2/mkg_delta_dark.json"
 
+import mkg_i1  from "./usercolorways3/mkg_blue_screen.json"
+import mkg_i2  from "./usercolorways3/mkg_coffe_latte.json"
+import mkg_i3  from "./usercolorways3/mkg_chladni.json"
+import mkg_i4  from "./usercolorways3/mkg_kura.json"
+import mkg_i6  from "./usercolorways3/mkg_zx.json"
+import mkg_i7  from "./usercolorways3/mkg_griseann_2.json"
+import mkg_i8  from "./usercolorways3/mkg_lucy.json"
+import mkg_i9  from "./usercolorways3/mkg_mystic_dao.json"
+import mkg_i10 from "./usercolorways3/mkg_retro_dark_lights_r2.json"
+import mkg_i11 from "./usercolorways3/mkg_tempest.json"
+import mkg_i12 from "./usercolorways3/mkg_lofi.json"
+import mkg_i13 from "./usercolorways3/mkg_crosshair.json"
+
+
 export const USERCOLORWAYS_NEW = {
+  mkg_blue_screen : mkg_i1,
+  mkg_coffe_latte : mkg_i2,
+  mkg_chladni : mkg_i3,
+  mkg_kura : mkg_i4,
+  mkg_zx : mkg_i6,
+  mkg_griseann_2 : mkg_i7,
+  mkg_lucy : mkg_i8,
+  mkg_mystic_dao : mkg_i9,
+  mkg_retro_dark_lights_r2 : mkg_i10,
+  mkg_tempest : mkg_i11,
+  mkg_lofi : mkg_i12,
+  mkg_crosshair : mkg_i13,
+}
+
+export const USERCOLORWAYS = {
   mkg_beloved           : mkg_m12,
   mkg_rubrehose         : mkg_g17,
   mkg_deepwell         : mkg_h1,
@@ -156,9 +185,6 @@ export const USERCOLORWAYS_NEW = {
   mkg_domikey_astronaut   : mkg_h6,
   mkg_delta   : mkg_h7,
   mkg_delta_dark   : mkg_h8,
-}
-
-export const USERCOLORWAYS = {
   //APPEND
   mkg_ntd: mkg_ntd,
   mkg_masterpiece: mkg_m1,
