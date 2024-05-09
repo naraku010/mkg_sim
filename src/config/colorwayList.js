@@ -146,7 +146,7 @@ import mkg_h7 from "./usercolorways2/mkg_delta.json"
 import mkg_h8 from "./usercolorways2/mkg_delta_dark.json"
 
 import mkg_i1  from "./usercolorways3/mkg_blue_screen.json"
-import mkg_i2  from "./usercolorways3/mkg_coffe_latte.json"
+import mkg_i2  from "./usercolorways3/mkg_coffee_latte.json"
 import mkg_i3  from "./usercolorways3/mkg_chladni.json"
 import mkg_i4  from "./usercolorways3/mkg_kura.json"
 import mkg_i6  from "./usercolorways3/mkg_zx.json"
@@ -161,7 +161,7 @@ import mkg_i13 from "./usercolorways3/mkg_crosshair.json"
 
 export const USERCOLORWAYS_NEW = {
   mkg_blue_screen : mkg_i1,
-  mkg_coffe_latte : mkg_i2,
+  mkg_coffee_latte : mkg_i2,
   mkg_chladni : mkg_i3,
   mkg_kura : mkg_i4,
   mkg_zx : mkg_i6,
