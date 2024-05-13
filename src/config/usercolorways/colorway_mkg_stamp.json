@@ -33,7 +33,7 @@
     "KC_LEFT": "accent",
     "KC_RGHT": "accent",
     "KC_TAB": "base",
-    "KC_GRV": "mods",
+    "KC_GRAVE": "mods",
     "KC_1": "mods",
     "KC_2": "mods",
     "KC_3": "mods",

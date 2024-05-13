@@ -47,6 +47,6 @@
   "KC_DOWN": "mods",
   "KC_RGHT": "accent3",
   "KC_PSCR": "accent4",
-  "KC_PAUS": "accent5"
+  "KC_PAUSE": "accent5"
  }
 }

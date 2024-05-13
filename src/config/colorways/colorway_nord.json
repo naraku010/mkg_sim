@@ -56,7 +56,7 @@
   "KC_APP": "accent4",
   "KC_RSFT": "accent",
   "KC_LSFT": "accent",
-  "KC_GRV": "mods",
+  "KC_GRAVE": "mods",
   "KC_BSLS": "mods",
   "KC_SPC": "base"
  }

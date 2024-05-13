@@ -33,7 +33,7 @@
   "KC_F11": "mods",
   "KC_F12": "mods",
   "KC_SPC": "base",
-  "KC_GRV": "mods",
+  "KC_GRAVE": "mods",
   "KC_BSLS": "mods"
  }
 }

@@ -111,6 +111,6 @@
   "KC_LEFT": "accent5",
   "KC_UP": "accent4",
   "KC_DOWN": "accent6",
-  "KC_GRV": "accent5"
+  "KC_GRAVE": "accent5"
  }
 }
