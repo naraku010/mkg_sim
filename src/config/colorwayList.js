@@ -160,7 +160,33 @@ import mkg_i13 from "./usercolorways3/mkg_crosshair.json"
 import mkg_i14 from "./usercolorways3/mkg_cocogoat.json"
 import mkg_i15 from "./usercolorways3/mkg_ascii.json"
 
+import mkg_j1 from "./usercolorways3/mkg_3077.json"
+import mkg_j2 from "./usercolorways3/mkg_3077_num.json"
+import mkg_j3 from "./usercolorways3/mkg_helleborus.json"
+import mkg_j4 from "./usercolorways3/mkg_sl_cipher.json"
+import mkg_j5 from "./usercolorways3/mkg_soda_squid.json"
+import mkg_j6 from "./usercolorways3/mkg_stargaze.json"
+import mkg_j7 from "./usercolorways3/mkg_stargaze_alpha.json"
+import mkg_j8 from "./usercolorways3/mkg_war_maiden.json"
+import mkg_j9 from "./usercolorways3/mkg_war_maiden_band.json"
+import mkg_j10 from "./usercolorways3/mkg_war_maiden_borsche.json"
+import mkg_j11 from "./usercolorways3/mkg_yokai.json"
+
 export const USERCOLORWAYS_NEW = {
+    mkg_3077: mkg_j1,
+    mkg_3077_num: mkg_j2,
+    mkg_helleborus: mkg_j3,
+    mkg_sl_cipher: mkg_j4,
+    mkg_soda_squid: mkg_j5,
+    mkg_stargaze: mkg_j6,
+    mkg_stargaze_alpha: mkg_j7,
+    mkg_war_maiden: mkg_j8,
+    mkg_war_maiden_band: mkg_j9,
+    mkg_war_maiden_borsche: mkg_j10,
+    mkg_yokai: mkg_j11,
+}
+
+export const USERCOLORWAYS = {
     mkg_blue_screen: mkg_i1,
     mkg_coffee_latte: mkg_i2,
     mkg_chladni: mkg_i3,
@@ -175,9 +201,6 @@ export const USERCOLORWAYS_NEW = {
     mkg_crosshair: mkg_i13,
     mkg_cocogoat: mkg_i14,
     mkg_ascii: mkg_i15,
-}
-
-export const USERCOLORWAYS = {
     mkg_beloved: mkg_m12,
     mkg_rubrehose: mkg_g17,
     mkg_deepwell: mkg_h1,

@@ -1,0 +1,25 @@
+{
+  "id": "mkg_stargaze",
+  "label": "Stargaze",
+  "manufacturer": "GMK",
+  "designer": "KGJun",
+  "swatches": {
+    "base": {
+      "background": "#001a33",
+      "color": "#cebd99"
+    },
+    "mods": {
+      "background": "#001a33",
+      "color": "#cebd99"
+    },
+    "accent": {
+      "background": "#cebd99",
+      "color": "#171718"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent"
+  }
+}
