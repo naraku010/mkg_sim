@@ -1,25 +1,33 @@
 {
-  "id": "vaporwave",
-  "label": "Vaporwave",
-  "manufacturer": "",
-  "swatches": {
-    "base": {
-      "background": "#9595D2",
-      "subColor": "#6244BB",
-      "color": "#FF3EB5"
-    },
-    "mods": {
-      "background": "#6244BB",
-      "color": "#00BCE3"
-    },
-    "accent": {
-      "background": "#00BCE3",
-      "color": "#6244BB"
-    }
+ "id": "vaporwave",
+ "label": "Vaporwave",
+ "manufacturer": "",
+ "swatches": {
+  "base": {
+   "background": "#9595D2",
+   "subColor": "#6244BB",
+   "color": "#FF3EB5"
   },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent"
+  "mods": {
+   "background": "#6244BB",
+   "color": "#00BCE3"
+  },
+  "accent": {
+   "background": "#00BCE3",
+   "color": "#6244BB"
   }
+ },
+ "override": {
+  "KC_ENT": "accent",
+  "KC_ESC": "accent",
+  "KC_GESC": "accent",
+  "KC_LGUI": "accent",
+  "KC_SPC": "accent",
+  "KC_RGUI": "accent",
+  "KC_PENT": "accent",
+  "KC_F5": "mods",
+  "KC_F6": "mods",
+  "KC_F7": "mods",
+  "KC_F8": "mods"
+ }
 }

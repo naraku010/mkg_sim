@@ -1,24 +1,34 @@
 {
-  "id": "olivia",
-  "label": "Olivia",
-  "manufacturer": "",
-  "swatches": {
-    "base": {
-      "background": "#e1dbd1",
-      "color": "#2B2B2B"
-    },
-    "mods": {
-      "background": "#2B2B2B",
-      "color": "#f1beb0"
-    },
-    "accent": {
-      "background": "#f1beb0",
-      "color": "#2B2B2B"
-    }
+ "id": "olivia",
+ "label": "Olivia",
+ "manufacturer": "",
+ "swatches": {
+  "base": {
+   "background": "#e1dbd1",
+   "color": "#2B2B2B"
   },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent"
+  "mods": {
+   "background": "#2B2B2B",
+   "color": "#f1beb0"
+  },
+  "accent": {
+   "background": "#f1beb0",
+   "color": "#2B2B2B"
   }
+ },
+ "override": {
+  "KC_ENT": "accent",
+  "KC_ESC": "accent",
+  "KC_GESC": "accent",
+  "KC_F5": "mods",
+  "KC_F6": "mods",
+  "KC_F7": "mods",
+  "KC_F8": "mods",
+  "KC_SPC": "accent",
+  "KC_LEFT": "accent",
+  "KC_DOWN": "accent",
+  "KC_UP": "accent",
+  "KC_RGHT": "accent",
+  "KC_PENT": "accent"
+ }
 }

@@ -1,29 +1,37 @@
 {
-  "id": "shoko",
-  "label": "Shoko",
-  "manufacturer": "",
-  "swatches": {
-    "base": {
-      "background": "#dde5ed",
-      "color": "#7a99ac"
-    },
-    "mods": {
-      "background": "#7a99ac",
-      "color": "#dde5ed"
-    },
-    "accent": {
-      "background": "#8dcbe0",
-      "color": "#dde5ed"
-    }
+ "id": "shoko",
+ "label": "Shoko",
+ "manufacturer": "",
+ "swatches": {
+  "base": {
+   "background": "#dde5ed",
+   "color": "#7a99ac"
   },
-  "override": {
-    "KC_SPC": "base",
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods"
+  "mods": {
+   "background": "#7a99ac",
+   "color": "#dde5ed"
+  },
+  "accent": {
+   "background": "#8dcbe0",
+   "color": "#dde5ed"
   }
+ },
+ "override": {
+  "KC_SPC": "accent",
+  "KC_ENT": "accent",
+  "KC_ESC": "accent",
+  "KC_GESC": "accent",
+  "KC_F5": "accent",
+  "KC_F6": "accent",
+  "KC_F7": "accent",
+  "KC_F8": "accent",
+  "KC_PSCR": "accent",
+  "KC_SLCK": "accent",
+  "KC_PAUS": "accent",
+  "KC_UP": "accent",
+  "KC_DOWN": "accent",
+  "KC_LEFT": "accent",
+  "KC_RGHT": "accent",
+  "KC_PENT": "accent"
+ }
 }

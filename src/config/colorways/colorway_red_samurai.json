@@ -1,24 +1,34 @@
 {
-  "id": "red_samurai",
-  "label": "Red Samurai",
-  "manufacturer": "",
-  "swatches": {
-    "base": {
-      "background": "#651C32",
-      "color": "#B9975B"
-    },
-    "mods": {
-      "background": "#25282A",
-      "color": "#B9975B"
-    },
-    "accent": {
-      "background": "#B9975B",
-      "color": "#651C32"
-    }
+ "id": "red_samurai",
+ "label": "Red Samurai",
+ "manufacturer": "",
+ "swatches": {
+  "base": {
+   "background": "#651C32",
+   "color": "#B9975B"
   },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent"
+  "mods": {
+   "background": "#25282A",
+   "color": "#B9975B"
+  },
+  "accent": {
+   "background": "#B9975B",
+   "color": "#651C32"
   }
+ },
+ "override": {
+  "KC_ENT": "accent",
+  "KC_ESC": "accent",
+  "KC_GESC": "accent",
+  "KC_F5": "mods",
+  "KC_F6": "mods",
+  "KC_F7": "mods",
+  "KC_F8": "mods",
+  "KC_SPC": "accent",
+  "KC_LEFT": "accent",
+  "KC_DOWN": "accent",
+  "KC_UP": "accent",
+  "KC_RGHT": "accent",
+  "KC_PENT": "accent"
+ }
 }

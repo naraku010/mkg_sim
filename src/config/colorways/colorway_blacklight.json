@@ -1,28 +1,32 @@
 {
-  "id": "blacklight",
-  "label": "Blacklight",
-  "manufacturer": "Infinikey",
-  "designer": "Ulliam",
-  "swatches": {
-    "base": {
-      "background": "#23262C",
-      "color": "#77659F"
-    },
-    "mods": {
-      "background": "#23262C",
-      "color": "#60BECD"
-    },
-    "accent": {
-      "background": "#23262C",
-      "color": "#60BECD"
-    }
+ "id": "blacklight",
+ "label": "Blacklight",
+ "manufacturer": "Infinikey",
+ "designer": "Ulliam",
+ "swatches": {
+  "base": {
+   "background": "#23262C",
+   "color": "#77659F"
   },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods"
+  "mods": {
+   "background": "#23262C",
+   "color": "#60BECD"
+  },
+  "accent": {
+   "background": "#23262C",
+   "color": "#7fd6a9"
   }
+ },
+ "override": {
+  "KC_ENT": "accent",
+  "KC_ESC": "accent",
+  "KC_F5": "mods",
+  "KC_F6": "mods",
+  "KC_F7": "mods",
+  "KC_F8": "mods",
+  "KC_UP": "accent",
+  "KC_DOWN": "accent",
+  "KC_LEFT": "accent",
+  "KC_RGHT": "accent"
+ }
 }

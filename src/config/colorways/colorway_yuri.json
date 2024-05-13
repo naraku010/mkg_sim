@@ -1,24 +1,30 @@
 {
-  "id": "yuri",
-  "manufacturer": "",
-  "label": "Yuri",
-  "swatches": {
-    "base": {
-      "background": "#b2c4d0",
-      "color": "#ff4a2a"
-    },
-    "mods": {
-      "background": "#323f52",
-      "color": "#ff4a2a"
-    },
-    "accent": {
-      "background": "#ff4a2a",
-      "color": "#323f52"
-    }
+ "id": "yuri",
+ "manufacturer": "",
+ "label": "Yuri",
+ "swatches": {
+  "base": {
+   "background": "#b2c4d0",
+   "color": "#ff4a2a"
   },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent"
+  "mods": {
+   "background": "#323f52",
+   "color": "#ff4a2a"
+  },
+  "accent": {
+   "background": "#ff4a2a",
+   "color": "#323f52"
   }
+ },
+ "override": {
+  "KC_ENT": "accent",
+  "KC_ESC": "accent",
+  "KC_GESC": "accent",
+  "KC_F5": "mods",
+  "KC_F6": "mods",
+  "KC_F7": "mods",
+  "KC_F8": "mods",
+  "KC_PENT": "accent",
+  "KC_SPC": "accent"
+ }
 }

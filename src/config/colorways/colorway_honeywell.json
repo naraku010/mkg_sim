@@ -1,31 +1,38 @@
 {
-  "id": "honeywell",
-  "label": "Honeywell",
-  "manufacturer": "",
-  "swatches": {
-    "base": {
-      "background": "#e1dbd1",
-      "color": "#6b7578"
-    },
-    "mods": {
-      "background": "#6b7578",
-      "color": "#e1dbd1"
-    },
-    "accent": {
-      "background": "#b5240c",
-      "color": "#e1dbd1"
-    }
+ "id": "honeywell",
+ "label": "Honeywell",
+ "manufacturer": "",
+ "swatches": {
+  "base": {
+   "background": "#e1dbd1",
+   "color": "#6b7578"
   },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_BSPC": "accent",
-    "KC_DEL": "accent",
-    "KC_UP": "accent",
-    "KC_DOWN": "accent",
-    "KC_LEFT": "accent",
-    "KC_RGHT": "accent",
-    "KC_PENT": "accent"
+  "mods": {
+   "background": "#6b7578",
+   "color": "#e1dbd1"
+  },
+  "accent": {
+   "background": "#b5240c",
+   "color": "#e1dbd1"
   }
+ },
+ "override": {
+  "KC_ENT": "accent",
+  "KC_ESC": "accent",
+  "KC_GESC": "accent",
+  "KC_BSPC": "accent",
+  "KC_DEL": "accent",
+  "KC_UP": "accent",
+  "KC_DOWN": "accent",
+  "KC_LEFT": "accent",
+  "KC_RGHT": "accent",
+  "KC_PENT": "accent",
+  "KC_SPC": "base",
+  "KC_F5": "mods",
+  "KC_F6": "mods",
+  "KC_F7": "mods",
+  "KC_F8": "mods",
+  "KC_GRV": "mods",
+  "KC_BSLS": "mods"
+ }
 }

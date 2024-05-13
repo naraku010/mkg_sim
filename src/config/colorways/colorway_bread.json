@@ -1,29 +1,30 @@
 {
-  "id": "bread",
-  "label": "Bread",
-  "manufacturer": "",
-  "designer": "",
-  "swatches": {
-    "base": {
-      "background": "#e6d2b5",
-      "color": "#724a24"
-    },
-    "mods": {
-      "background": "#724a24",
-      "color": "#e6d2b5"
-    },
-    "accent": {
-      "background": "#724a24",
-      "color": "#e6d2b5"
-    }
+ "id": "bread",
+ "label": "Bread",
+ "manufacturer": "",
+ "designer": "",
+ "swatches": {
+  "base": {
+   "background": "#e6d2b5",
+   "color": "#724a24"
   },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods"
+  "mods": {
+   "background": "#724a24",
+   "color": "#e6d2b5"
+  },
+  "accent": {
+   "background": "#724a24",
+   "color": "#e6d2b5"
   }
+ },
+ "override": {
+  "KC_ENT": "accent",
+  "KC_ESC": "accent",
+  "KC_GESC": "accent",
+  "KC_F5": "mods",
+  "KC_F6": "mods",
+  "KC_F7": "mods",
+  "KC_F8": "mods",
+  "KC_SPC": "base"
+ }
 }

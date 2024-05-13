@@ -1,24 +1,39 @@
 {
-  "id": "space_cadet",
-  "label": "Space Cadet",
-  "manufacturer": "",
-  "swatches": {
-    "base": {
-      "background": "#63696a",
-      "color": "#faf7f0"
-    },
-    "mods": {
-      "background": "#0073a2",
-      "color": "#faf7f0"
-    },
-    "accent": {
-      "background": "#0073a2",
-      "color": "#faf7f0"
-    }
+ "id": "space_cadet",
+ "label": "Space Cadet",
+ "manufacturer": "",
+ "swatches": {
+  "base": {
+   "background": "#63696a",
+   "color": "#faf7f0"
   },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent"
+  "mods": {
+   "background": "#0073a2",
+   "color": "#faf7f0"
+  },
+  "accent": {
+   "background": "#0073a2",
+   "color": "#faf7f0"
   }
+ },
+ "override": {
+  "KC_ENT": "accent",
+  "KC_ESC": "accent",
+  "KC_GESC": "accent",
+  "KC_F1": "mods",
+  "KC_F2": "mods",
+  "KC_F3": "mods",
+  "KC_F4": "mods",
+  "KC_F5": "mods",
+  "KC_F6": "mods",
+  "KC_F7": "mods",
+  "KC_F8": "mods",
+  "KC_F9": "mods",
+  "KC_F10": "mods",
+  "KC_F11": "mods",
+  "KC_F12": "mods",
+  "KC_SPC": "base",
+  "KC_GRV": "mods",
+  "KC_BSLS": "mods"
+ }
 }

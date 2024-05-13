@@ -1,44 +1,49 @@
 {
-  "id": "bobafett",
-  "label": "Boba Fett",
-  "manufacturer": "",
-  "swatches": {
-    "base": {
-      "background": "#f7f2ea",
-      "color": "#171718"
-    },
-    "mods": {
-      "background": "#849585",
-      "color": "#171718"
-    },
-    "accent": {
-      "background": "#6c2830",
-      "color": "#171718"
-    },
-    "accent2": {
-      "background": "#f2cf21",
-      "color": "#171718"
-    }
+ "id": "bobafett",
+ "label": "Boba Fett",
+ "manufacturer": "",
+ "swatches": {
+  "base": {
+   "background": "#dcdbd5",
+   "color": "#171718"
   },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent2",
-    "KC_F1": "accent2",
-    "KC_F2": "accent2",
-    "KC_F3": "accent2",
-    "KC_F4": "accent2",
-    "KC_F9": "accent2",
-    "KC_F10": "accent2",
-    "KC_F11": "accent2",
-    "KC_F12": "accent2",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods",
-    "KC_LEFT": "accent",
-    "KC_RGHT": "accent",
-    "KC_DOWN": "accent",
-    "KC_UP": "accent"
+  "mods": {
+   "background": "#798b79",
+   "color": "#171718"
+  },
+  "accent": {
+   "background": "#892935",
+   "color": "#171718"
+  },
+  "accent2": {
+   "background": "#ebac00",
+   "color": "#171718"
   }
+ },
+ "override": {
+  "KC_ENT": "accent",
+  "KC_ESC": "accent",
+  "KC_GESC": "accent2",
+  "KC_UP": "accent",
+  "KC_DOWN": "accent",
+  "KC_LEFT": "accent",
+  "KC_RGHT": "accent",
+  "KC_F5": "mods",
+  "KC_F6": "mods",
+  "KC_F7": "mods",
+  "KC_F8": "mods",
+  "KC_SPC": "base",
+  "KC_PAUS": "accent",
+  "KC_PSCR": "accent",
+  "KC_F1": "accent2",
+  "KC_F2": "accent2",
+  "KC_F3": "accent2",
+  "KC_F4": "accent2",
+  "KC_F9": "accent2",
+  "KC_F10": "accent2",
+  "KC_F11": "accent2",
+  "KC_F12": "accent2",
+  "KC_LGUI": "accent",
+  "KC_RGUI": "accent"
+ }
 }

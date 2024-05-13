@@ -1,28 +1,42 @@
 {
-  "id": "sumi",
-  "label": "Sumi",
-  "manufacturer": "",
-  "designer": "",
-  "swatches": {
-    "base": {
-      "background": "#191e28",
-      "subColor": "#f7f2ea",
-      "color": "#f7f2ea"
-    },
-    "mods": {
-      "background": "#f7f2ea",
-      "subColor": "#191e28",
-      "color": "#191e28"
-    },
-    "accent": {
-      "background": "#cc2c24",
-      "subColor": "#f7f2ea",
-      "color": "#f7f2ea"
-    }
+ "id": "sumi",
+ "label": "Sumi",
+ "manufacturer": "",
+ "designer": "",
+ "swatches": {
+  "base": {
+   "background": "#191e28",
+   "subColor": "#f7f2ea",
+   "color": "#f7f2ea"
   },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent"
+  "mods": {
+   "background": "#f7f2ea",
+   "subColor": "#191e28",
+   "color": "#191e28"
+  },
+  "accent": {
+   "background": "#cc2c24",
+   "subColor": "#f7f2ea",
+   "color": "#f7f2ea"
   }
+ },
+ "override": {
+  "KC_ENT": "accent",
+  "KC_ESC": "accent",
+  "KC_GESC": "accent",
+  "KC_F1": "mods",
+  "KC_F2": "mods",
+  "KC_F3": "mods",
+  "KC_F4": "mods",
+  "KC_F9": "mods",
+  "KC_F10": "mods",
+  "KC_F11": "mods",
+  "KC_F12": "mods",
+  "KC_PENT": "accent",
+  "KC_SPC": "base",
+  "KC_LEFT": "base",
+  "KC_DOWN": "base",
+  "KC_RGHT": "base",
+  "KC_UP": "base"
+ }
 }
