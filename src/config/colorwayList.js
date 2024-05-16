@@ -171,6 +171,10 @@ import mkg_j8 from "./usercolorways3/mkg_war_maiden.json"
 import mkg_j9 from "./usercolorways3/mkg_war_maiden_band.json"
 import mkg_j10 from "./usercolorways3/mkg_war_maiden_borsche.json"
 import mkg_j11 from "./usercolorways3/mkg_yokai.json"
+import mkg_j12 from "./usercolorways3/mkg_colorful_beige.json"
+import mkg_j13 from "./usercolorways3/mkg_colorful_white.json"
+import mkg_j14 from "./usercolorways3/mkg_henchman.json"
+
 
 export const USERCOLORWAYS_NEW = {
     mkg_3077: mkg_j1,
@@ -184,6 +188,9 @@ export const USERCOLORWAYS_NEW = {
     mkg_war_maiden_band: mkg_j9,
     mkg_war_maiden_borsche: mkg_j10,
     mkg_yokai: mkg_j11,
+    mkg_colorful_beige: mkg_j12,
+    mkg_colorful_white: mkg_j13,
+    mkg_henckman: mkg_j14,
 }
 
 export const USERCOLORWAYS = {
