@@ -176,8 +176,20 @@ import mkg_j13 from "./usercolorways3/mkg_colorful_white.json"
 import mkg_j14 from "./usercolorways3/mkg_henchman.json"
 import mkg_j15 from "./usercolorways3/mkg_buff_bride.json"
 
+import mkg_k1 from "./usercolorways3/mkg_classic1.json"
+import mkg_k2 from "./usercolorways3/mkg_classic2.json"
+import mkg_k3 from "./usercolorways3/mkg_classic3.json"
+
+
 
 export const USERCOLORWAYS_NEW = {
+    mkg_buff_bride: mkg_j15,
+    mkg_classic1: mkg_k1,
+    mkg_classic2: mkg_k2,
+    mkg_classic3: mkg_k3,
+}
+
+export const USERCOLORWAYS = {
     mkg_3077: mkg_j1,
     mkg_3077_num: mkg_j2,
     mkg_helleborus: mkg_j3,
@@ -192,10 +204,6 @@ export const USERCOLORWAYS_NEW = {
     mkg_colorful_beige: mkg_j12,
     mkg_colorful_white: mkg_j13,
     mkg_henckman: mkg_j14,
-    mkg_buff_bride: mkg_j15,
-}
-
-export const USERCOLORWAYS = {
     mkg_blue_screen: mkg_i1,
     mkg_coffee_latte: mkg_i2,
     mkg_chladni: mkg_i3,
