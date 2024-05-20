@@ -174,6 +174,7 @@ import mkg_j11 from "./usercolorways3/mkg_yokai.json"
 import mkg_j12 from "./usercolorways3/mkg_colorful_beige.json"
 import mkg_j13 from "./usercolorways3/mkg_colorful_white.json"
 import mkg_j14 from "./usercolorways3/mkg_henchman.json"
+import mkg_j15 from "./usercolorways3/mkg_buff_bride.json"
 
 
 export const USERCOLORWAYS_NEW = {
@@ -191,6 +192,7 @@ export const USERCOLORWAYS_NEW = {
     mkg_colorful_beige: mkg_j12,
     mkg_colorful_white: mkg_j13,
     mkg_henckman: mkg_j14,
+    mkg_buff_bride: mkg_j15,
 }
 
 export const USERCOLORWAYS = {

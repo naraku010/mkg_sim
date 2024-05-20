@@ -1,0 +1,29 @@
+{
+  "id": "mkg_buff_bride",
+  "label": "Buff Bride",
+  "manufacturer": "Keykobo",
+  "designer": "KGJun",
+  "swatches": {
+    "base": {
+      "background": "#a8abc1",
+      "color": "#c5c7ca"
+    },
+    "mods": {
+      "background": "#211e2f",
+      "color": "#c5c7ca"
+    },
+    "accent": {
+      "background": "#b85584",
+      "color": "#c5c7ca"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods"
+  }
+}
