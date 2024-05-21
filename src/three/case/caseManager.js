@@ -59,26 +59,26 @@ const shadow_paths = {
 const MATERIAL_OPTIONS = {
   tra: {
     metalness: 0.4,
-    aoMapIntensity: 0.4,
+    aoMapIntensity: 0.25,
     envMapIntensity: 0.1,
   },
   matte: {
     metalness: 0,
     roughness: 1,
     clearcoat: 0,
-    aoMapIntensity: 0.1,
+    aoMapIntensity: 0,
     clearcoatRoughness: 1,
     lightMapIntensity: 0.2,
   },
   brushed: {
     metalness: 0.4,
-    aoMapIntensity: 0.4,
+    aoMapIntensity: 0.25,
     envMapIntensity: 0.1,
   },
   glossy: {
     metalness: 0.8,
     roughness: 0.1,
-    aoMapIntensity: 0.4,
+    aoMapIntensity: 0.25,
     envMapIntensity: 0.5,
   },
 };

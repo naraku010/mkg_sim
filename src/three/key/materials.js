@@ -70,7 +70,7 @@ const getMaterialSet = (opts, offset) => {
     normalMap: normalMap,
     normalMapType: 1,
     aoMap: ambiantOcclusionMap,
-    aoMapIntensity: .25,
+    aoMapIntensity: .2,
     // lightMap: lightMap,
     // lightMapIntensity: 0,
   });
