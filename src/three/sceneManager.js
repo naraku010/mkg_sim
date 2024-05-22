@@ -2,11 +2,12 @@ import * as THREE from "three";
 import Collection from "./collection";
 import {subscribe} from "redux-subscriber";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js";
-import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
+// import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 import {disableHighlight, enableHighlight} from "./key/materials";
 import ThreeUtil from "../util/three";
-import DestmatModel from "../assets/models/scene.glb";
+// import DestmatModel from "../assets/models/scene.glb";
 import ColorUtil from "../util/color";
+import { GUI } from 'dat.gui'
 //import { CSS3DRenderer } from "three/examples/jsm/renderers/CSS3DRenderer.js";
 
 export default class SceneManager extends Collection {
@@ -89,15 +90,15 @@ export default class SceneManager extends Collection {
       this.editing = state.colorways.editing;
     });
 
-    subscribe("colorways.active", (state) => {
-      this.updateDeskMatColor(state);
-    });
-    subscribe("case.layout", (state) => {
-      this.updateDeskMatLayout(state.case.layout);
-    });
-    subscribe("settings.mat", (state) => {
-      this.updateDeskMat(state);
-    });
+    // subscribe("colorways.active", (state) => {
+    //   this.updateDeskMatColor(state);
+    // });
+    // subscribe("case.layout", (state) => {
+    //   this.updateDeskMatLayout(state.case.layout);
+    // });
+    // subscribe("settings.mat", (state) => {
+    //   this.updateDeskMat(state);
+    // });
   }
   get w() {
     return this.el.offsetWidth;
@@ -130,43 +131,62 @@ export default class SceneManager extends Collection {
     this.controls.target = new THREE.Vector3(0, 0, 0);
   }
   async setupLights() {
+    // const gui = new GUI({autoPlace: false});
+    //
+    // const containerEl = document.querySelector('#canvas-wrapper');
+    // // gui.domElement.
+    // const guiDOM = document.createElement("div");
+    // guiDOM.className = 'moveGUI';
+    // guiDOM.append(gui.domElement);
+    // containerEl.prepend(guiDOM);
     let ambiant = new THREE.AmbientLight("#ffffff", 0.7);
     this.scene.add(ambiant);
-
-    //main
+    //
+    // //main
     let primaryLight = new THREE.DirectionalLight("#dddddd", 0.8);
     primaryLight.position.set(5, 10, 10);
     primaryLight.target.position.set(0, -10, -10);
     primaryLight.target.updateMatrixWorld();
     this.scene.add(primaryLight, primaryLight.target);
-
-    //secondary shadows
+    //
+    // //secondary shadows
     let shadowLight = new THREE.DirectionalLight("#FFFFFF", 0.5);
-    shadowLight.position.set(-4, 3, -10);
+    shadowLight.position.set(10, 3, -10);
+    shadowLight.shadow.mapSize.width = 1024;
+    shadowLight.shadow.mapSize.height = 1024;
+    shadowLight.shadow.camera.near = 1;
+    shadowLight.shadow.camera.far = 6;
     shadowLight.target.position.set(0, 0, 0);
     shadowLight.target.updateMatrixWorld();
     this.scene.add(shadowLight, shadowLight.target);
 
-    const curr = this;
-    const loader = new GLTFLoader();
-    loader.load(DestmatModel, async function ( gltf ) {
-      const d = gltf.scene;
-      d.traverse((child) => {
-        const nc = ColorUtil.colorway;
-        if (child.isMesh) {
-          // child.material.map.encoding = THREE.sRGBEncoding;
-          if(child.name === 'Deskmat_-_Mat')
-            child.material.color.set(nc.swatches.base.background);
-          else
-            child.material.color.set(nc.swatches.base.color);
-          // child.material.map.needsUpdate = true;
-        }
-      });
-      d.position.z = 2;
-      d.scale.set(30, 30, 30);
-      curr.deskmat = d;
-      curr.scene.add(d);
-    } );
+
+    // const plight = gui.addFolder('light');
+    // plight.add(primaryLight.position, 'x', 5, 20);
+    // plight.add(primaryLight.position, 'z', 10, 50);
+    //
+    // plight.open();
+
+    // const curr = this;
+    // const loader = new GLTFLoader();
+    // loader.load(DestmatModel, async function ( gltf ) {
+    //   const d = gltf.scene;
+    //   d.traverse((child) => {
+    //     const nc = ColorUtil.colorway;
+    //     if (child.isMesh) {
+    //       // child.material.map.encoding = THREE.sRGBEncoding;
+    //       if(child.name === 'Deskmat_-_Mat')
+    //         child.material.color.set(nc.swatches.base.background);
+    //       else
+    //         child.material.color.set(nc.swatches.base.color);
+    //       // child.material.map.needsUpdate = true;
+    //     }
+    //   });
+    //   d.position.z = 2;
+    //   d.scale.set(30, 30, 30);
+    //   curr.deskmat = d;
+    //   curr.scene.add(d);
+    // } );
     //lighthelpers
     // let slh = new THREE.DirectionalLightHelper(shadowLight, 2);
     // let plh = new THREE.DirectionalLightHelper(primaryLight, 2);

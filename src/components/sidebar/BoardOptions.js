@@ -103,8 +103,9 @@ export default function BoardOptions() {
                     selected={legendSecondaryStyle}
                     options={[
                         {label: "기본", value: ""},
-                        {label: "룬문자", value: "rune"},
                         {label: "한글", value: "hangul"},
+                        {label: "키릴", value: "cyrillic"},
+                        {label: "룬문자", value: "rune"},
                         {label: "히라가나", value: "hiragana"},
                         {label: "가타카나", value: "katakana"},
                         {label: "중국어", value: "chinese"},
@@ -113,11 +114,11 @@ export default function BoardOptions() {
                         dispatch(keyActions.setLegendSecondaryStyle(val));
                     }}
                 />
-                <ToggleField
-                    value={hasMat}
-                    label={"장패드 토글"}
-                    handler={() => dispatch(toggleMat())}
-                />
+                {/*<ToggleField*/}
+                {/*    value={hasMat}*/}
+                {/*    label={"장패드 토글"}*/}
+                {/*    handler={() => dispatch(toggleMat())}*/}
+                {/*/>*/}
             </CollapsibleSection>
 
             <CollapsibleSection title="하우징 옵션" open={true}>
