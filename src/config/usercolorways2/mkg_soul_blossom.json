@@ -5,11 +5,11 @@
   "designer": "Yeony",
   "swatches": {
     "base": {
-      "background": "#e9f1ff",
+      "background": "#f4effa",
       "color": "#c60048"
     },
     "mods": {
-      "background": "#c3d5fb",
+      "background": "#b9caef",
       "color": "#c60048"
     },
     "accent": {

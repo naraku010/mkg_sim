@@ -1,0 +1,130 @@
+{
+  "id": "mkg_tribal",
+  "label": "Tribal",
+  "manufacturer": "Gmk",
+  "designer": "KGJun",
+  "swatches": {
+    "base": {
+      "background": "#252525",
+      "color": "#f7f2ea"
+    },
+    "mods": {
+      "background": "#252525",
+      "color": "#cccccc"
+    },
+    "accent": {
+      "background": "#252525",
+      "color": "#0590a6"
+    },
+    "swatch1": {
+      "background": "#252525",
+      "color": "#d86d73"
+    },
+    "swatch2": {
+      "background": "#252525",
+      "color": "#5eaa92"
+    },
+    "swatch3": {
+      "background": "#252525",
+      "color": "#e6cd7b"
+    },
+    "swatch4": {
+      "background": "#252525",
+      "color": "#f7f2ea"
+    },
+    "swatch5": {
+      "background": "#252525",
+      "color": "#f7f2ea",
+      "subColor": "#d86d73"
+    },
+    "swatch6": {
+      "background": "#252525",
+      "color": "#f7f2ea",
+      "subColor": "#5eaa92"
+    },
+    "swatch7": {
+      "background": "#252525",
+      "color": "#f7f2ea",
+      "subColor": "#e6cd7b"
+    },
+    "swatch8": {
+      "background": "#252525",
+      "color": "#f7f2ea"
+    }
+  },
+  "override": {
+    "KC_ENT": "swatch2",
+    "KC_ESC": "swatch1",
+    "KC_GESC": "accent",
+    "KC_F1": "swatch3",
+    "KC_F8": "swatch3",
+    "KC_F11": "swatch3",
+    "KC_PAUSE": "swatch3",
+    "KC_F2": "swatch4",
+    "KC_F5": "swatch4",
+    "KC_F12": "swatch4",
+    "KC_INS": "swatch4",
+    "KC_PGDN": "swatch4",
+    "KC_RGHT": "swatch4",
+    "KC_DOWN": "swatch3",
+    "KC_LEFT": "swatch2",
+    "KC_F4": "swatch2",
+    "KC_F7": "swatch2",
+    "KC_F9": "swatch2",
+    "KC_SLCK": "swatch2",
+    "KC_F3": "swatch1",
+    "KC_F6": "swatch1",
+    "KC_F10": "swatch1",
+    "KC_PSCR": "swatch1",
+    "KC_UP": "swatch1",
+    "KC_CAPS": "swatch3",
+    "KC_LSFT": "swatch1",
+    "KC_LGUI": "swatch1",
+    "KC_RCTL": "swatch1",
+    "KC_BSPC": "swatch1",
+    "KC_HOME": "swatch1",
+    "KC_PGUP": "swatch2",
+    "KC_DEL": "swatch2",
+    "KC_END": "swatch3",
+    "KC_1": "swatch5",
+    "KC_Z": "swatch5",
+    "KC_E": "swatch5",
+    "KC_4": "swatch5",
+    "KC_6": "swatch5",
+    "KC_B": "swatch5",
+    "KC_U": "swatch5",
+    "KC_0": "swatch6",
+    "KC_MINS": "swatch5",
+    "KC_QUOT": "swatch5",
+    "KC_APP": "swatch3",
+    "KC_LALT": "swatch3",
+    "KC_LCTL": "swatch2",
+    "KC_RALT": "swatch2",
+    "KC_GRAVE": "swatch6",
+    "KC_5": "swatch6",
+    "KC_SLSH": "swatch6",
+    "KC_L": "swatch6",
+    "KC_M": "swatch6",
+    "KC_O": "swatch6",
+    "KC_R": "swatch6",
+    "KC_D": "swatch6",
+    "KC_Q": "swatch6",
+    "KC_C": "swatch6",
+    "KC_H": "swatch6",
+    "KC_2": "swatch7",
+    "KC_W": "swatch7",
+    "KC_T": "swatch7",
+    "KC_8": "swatch7",
+    "KC_P": "swatch7",
+    "KC_BSLS": "swatch7",
+    "KC_LBRC": "swatch6",
+    "KC_DOT": "swatch7",
+    "KC_COMM": "swatch5",
+    "KC_K": "swatch7",
+    "KC_F": "swatch7",
+    "KC_A": "swatch7",
+    "KC_9": "swatch5",
+    "KC_EQL": "swatch7",
+    "KC_G": "swatch5"
+  }
+}

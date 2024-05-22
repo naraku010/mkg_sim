@@ -179,6 +179,9 @@ import mkg_j15 from "./usercolorways3/mkg_buff_bride.json"
 import mkg_k1 from "./usercolorways3/mkg_classic1.json"
 import mkg_k2 from "./usercolorways3/mkg_classic2.json"
 import mkg_k3 from "./usercolorways3/mkg_classic3.json"
+import mkg_k4 from "./usercolorways3/mkg_mecha_00.json"
+import mkg_k5 from "./usercolorways3/mkg_mecha_00_alpha.json"
+import mkg_k6 from "./usercolorways3/mkg_tribal.json"
 
 
 
@@ -187,6 +190,9 @@ export const USERCOLORWAYS_NEW = {
     mkg_classic1: mkg_k1,
     mkg_classic2: mkg_k2,
     mkg_classic3: mkg_k3,
+    mkg_mecha_00: mkg_k4,
+    mkg_mecha_00_alpha: mkg_k5,
+    mkg_tribal: mkg_k6,
 }
 
 export const USERCOLORWAYS = {
