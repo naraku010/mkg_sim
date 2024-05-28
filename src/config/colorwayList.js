@@ -185,6 +185,7 @@ import mkg_k6 from "./usercolorways3/mkg_tribal.json"
 import mkg_k7 from "./usercolorways3/mkg_twist_r2.json"
 import mkg_k8 from "./usercolorways3/mkg_mw_frieren.json"
 import mkg_k9 from "./usercolorways3/mkg_good_night.json"
+import mkg_k10 from "./usercolorways3/mkg_gmk_a.json"
 
 
 
@@ -199,6 +200,7 @@ export const USERCOLORWAYS_NEW = {
     mkg_twist_r2: mkg_k7,
     mkg_mw_frieren: mkg_k8,
     mkg_good_night: mkg_k9,
+    mkg_gmk_a: mkg_k10,
 }
 
 export const USERCOLORWAYS = {
