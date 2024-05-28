@@ -8,8 +8,8 @@ import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { ReactComponent as Name } from "../../assets/logo_text.svg";
 import "./tabs.scss";
 
-export default function Sidebar() {
-  const [tabIndex, setTabIndex] = useState(0);
+export default function Sidebar({tabIndex, setTabIndex}) {
+  // const [tabIndex, setTabIndex] = useState(0);
 
   return (
     <div id="sidebar" className={styles.sidebar}>
@@ -24,14 +24,18 @@ export default function Sidebar() {
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>
           <Tab tabIndex="0">기본</Tab>
-          <Tab tabIndex="0">커스텀</Tab>
-          <Tab tabIndex="0">테스트</Tab>
+          <Tab tabIndex="1">커스텀</Tab>
+          <Tab tabIndex="2">테스트</Tab>
+          {/*<Tab tabIndex="3">송장확인</Tab>*/}
         </TabList>
         <TabPanel>
           <OptionsPane setTab={setTabIndex} />
         </TabPanel>
         <TabPanel>
           <ColorwayEditor />
+        </TabPanel>
+        <TabPanel>
+          <TestingPane />
         </TabPanel>
         <TabPanel>
           <TestingPane />

@@ -14,22 +14,24 @@ export default (element) => {
     active: function () {
       //MAIN THREE JS SETUP
       //-------------------------------------
-      const ThreeApp = new SceneManager({
-        scale: SCREEN_SCALE,
-        el: element,
-      });
+      if (element) {
+        const ThreeApp = new SceneManager({
+          scale: SCREEN_SCALE,
+          el: element,
+        });
 
-      const KEYS = new KeyManager({
-        scene: ThreeApp.scene,
-      });
+        const KEYS = new KeyManager({
+          scene: ThreeApp.scene,
+        });
 
-      new CaseManager({
-        scene: ThreeApp.scene,
-      });
+        new CaseManager({
+          scene: ThreeApp.scene,
+        });
 
-      //start render loop
-      ThreeApp.add(KEYS);
-      ThreeApp.tick();
+        //start render loop
+        ThreeApp.add(KEYS);
+        ThreeApp.tick();
+      }
     },
   });
 };
