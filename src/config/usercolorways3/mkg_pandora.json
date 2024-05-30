@@ -1,0 +1,86 @@
+{
+  "id": "mkg_pandora",
+  "label": "Pandora",
+  "manufacturer": "Keykobo",
+  "designer": "KGJun",
+  "swatches": {
+    "base": {
+      "background": "#17181f",
+      "color": "#c3b7c5"
+    },
+    "mods": {
+      "background": "#666666",
+      "color": "#cccccc"
+    },
+    "accent": {
+      "background": "#c78bd6",
+      "color": "#0590a6"
+    },
+    "swatch1": {
+      "background": "#bfb0bc",
+      "color": "#91808a"
+    },
+    "swatch2": {
+      "background": "#947888",
+      "color": "#ba9ca7"
+    },
+    "swatch3": {
+      "background": "#302128",
+      "color": "#bd9aab"
+    },
+    "swatch4": {
+      "background": "#c78bd6",
+      "color": "#0590a6"
+    }
+  },
+  "override": {
+    "KC_ENT": "base",
+    "KC_ESC": "swatch1",
+    "KC_GESC": "accent",
+    "KC_RALT": "base",
+    "KC_RGUI": "base",
+    "KC_APP": "base",
+    "KC_RCTL": "base",
+    "KC_RSFT": "base",
+    "KC_LEFT": "base",
+    "KC_DOWN": "base",
+    "KC_UP": "base",
+    "KC_RGHT": "base",
+    "KC_DEL": "base",
+    "KC_END": "base",
+    "KC_PGDN": "base",
+    "KC_PGUP": "base",
+    "KC_HOME": "base",
+    "KC_INS": "base",
+    "KC_BSPC": "base",
+    "KC_PSCR": "base",
+    "KC_SLCK": "base",
+    "KC_PAUSE": "base",
+    "KC_GRAVE": "swatch1",
+    "KC_1": "swatch1",
+    "KC_2": "swatch1",
+    "KC_F1": "swatch1",
+    "KC_W": "swatch1",
+    "KC_Q": "swatch1",
+    "KC_TAB": "swatch1",
+    "KC_CAPS": "swatch1",
+    "KC_A": "swatch1",
+    "KC_S": "swatch1",
+    "KC_X": "swatch1",
+    "KC_Z": "swatch1",
+    "KC_LSFT": "swatch1",
+    "KC_LCTL": "swatch1",
+    "KC_LGUI": "swatch1",
+    "KC_LALT": "swatch1",
+    "KC_F2": "swatch2",
+    "KC_3": "swatch2",
+    "KC_E": "swatch2",
+    "KC_D": "swatch2",
+    "KC_C": "swatch2",
+    "KC_F3": "swatch3",
+    "KC_4": "swatch3",
+    "KC_R": "swatch3",
+    "KC_F": "swatch3",
+    "KC_V": "swatch3"
+  }
+}

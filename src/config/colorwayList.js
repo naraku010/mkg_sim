@@ -186,10 +186,21 @@ import mkg_k7 from "./usercolorways3/mkg_twist_r2.json"
 import mkg_k8 from "./usercolorways3/mkg_mw_frieren.json"
 import mkg_k9 from "./usercolorways3/mkg_good_night.json"
 import mkg_k10 from "./usercolorways3/mkg_gmk_a.json"
+import mkg_k11 from "./usercolorways3/mkg_my_first_joy.json"
+import mkg_k12 from "./usercolorways3/mkg_nama.json"
+import mkg_k13 from "./usercolorways3/mkg_pandora.json"
+import mkg_k14 from "./usercolorways3/mkg_to_my_lover.json"
 
 
 
 export const USERCOLORWAYS_NEW = {
+    mkg_my_first_joy: mkg_k11,
+    mkg_nama: mkg_k12,
+    mkg_pandora: mkg_k13,
+    mkg_to_my_lover: mkg_k14,
+}
+
+export const USERCOLORWAYS = {
     mkg_buff_bride: mkg_j15,
     mkg_classic1: mkg_k1,
     mkg_classic2: mkg_k2,
@@ -201,9 +212,6 @@ export const USERCOLORWAYS_NEW = {
     mkg_mw_frieren: mkg_k8,
     mkg_good_night: mkg_k9,
     mkg_gmk_a: mkg_k10,
-}
-
-export const USERCOLORWAYS = {
     mkg_3077: mkg_j1,
     mkg_3077_num: mkg_j2,
     mkg_helleborus: mkg_j3,
