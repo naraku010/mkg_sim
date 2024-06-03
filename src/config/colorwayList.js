@@ -191,6 +191,8 @@ import mkg_k12 from "./usercolorways3/mkg_nama.json"
 import mkg_k13 from "./usercolorways3/mkg_pandora.json"
 import mkg_k14 from "./usercolorways3/mkg_to_my_lover.json"
 
+import mkg_l1 from "./usercolorways3/mkg_dragon_witch.json"
+import mkg_l2 from "./usercolorways3/mkg_teradrive.json"
 
 
 export const USERCOLORWAYS_NEW = {
@@ -198,6 +200,8 @@ export const USERCOLORWAYS_NEW = {
     mkg_nama: mkg_k12,
     mkg_pandora: mkg_k13,
     mkg_to_my_lover: mkg_k14,
+    mkg_dragon_witch: mkg_l1,
+    mkg_teradrive: mkg_l2,
 }
 
 export const USERCOLORWAYS = {
