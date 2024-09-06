@@ -55,12 +55,9 @@ export class Key {
     let geometry = this.is_iso_enter
       ? keyGeometryISOEnter(this.geometryOptions)
       : keyGeometry(this.geometryOptions);
-    // if(this.geometryOptions.angle === 1) {
-    //   geometry.rotateY(1);
-    // } else {
-    //   geometry.rotateY(this.geometryOptions.angle);
-    // }
+
     let materials = keyMaterials(this.materialOptions);
+    // Canvas 요소 생성
     this.cap = new THREE.Mesh(geometry, materials);
     this.cap.name = this.options.code;
     KeyUtil.setKeyLayers(this.options.code, this.cap);
@@ -73,8 +70,8 @@ export class Key {
       this.is_iso_enter
     );
 
-    this.cap.castShadow = false;
-    this.cap.receiveShadow = false;
+    this.cap.castShadow = true;
+    this.cap.receiveShadow = true;
     this.cap.position.y = this.start_y;
     this.cap.position.x = this.x;
     this.cap.position.z = this.y;

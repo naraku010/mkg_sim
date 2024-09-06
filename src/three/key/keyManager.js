@@ -4,10 +4,10 @@ import KeyUtil from "../../util/keyboard";
 import ColorUtil from "../../util/color";
 import KEYMAPS from "../../config/keymaps/keymaps";
 import LAYOUTS from "../../config/layouts/layouts";
-import {subscribe} from "redux-subscriber";
-import {initial_settings} from "../../store/startup";
-import {Key, KEYSTATES} from "./key";
-import {Switch, SWITCHSTATE} from "./switch";
+import { subscribe } from "redux-subscriber";
+import { initial_settings } from "../../store/startup";
+import { Key, KEYSTATES } from "./key";
+import { Switch, SWITCHSTATE } from "./switch";
 import Collection from "../collection";
 
 export default class KeyManager extends Collection {
@@ -19,7 +19,7 @@ export default class KeyManager extends Collection {
   }
 
   setup() {
-    this.group = new THREE.Object3D();
+    this.group = new THREE.Group(); // 최신 버전에서 Object3D 대신 Group 사용
     this.group.name = "KEYS";
     this.editing = false;
     this.paintWithKeys = false;
@@ -48,9 +48,11 @@ export default class KeyManager extends Collection {
   get width() {
     return this.layoutFull.width;
   }
+
   get depth() {
     return this.layoutFull.height;
   }
+
   get angleOffset() {
     return Math.sin(Util.toRad(this.angle)) * this.depth;
   }
@@ -100,7 +102,7 @@ export default class KeyManager extends Collection {
 
   paintKey(code) {
     this.components.forEach((x) => {
-      if(x.code === code) {
+      if (x.code === code) {
         ColorUtil.addCodeToOverride(x.code);
         x.updateColors();
       }
@@ -121,23 +123,18 @@ export default class KeyManager extends Collection {
   }
 
   createKeys() {
-    let seen = []; //for boards with multiple keys of same code
+    let seen = []; // For boards with multiple keys of the same code
     this.removeAllOldKeys();
     for (let i = 0; i < this.layout.length; i++) {
       let code = this.keymap[i];
       let dimensions = this.layout[i];
       dimensions.row = KeyUtil.getKeyProfile(
-        i,
-        this.layout,
-        this.layoutFull.height
+          i,
+          this.layout,
+          this.layoutFull.height
       );
       let existingKey = this.getKey(code);
       if (existingKey && !seen.includes(code)) {
-        // if (this.matchesSize(existingKey, dimensions)) {
-        //   existingKey.move(dimensions);
-        //   seen.push(code);
-        //   continue;
-        // }
         this.removeKey(existingKey);
       }
       let K = new Key({

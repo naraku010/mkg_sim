@@ -11,31 +11,19 @@ export default (layout, color) => {
   let width = layout.width + bezel * 2;
   let depth = layout.height + bezel * 2;
   let size = store.getState().case.layout;
-  let geometry;
-  let mesh;
 
-  //create geometry
+  // Create shape for extrusion
   let shape = new THREE.Shape();
-
-
-  //basic outline
-  // shape.moveTo(0, 0);
-  // shape.lineTo(width, 0);
-  // shape.lineTo(width, depth);
-  // shape.lineTo(width*.7, depth);
-  // shape.lineTo(width*.5, depth+.5);
-  // shape.lineTo(width*.3, depth);
-  // shape.lineTo(0, depth);
-  // shape.lineTo(0, 0);
-  //
   shape.moveTo(0, cornerRadius);
   shape.lineTo(width - cornerRadius, 0);
   shape.lineTo(width, depth - cornerRadius);
   shape.lineTo(cornerRadius, depth);
   shape.lineTo(0, cornerRadius);
 
+  // Define holes in the shape
   shape.holes = holes(size, layout, bezel);
 
+  // Extrude geometry options
   let extrudeOptions = {
     depth: height,
     steps: 1,
@@ -45,38 +33,35 @@ export default (layout, color) => {
     bevelThickness: bevel,
   };
 
-  geometry = new THREE.ExtrudeGeometry(shape, extrudeOptions);
+  // Create extruded geometry using BufferGeometry
+  let geometry = new THREE.ExtrudeGeometry(shape, extrudeOptions);
 
-  for (let i = 0; i < geometry.vertices.length; i++) {
-    let v = geometry.vertices[i];
-    if (v.z > 0.5 && v.y < 0.7) {
+  // Modify vertices if necessary
+  const positionAttribute = geometry.getAttribute("position");
+  for (let i = 0; i < positionAttribute.count; i++) {
+    let z = positionAttribute.getZ(i);
+    let y = positionAttribute.getY(i);
+
+    if (z > 0.5 && y < 0.7) {
       if (depth > 6) {
-        v.z += 0.67;
+        positionAttribute.setZ(i, z + 0.67);
       } else if (depth > 5) {
-        v.z += 0.55;
+        positionAttribute.setZ(i, z + 0.55);
       } else {
-        v.z += 0.5;
+        positionAttribute.setZ(i, z + 0.5);
       }
     }
   }
 
-  geometry.faceVertexUvs.push(geometry.faceVertexUvs[0]);
+  geometry.computeVertexNormals();
 
-  for (let i = 0; i < geometry.faces.length; i++) {
-    const f = geometry.faces[i];
-    //all faces geneated from the extrusion (side faces)
-    if (!f.normal.z) {
-      f.materialIndex = 1;
-    } else {
-      f.materialIndex = 0;
-    }
-  }
+  // Create a multi-material mesh
+  const materials = [
+    new THREE.MeshBasicMaterial({ color: color }), // Front/Back
+    new THREE.MeshBasicMaterial({ color: 0x999999 }) // Sides
+  ];
 
-  //create mesh
-  mesh = new THREE.Mesh(
-    geometry,
-    new THREE.MeshBasicMaterial({ color: color })
-  );
+  const mesh = new THREE.Mesh(geometry, materials);
   mesh.name = "CASE";
   mesh.rotation.x = Math.PI / 2;
   mesh.position.set(-bezel, 0, -bezel);

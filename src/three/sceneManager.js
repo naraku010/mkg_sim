@@ -89,16 +89,6 @@ export default class SceneManager extends Collection {
     subscribe("colorways.editing", (state) => {
       this.editing = state.colorways.editing;
     });
-
-    // subscribe("colorways.active", (state) => {
-    //   this.updateDeskMatColor(state);
-    // });
-    // subscribe("case.layout", (state) => {
-    //   this.updateDeskMatLayout(state.case.layout);
-    // });
-    // subscribe("settings.mat", (state) => {
-    //   this.updateDeskMat(state);
-    // });
   }
   get w() {
     return this.el.offsetWidth;
@@ -131,149 +121,12 @@ export default class SceneManager extends Collection {
     this.controls.target = new THREE.Vector3(0, 0, 0);
   }
   async setupLights() {
-    // const gui = new GUI({autoPlace: false});
-    //
-    // const containerEl = document.querySelector('#canvas-wrapper');
-    // // gui.domElement.
-    // const guiDOM = document.createElement("div");
-    // guiDOM.className = 'moveGUI';
-    // guiDOM.append(gui.domElement);
-    // containerEl.prepend(guiDOM);
-    let ambiant = new THREE.AmbientLight("#ffffff", 0.7);
-    this.scene.add(ambiant);
-    //
-    // //main
-    let primaryLight = new THREE.DirectionalLight("#dddddd", 0.8);
-    primaryLight.position.set(5, 10, 10);
-    primaryLight.target.position.set(0, -10, -10);
-    primaryLight.target.updateMatrixWorld();
-    this.scene.add(primaryLight, primaryLight.target);
-    //
-    // //secondary shadows
-    let shadowLight = new THREE.DirectionalLight("#FFFFFF", 0.5);
-    shadowLight.position.set(10, 3, -10);
-    shadowLight.shadow.mapSize.width = 1024;
-    shadowLight.shadow.mapSize.height = 1024;
-    shadowLight.shadow.camera.near = 1;
-    shadowLight.shadow.camera.far = 6;
-    shadowLight.target.position.set(0, 0, 0);
-    shadowLight.target.updateMatrixWorld();
-    this.scene.add(shadowLight, shadowLight.target);
+    const ambientLight = new THREE.AmbientLight(0xffffff, .7); // Ambient light for general illumination
+    this.scene.add(ambientLight);
 
-
-    // const plight = gui.addFolder('light');
-    // plight.add(primaryLight.position, 'x', 5, 20);
-    // plight.add(primaryLight.position, 'z', 10, 50);
-    //
-    // plight.open();
-
-    // const curr = this;
-    // const loader = new GLTFLoader();
-    // loader.load(DestmatModel, async function ( gltf ) {
-    //   const d = gltf.scene;
-    //   d.traverse((child) => {
-    //     const nc = ColorUtil.colorway;
-    //     if (child.isMesh) {
-    //       // child.material.map.encoding = THREE.sRGBEncoding;
-    //       if(child.name === 'Deskmat_-_Mat')
-    //         child.material.color.set(nc.swatches.base.background);
-    //       else
-    //         child.material.color.set(nc.swatches.base.color);
-    //       // child.material.map.needsUpdate = true;
-    //     }
-    //   });
-    //   d.position.z = 2;
-    //   d.scale.set(30, 30, 30);
-    //   curr.deskmat = d;
-    //   curr.scene.add(d);
-    // } );
-    //lighthelpers
-    // let slh = new THREE.DirectionalLightHelper(shadowLight, 2);
-    // let plh = new THREE.DirectionalLightHelper(primaryLight, 2);
-    // slh.update();
-    // plh.update();
-    // this.scene.add(slh, plh);
-  }
-  updateDeskMat(state) {
-    console.log(state.settings.mat);
-    this.deskmat.traverse((child) => {
-      if (child.isMesh) {
-        child.visible = state.settings.mat;
-      }
-    });
-    this.deskmat.needsUpdate = true;
-  }
-  updateDeskMatLayout(layout) {
-    let sf = 10;
-    let z = 2;
-    switch(layout) {
-      default:
-      case 'numpad':
-        sf = 15; z = 2;
-        this.deskmat.position.z = z;
-        this.deskmat.scale.set(sf, sf, 30);
-        break;
-      case "40":
-      case "40ortho":
-        sf = 23; z = 2;
-        this.deskmat.position.z = z;
-        this.deskmat.scale.set(sf, sf, sf);
-        break;
-      case "50":
-      case "leftnum":
-      case "50ortho":
-        sf = 24; z = 2;
-        this.deskmat.position.z = z;
-        this.deskmat.scale.set(sf, sf, sf);
-        break;
-      case "60":      case "60hhkb":
-      case "60iso":   case "60tsangan":
-      case "60wkl":   case "65":
-        sf = 25; z = 2;
-        this.deskmat.position.z = z;
-        this.deskmat.scale.set(sf, sf, sf);
-        break;
-      case "65ergo": case "70": case "70wkl": case "75":
-      case "80": case "80wkl":
-        sf = 30; z = 3;
-        this.deskmat.position.z = z;
-        this.deskmat.scale.set(sf, sf, sf);
-        break;
-      case "95":
-        sf = 35; z = 3;
-        this.deskmat.position.z = z;
-        this.deskmat.scale.set(sf, sf, sf);
-        break;
-      case "100":
-        sf = 40; z = 3;
-        this.deskmat.position.z = z;
-        this.deskmat.scale.set(sf, sf, sf);
-        break;
-
-    }
-
-    this.deskmat.needsUpdate = true;
-    // if (layout == LAYOUTS.)
-    // this.deskmat.traverse((child) => {
-    //   if (child.isMesh) {
-    //     if(child.name === 'Deskmat_-_Mat')
-    //       child.material.color.set(nc.swatches.base.background);
-    //     else
-    //       child.material.color.set(nc.swatches.base.color);
-    //   }
-    // });
-  }
-  updateDeskMatColor(st) {
-    const nc = ColorUtil.colorway;
-    this.deskmat.traverse((child) => {
-      if (child.isMesh) {
-        if(child.name === 'Deskmat_-_Mat')
-          child.material.color.set(nc.swatches.base.background);
-        else
-          child.material.color.set(nc.swatches.base.color);
-      }
-    });
-    this.deskmat.needsUpdate = true;
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1); // Directional light for shadows and highlights
+    directionalLight.position.set(0, 1, 50).normalize();
+    this.scene.add(directionalLight);
   }
   mouseClick(e) {
     if (!this.editing) return;
@@ -291,6 +144,7 @@ export default class SceneManager extends Collection {
     let t = (isTouch ? e.touches[0].clientY : e.clientY) - 0;
     this.mouse.x = (l / this.w) * 2 - 1;
     this.mouse.y = -(t / this.h) * 2 + 1;
+
   }
   deactivateIntersection() {
     if (!this.intersectedObj) return;
