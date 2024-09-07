@@ -131,6 +131,7 @@ export default function BoardOptions() {
                         {label: "매트", value: "matte"},
                         {label: "무광", value: "brushed"},
                         {label: "유광", value: "glossy"},
+                        {label: "살짝광", value: "lowglossy"},
                     ]}
                     handler={(val) => {
                         dispatch(caseActions.setMaterial(val));

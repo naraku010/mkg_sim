@@ -1,83 +1,83 @@
-import mkg_ntd from "./usercolorways/colorway_mkg_ntd.json";
-import mkg_m1 from "./usercolorways/colorway_mkg_masterpiece.json";
-import mkg_m2 from "./usercolorways/colorway_mkg_kaiju.json";
-import mkg_m3 from "./usercolorways/colorway_mkg_sang.json";
-import mkg_m4 from "./usercolorways/colorway_mkg_maestro.json";
-import mkg_m6 from "./usercolorways/colorway_mkg_handa.json";
-import mkg_m7 from "./usercolorways/colorway_mkg_taiga.json";
-import mkg_m8 from "./usercolorways/colorway_mkg_bingsu.json";
-import mkg_m9 from "./usercolorways/colorway_mkg_dracula.json";
-import mkg_m10 from "./usercolorways/colorway_mkg_js.json";
-import mkg_m11 from "./usercolorways/colorway_mkg_beta.json";
-import mkg_m12 from "./usercolorways/colorway_mkg_beloved.json";
-import mkg_m13 from "./usercolorways/colorway_mkg_redalert.json";
-import mkg_m14 from "./usercolorways/colorway_mkg_art.json";
-import mkg_m15 from "./usercolorways/colorway_mkg_darling.json";
-import mkg_m16 from "./usercolorways/colorway_mkg_evil_eye.json";
-import mkg_m17 from "./usercolorways/colorway_mkg_foundation.json";
-import mkg_m18 from "./usercolorways/colorway_mkg_dualshot.json";
-import mkg_m19 from "./usercolorways/colorway_mkg_symbiote.json";
-import mkg_m20 from "./usercolorways/colorway_mkg_nachtarbeit.json";
-import mkg_m21 from "./usercolorways/colorway_mkg_dark_olivia.json";
-import mkg_a1 from "./usercolorways/colorway_mkg_arctic.json";
-import mkg_a2 from "./usercolorways/colorway_mkg_birch.json";
-import mkg_a3 from "./usercolorways/colorway_mkg_cinder.json";
-import mkg_a4 from "./usercolorways/colorway_mkg_coral.json";
-import mkg_a5 from "./usercolorways/colorway_mkg_fleuriste.json";
-import mkg_a6 from "./usercolorways/colorway_mkg_frost_witch.json";
-import mkg_a7 from "./usercolorways/colorway_mkg_galaxy.json";
-import mkg_a8 from "./usercolorways/colorway_mkg_grand_prix.json";
-import mkg_a9 from "./usercolorways/colorway_mkg_maroon.json";
-import mkg_a10 from "./usercolorways/colorway_mkg_matsu.json";
-import mkg_a11 from "./usercolorways/colorway_mkg_regal.json";
-import mkg_a12 from "./usercolorways/colorway_mkg_soyamilk.json";
-import mkg_a13 from "./usercolorways/colorway_mkg_tenshi.json";
-import mkg_a14 from "./usercolorways/colorway_mkg_vamp.json";
-import mkg_a15 from "./usercolorways/colorway_mkg_alhambra.json";
-import mkg_a16 from "./usercolorways/colorway_mkg_british_racing_green_b.json"
-import mkg_a17 from "./usercolorways/colorway_mkg_british_racing_green_r.json"
-import mkg_b1 from "./usercolorways/colorway_mkg_rome.json"
-import mkg_b2 from "./usercolorways/colorway_mkg_hanok.json"
-import mkg_b3 from "./usercolorways/colorway_mkg_barista.json"
-import mkg_b4 from "./usercolorways/colorway_mkg_apollo.json"
-import mkg_b5 from "./usercolorways/colorway_mkg_camping_burgundy.json"
-import mkg_b6 from "./usercolorways/colorway_mkg_first_love.json"
-import mkg_b7 from "./usercolorways/colorway_mkg_fishing.json"
-import mkg_b8 from "./usercolorways/colorway_mkg_Illusion.json"
-import mkg_b9 from "./usercolorways/colorway_mkg_manhattan_cafe.json"
-import mkg_b10 from "./usercolorways/colorway_mkg_marmoreal.json"
-import mkg_b11 from "./usercolorways/colorway_mkg_winterglow.json"
-import mkg_c1 from "./usercolorways/colorway_mkg_stamp.json"
-import mkg_c2 from "./usercolorways/colorway_mkg_wavez.json"
-import mkg_c3 from "./usercolorways/colorway_mkg_rudy.json"
-import mkg_c4 from "./usercolorways/colorway_mkg_merlin.json"
-import mkg_c5 from "./usercolorways/colorway_mkg_mars_green.json"
-import mkg_c6 from "./usercolorways/colorway_mkg_aegyptus.json"
-import mkg_c7 from "./usercolorways/colorway_mkg_3run.json"
-import mkg_c8 from "./usercolorways/colorway_mkg_amethyst.json"
-import mkg_c9 from "./usercolorways/colorway_mkg_amethyst_dark.json"
-import mkg_c10 from "./usercolorways/colorway_mkg_analog_dreams.json"
-import mkg_c11 from "./usercolorways/colorway_mkg_black_pink.json"
-import mkg_c12 from "./usercolorways/colorway_mkg_calm_depths.json"
-import mkg_c13 from "./usercolorways/colorway_mkg_daifuku.json"
-import mkg_c14 from "./usercolorways/colorway_mkg_deku.json"
-import mkg_c15 from "./usercolorways/colorway_mkg_dolch_reborn.json"
-import mkg_c16 from "./usercolorways/colorway_mkg_evil_dolch.json"
-import mkg_c17 from "./usercolorways/colorway_mkg_hydro.json"
-import mkg_c18 from "./usercolorways/colorway_mkg_hyperfuse.json"
-import mkg_c19 from "./usercolorways/colorway_mkg_iceberg.json"
-import mkg_c20 from "./usercolorways/colorway_mkg_lavender.json"
-import mkg_c21 from "./usercolorways/colorway_mkg_lavender_violet.json"
-import mkg_d1 from "./usercolorways/colorway_mkg_mint_chocolate.json"
-import mkg_d2 from "./usercolorways/colorway_mkg_noel.json"
-import mkg_d3 from "./usercolorways/colorway_mkg_phantom.json"
-import mkg_d4 from "./usercolorways/colorway_mkg_plum.json"
-import mkg_d5 from "./usercolorways/colorway_mkg_retro_mixed_lights.json"
-import mkg_d6 from "./usercolorways/colorway_mkg_carpenter.json"
-import mkg_d7 from "./usercolorways/colorway_mkg_panels.json"
-import mkg_d8 from "./usercolorways/colorway_mkg_spark_light.json"
-import mkg_d9 from "./usercolorways/colorway_mkg_spark.json"
-import mkg_d10 from "./usercolorways/colorway_mkg_violet_alert.json"
+import mkg_ntd from "./usercolorways1/colorway_mkg_ntd.json";
+import mkg_m1 from "./usercolorways1/colorway_mkg_masterpiece.json";
+import mkg_m2 from "./usercolorways1/colorway_mkg_kaiju.json";
+import mkg_m3 from "./usercolorways1/colorway_mkg_sang.json";
+import mkg_m4 from "./usercolorways1/colorway_mkg_maestro.json";
+import mkg_m6 from "./usercolorways1/colorway_mkg_handa.json";
+import mkg_m7 from "./usercolorways1/colorway_mkg_taiga.json";
+import mkg_m8 from "./usercolorways1/colorway_mkg_bingsu.json";
+import mkg_m9 from "./usercolorways1/colorway_mkg_dracula.json";
+import mkg_m10 from "./usercolorways1/colorway_mkg_js.json";
+import mkg_m11 from "./usercolorways1/colorway_mkg_beta.json";
+import mkg_m12 from "./usercolorways1/colorway_mkg_beloved.json";
+import mkg_m13 from "./usercolorways1/colorway_mkg_redalert.json";
+import mkg_m14 from "./usercolorways1/colorway_mkg_art.json";
+import mkg_m15 from "./usercolorways1/colorway_mkg_darling.json";
+import mkg_m16 from "./usercolorways1/colorway_mkg_evil_eye.json";
+import mkg_m17 from "./usercolorways1/colorway_mkg_foundation.json";
+import mkg_m18 from "./usercolorways1/colorway_mkg_dualshot.json";
+import mkg_m19 from "./usercolorways1/colorway_mkg_symbiote.json";
+import mkg_m20 from "./usercolorways1/colorway_mkg_nachtarbeit.json";
+import mkg_m21 from "./usercolorways1/colorway_mkg_dark_olivia.json";
+import mkg_a1 from "./usercolorways1/colorway_mkg_arctic.json";
+import mkg_a2 from "./usercolorways1/colorway_mkg_birch.json";
+import mkg_a3 from "./usercolorways1/colorway_mkg_cinder.json";
+import mkg_a4 from "./usercolorways1/colorway_mkg_coral.json";
+import mkg_a5 from "./usercolorways1/colorway_mkg_fleuriste.json";
+import mkg_a6 from "./usercolorways1/colorway_mkg_frost_witch.json";
+import mkg_a7 from "./usercolorways1/colorway_mkg_galaxy.json";
+import mkg_a8 from "./usercolorways1/colorway_mkg_grand_prix.json";
+import mkg_a9 from "./usercolorways1/colorway_mkg_maroon.json";
+import mkg_a10 from "./usercolorways1/colorway_mkg_matsu.json";
+import mkg_a11 from "./usercolorways1/colorway_mkg_regal.json";
+import mkg_a12 from "./usercolorways1/colorway_mkg_soyamilk.json";
+import mkg_a13 from "./usercolorways1/colorway_mkg_tenshi.json";
+import mkg_a14 from "./usercolorways1/colorway_mkg_vamp.json";
+import mkg_a15 from "./usercolorways1/colorway_mkg_alhambra.json";
+import mkg_a16 from "./usercolorways1/colorway_mkg_british_racing_green_b.json"
+import mkg_a17 from "./usercolorways1/colorway_mkg_british_racing_green_r.json"
+import mkg_b1 from "./usercolorways1/colorway_mkg_rome.json"
+import mkg_b2 from "./usercolorways1/colorway_mkg_hanok.json"
+import mkg_b3 from "./usercolorways1/colorway_mkg_barista.json"
+import mkg_b4 from "./usercolorways1/colorway_mkg_apollo.json"
+import mkg_b5 from "./usercolorways1/colorway_mkg_camping_burgundy.json"
+import mkg_b6 from "./usercolorways1/colorway_mkg_first_love.json"
+import mkg_b7 from "./usercolorways1/colorway_mkg_fishing.json"
+import mkg_b8 from "./usercolorways1/colorway_mkg_Illusion.json"
+import mkg_b9 from "./usercolorways1/colorway_mkg_manhattan_cafe.json"
+import mkg_b10 from "./usercolorways1/colorway_mkg_marmoreal.json"
+import mkg_b11 from "./usercolorways1/colorway_mkg_winterglow.json"
+import mkg_c1 from "./usercolorways1/colorway_mkg_stamp.json"
+import mkg_c2 from "./usercolorways1/colorway_mkg_wavez.json"
+import mkg_c3 from "./usercolorways1/colorway_mkg_rudy.json"
+import mkg_c4 from "./usercolorways1/colorway_mkg_merlin.json"
+import mkg_c5 from "./usercolorways1/colorway_mkg_mars_green.json"
+import mkg_c6 from "./usercolorways1/colorway_mkg_aegyptus.json"
+import mkg_c7 from "./usercolorways1/colorway_mkg_3run.json"
+import mkg_c8 from "./usercolorways1/colorway_mkg_amethyst.json"
+import mkg_c9 from "./usercolorways1/colorway_mkg_amethyst_dark.json"
+import mkg_c10 from "./usercolorways1/colorway_mkg_analog_dreams.json"
+import mkg_c11 from "./usercolorways1/colorway_mkg_black_pink.json"
+import mkg_c12 from "./usercolorways1/colorway_mkg_calm_depths.json"
+import mkg_c13 from "./usercolorways1/colorway_mkg_daifuku.json"
+import mkg_c14 from "./usercolorways1/colorway_mkg_deku.json"
+import mkg_c15 from "./usercolorways1/colorway_mkg_dolch_reborn.json"
+import mkg_c16 from "./usercolorways1/colorway_mkg_evil_dolch.json"
+import mkg_c17 from "./usercolorways1/colorway_mkg_hydro.json"
+import mkg_c18 from "./usercolorways1/colorway_mkg_hyperfuse.json"
+import mkg_c19 from "./usercolorways1/colorway_mkg_iceberg.json"
+import mkg_c20 from "./usercolorways1/colorway_mkg_lavender.json"
+import mkg_c21 from "./usercolorways1/colorway_mkg_lavender_violet.json"
+import mkg_d1 from "./usercolorways1/colorway_mkg_mint_chocolate.json"
+import mkg_d2 from "./usercolorways1/colorway_mkg_noel.json"
+import mkg_d3 from "./usercolorways1/colorway_mkg_phantom.json"
+import mkg_d4 from "./usercolorways1/colorway_mkg_plum.json"
+import mkg_d5 from "./usercolorways1/colorway_mkg_retro_mixed_lights.json"
+import mkg_d6 from "./usercolorways1/colorway_mkg_carpenter.json"
+import mkg_d7 from "./usercolorways1/colorway_mkg_panels.json"
+import mkg_d8 from "./usercolorways1/colorway_mkg_spark_light.json"
+import mkg_d9 from "./usercolorways1/colorway_mkg_spark.json"
+import mkg_d10 from "./usercolorways1/colorway_mkg_violet_alert.json"
 import mkg_f1 from "./usercolorways2/mkg_bank_account.json"
 import mkg_f2 from "./usercolorways2/mkg_kabukicho.json"
 import mkg_f3 from "./usercolorways2/mkg_kitsune.json"
@@ -194,17 +194,111 @@ import mkg_k14 from "./usercolorways3/mkg_to_my_lover.json"
 import mkg_l1 from "./usercolorways3/mkg_dragon_witch.json"
 import mkg_l2 from "./usercolorways3/mkg_teradrive.json"
 
+import mkg_gmk_classic_arabic from "./usercolorways4/mkg_gmk_classic_arabic.json";
+import mkg_gmk_boho from "./usercolorways4/mkg_gmk_boho.json";
+import mkg_gmk_moonlight from "./usercolorways4/mkg_gmk_moonlight.json";
+import mkg_gmk_hazakura from "./usercolorways4/mkg_gmk_hazakura.json";
+import mkg_gmk_lazurite from "./usercolorways4/mkg_gmk_lazurite.json";
+import mkg_gmk_boulder from "./usercolorways4/mkg_gmk_boulder.json";
+import mkg_gmk_blurple from "./usercolorways4/mkg_gmk_blurple.json";
+import mkg_gmk_astral_light from "./usercolorways4/mkg_gmk_astral_light.json";
+import mkg_gmk_fuji from "./usercolorways4/mkg_gmk_fuji.json";
+import mkg_gmk_terror from "./usercolorways4/mkg_gmk_terror.json";
+import mkg_gmk_tiramisu from "./usercolorways4/mkg_gmk_tiramisu.json";
+import mkg_gmk_cream_matcha from "./usercolorways4/mkg_gmk_cream_matcha.json";
+import mkg_gmk_slasher from "./usercolorways4/mkg_gmk_slasher.json";
+import mkg_gmk_monarch from "./usercolorways4/mkg_gmk_monarch.json";
+import mkg_gmk_tako from "./usercolorways4/mkg_gmk_tako.json";
+import mkg_gmk_bordeaux from "./usercolorways4/mkg_gmk_bordeaux.json";
+import mkg_gmk_earth_tones from "./usercolorways4/mkg_gmk_earth_tones.json";
+import mkg_gmk_higanbana from "./usercolorways4/mkg_gmk_higanbana.json";
+import mkg_gmk_moomin from "./usercolorways4/mkg_gmk_moomin.json";
+import mkg_gmk_a from "./usercolorways4/mkg_gmk_a.json";
+import mkg_gmk_jags from "./usercolorways4/mkg_gmk_jags.json";
+import mkg_gmk_shadow from "./usercolorways4/mkg_gmk_shadow.json";
+import mkg_gmk_shashin from "./usercolorways4/mkg_gmk_shashin.json";
+import mkg_gmk_monochrome_r2 from "./usercolorways4/mkg_gmk_monochrome_r2.json";
+import mkg_gmk_lychee from "./usercolorways4/mkg_gmk_lychee.json";
+import mkg_gmk_peach_blossom from "./usercolorways4/mkg_gmk_peach_blossom.json";
+import mkg_gmk_zimo from "./usercolorways4/mkg_gmk_zimo.json";
+import mkg_gmk_zen_pond from "./usercolorways4/mkg_gmk_zen_pond.json";
+import mkg_gmk_nightlight from "./usercolorways4/mkg_gmk_nightlight.json";
+import mkg_gmk_reforged from "./usercolorways4/mkg_gmk_reforged.json";
+import mkg_gmk_harvest from "./usercolorways4/mkg_gmk_harvest.json";
+import mkg_gmk_firefly from "./usercolorways4/mkg_gmk_firefly.json";
+import mkg_gmk_pharaoh from "./usercolorways4/mkg_gmk_pharaoh.json";
+import mkg_gmk_mono_yume from "./usercolorways4/mkg_gmk_mono_yume.json";
+import mkg_gmk_abyssal from "./usercolorways4/mkg_gmk_abyssal.json";
+import mkg_gmk_orange_boi from "./usercolorways4/mkg_gmk_orange_boi.json";
+import mkg_gmk_blossom from "./usercolorways4/mkg_gmk_blossom.json";
+import mkg_gmk_manta from "./usercolorways4/mkg_gmk_manta.json";
+import mkg_gmk_november_fog from "./usercolorways4/mkg_gmk_november_fog.json";
+import mkg_gmk_villanelle from "./usercolorways4/mkg_gmk_villanelle.json";
+import mkg_gmk_infernal from "./usercolorways4/mkg_gmk_infernal.json";
+import mkg_gmk_hooty from "./usercolorways4/mkg_gmk_hooty.json";
+import mkg_gmk_yutousu from "./usercolorways4/mkg_gmk_yutousu.json";
+import mkg_keykobo_cherries from "./usercolorways4/mkg_keykobo_cherries.json";
+import mkg_keykobo_cherries_alpha from "./usercolorways4/mkg_keykobo_cherries_alpha.json";
+import mkg_keykobo_verdigris from "./usercolorways4/mkg_keykobo_verdigris.json";
+import mkg_pbtfans_no_signal from "./usercolorways4/mkg_pbtfans_no_signal.json";
 
 export const USERCOLORWAYS_NEW = {
+    mkg_gmk_classic_arabic: mkg_gmk_classic_arabic,
+    mkg_gmk_boho: mkg_gmk_boho,
+    mkg_gmk_moonlight: mkg_gmk_moonlight,
+    mkg_gmk_hazakura: mkg_gmk_hazakura,
+    mkg_gmk_lazurite: mkg_gmk_lazurite,
+    mkg_gmk_boulder: mkg_gmk_boulder,
+    mkg_gmk_blurple: mkg_gmk_blurple,
+    mkg_gmk_astral_light: mkg_gmk_astral_light,
+    mkg_gmk_fuji: mkg_gmk_fuji,
+    mkg_gmk_terror: mkg_gmk_terror,
+    mkg_gmk_tiramisu: mkg_gmk_tiramisu,
+    mkg_gmk_cream_matcha: mkg_gmk_cream_matcha,
+    mkg_gmk_slasher: mkg_gmk_slasher,
+    mkg_gmk_monarch: mkg_gmk_monarch,
+    mkg_gmk_tako: mkg_gmk_tako,
+    mkg_gmk_bordeaux: mkg_gmk_bordeaux,
+    mkg_gmk_earth_tones: mkg_gmk_earth_tones,
+    mkg_gmk_higanbana: mkg_gmk_higanbana,
+    mkg_gmk_moomin: mkg_gmk_moomin,
+    mkg_gmk_a: mkg_gmk_a,
+    mkg_gmk_jags: mkg_gmk_jags,
+    mkg_gmk_shadow: mkg_gmk_shadow,
+    mkg_gmk_shashin: mkg_gmk_shashin,
+    mkg_gmk_monochrome_r2: mkg_gmk_monochrome_r2,
+    mkg_gmk_lychee: mkg_gmk_lychee,
+    mkg_gmk_peach_blossom: mkg_gmk_peach_blossom,
+    mkg_gmk_zimo: mkg_gmk_zimo,
+    mkg_gmk_zen_pond: mkg_gmk_zen_pond,
+    mkg_gmk_nightlight: mkg_gmk_nightlight,
+    mkg_gmk_reforged: mkg_gmk_reforged,
+    mkg_gmk_harvest: mkg_gmk_harvest,
+    mkg_gmk_firefly: mkg_gmk_firefly,
+    mkg_gmk_pharaoh: mkg_gmk_pharaoh,
+    mkg_gmk_mono_yume: mkg_gmk_mono_yume,
+    mkg_gmk_abyssal: mkg_gmk_abyssal,
+    mkg_gmk_orange_boi: mkg_gmk_orange_boi,
+    mkg_gmk_blossom: mkg_gmk_blossom,
+    mkg_gmk_manta: mkg_gmk_manta,
+    mkg_gmk_november_fog: mkg_gmk_november_fog,
+    mkg_gmk_villanelle: mkg_gmk_villanelle,
+    mkg_gmk_infernal: mkg_gmk_infernal,
+    mkg_gmk_hooty: mkg_gmk_hooty,
+    mkg_gmk_yutousu: mkg_gmk_yutousu,
+    mkg_keykobo_cherries: mkg_keykobo_cherries,
+    mkg_keykobo_cherries_alpha: mkg_keykobo_cherries_alpha,
+    mkg_keykobo_verdigris: mkg_keykobo_verdigris,
+    mkg_pbtfans_no_signal: mkg_pbtfans_no_signal
+}
+
+export const USERCOLORWAYS = {
     mkg_my_first_joy: mkg_k11,
     mkg_nama: mkg_k12,
     mkg_pandora: mkg_k13,
     mkg_to_my_lover: mkg_k14,
     mkg_dragon_witch: mkg_l1,
     mkg_teradrive: mkg_l2,
-}
-
-export const USERCOLORWAYS = {
     mkg_buff_bride: mkg_j15,
     mkg_classic1: mkg_k1,
     mkg_classic2: mkg_k2,
@@ -391,6 +485,3 @@ export const USERCOLORWAYS = {
     mkg_euler: mkg_g15,
     mkg_pc_neon_lights: mkg_g16,
 };
-
-
-export const userColorwayOptions = Object.keys(USERCOLORWAYS);

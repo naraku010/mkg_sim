@@ -91,6 +91,14 @@ const MATERIAL_OPTIONS = {
         clearcoatRoughness: 0.1, // 코팅의 거칠기를 낮게 설정
         envMapIntensity: 1.0, // 주변 반사 환경을 좀 더 강하게 설정
     },
+    lowglossy: {
+        metalness: .3,  // 금속성 최대치
+        roughness: .05, // 표면을 매끄럽게 설정
+        reflectivity: .3, // 매우 높은 반사율
+        clearcoat: .4, // 유광 효과를 위한 코팅
+        clearcoatRoughness: .5, // 코팅의 거칠기를 낮게 설정
+        envMapIntensity: .2, // 주변 반사 환경을 좀 더 강하게 설정
+    }
 };
 
 // Manage the parts of the board: case, keys.
