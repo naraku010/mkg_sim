@@ -123,7 +123,7 @@ export default class SceneManager extends Collection {
     // guiDOM.className = 'moveGUI';
     // guiDOM.append(gui.domElement);
     // containerEl.prepend(guiDOM);
-    let ambiant = new THREE.AmbientLight("#ffffff", 2.3);
+    let ambiant = new THREE.AmbientLight("#ffffff", 1.5);
     this.scene.add(ambiant);
     //
     // //main

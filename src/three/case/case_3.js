@@ -11,8 +11,6 @@ export default (layout, color) => {
   let width = layout.width + bezel * 2;
   let depth = layout.height + bezel * 2;
   let size = store.getState().case.layout;
-  let geometry;
-  let mesh;
 
   //create geometry
   let shape = new THREE.Shape();
@@ -21,9 +19,9 @@ export default (layout, color) => {
   shape.moveTo(0, 0);
   shape.lineTo(width, 0);
   shape.lineTo(width, depth);
-  shape.lineTo(width*.7, depth);
-  shape.lineTo(width*.5, depth+.7);
-  shape.lineTo(width*.3, depth);
+  shape.lineTo(width * 0.7, depth);
+  shape.lineTo(width * 0.5, depth + 0.7);
+  shape.lineTo(width * 0.3, depth);
   shape.lineTo(0, depth);
   shape.lineTo(0, 0);
 
@@ -38,38 +36,36 @@ export default (layout, color) => {
     bevelThickness: bevel,
   };
 
-  geometry = new THREE.ExtrudeGeometry(shape, extrudeOptions);
+  let geometry = new THREE.ExtrudeGeometry(shape, extrudeOptions);
 
-  for (let i = 0; i < geometry.vertices.length; i++) {
-    let v = geometry.vertices[i];
-    if (v.z > 0.5 && v.y < 0.7) {
+  let positionAttribute = geometry.getAttribute("position");
+
+  // Update the vertices based on the new geometry format
+  for (let i = 0; i < positionAttribute.count; i++) {
+    let z = positionAttribute.getZ(i);
+    let y = positionAttribute.getY(i);
+
+    if (z > 0.5 && y < 0.7) {
       if (depth > 6) {
-        v.z += 0.67;
+        positionAttribute.setZ(i, z + 0.67);
       } else if (depth > 5) {
-        v.z += 0.55;
+        positionAttribute.setZ(i, z + 0.55);
       } else {
-        v.z += 0.5;
+        positionAttribute.setZ(i, z + 0.5);
       }
     }
   }
 
-  geometry.faceVertexUvs.push(geometry.faceVertexUvs[0]);
+  geometry.computeVertexNormals(); // To ensure normals are updated after modifying vertices
 
-  for (let i = 0; i < geometry.faces.length; i++) {
-    const f = geometry.faces[i];
-    //all faces geneated from the extrusion (side faces)
-    if (!f.normal.z) {
-      f.materialIndex = 1;
-    } else {
-      f.materialIndex = 0;
-    }
-  }
+  // Materials for the case
+  let materials = [
+    new THREE.MeshBasicMaterial({ color: color }), // Top/bottom
+    new THREE.MeshBasicMaterial({ color: 0x000000 }), // Sides
+  ];
 
-  //create mesh
-  mesh = new THREE.Mesh(
-    geometry,
-    new THREE.MeshBasicMaterial({ color: color })
-  );
+  // Create mesh
+  let mesh = new THREE.Mesh(geometry, materials);
   mesh.name = "CASE";
   mesh.rotation.x = Math.PI / 2;
   mesh.position.set(-bezel, 0, -bezel);
