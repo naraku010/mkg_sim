@@ -161,7 +161,7 @@ export default class SceneManager extends Collection {
     const primaryLightHelper = new DirectionalLightHelper(primaryLight, 5);  // Helper 크기 지정
     this.scene.add(primaryLightHelper);
     const params = {
-      showPrimaryLightHelper: true  // GUI에서 제어할 수 있는 변수
+      showPrimaryLightHelper: false  // GUI에서 제어할 수 있는 변수
     };
 
     gui.add(params, 'showPrimaryLightHelper').name('Toggle Primarylight Helper').onChange((value) => {
