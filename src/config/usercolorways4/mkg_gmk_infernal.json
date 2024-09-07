@@ -1,0 +1,25 @@
+{
+    "id": "mkg_gmk_infernal",
+    "label": "GMK Infernal",
+    "manufacturer": "",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#551e27",
+            "color": "#c01e1b"
+        },
+        "mods": {
+            "background": "#551e27",
+            "color": "#c01e1b"
+        },
+        "accent": {
+            "background": "#1b1c21",
+            "color": "#c01e1b"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent"
+    }
+}

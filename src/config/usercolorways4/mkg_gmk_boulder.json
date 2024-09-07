@@ -1,0 +1,29 @@
+{
+    "id": "mkg_gmk_boulder",
+    "label": "GMK Boulder",
+    "manufacturer": "",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#444444",
+            "color": "#827464"
+        },
+        "mods": {
+            "background": "#827464",
+            "color": "#444444"
+        },
+        "accent": {
+            "background": "#cec3ac",
+            "color": "#444444"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F7": "mods",
+        "KC_F6": "mods",
+        "KC_F8": "mods"
+    }
+}

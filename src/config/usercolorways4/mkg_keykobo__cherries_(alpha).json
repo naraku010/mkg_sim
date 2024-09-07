@@ -1,0 +1,37 @@
+{
+    "id": "mkg_keykobo__cherries_(alpha)",
+    "label": "KeyKobo  Cherries (Alpha)",
+    "manufacturer": "",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#d4c2b4",
+            "color": "#5c161e"
+        },
+        "mods": {
+            "background": "#5c161e",
+            "color": "#d4c2b4"
+        },
+        "accent": {
+            "background": "#441b1f",
+            "color": "#d4c2b4"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F1": "mods",
+        "KC_F2": "mods",
+        "KC_F3": "mods",
+        "KC_F4": "mods",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_F9": "mods",
+        "KC_F10": "mods",
+        "KC_F11": "mods",
+        "KC_F12": "mods"
+    }
+}

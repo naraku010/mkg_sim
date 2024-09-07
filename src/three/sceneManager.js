@@ -4,8 +4,9 @@ import {subscribe} from "redux-subscriber";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js";
 import {disableHighlight, enableHighlight} from "./key/materials";
 import ThreeUtil from "../util/three";
-import emptyTexture from "../assets/shadows/empty_warehouse_01_2k.hdr";
-import {RGBELoader} from "three/addons/loaders/RGBELoader";
+import GUI from "lil-gui";
+import {DirectionalLightHelper, SpotLightHelper} from 'three';
+
 export default class SceneManager extends Collection {
   constructor(options) {
     super();
@@ -123,11 +124,11 @@ export default class SceneManager extends Collection {
     // guiDOM.className = 'moveGUI';
     // guiDOM.append(gui.domElement);
     // containerEl.prepend(guiDOM);
-    let ambiant = new THREE.AmbientLight("#ffffff", 1.5);
+    let ambiant = new THREE.AmbientLight("#ffffff", 1);
     this.scene.add(ambiant);
     //
     // //main
-    let primaryLight = new THREE.DirectionalLight("#dddddd", 0.8);
+    let primaryLight = new THREE.DirectionalLight("#dddddd", 5);
     primaryLight.position.set(5, 10, 10);
     primaryLight.target.position.set(0, -10, -10);
     primaryLight.target.updateMatrixWorld();
@@ -144,6 +145,34 @@ export default class SceneManager extends Collection {
     shadowLight.target.updateMatrixWorld();
     this.scene.add(shadowLight, shadowLight.target);
 
+
+    const gui = new GUI();
+// AmbientLight 조절
+    const ambientLightFolder = gui.addFolder('Ambient Light');
+    ambientLightFolder.add(ambiant, 'intensity', 0, 4, 0.1).name('Intensity');
+
+// SpotLight 각도 및 강도 조절
+    const primaryLightFolder = gui.addFolder('Primary Light');
+    primaryLightFolder.add(primaryLight, 'intensity', 0, 5, 0.1).name('Intensity');
+    primaryLightFolder.add(primaryLight.position, 'x', -10, 10, 0.1).name('Position X');
+    primaryLightFolder.add(primaryLight.position, 'y', -10, 10, 0.1).name('Position Y');
+    primaryLightFolder.add(primaryLight.position, 'z', -10, 10, 0.1).name('Position Z');
+
+    const primaryLightHelper = new DirectionalLightHelper(primaryLight, 5);  // Helper 크기 지정
+    this.scene.add(primaryLightHelper);
+    const params = {
+      showPrimaryLightHelper: true  // GUI에서 제어할 수 있는 변수
+    };
+
+    gui.add(params, 'showPrimaryLightHelper').name('Toggle Primarylight Helper').onChange((value) => {
+      if (value) {
+        this.scene.add(primaryLightHelper);  // 가이드라인 표시
+      } else {
+        this.scene.remove(primaryLightHelper);  // 가이드라인 숨김
+      }
+    });
+
+    //lighthelpers
     //lighthelpers
     // let slh = new THREE.DirectionalLightHelper(shadowLight, 2);
     // let plh = new THREE.DirectionalLightHelper(primaryLight, 2);

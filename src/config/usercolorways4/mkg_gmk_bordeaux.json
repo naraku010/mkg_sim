@@ -1,0 +1,25 @@
+{
+    "id": "mkg_gmk_bordeaux",
+    "label": "GMK Bordeaux",
+    "manufacturer": "",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#381921",
+            "color": "#c69982"
+        },
+        "mods": {
+            "background": "#381921",
+            "color": "#c69982"
+        },
+        "accent": {
+            "background": "#c69982",
+            "color": "#381921"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent"
+    }
+}

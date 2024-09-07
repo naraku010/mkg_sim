@@ -1,0 +1,58 @@
+{
+    "id": "mkg_gmk_zen_pond",
+    "label": "GMK Zen Pond",
+    "manufacturer": "",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#1e263d",
+            "color": "#6ab6ca",
+            "subColor": "#f7f2ea"
+        },
+        "mods": {
+            "background": "#1e263d",
+            "color": "#f7f2ea"
+        },
+        "accent": {
+            "background": "#6ab6ca",
+            "color": "#f7f2ea"
+        },
+        "swatch1": {
+            "background": "#1e263d",
+            "color": "#6ab6ca",
+            "subColor": "#881c31"
+        },
+        "swatch2": {
+            "background": "#1e263d",
+            "color": "#881c31"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_UP": "base",
+        "KC_DOWN": "base",
+        "KC_RGHT": "base",
+        "KC_LEFT": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_GRAVE": "swatch1",
+        "KC_1": "swatch1",
+        "KC_2": "swatch1",
+        "KC_3": "swatch1",
+        "KC_4": "swatch1",
+        "KC_5": "swatch1",
+        "KC_6": "swatch1",
+        "KC_7": "swatch1",
+        "KC_8": "swatch1",
+        "KC_9": "swatch1",
+        "KC_0": "swatch1",
+        "KC_MINS": "swatch1",
+        "KC_EQL": "swatch1",
+        "KC_LGUI": "swatch2",
+        "KC_RGUI": "swatch2"
+    }
+}

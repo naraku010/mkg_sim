@@ -55,14 +55,14 @@ const getMaterialSet = (opts) => {
         clearcoat: 0.5,              // 적당한 클리어코트 반짝임
         clearcoatRoughness: 0.4,     // 거칠기 반영
         reflectivity: 0.2,           // 적당한 반사도
-        // envMapIntensity: 1.2,        // 환경 맵 반사 강도
+        envMapIntensity: 1.2,        // 환경 맵 반사 강도
     } : {
         roughness: 0.2,              // ABS는 더 낮은 거칠기
         metalness: 0,                // 금속성 없음
         clearcoat: 0.6,                // 강한 클리어코트로 반짝임 효과
         clearcoatRoughness: 0.05,    // 매끄러운 표면
         reflectivity: 0.3,           // 더 높은 반사도
-        // envMapIntensity: 1.5,        // 더 강한 환경 맵 반사
+        envMapIntensity: 1.5,        // 더 강한 환경 맵 반사
     };
     let top = new THREE.MeshPhysicalMaterial({
         map: legendTexture,
@@ -85,6 +85,8 @@ const getMaterialSet = (opts) => {
         top.transparent = side.transparent = true;
         top.opacity = side.opacity = 0.55;
     }
+    top.castShadow = side.receiveShadow = false;
+    top.receiveShadow = side.receiveShadow = true;
     // side.needsUpdate = true;
     computed_materials[key] = side;
     return [side, top];

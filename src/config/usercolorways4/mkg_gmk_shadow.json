@@ -1,0 +1,25 @@
+{
+    "id": "mkg_gmk_shadow",
+    "label": "GMK Shadow",
+    "manufacturer": "",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#2a2e33",
+            "color": "#6488a0"
+        },
+        "mods": {
+            "background": "#2a2e33",
+            "color": "#6488a0"
+        },
+        "accent": {
+            "background": "#6f322f",
+            "color": "#6488a0"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent"
+    }
+}

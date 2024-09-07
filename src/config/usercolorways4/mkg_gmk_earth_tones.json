@@ -1,0 +1,33 @@
+{
+    "id": "mkg_gmk_earth_tones",
+    "label": "GMK Earth Tones",
+    "manufacturer": "",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#cfbeac",
+            "color": "#32606d"
+        },
+        "mods": {
+            "background": "#32606d",
+            "color": "#cfbeac"
+        },
+        "accent": {
+            "background": "#7a593a",
+            "color": "#cfbeac"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_UP": "accent",
+        "KC_LEFT": "accent",
+        "KC_DOWN": "accent",
+        "KC_RGHT": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

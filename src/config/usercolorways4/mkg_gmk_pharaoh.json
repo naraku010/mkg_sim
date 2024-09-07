@@ -1,0 +1,25 @@
+{
+    "id": "mkg_gmk_pharaoh",
+    "label": "GMK Pharaoh",
+    "manufacturer": "",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#181818",
+            "color": "#c29842"
+        },
+        "mods": {
+            "background": "#181818",
+            "color": "#c29842"
+        },
+        "accent": {
+            "background": "#c29842",
+            "color": "#181818"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent"
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "id": "mkg_gmk_lychee",
+    "label": "GMK Lychee",
+    "manufacturer": "",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#dbd8d0",
+            "color": "#923a43"
+        },
+        "mods": {
+            "background": "#ad454e",
+            "color": "#f7f2ea"
+        },
+        "accent": {
+            "background": "#55272a",
+            "color": "#f7f2ea"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_RGHT": "accent",
+        "KC_LEFT": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

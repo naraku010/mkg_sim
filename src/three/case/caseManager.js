@@ -354,6 +354,7 @@ export default class CaseManager {
             ...options,
             color: color,
         });
+
         materials.push(materialPrimary, materialSecondary);
         this.case.material = materials;
     }

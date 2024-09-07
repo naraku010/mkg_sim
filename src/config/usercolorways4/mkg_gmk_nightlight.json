@@ -1,0 +1,29 @@
+{
+    "id": "mkg_gmk_nightlight",
+    "label": "GMK Nightlight",
+    "manufacturer": "",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#acc9db",
+            "color": "#155274"
+        },
+        "mods": {
+            "background": "#155274",
+            "color": "#acc9db"
+        },
+        "accent": {
+            "background": "#5abece",
+            "color": "#155274"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

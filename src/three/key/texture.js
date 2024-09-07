@@ -181,7 +181,8 @@ export const keyTexture = (opts) => {
 
   //document.body.appendChild(canvas);
 
+  texture.minFilter = THREE.LinearMipMapLinearFilter;  // 더 부드러운 텍스처 필터링
+  texture.magFilter = THREE.LinearFilter;
   texture.needsUpdate = true;
-  texture.minFilter = THREE.NearestMipmapNearestFilter;
   return texture;
 };

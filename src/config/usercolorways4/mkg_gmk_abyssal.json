@@ -1,0 +1,29 @@
+{
+    "id": "mkg_gmk_abyssal",
+    "label": "GMK Abyssal",
+    "manufacturer": "",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#c3bfc9",
+            "color": "#628fc9"
+        },
+        "mods": {
+            "background": "#23232e",
+            "color": "#628fc9"
+        },
+        "accent": {
+            "background": "#23232e",
+            "color": "#628fc9"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}
