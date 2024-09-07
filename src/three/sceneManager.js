@@ -2,29 +2,23 @@ import * as THREE from "three";
 import Collection from "./collection";
 import {subscribe} from "redux-subscriber";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js";
-// import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader.js';
 import {disableHighlight, enableHighlight} from "./key/materials";
 import ThreeUtil from "../util/three";
-// import DestmatModel from "../assets/models/scene.glb";
-import ColorUtil from "../util/color";
-import { GUI } from 'dat.gui'
-//import { CSS3DRenderer } from "three/examples/jsm/renderers/CSS3DRenderer.js";
-
+import emptyTexture from "../assets/shadows/empty_warehouse_01_2k.hdr";
+import {RGBELoader} from "three/addons/loaders/RGBELoader";
 export default class SceneManager extends Collection {
   constructor(options) {
     super();
-    this.deskmat = null;
     this.takeScreenshot = false;
     this.options = options || {};
     this.editing = false;
     this.scale = options.scale || 1;
-    this.textureLoader = new THREE.TextureLoader();
     this.el = options.el || document.body;
     this.init();
   }
   init() {
     this.scene = new THREE.Scene();
-    //main renderer
+
     this.renderer = new THREE.WebGLRenderer({
       alpha: true,
       logarithmicDepthBuffer: true,
@@ -121,12 +115,41 @@ export default class SceneManager extends Collection {
     this.controls.target = new THREE.Vector3(0, 0, 0);
   }
   async setupLights() {
-    const ambientLight = new THREE.AmbientLight(0xffffff, .7); // Ambient light for general illumination
-    this.scene.add(ambientLight);
+    // const gui = new GUI({autoPlace: false});
+    //
+    // const containerEl = document.querySelector('#canvas-wrapper');
+    // // gui.domElement.
+    // const guiDOM = document.createElement("div");
+    // guiDOM.className = 'moveGUI';
+    // guiDOM.append(gui.domElement);
+    // containerEl.prepend(guiDOM);
+    let ambiant = new THREE.AmbientLight("#ffffff", 3);
+    this.scene.add(ambiant);
+    //
+    // //main
+    let primaryLight = new THREE.DirectionalLight("#dddddd", 0.8);
+    primaryLight.position.set(5, 10, 10);
+    primaryLight.target.position.set(0, -10, -10);
+    primaryLight.target.updateMatrixWorld();
+    this.scene.add(primaryLight, primaryLight.target);
+    //
+    // //secondary shadows
+    let shadowLight = new THREE.DirectionalLight("#FFFFFF", 0.5);
+    shadowLight.position.set(10, 3, -10);
+    shadowLight.shadow.mapSize.width = 1024;
+    shadowLight.shadow.mapSize.height = 1024;
+    shadowLight.shadow.camera.near = 1;
+    shadowLight.shadow.camera.far = 6;
+    shadowLight.target.position.set(0, 0, 0);
+    shadowLight.target.updateMatrixWorld();
+    this.scene.add(shadowLight, shadowLight.target);
 
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1); // Directional light for shadows and highlights
-    directionalLight.position.set(0, 1, 50).normalize();
-    this.scene.add(directionalLight);
+    //lighthelpers
+    // let slh = new THREE.DirectionalLightHelper(shadowLight, 2);
+    // let plh = new THREE.DirectionalLightHelper(primaryLight, 2);
+    // slh.update();
+    // plh.update();
+    // this.scene.add(slh, plh);
   }
   mouseClick(e) {
     if (!this.editing) return;

@@ -46,32 +46,46 @@ const setMaterialIndexes = (mesh, side, top, isoent) => {
 
 // Generate top and side materials for a single color set
 const getMaterialSet = (opts) => {
-    const currentState = store.getState();
-    const key = `mat${opts.background}`;
-    const legendTexture = keyTexture(opts);
-    const top = new THREE.MeshStandardMaterial({
+    let currentState = store.getState();
+    let key = `mat${opts.background}`;
+    let legendTexture = keyTexture(opts);
+    let options = currentState.keys.legendType === 'pbt' ? {
+        roughness: 0.6,              // PBT는 더 높은 거칠기
+        metalness: 0,                // 금속성 없음
+        clearcoat: 0.5,              // 적당한 클리어코트 반짝임
+        clearcoatRoughness: 0.4,     // 거칠기 반영
+        reflectivity: 0.2,           // 적당한 반사도
+        // envMapIntensity: 1.2,        // 환경 맵 반사 강도
+    } : {
+        roughness: 0.2,              // ABS는 더 낮은 거칠기
+        metalness: 0,                // 금속성 없음
+        clearcoat: 0.6,                // 강한 클리어코트로 반짝임 효과
+        clearcoatRoughness: 0.05,    // 매끄러운 표면
+        reflectivity: 0.3,           // 더 높은 반사도
+        // envMapIntensity: 1.5,        // 더 강한 환경 맵 반사
+    };
+    let top = new THREE.MeshPhysicalMaterial({
         map: legendTexture,
+        // color: opts.background,
+        ...options
     });
+
+    top.needsUpdate = true
     top.map.minFilter = THREE.LinearFilter;
 
-
-    const side = new THREE.MeshStandardMaterial({
-        aoMap: ambiantOcclusionMap,
+    // if (computed_materials[key]) {
+    //   return [computed_materials[key].clone(), top];
+    // }
+    let side = new THREE.MeshPhysicalMaterial({
         color: opts.background,
-        aoMapIntensity: 0.4,
-        lightMap: lightMap,
-        lightMapIntensity: 0,
+        ...options,
     });
-
-    if (currentState.keys.legendType === 'trn') {
+    if( currentState.keys.legendType === 'trn') {
         top.transparent = side.transparent = true;
         top.opacity = side.opacity = 0.75;
     }
-
-    if (!computed_materials[key]) {
-        computed_materials[key] = side;
-    }
-
+    // side.needsUpdate = true;
+    computed_materials[key] = side;
     return [side, top];
 };
 

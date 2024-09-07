@@ -6,8 +6,8 @@ import { RectAreaLightUniformsLib } from "three/examples/jsm/lights/RectAreaLigh
 export default class Screen {
   constructor(options) {
     this.el = document.getElementById("screen");
-    this.h = this.el.clientHeight || 450;
-    this.w = this.el.clientWidth || 800;
+    this.h = this.el ? this.el.clientHeight : 450;
+    this.w = this.el ? this.el.clientWidth : 800;
     this.scene = options.scene;
     this.scale = options.scale;
     this.el = options.el;
@@ -16,7 +16,6 @@ export default class Screen {
   }
 
   setup() {
-    //container for screen, light, body/stand mesh
     this.monitor = new THREE.Object3D();
     this.setupGlow();
 
@@ -30,7 +29,7 @@ export default class Screen {
     let h = uh + bezel * 2;
     let r = 0.4;
 
-    //body
+    // body
     let shape = new THREE.Shape();
     shape.moveTo(0, r);
     shape.quadraticCurveTo(0, 0, r, 0);
@@ -41,6 +40,7 @@ export default class Screen {
     shape.lineTo(r, h);
     shape.quadraticCurveTo(0, h, 0, h - r);
     shape.lineTo(0, r);
+
     let extrudeOptions = {
       bevelEnabled: true,
       bevelSegments: 1,
@@ -50,6 +50,7 @@ export default class Screen {
       depth: thickness,
       steps: 1,
     };
+
     let geometry = new THREE.ExtrudeGeometry(shape, extrudeOptions);
     let material = new THREE.MeshStandardMaterial({
       color: "#cccccc",
@@ -60,7 +61,7 @@ export default class Screen {
     body.position.y -= h / 2;
     body.position.x -= w / 2;
 
-    //stand
+    // stand
     let standWidth = uw * 0.25;
     let sr = 0.08;
     let baseWidth = 10;
@@ -75,26 +76,17 @@ export default class Screen {
     standShape.lineTo(baseWidth - sr, 0);
     standShape.quadraticCurveTo(baseWidth, 0, baseWidth, sr);
     standShape.lineTo(baseWidth, baseHeight - sr);
-    standShape.quadraticCurveTo(
-      baseWidth,
-      baseHeight,
-      baseWidth - sr,
-      baseHeight
-    );
+    standShape.quadraticCurveTo(baseWidth, baseHeight, baseWidth - sr, baseHeight);
     standShape.lineTo(armBack + sr, baseHeight);
     standShape.quadraticCurveTo(armBack, baseHeight, armBack, baseHeight + sr);
     standShape.lineTo(armBack, armHeight);
     standShape.lineTo(armFront, armHeight);
     standShape.lineTo(armFront, baseHeight + sr);
-    standShape.quadraticCurveTo(
-      armFront,
-      baseHeight,
-      armFront - sr,
-      baseHeight
-    );
+    standShape.quadraticCurveTo(armFront, baseHeight, armFront - sr, baseHeight);
     standShape.lineTo(sr, baseHeight);
     standShape.quadraticCurveTo(0, baseHeight, 0, baseHeight - sr);
     standShape.lineTo(0, sr);
+
     let standExtrudeOptions = {
       bevelEnabled: true,
       bevelSegments: 1,
@@ -104,25 +96,19 @@ export default class Screen {
       depth: standWidth,
       steps: 1,
     };
-    let standGeometry = new THREE.ExtrudeGeometry(
-      standShape,
-      standExtrudeOptions
-    );
+    let standGeometry = new THREE.ExtrudeGeometry(standShape, standExtrudeOptions);
     let stand = new THREE.Mesh(standGeometry, material);
     stand.rotation.y = Math.PI / 2;
     stand.position.x -= standWidth / 2;
     stand.position.z = -setBackDistance + baseWidth / 2;
 
-    //this.scene.add(stand);
-
-    //dom element for the screen
+    // dom element for the screen
     let element = document.getElementById("screen");
-    element.remove();
+    if (element) element.remove();
+
     this.display = new CSS3DObject(element);
-    this.display.position.y =
-      this.h / 2 + distAboveDesk * this.scale - bezel * this.scale;
-    this.display.position.z =
-      -(setBackDistance * this.scale) + this.scale * (thickness + 0.2);
+    this.display.position.y = this.h / 2 + distAboveDesk * this.scale - bezel * this.scale;
+    this.display.position.z = -(setBackDistance * this.scale) + this.scale * (thickness + 0.2);
 
     this.monitor.add(body);
     this.monitor.add(this.display);
@@ -136,21 +122,15 @@ export default class Screen {
   }
 
   setupGlow() {
-    //glow light
+    // glow light
     RectAreaLightUniformsLib.init();
     this.glow = new THREE.RectAreaLight("#ffffff", 0.4, this.w, this.h);
     this.glow.rotateY(Math.PI);
     this.glow.position.set(0, 0, 1);
-    //add debugging mesh
+
     if (this.debug) {
-      var lightMesh = new THREE.Mesh(
-        new THREE.PlaneBufferGeometry(),
-        new THREE.MeshBasicMaterial({ side: THREE.BackSide })
-      );
-      var lightMeshBack = new THREE.Mesh(
-        new THREE.PlaneBufferGeometry(),
-        new THREE.MeshBasicMaterial({ color: "#080808" })
-      );
+      var lightMesh = new THREE.Mesh(new THREE.PlaneGeometry(), new THREE.MeshBasicMaterial({ side: THREE.BackSide }));
+      var lightMeshBack = new THREE.Mesh(new THREE.PlaneGeometry(), new THREE.MeshBasicMaterial({ color: "#080808" }));
       lightMesh.scale.x = this.glow.width;
       lightMesh.scale.y = this.glow.height;
       lightMesh.add(lightMeshBack);

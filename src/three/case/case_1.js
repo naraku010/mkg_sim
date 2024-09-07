@@ -3,63 +3,67 @@ import store from "../../store/store";
 import holes from "./holes";
 
 export default (layout, color) => {
-  color = color || "#cccccc";
-  let cornerRadius = 0.5;
-  let bevel = 0.05;
-  let bezel = 0.5;
-  let height = 1;
-  let width = layout.width + bezel * 2;
-  let depth = layout.height + bezel * 2;
-  let size = store.getState().case.layout;
-  let geometry;
-  let mesh;
+    color = color || "#cccccc";
+    let cornerRadius = 0.5;
+    let bevel = 0.05;
+    let bezel = 0.5;
+    let height = 1;
+    let width = layout.width + bezel * 2;
+    let depth = layout.height + bezel * 2;
+    let size = store.getState().case.layout;
 
-  //create geometry
-  let shape = new THREE.Shape();
+    // create geometry
+    let shape = new THREE.Shape();
 
-  //basic outline
-  shape.moveTo(0, cornerRadius);
-  shape.quadraticCurveTo(0, 0, cornerRadius, 0);
-  shape.lineTo(width - cornerRadius, 0);
-  shape.quadraticCurveTo(width, 0, width, cornerRadius);
-  shape.lineTo(width, depth - cornerRadius);
-  shape.quadraticCurveTo(width, depth, width - cornerRadius, depth);
-  shape.lineTo(cornerRadius, depth);
-  shape.quadraticCurveTo(0, depth, 0, depth - cornerRadius);
-  shape.lineTo(0, cornerRadius);
+    // basic outline
+    shape.moveTo(0, cornerRadius);
+    shape.quadraticCurveTo(0, 0, cornerRadius, 0);
+    shape.lineTo(width - cornerRadius, 0);
+    shape.quadraticCurveTo(width, 0, width, cornerRadius);
+    shape.lineTo(width, depth - cornerRadius);
+    shape.quadraticCurveTo(width, depth, width - cornerRadius, depth);
+    shape.lineTo(cornerRadius, depth);
+    shape.quadraticCurveTo(0, depth, 0, depth - cornerRadius);
+    shape.lineTo(0, cornerRadius);
 
-  shape.holes = holes(size, layout, bezel);
+    shape.holes = holes(size, layout, bezel);
 
-  let extrudeOptions = {
-    depth: height,
-    steps: 1,
-    bevelSegments: 1,
-    bevelEnabled: true,
-    bevelSize: bevel,
-    bevelThickness: bevel,
-  };
+    // Extrude options
+    let extrudeOptions = {
+        depth: height,
+        steps: 1,
+        bevelSegments: 1,
+        bevelEnabled: true,
+        bevelSize: bevel,
+        bevelThickness: bevel,
+    };
 
-  geometry = new THREE.ExtrudeGeometry(shape, extrudeOptions);
-  geometry.faceVertexUvs.push(geometry.faceVertexUvs[0]); //duplicate uvs for ao
+    let geometry = new THREE.ExtrudeGeometry(shape, extrudeOptions);
 
-  for (let i = 0; i < geometry.faces.length; i++) {
-    const f = geometry.faces[i];
-    //all faces geneated from the extrusion (side faces)
-    if (!f.normal.z) {
-      f.materialIndex = 1;
-    } else {
-      f.materialIndex = 0;
+    // UV 매핑을 위해 bounding box를 계산
+    geometry.computeBoundingBox();
+    const max = geometry.boundingBox.max;
+    const min = geometry.boundingBox.min;
+    const offset = new THREE.Vector2(0 - min.x, 0 - min.y);
+    const range = new THREE.Vector2(max.x - min.x, max.y - min.y);
+
+    const uvAttribute = geometry.attributes.uv;
+    for (let i = 0; i < uvAttribute.count; i++) {
+        const u = uvAttribute.getX(i);
+        const v = uvAttribute.getY(i);
+        uvAttribute.setXY(i, (u + offset.x) / range.x, (v + offset.y) / range.y);
     }
-  }
+    uvAttribute.needsUpdate = true;
 
-  //create mesh
-  mesh = new THREE.Mesh(
-    geometry,
-    new THREE.MeshBasicMaterial({ color: color })
-  );
-  mesh.name = "CASE";
-  mesh.rotation.x = Math.PI / 2;
-  mesh.position.set(-bezel, 0, -bezel);
+    // 메쉬 생성
+    const material = new THREE.MeshStandardMaterial({
+        color: color,
+    });
 
-  return mesh;
+    let mesh = new THREE.Mesh(geometry, material);
+    mesh.name = "CASE";
+    mesh.rotation.x = Math.PI / 2;
+    mesh.position.set(-bezel, 0, -bezel);
+
+    return mesh;
 };

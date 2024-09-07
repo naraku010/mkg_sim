@@ -19,7 +19,7 @@
     "bezel": 1,
     "layout": "60iso",
     "profile": "high",
-    "material": "brushed"
+    "material": "glossy"
   },
   "keys": {
     "visible": true,
