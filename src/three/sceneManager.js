@@ -1,11 +1,11 @@
 import * as THREE from "three";
+import {DirectionalLightHelper} from "three";
 import Collection from "./collection";
 import {subscribe} from "redux-subscriber";
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js";
 import {disableHighlight, enableHighlight} from "./key/materials";
 import ThreeUtil from "../util/three";
 import GUI from "lil-gui";
-import {DirectionalLightHelper, SpotLightHelper} from 'three';
 
 export default class SceneManager extends Collection {
   constructor(options) {
@@ -128,7 +128,7 @@ export default class SceneManager extends Collection {
     this.scene.add(ambiant);
     //
     // //main
-    let primaryLight = new THREE.DirectionalLight("#dddddd", 5);
+    let primaryLight = new THREE.DirectionalLight("#dddddd", 3.3);
     primaryLight.position.set(5, 10, 10);
     primaryLight.target.position.set(0, -10, -10);
     primaryLight.target.updateMatrixWorld();
@@ -154,23 +154,9 @@ export default class SceneManager extends Collection {
 // SpotLight 각도 및 강도 조절
     const primaryLightFolder = gui.addFolder('Primary Light');
     primaryLightFolder.add(primaryLight, 'intensity', 0, 5, 0.1).name('Intensity');
-    primaryLightFolder.add(primaryLight.position, 'x', -10, 10, 0.1).name('Position X');
-    primaryLightFolder.add(primaryLight.position, 'y', -10, 10, 0.1).name('Position Y');
-    primaryLightFolder.add(primaryLight.position, 'z', -10, 10, 0.1).name('Position Z');
 
-    const primaryLightHelper = new DirectionalLightHelper(primaryLight, 5);  // Helper 크기 지정
-    this.scene.add(primaryLightHelper);
-    const params = {
-      showPrimaryLightHelper: false  // GUI에서 제어할 수 있는 변수
-    };
-
-    gui.add(params, 'showPrimaryLightHelper').name('Toggle Primarylight Helper').onChange((value) => {
-      if (value) {
-        this.scene.add(primaryLightHelper);  // 가이드라인 표시
-      } else {
-        this.scene.remove(primaryLightHelper);  // 가이드라인 숨김
-      }
-    });
+    // const primaryLightHelper = new DirectionalLightHelper(primaryLight, 5);  // Helper 크기 지정
+    // this.scene.add(primaryLightHelper);
 
     //lighthelpers
     //lighthelpers
