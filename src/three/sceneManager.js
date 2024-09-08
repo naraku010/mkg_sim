@@ -25,6 +25,8 @@ export default class SceneManager extends Collection {
       logarithmicDepthBuffer: true,
       antialias: true,
     });
+    this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    this.renderer.toneMappingExposure = 1;
     this.renderer.localClippingEnabled = true;
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.el.appendChild(this.renderer.domElement);

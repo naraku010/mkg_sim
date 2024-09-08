@@ -50,24 +50,24 @@ const getMaterialSet = (opts) => {
     let key = `mat${opts.background}`;
     let legendTexture = keyTexture(opts);
     let options = currentState.keys.legendType === 'pbt' ? {
-        roughness: 0.6,              // PBT는 더 높은 거칠기
+        roughness: .9,              // PBT는 더 높은 거칠기
         metalness: 0,                // 금속성 없음
-        clearcoat: 0.5,              // 적당한 클리어코트 반짝임
-        clearcoatRoughness: 0.4,     // 거칠기 반영
-        reflectivity: 0.2,           // 적당한 반사도
-        envMapIntensity: 1.2,        // 환경 맵 반사 강도
+        clearcoat: .2,              // 적당한 클리어코트 반짝임
+        clearcoatRoughness: .8,     // 거칠기 반영
+        reflectivity: .05,           // 적당한 반사도
+        envMapIntensity: 1,        // 환경 맵 반사 강도
     } : {
-        roughness: 0.2,              // ABS는 더 낮은 거칠기
+        roughness: .5,              // ABS는 더 낮은 거칠기
         metalness: 0,                // 금속성 없음
-        clearcoat: 0.6,                // 강한 클리어코트로 반짝임 효과
-        clearcoatRoughness: 0.05,    // 매끄러운 표면
-        reflectivity: 0.3,           // 더 높은 반사도
-        envMapIntensity: 1.5,        // 더 강한 환경 맵 반사
+        clearcoat: .2,                // 강한 클리어코트로 반짝임 효과
+        clearcoatRoughness: .4,    // 매끄러운 표면
+        reflectivity: .1,           // 더 높은 반사도
+        envMapIntensity: 1,        // 더 강한 환경 맵 반사
     };
     let top = new THREE.MeshPhysicalMaterial({
         map: legendTexture,
         // color: opts.background,
-        ...options
+        // ...options
     });
 
     top.needsUpdate = true

@@ -130,8 +130,9 @@ export default function BoardOptions() {
                         {label: "PC", value: "tra"},
                         {label: "매트", value: "matte"},
                         {label: "무광", value: "brushed"},
-                        {label: "유광", value: "glossy"},
                         {label: "살짝광", value: "lowglossy"},
+                        {label: "유광", value: "glossy"},
+                        {label: "SUS PVD", value: "pvd"},
                     ]}
                     handler={(val) => {
                         dispatch(caseActions.setMaterial(val));

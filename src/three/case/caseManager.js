@@ -83,20 +83,29 @@ const MATERIAL_OPTIONS = {
         aoMapIntensity: 0.25,
         envMapIntensity: 0.1,
     },
+    pvd: {
+        metalness: 1,  // 금속성 최대치
+        roughness: .05, // 표면을 매끄럽게 설정
+        reflectivity: 1, // 매우 높은 반사율
+        clearcoat: 1, // 유광 효과를 위한 코팅
+        clearcoatRoughness: .1, // 코팅의 거칠기를 낮게 설정
+        envMapIntensity: 1.0, // 주변 반사 환경을 좀 더 강하게 설정
+    },
     glossy: {
-        metalness: 1.0,  // 금속성 최대치
-        roughness: 0.05, // 표면을 매끄럽게 설정
-        reflectivity: 0.9, // 매우 높은 반사율
-        clearcoat: 0.8, // 유광 효과를 위한 코팅
-        clearcoatRoughness: 0.1, // 코팅의 거칠기를 낮게 설정
+        metalness: .6,  // 금속성 최대치
+        roughness: .05, // 표면을 매끄럽게 설정
+        reflectivity: .9, // 매우 높은 반사율
+        clearcoat: .6, // 유광 효과를 위한 코팅
+        clearcoatRoughness: .1, // 코팅의 거칠기를 낮게 설정
         envMapIntensity: 1.0, // 주변 반사 환경을 좀 더 강하게 설정
     },
     lowglossy: {
-        metalness: .3,  // 금속성 최대치
+        metalness: .4,  // 금속성 최대치
+        aoMapIntensity: 0.25,
         roughness: .05, // 표면을 매끄럽게 설정
-        reflectivity: .3, // 매우 높은 반사율
+        reflectivity: .1, // 매우 높은 반사율
         clearcoat: .4, // 유광 효과를 위한 코팅
-        clearcoatRoughness: .5, // 코팅의 거칠기를 낮게 설정
+        clearcoatRoughness: 1.2, // 코팅의 거칠기를 낮게 설정
         envMapIntensity: .2, // 주변 반사 환경을 좀 더 강하게 설정
     }
 };
@@ -326,22 +335,6 @@ export default class CaseManager {
         if (finish === "tra") {
             options.transparent = true;
             options.opacity = 0.93;
-        }
-        if (finish === 'glossy') {
-            const c = this.metal;
-            options = {
-                ...options,
-                // map: c.baseColorTexture,         // Base Color 맵 적용
-                // aoMap: c.aoTexture,              // Ambient Occlusion 맵 적용
-                // normalMap: c.normalTexture,      // 표면의 디테일을 표현하는 노멀 맵
-                roughnessMap: c.roughnessTexture, // 거칠기 맵 적용
-                metalnessMap: c.metallicTexture,  // 금속성 맵 적용
-                // displacementMap: c.displacementTexture, // 표면 높이 맵 적용
-                // displacementScale: 0.05,       // 높이 변형 정도
-                metalness: 1,                // 금속성 설정
-                roughness: 0.5,                // 거칠기 조정 (roughness 맵과 함께 사용)
-
-            };
         }
         //create materials
         let materialPrimary = new THREE.MeshPhysicalMaterial({
