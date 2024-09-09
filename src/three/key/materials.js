@@ -66,12 +66,19 @@ const getMaterialSet = (opts) => {
     };
     let top = new THREE.MeshPhysicalMaterial({
         map: legendTexture,
-        // color: opts.background,
-        // ...options
+        ...options,
+        // lightMap: lightMap,
+        // lightMapIntensity: 0,
     });
+    // let top = new THREE.MeshPhysicalMaterial({
+    //     map: legendTexture,
+    //     metalness: 0,
+    //     // color: opts.background,
+    //     // ...options
+    // });
 
     top.needsUpdate = true
-    top.map.minFilter = THREE.LinearFilter;
+    // top.map.minFilter = THREE.LinearFilter;
 
     // if (computed_materials[key]) {
     //   return [computed_materials[key].clone(), top];

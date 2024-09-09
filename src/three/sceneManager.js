@@ -25,6 +25,7 @@ export default class SceneManager extends Collection {
       logarithmicDepthBuffer: true,
       antialias: true,
     });
+    this.renderer.colorSpace = THREE.SRGBColorSpace;
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
     this.renderer.toneMappingExposure = 1;
     this.renderer.localClippingEnabled = true;
@@ -154,11 +155,13 @@ export default class SceneManager extends Collection {
     const gui = new GUI();
 // AmbientLight 조절
     const ambientLightFolder = gui.addFolder('Ambient Light');
-    ambientLightFolder.add(ambiant, 'intensity', 0, 4, 0.1).name('Intensity');
+    ambientLightFolder.add(ambiant, 'intensity', 0, 4, 0.1).name('조명강도');
 
     const primaryLightFolder = gui.addFolder('Primary Light');
-    primaryLightFolder.add(primaryLight, 'intensity', 0, 5, 0.1).name('Intensity');
-
+    primaryLightFolder.add(primaryLight, 'intensity', 0, 5, 0.1).name('조명강도');
+    primaryLightFolder.addColor({ color: primaryLight.color.getHex() }, 'color').name('조명색상').onChange((value) => {
+      primaryLight.color.setHex(value);
+    });
     const positionFolder = gui.addFolder('조명 위치');
     positionFolder.add(primaryLight.position, 'x', -50, 50, 0.1).name('X');
     positionFolder.add(primaryLight.position, 'y', -50, 50, 0.1).name('Y');

@@ -180,9 +180,8 @@ export const keyTexture = (opts) => {
   }
 
   //document.body.appendChild(canvas);
-  texture.premultiplyAlpha = true;
   texture.minFilter = THREE.LinearMipMapLinearFilter;  // 더 부드러운 텍스처 필터링
-  texture.minFilter = THREE.NearestMipmapNearestFilter;
+  // texture.colorSpace = THREE.SRGBColorSpace;
   texture.needsUpdate = true;
   return texture;
 };
