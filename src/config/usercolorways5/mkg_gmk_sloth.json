@@ -1,0 +1,29 @@
+{
+    "id": "mkg_gmk_sloth",
+    "label": "GMK Sloth",
+    "manufacturer": "",
+    "designer": "Endeavour",
+    "swatches": {
+        "base": {
+            "background": "#eee2d0",
+            "color": "#655e4e"
+        },
+        "mods": {
+            "background": "#655e4e",
+            "color": "#eee2d0"
+        },
+        "accent": {
+            "background": "#5a4539",
+            "color": "#eee2d0"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

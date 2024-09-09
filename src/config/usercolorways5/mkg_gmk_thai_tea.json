@@ -1,0 +1,41 @@
+{
+    "id": "mkg_gmk_thai_tea",
+    "label": "GMK Thai tea",
+    "manufacturer": "",
+    "designer": "Endeavour",
+    "swatches": {
+        "base": {
+            "background": "#fddebc",
+            "color": "#e5743b"
+        },
+        "mods": {
+            "background": "#412533",
+            "color": "#e5743b"
+        },
+        "accent": {
+            "background": "#e5743b",
+            "color": "#412533"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F1": "mods",
+        "KC_F2": "mods",
+        "KC_F3": "mods",
+        "KC_F4": "mods",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_F9": "mods",
+        "KC_F10": "mods",
+        "KC_F12": "mods",
+        "KC_F11": "mods",
+        "KC_LEFT": "accent",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_RGHT": "accent"
+    }
+}
