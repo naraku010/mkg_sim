@@ -36,8 +36,8 @@ export const setKeyMaterialState = (mesh, state, isoent) => {
     }
 };
 const setMaterialIndexes = (mesh, side, top, isoent) => {
+    mesh.geometry.clearGroups();
     let threshold = isoent ? 30 : 18;
-
     const sideIndicesCount = mesh.geometry.index.count - threshold;
     mesh.geometry.addGroup(threshold, sideIndicesCount, side);
     mesh.geometry.addGroup(0, threshold, top);
@@ -78,8 +78,10 @@ const getMaterialSet = (opts) => {
     // });
 
     top.needsUpdate = true
-    // top.map.minFilter = THREE.LinearFilter;
-
+    top.map.minFilter = THREE.LinearFilter;
+    // if (computed_materials[key]) {
+    //     return [computed_materials[key].clone(), top];
+    // }
     // if (computed_materials[key]) {
     //   return [computed_materials[key].clone(), top];
     // }

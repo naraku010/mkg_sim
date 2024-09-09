@@ -111,69 +111,134 @@ export const keyGeometry = (opts) => {
 
 // Geometry for ISO Enter key
 export const keyGeometryISOEnter = (opts) => {
-  if (computed_geometries["isoent"]) {
-    return computed_geometries["isoent"].clone();
+  if (computed_geometries['isoent']) {
+    return computed_geometries['isoent'].clone();
   }
 
   let w = (opts.w || 1) - GUTTER;
   let d = opts.h - GUTTER;
   let h = 0.4;
-  let o = 0.25; // extra width for top
 
-  const vertices = new Float32Array([
-    // Bottom vertices
-    -o, 0, 0,  // 0
-    w, 0, 0,  // 1
-    w, 0, d,  // 2
-    0, 0, d,  // 3
-    0, 0, 1,  // 4
-    -o, 0, 1,  // 5
-    // Top vertices
-    i - o, h, it + c,  // 6
-    i + c - o, h, it,  // 7
-    w - i - c, h, it,  // 8
-    w - i, h, it + c,  // 9
-    w - i, h, d - i - c,  // 10
-    w - i - c, h, d - i,  // 11
-    i + c, h, d - i,  // 12
-    i, h, d - i - c,  // 13
-    i, h, 1 - i,  // 14
-    i - c, h, 1 - i,  // 15
-    i + c - o, h, 1 - i,  // 16
-    i - o, h, 1 - i - c  // 17
-  ]);
+  // extra width of the top
+  let o = 0.25;
 
-  const indices = [
-    // Top faces
-    6, 9, 7, 9, 8, 7, 17, 15, 16, 17, 14, 15, 6, 17, 9, 15, 9, 14,
-    // Corner faces
-    0, 6, 7, 1, 8, 9, 2, 10, 11, 3, 12, 13, 4, 14, 15, 5, 16, 17,
-    // Side faces
-    0, 7, 8, 0, 8, 1, 9, 10, 2, 9, 2, 1, 3, 2, 11, 3, 11, 12, 4, 3, 13, 4, 13, 14
+  const vertices = [
+    // bottom vertices
+    -o, 0, 0,      // 0
+    w, 0, 0,       // 1
+    w, 0, d,       // 2
+    0, 0, d,       // 3
+    0, 0, 1,       // 4
+    -o, 0, 1,      // 5
+    // top vertices
+    i - o, h, it + c,         // 6
+    i + c - o, h, it,         // 7
+    w - i - c, h, it,         // 8
+    w - i, h, it + c,         // 9
+    w - i, h, d - i - c,      // 10
+    w - i - c, h, d - i,      // 11
+    i + c, h, d - i,          // 12
+    i, h, d - i - c,          // 13
+    i, h, 1 - i,              // 14
+    i - c, h, 1 - i,          // 15
+    i + c - o, h, 1 - i,      // 16
+    i - o, h, 1 - i - c       // 17
   ];
 
-  const uv = new Float32Array([
-    // UVs for bottom and top vertices
-    0, 0,   // 0
-    1, 0,   // 1
-    1, 1,   // 2
-    0, 1,   // 3
-    0, 0.9, // 4
-    0.1, 1, // 5
-    0.9, 1, // 6
-    1, 0.9, // 7
-    1, 0.1, // 8
-    0.9, 0, // 9
-    0.1, 0, // 10
-    0, 0.1  // 11
-  ]);
+  const indices = [
+    // top faces
+    6, 9, 7,   7, 9, 8,
+    6, 17, 15, 17, 16, 15,
+    6, 15, 9,  15, 14, 9,
+    14, 10, 9, 14, 13, 10,
+    13, 11, 10, 13, 12, 11,
+    // corners
+    0, 6, 7,   1, 8, 9,
+    2, 10, 11, 3, 12, 13,
+    4, 14, 15, 5, 16, 17,
+    // sides
+    0, 7, 8,   0, 8, 1,
+    9, 10, 2,  9, 2, 1,
+    3, 2, 11,  3, 11, 12,
+    4, 3, 13,  4, 13, 14,
+    5, 4, 15,  5, 15, 16,
+    0, 5, 17,  0, 17, 6
+  ];
 
+  // const uxo = 0.2;
+  // const uyo = 0.35;
+  // const uvs = [
+  //   // Adjust UV coordinates for top faces
+  //   [0, 1 - c], [1, 1 - c], [c, 1],   // Face 6, 9, 7
+  //   [c, 1], [1, 1 - c], [1 - c, 1],   // Face 7, 9, 8
+  //   [0, 1 - c], [0, uyo + c], [uxo - c, uyo], // Face 6, 17, 15
+  //   [0, uyo + c], [c, uyo], [uxo - c, uyo],  // Face 17, 16, 15
+  //   [0, 1 - c], [uxo - c, uyo], [1, 1 - c],  // Face 6, 15, 9
+  //   [uxo - c, uyo], [uxo, uyo], [1, 1 - c],  // Face 15, 14, 9
+  //   [uxo, uyo], [1, c], [1, 1 - c],    // Face 14, 10, 9
+  //   [uxo, uyo], [uxo, c], [1, c],      // Face 14, 13, 10
+  //   [uxo, c], [1 - c, 0], [1, c],      // Face 13, 11, 10
+  //   [uxo, c], [uxo + c, 0], [1 - c, 0],  // Face 13, 12, 11
+  //   // Corners (UV values for each triangle face)
+  //   [0, 0], [0, 0], [0, 0],
+  //   [0, 0], [0, 0], [0, 0],
+  //   [0, 0], [0, 0], [0, 0],
+  //   [0, 0], [0, 0], [0, 0],
+  //   [0, 0], [0, 0], [0, 0],
+  //   [0, 0], [0, 0], [0, 0],
+  //   // Sides
+  //   [1, 0], [1, 1], [0, 1],
+  //   [1, 0], [0, 1], [0, 0],
+  //   [1, 1], [0, 1], [0, 0],
+  //   [1, 1], [0, 0], [1, 0],
+  //   [0, 0], [1, 0], [1, 1],
+  //   [0, 0], [1, 1], [0, 1],
+  //   [0, 0], [1, 0], [1, 1],
+  //   [0, 0], [1, 1], [0, 1],
+  //   [0, 0], [1, 1], [0, 1],
+  //   [0, 0], [1, 0], [1, 1],
+  //   [0, 0], [1, 0], [1, 1],
+  //   [0, 0], [1, 1], [0, 1]
+  // ];
+  // const flattenedUVs = uvs.flat();
+
+
+  // BufferGeometry setup
   const geometry = new THREE.BufferGeometry();
-  geometry.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
+  geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
   geometry.setIndex(indices);
-  geometry.setAttribute('uv', new THREE.BufferAttribute(uv, 2));
+  geometry.computeBoundingBox();
+
+  // Get bounding box size and min
+  const bbox = geometry.boundingBox;
+  const size = bbox.max.clone().sub(bbox.min);  // Get the size of the bounding box
+  const min = bbox.min;     // Get the minimum point of the bounding box
+
+  // Create UV mapping based on bounding box
+  const uvs = [];
+  const positions = geometry.attributes.position.array;
+
+  const UV_OFFSET_U = -.2; // U 방향으로 중앙으로 이동하기 위한 오프셋
+  const UV_OFFSET_V = .1;
+
+  for (let i = 0; i < positions.length; i += 3) {
+    const x = positions[i];
+    const z = positions[i + 2];
+
+    // 기본 UV 좌표 계산
+    const u = (x - min.x) / size.x;
+    const v = (z - min.z) / size.z;
+
+    // 스케일 및 오프셋을 적용하고, V 좌표를 반전하여 UV 좌표를 중앙으로 이동
+    const uAdjusted = u + UV_OFFSET_U;  // U 값을 오프셋 적용
+    const vAdjusted = (1 - v) + UV_OFFSET_V;  // V 값을 반전하고 오프셋 적용
+
+    uvs.push(uAdjusted, vAdjusted);
+  }
+  geometry.setAttribute('uv', new THREE.Float32BufferAttribute(uvs, 2));
+
   geometry.computeVertexNormals();
 
-  computed_geometries["isoent"] = geometry;
+  computed_geometries['isoent'] = geometry;
   return geometry;
 };
