@@ -10,6 +10,7 @@ import { selectColorway } from "../../store/slices/colorways";
 
 export default function Colorway(props) {
   const dispatch = useDispatch();
+  const backgroundColorFix = useSelector(settingsActions.selectFixBackground);
   const base_bg = props.colorway?.swatches?.base?.background || "#ffffff";
   const base_fg = props.colorway?.swatches?.base?.color || "#000000";
   const mods_bg = props.colorway?.swatches?.mods?.background || base_bg;
@@ -21,7 +22,7 @@ export default function Colorway(props) {
   const applyColorway = () => {
     dispatch(setColorway(props.colorway.id));
     let c = accent_bg;
-    if (c) {
+    if (c && !backgroundColorFix) {
       dispatch(settingsActions.setSceneColor(c));
     }
   };

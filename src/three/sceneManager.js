@@ -126,13 +126,13 @@ export default class SceneManager extends Collection {
     // guiDOM.className = 'moveGUI';
     // guiDOM.append(gui.domElement);
     // containerEl.prepend(guiDOM);
-    let ambiant = new THREE.AmbientLight("#ffffff", 1);
+    let ambiant = new THREE.AmbientLight("#fdfbd3", 1);
     this.scene.add(ambiant);
     //
     // //main
-    let primaryLight = new THREE.DirectionalLight("#dddddd", 3.3);
-    primaryLight.position.set(5, 10, 10);
-    primaryLight.target.position.set(0, -10, -10);
+    let primaryLight = new THREE.DirectionalLight("#fdfbd3", 2.8);
+    primaryLight.position.set(0, 15, 10);
+    primaryLight.target.position.set(0, 0, 0);
     primaryLight.target.updateMatrixWorld();
     this.scene.add(primaryLight, primaryLight.target);
     //
@@ -147,18 +147,32 @@ export default class SceneManager extends Collection {
     shadowLight.target.updateMatrixWorld();
     this.scene.add(shadowLight, shadowLight.target);
 
+    const primaryLightHelper = new DirectionalLightHelper(primaryLight, 5);  // Helper 크기 지정
+    this.scene.add(primaryLightHelper);
 
     const gui = new GUI();
 // AmbientLight 조절
     const ambientLightFolder = gui.addFolder('Ambient Light');
     ambientLightFolder.add(ambiant, 'intensity', 0, 4, 0.1).name('Intensity');
 
-// SpotLight 각도 및 강도 조절
     const primaryLightFolder = gui.addFolder('Primary Light');
     primaryLightFolder.add(primaryLight, 'intensity', 0, 5, 0.1).name('Intensity');
 
-    // const primaryLightHelper = new DirectionalLightHelper(primaryLight, 5);  // Helper 크기 지정
-    // this.scene.add(primaryLightHelper);
+    const positionFolder = gui.addFolder('조명 위치');
+    positionFolder.add(primaryLight.position, 'x', -50, 50, 0.1).name('X');
+    positionFolder.add(primaryLight.position, 'y', -50, 50, 0.1).name('Y');
+    positionFolder.add(primaryLight.position, 'z', -50, 50, 0.1).name('Z');
+
+    let helperVisible = false; // 초기 가시성 상태
+    let helperControls = {
+      toggleHelper: function() {
+        helperVisible = !helperVisible;
+        primaryLightHelper.visible = helperVisible;
+      }
+    };
+
+// GUI에 토글 버튼 추가
+    gui.add(helperControls, 'toggleHelper').name('조명 가이드 보기');
 
     //lighthelpers
     //lighthelpers

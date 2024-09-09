@@ -38,6 +38,9 @@ export const settingsSlice = createSlice({
     togglePaintWithKeys: (state) => {
       state.paintWithKeys = !state.paintWithKeys;
     },
+    toggleFixBackground: (state) => {
+      state.backgroundColorFix = !state.backgroundColorFix;
+    },
   },
 });
 
@@ -52,6 +55,7 @@ export const {
   toggleTestingMode,
   togglePaintWithKeys,
   toggleSceneAutoColor,
+  toggleFixBackground,
   setSceneAutoColor,
 } = settingsSlice.actions;
 export const selectMat = (state) => state.settings.mat;
@@ -64,5 +68,6 @@ export const selectPaintWithKeys = (state) => state.settings.paintWithKeys;
 export const selectGlowColor = (state) => state.settings.glowColor;
 export const selectSceneColor = (state) => state.settings.sceneColor;
 export const selectSceneAutoColor = (state) => state.settings.sceneAutoColor;
+export const selectFixBackground = (state) => state.settings.backgroundColorFix;
 
 export default settingsSlice.reducer;

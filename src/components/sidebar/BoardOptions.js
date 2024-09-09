@@ -1,8 +1,6 @@
 import React from "react";
 import styles from "./BoardOptions.module.scss";
-import {useSelector, useDispatch} from "react-redux";
-
-import RadioField from "../elements/RadioField";
+import {useDispatch, useSelector} from "react-redux";
 import SelectField from "../elements/SelectField";
 import ColorPicker from "../elements/ColorPicker";
 import CollapsibleSection from "../containers/CollapsibleSection";
@@ -21,13 +19,10 @@ import icon60hhkb from "../../assets/icons/icon-60-hhkb.png";
 
 import * as caseActions from "../../store/slices/case";
 import * as settingsActions from "../../store/slices/settings";
+import {selectMat, toggleFixBackground} from "../../store/slices/settings";
 import * as keyActions from "../../store/slices/keys";
-import {selectPaintWithKeys, togglePaintWithKeys} from "../../store/slices/settings";
 import ToggleField from "../elements/ToggleField";
-import {
-    toggleMat,
-    selectMat
-} from "../../store/slices/settings";
+
 export default function BoardOptions() {
     const dispatch = useDispatch();
 
@@ -43,6 +38,7 @@ export default function BoardOptions() {
     const style = useSelector(caseActions.selectStyle);
     const material = useSelector(caseActions.selectMaterial);
     const sceneColor = useSelector(settingsActions.selectSceneColor);
+    const fixBackground = useSelector(settingsActions.toggleFixBackground);
 
     return (
         <>
@@ -149,6 +145,11 @@ export default function BoardOptions() {
                     handler={(val) => {
                         dispatch(caseActions.setStyle(val));
                     }}
+                />
+                <ToggleField
+                    value={fixBackground}
+                    label={"배경색 고정"}
+                    handler={() => dispatch(toggleFixBackground())}
                 />
                 <div className={styles.row}>
                     <div className={styles.fieldColor}>

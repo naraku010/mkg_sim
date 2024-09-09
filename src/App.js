@@ -13,13 +13,18 @@ export default function App() {
   const sceneAutoColor = useSelector(settingsActions.selectSceneAutoColor);
   const sceneColor = useSelector(settingsActions.selectSceneColor);
   const highContrast = useSelector(settingsActions.selectHighContrast);
+  const backgroundColorFix = useSelector(settingsActions.selectFixBackground);
 
   const getAccent = () => {
     return ColorUtil.getUiAccent(colorway_id);
   };
 
   const getSceneColor = () => {
-    return sceneAutoColor ? ColorUtil.getAccent(colorway_id) : sceneColor;
+    if(backgroundColorFix) {
+      return sceneColor;
+    } else {
+      return sceneAutoColor ? ColorUtil.getAccent(colorway_id) : sceneColor;
+    }
   };
 
   const uiColors = {

@@ -5,6 +5,7 @@
     "debug": false,
     "testing": false,
     "mode": "sidebar",
+    "backgroundColorFix": true,
     "sceneAutoColor": true,
     "sceneColor": "#cccccc",
     "glowColor": "#ffffff",
