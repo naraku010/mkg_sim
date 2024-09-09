@@ -148,6 +148,7 @@ export default class SceneManager extends Collection {
     this.scene.add(shadowLight, shadowLight.target);
 
     const primaryLightHelper = new DirectionalLightHelper(primaryLight, 5);  // Helper 크기 지정
+    primaryLightHelper.visible = false;
     this.scene.add(primaryLightHelper);
 
     const gui = new GUI();
