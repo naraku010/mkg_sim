@@ -22,12 +22,12 @@ export default class SceneManager extends Collection {
 
     this.renderer = new THREE.WebGLRenderer({
       alpha: true,
-      logarithmicDepthBuffer: true,
       antialias: true,
     });
-    this.renderer.colorSpace = THREE.SRGBColorSpace;
-    this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    this.renderer.toneMappingExposure = 1;
+    this.renderer.colorSpace = THREE.LinearSRGBColorSpace;
+    this.renderer.toneMapping = THREE.NoToneMapping;
+    // this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    // this.renderer.toneMappingExposure = .5;
     this.renderer.localClippingEnabled = true;
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.el.appendChild(this.renderer.domElement);
@@ -131,8 +131,8 @@ export default class SceneManager extends Collection {
     this.scene.add(ambiant);
     //
     // //main
-    let primaryLight = new THREE.DirectionalLight("#fdfbd3", 2.8);
-    primaryLight.position.set(0, 15, 10);
+    let primaryLight = new THREE.DirectionalLight("#ffffff", 2.5);
+    primaryLight.position.set(0, 10, 0);
     primaryLight.target.position.set(0, 0, 0);
     primaryLight.target.updateMatrixWorld();
     this.scene.add(primaryLight, primaryLight.target);
@@ -158,7 +158,7 @@ export default class SceneManager extends Collection {
     ambientLightFolder.add(ambiant, 'intensity', 0, 4, 0.1).name('조명강도');
 
     const primaryLightFolder = gui.addFolder('Primary Light');
-    primaryLightFolder.add(primaryLight, 'intensity', 0, 5, 0.1).name('조명강도');
+    primaryLightFolder.add(primaryLight, 'intensity', 0, 10, 0.1).name('조명강도');
     primaryLightFolder.addColor({ color: primaryLight.color.getHex() }, 'color').name('조명색상').onChange((value) => {
       primaryLight.color.setHex(value);
     });
