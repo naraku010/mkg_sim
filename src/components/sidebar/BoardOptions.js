@@ -64,7 +64,7 @@ export default function BoardOptions() {
                         {label: "75%", value: "75", img: icon75},
                         {label: "80%", value: "80", img: icon80},
                         {label: "80% WK 7U", value: "80wk7u", img: icon80},
-                        {label: "80% WKL", value: "80wkl", img: icon75},
+                        {label: "80% WKL", value: "80wkl", img: icon80},
                         {label: "95%", value: "95", img: icon95},
                         {label: "100%", value: "100", img: icon100},
                     ]}
