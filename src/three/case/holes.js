@@ -110,7 +110,7 @@ export default (layoutName, layoutJson, bezel) => {
                 ])
             );
             break;
-        case "80":
+        case "80": case "80wk7u":
             holes.push(esc, f1, f5, f9, print, nav, arrows);
             holes.push(getSquarePath(sx, sy + 1.25, 15, 5, gutter));
             break;

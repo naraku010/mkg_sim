@@ -11,6 +11,7 @@ import layout_70_wkl from "./layout_70_wkl.json";
 import layout_75 from "./layout_75_default.json";
 import layout_80 from "./layout_80_default.json";
 import layout_80_wkl from "./layout_80_wkl.json";
+import layout_80_wk_7u from "./layout_80_wk_7u.json";
 import layout_numpad from "./layout_numpad.json";
 import layout_40_ortho from "./layout_40_ortho.json";
 import layout_50_ortho from "./layout_50_ortho.json";
@@ -27,6 +28,7 @@ const LAYOUTS = {
   "70wkl": layout_70_wkl,
   75: layout_75,
   80: layout_80,
+  "80wk7u": layout_80_wk_7u,
   "80wkl": layout_80_wkl,
   95: layout_95,
   100: layout_100,

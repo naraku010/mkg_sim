@@ -14,6 +14,7 @@ import keymap_70_wkl from "./keymap_70_wkl.json";
 import keymap_65_ergo from "./keymap_65_ergo.json";
 import keymap_75 from "./keymap_75_default.json";
 import keymap_80 from "./keymap_80_default.json";
+import keymap_80_wk_7u from "./keymap_80_wk_7u.json";
 import keymap_80_wkl from "./keymap_80_wkl.json";
 import keymap_95 from "./keymap_95_default.json";
 import keymap_100 from "./keymap_100_default.json";
@@ -35,6 +36,7 @@ const KEYMAPS = {
   "70wkl": keymap_70_wkl,
   75: keymap_75,
   80: keymap_80,
+  "80wk7u": keymap_80_wk_7u,
   "80wkl": keymap_80_wkl,
   95: keymap_95,
   100: keymap_100,
