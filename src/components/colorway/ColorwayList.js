@@ -56,7 +56,7 @@ export default function ColorwayList(props) {
   };
 
   return (
-    <CollapsibleSection title="하우징 색상" open={true}>
+    <CollapsibleSection title="하우징 색상" open={true} >
       <div>
         <div className={styles.group}>
           <SearchField
