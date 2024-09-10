@@ -6,6 +6,7 @@ import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js";
 import {disableHighlight, enableHighlight} from "./key/materials";
 import ThreeUtil from "../util/three";
 import GUI from "lil-gui";
+import RoundedMatPad from "./mat";
 
 export default class SceneManager extends Collection {
   constructor(options) {
@@ -40,6 +41,8 @@ export default class SceneManager extends Collection {
     this.setupCamera();
     this.setupControls();
     this.setupLights();
+    // 시발 장패드
+    // this.setupMat();
     this.resize();
 
     //mouse and raycaster
@@ -103,6 +106,11 @@ export default class SceneManager extends Collection {
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(this.w, this.h);
   }
+  setupMat() {
+    const matPad = new RoundedMatPad(this.scene, 50, 25, 10, 'path_to_your_image.jpg');
+    matPad.setPosition(0, 0, 0);
+    matPad.setRotation(-Math.PI / 2, 0, 0);
+  }
   setupCamera() {
     this.camera = new THREE.PerspectiveCamera(60, this.w / this.h, 1, 1000);
     this.camera.position.y = 15;
@@ -118,7 +126,7 @@ export default class SceneManager extends Collection {
     this.controls.maxDistance = 40;
     this.controls.target = new THREE.Vector3(0, 0, 0);
   }
-  async setupLights() {
+  setupLights() {
     // const gui = new GUI({autoPlace: false});
     //
     // const containerEl = document.querySelector('#canvas-wrapper');

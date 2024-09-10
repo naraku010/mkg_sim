@@ -334,7 +334,7 @@ export default class CaseManager {
         }
         if (finish === "tra") {
             options.transparent = true;
-            options.opacity = 0.93;
+            options.opacity = 0.5;
         }
         //create materials
         let materialPrimary = new THREE.MeshPhysicalMaterial({
