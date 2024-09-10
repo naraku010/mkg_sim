@@ -1,0 +1,29 @@
+{
+    "id": "mkg_gmk_norse",
+    "label": "GMK Norse",
+    "manufacturer": "",
+    "designer": "듀얼샷",
+    "swatches": {
+        "base": {
+            "background": "#2a2b2a",
+            "color": "#d8d2c3"
+        },
+        "mods": {
+            "background": "#003740",
+            "color": "#d8d2c3"
+        },
+        "accent": {
+            "background": "#d8d2c3",
+            "color": "#aca693"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

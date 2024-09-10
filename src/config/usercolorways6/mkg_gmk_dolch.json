@@ -1,0 +1,33 @@
+{
+    "id": "mkg_gmk_dolch",
+    "label": "GMK Dolch",
+    "manufacturer": "",
+    "designer": "듀얼샷",
+    "swatches": {
+        "base": {
+            "background": "#393b3b",
+            "color": "#e1dbd1"
+        },
+        "mods": {
+            "background": "#67635b",
+            "color": "#e1dbd1"
+        },
+        "accent": {
+            "background": "#bc251e",
+            "color": "#e1dbd1"
+        },
+        "swatch1": {
+            "background": "#00aa93",
+            "color": "#e1dbd1"
+        }
+    },
+    "override": {
+        "KC_ENT": "swatch1",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

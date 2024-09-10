@@ -1,0 +1,31 @@
+{
+    "id": "mkg_gmk_mercury",
+    "label": "GMK Mercury",
+    "manufacturer": "",
+    "designer": "듀얼샷",
+    "swatches": {
+        "base": {
+            "background": "#c1c6c8",
+            "color": "#393b3b"
+        },
+        "mods": {
+            "background": "#393b3b",
+            "color": "#ffffff"
+        },
+        "accent": {
+            "background": "#393b3b",
+            "color": "#ffffff"
+        }
+    },
+    "override": {
+        "KC_ENT": "base",
+        "KC_ESC": "base",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_D": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

@@ -12,7 +12,7 @@ def to_snake_case(snake_str):
     components = snake_str.lower().replace('-', ' ').split()
     return '_'.join(components)
 
-colorways = 'usercolorways5'
+colorways = 'usercolorways6'
 # JSON 파일 경로
 input_json = 'input.json'  # 여기에 JSON 파일 경로를 입력하세요
 output_folder = f'./{colorways}'  # 저장할 폴더
@@ -37,7 +37,7 @@ for sub_item in data:
 
     # id 값을 파일명과 동일하게 수정
     sub_item['id'] = f"mkg_{label_snake_case}"
-    sub_item['designer'] = 'Endeavour'
+    sub_item['designer'] = '듀얼샷'
 
     # 파일 저장 경로 설정
     file_path = os.path.join(output_folder, file_name)
@@ -55,7 +55,7 @@ import_block = "\n".join(import_statements)
 usercolorways_block = ",\n".join(usercolorways_new)
 
 # 최종적으로 생성할 JS 코드
-js_code = "\n".join(import_statements) + "\n\n" + "export const USERCOLORWAYS_NEW = {\n" + ",\n".join(usercolorways_new) + "\n};"
+js_code = "\n".join(import_statements) + "\n\n" + "export const COLORWAYS_NEW = {\n" + ",\n".join(usercolorways_new) + "\n};"
 
 # JS 파일 저장
 output_js = 'output.js'  # 생성할 JS 파일 경로

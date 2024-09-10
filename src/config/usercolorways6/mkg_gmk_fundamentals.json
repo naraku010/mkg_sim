@@ -1,0 +1,38 @@
+{
+    "id": "mkg_gmk_fundamentals",
+    "label": "GMK Fundamentals",
+    "manufacturer": "",
+    "designer": "듀얼샷",
+    "swatches": {
+        "base": {
+            "background": "#ccc6c0",
+            "color": "#171718"
+        },
+        "mods": {
+            "background": "#727474",
+            "color": "#ccc6c0"
+        },
+        "accent": {
+            "background": "#7fa580",
+            "color": "#171718"
+        },
+        "swatch1": {
+            "background": "#5d437e",
+            "color": "#ccc6c0"
+        },
+        "swatch2": {
+            "background": "#00627a",
+            "color": "#ccc6c0"
+        }
+    },
+    "override": {
+        "KC_ENT": "swatch1",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "swatch2",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

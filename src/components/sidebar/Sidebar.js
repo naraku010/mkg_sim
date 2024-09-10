@@ -7,6 +7,7 @@ import ColorwayEditor from "../colorway/ColorwayEditor";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { ReactComponent as Name } from "../../assets/logo_text.svg";
 import "./tabs.scss";
+import GoogleAdvertise from "../google/GoogleAdvertise";
 
 export default function Sidebar() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -21,6 +22,7 @@ export default function Sidebar() {
           </h1>
         </div>
       </div>
+      <GoogleAdvertise client="ca-pub-8399187337788337" slot="8506739735" format="auto" responsive="true"/>
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>
           <Tab tabIndex="0">기본</Tab>

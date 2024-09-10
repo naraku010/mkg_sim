@@ -185,7 +185,6 @@ import mkg_k6 from "./usercolorways3/mkg_tribal.json"
 import mkg_k7 from "./usercolorways3/mkg_twist_r2.json"
 import mkg_k8 from "./usercolorways3/mkg_mw_frieren.json"
 import mkg_k9 from "./usercolorways3/mkg_good_night.json"
-import mkg_k10 from "./usercolorways3/mkg_gmk_a.json"
 import mkg_k11 from "./usercolorways3/mkg_my_first_joy.json"
 import mkg_k12 from "./usercolorways3/mkg_nama.json"
 import mkg_k13 from "./usercolorways3/mkg_pandora.json"
@@ -245,8 +244,13 @@ import mkg_gmk_sloth from "./usercolorways5/mkg_gmk_sloth.json";
 import mkg_gmk_thai_tea from "./usercolorways5/mkg_gmk_thai_tea.json";
 import mkg_gmk_copper from "./usercolorways5/mkg_gmk_copper.json";
 import mkg_dcs_soware from "./usercolorways5/mkg_dcs_soware.json";
+import {COLORWAYS_NEW} from "./output";
 
 export const USERCOLORWAYS_NEW = {
+    ...COLORWAYS_NEW
+}
+
+export const USERCOLORWAYS = {
     mkg_gmk_sloth: mkg_gmk_sloth,
     mkg_gmk_thai_tea: mkg_gmk_thai_tea,
     mkg_gmk_copper: mkg_gmk_copper,
@@ -297,10 +301,7 @@ export const USERCOLORWAYS_NEW = {
     mkg_keykobo_cherries: mkg_keykobo_cherries,
     mkg_keykobo_cherries_alpha: mkg_keykobo_cherries_alpha,
     mkg_keykobo_verdigris: mkg_keykobo_verdigris,
-    mkg_pbtfans_no_signal: mkg_pbtfans_no_signal
-}
-
-export const USERCOLORWAYS = {
+    mkg_pbtfans_no_signal: mkg_pbtfans_no_signal,
     mkg_my_first_joy: mkg_k11,
     mkg_nama: mkg_k12,
     mkg_pandora: mkg_k13,
@@ -317,7 +318,6 @@ export const USERCOLORWAYS = {
     mkg_twist_r2: mkg_k7,
     mkg_mw_frieren: mkg_k8,
     mkg_good_night: mkg_k9,
-    mkg_gmk_a: mkg_k10,
     mkg_3077: mkg_j1,
     mkg_3077_num: mkg_j2,
     mkg_helleborus: mkg_j3,
