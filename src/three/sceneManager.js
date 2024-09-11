@@ -142,8 +142,8 @@ export default class SceneManager extends Collection {
     // //secondary shadows
     let shadowLight = new THREE.DirectionalLight("#FFFFFF", 0.5);
     shadowLight.position.set(10, 3, -10);
-    shadowLight.shadow.mapSize.width = 1024;
-    shadowLight.shadow.mapSize.height = 1024;
+    shadowLight.shadow.mapSize.width = 4096;
+    shadowLight.shadow.mapSize.height = 4096;
     shadowLight.shadow.camera.near = 1;
     shadowLight.shadow.camera.far = 6;
     shadowLight.target.position.set(0, 0, 0);
