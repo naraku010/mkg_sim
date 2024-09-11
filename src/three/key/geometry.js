@@ -165,44 +165,6 @@ export const keyGeometryISOEnter = (opts) => {
     0, 5, 17,  0, 17, 6
   ];
 
-  // const uxo = 0.2;
-  // const uyo = 0.35;
-  // const uvs = [
-  //   // Adjust UV coordinates for top faces
-  //   [0, 1 - c], [1, 1 - c], [c, 1],   // Face 6, 9, 7
-  //   [c, 1], [1, 1 - c], [1 - c, 1],   // Face 7, 9, 8
-  //   [0, 1 - c], [0, uyo + c], [uxo - c, uyo], // Face 6, 17, 15
-  //   [0, uyo + c], [c, uyo], [uxo - c, uyo],  // Face 17, 16, 15
-  //   [0, 1 - c], [uxo - c, uyo], [1, 1 - c],  // Face 6, 15, 9
-  //   [uxo - c, uyo], [uxo, uyo], [1, 1 - c],  // Face 15, 14, 9
-  //   [uxo, uyo], [1, c], [1, 1 - c],    // Face 14, 10, 9
-  //   [uxo, uyo], [uxo, c], [1, c],      // Face 14, 13, 10
-  //   [uxo, c], [1 - c, 0], [1, c],      // Face 13, 11, 10
-  //   [uxo, c], [uxo + c, 0], [1 - c, 0],  // Face 13, 12, 11
-  //   // Corners (UV values for each triangle face)
-  //   [0, 0], [0, 0], [0, 0],
-  //   [0, 0], [0, 0], [0, 0],
-  //   [0, 0], [0, 0], [0, 0],
-  //   [0, 0], [0, 0], [0, 0],
-  //   [0, 0], [0, 0], [0, 0],
-  //   [0, 0], [0, 0], [0, 0],
-  //   // Sides
-  //   [1, 0], [1, 1], [0, 1],
-  //   [1, 0], [0, 1], [0, 0],
-  //   [1, 1], [0, 1], [0, 0],
-  //   [1, 1], [0, 0], [1, 0],
-  //   [0, 0], [1, 0], [1, 1],
-  //   [0, 0], [1, 1], [0, 1],
-  //   [0, 0], [1, 0], [1, 1],
-  //   [0, 0], [1, 1], [0, 1],
-  //   [0, 0], [1, 1], [0, 1],
-  //   [0, 0], [1, 0], [1, 1],
-  //   [0, 0], [1, 0], [1, 1],
-  //   [0, 0], [1, 1], [0, 1]
-  // ];
-  // const flattenedUVs = uvs.flat();
-
-
   // BufferGeometry setup
   const geometry = new THREE.BufferGeometry();
   geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));

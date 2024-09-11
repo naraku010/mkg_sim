@@ -6,6 +6,7 @@ import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js";
 import {disableHighlight, enableHighlight} from "./key/materials";
 import ThreeUtil from "../util/three";
 import GUI from "lil-gui";
+import RoundedMatPad from "./mat";
 
 export default class SceneManager extends Collection {
   constructor(options) {
@@ -41,6 +42,7 @@ export default class SceneManager extends Collection {
     this.setupControls();
     this.setupLights();
     // 시발 장패드
+    // this.setupMat();
     // this.setupMat();
     this.resize();
 
@@ -85,9 +87,13 @@ export default class SceneManager extends Collection {
         this.takeScreenshot = true;
       }
     });
-
+    const sl = this;
     subscribe("colorways.editing", (state) => {
       this.editing = state.colorways.editing;
+    });
+    subscribe("settings.matImage", (state) => {
+      if(sl.mat) sl.mat.destroy();
+      sl.mat = new RoundedMatPad(sl.scene, state.settings.matImage);
     });
   }
   get w() {
@@ -105,6 +111,9 @@ export default class SceneManager extends Collection {
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(this.w, this.h);
   }
+  setupMat() {
+    this.mat = new RoundedMatPad(this.scene, 45, 20, 1, 'path_to_your_image.jpg');
+  }
   setupCamera() {
     this.camera = new THREE.PerspectiveCamera(60, this.w / this.h, 1, 1000);
     this.camera.position.y = 15;
@@ -121,25 +130,15 @@ export default class SceneManager extends Collection {
     this.controls.target = new THREE.Vector3(0, 0, 0);
   }
   setupLights() {
-    // const gui = new GUI({autoPlace: false});
-    //
-    // const containerEl = document.querySelector('#canvas-wrapper');
-    // // gui.domElement.
-    // const guiDOM = document.createElement("div");
-    // guiDOM.className = 'moveGUI';
-    // guiDOM.append(gui.domElement);
-    // containerEl.prepend(guiDOM);
     let ambiant = new THREE.AmbientLight("#fdfbd3", 1);
     this.scene.add(ambiant);
-    //
-    // //main
+
     let primaryLight = new THREE.DirectionalLight("#ffffff", 2.5);
     primaryLight.position.set(0, 10, 0);
     primaryLight.target.position.set(0, 0, 0);
     primaryLight.target.updateMatrixWorld();
     this.scene.add(primaryLight, primaryLight.target);
-    //
-    // //secondary shadows
+
     let shadowLight = new THREE.DirectionalLight("#FFFFFF", 0.5);
     shadowLight.position.set(10, 3, -10);
     shadowLight.shadow.mapSize.width = 4096;
@@ -169,11 +168,9 @@ export default class SceneManager extends Collection {
     positionFolder.add(primaryLight.position, 'y', -50, 50, 0.1).name('Y');
     positionFolder.add(primaryLight.position, 'z', -50, 50, 0.1).name('Z');
 
-    let helperVisible = false; // 초기 가시성 상태
     let helperControls = {
       toggleHelper: function() {
-        helperVisible = !helperVisible;
-        primaryLightHelper.visible = helperVisible;
+        primaryLightHelper.visible = false;
       }
     };
 

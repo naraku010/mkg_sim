@@ -8,6 +8,9 @@ export const settingsSlice = createSlice({
     toggleMat: (state, action) => {
       state.mat = !state.mat;
     },
+    setMatIamge: (state, action) => {
+      state.matImage = action.payload;
+    },
     setMode: (state, action) => {
       state.mode = action.payload;
     },
@@ -47,6 +50,7 @@ export const settingsSlice = createSlice({
 export const {
   toggleMat,
   setMode,
+  setMatIamge,
   toggleMute,
   toggleDebug,
   setGlowColor,
@@ -59,6 +63,7 @@ export const {
   setSceneAutoColor,
 } = settingsSlice.actions;
 export const selectMat = (state) => state.settings.mat;
+export const selectMatImage = (state) => state.settings.matImage;
 export const selectMode = (state) => state.settings.mode;
 export const selectMute = (state) => state.settings.mute;
 export const selectDebug = (state) => state.settings.debug;
@@ -69,5 +74,6 @@ export const selectGlowColor = (state) => state.settings.glowColor;
 export const selectSceneColor = (state) => state.settings.sceneColor;
 export const selectSceneAutoColor = (state) => state.settings.sceneAutoColor;
 export const selectFixBackground = (state) => state.settings.backgroundColorFix;
+
 
 export default settingsSlice.reducer;

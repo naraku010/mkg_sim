@@ -147,7 +147,7 @@ export default class CaseManager {
         this.loader = new TextureLoader();
         this.loadTextures();
         this.createEnvCubeMap();
-        this.createCaseShadow();
+        // this.createCaseShadow();
         // this.createBadge();
         this.createPlate();
         this.createCase();

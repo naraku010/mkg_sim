@@ -8,9 +8,14 @@ import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { ReactComponent as Name } from "../../assets/logo_text.svg";
 import "./tabs.scss";
 import GoogleAdvertise from "../google/GoogleAdvertise";
+import {TextureLoader} from "three/src/loaders/TextureLoader.js";
+import * as settingsActions from "../../store/slices/settings";
+import {  useDispatch } from "react-redux";
 
 export default function Sidebar() {
   const [tabIndex, setTabIndex] = useState(0);
+  const dispatch = useDispatch();
+
 
   return (
     <div id="sidebar" className={styles.sidebar}>
@@ -30,10 +35,10 @@ export default function Sidebar() {
           <Tab tabIndex="0">테스트</Tab>
         </TabList>
         <TabPanel>
-          <OptionsPane setTab={setTabIndex} />
+          <OptionsPane setTab={setTabIndex}/>
         </TabPanel>
         <TabPanel>
-          <ColorwayEditor />
+          <ColorwayEditor/>
         </TabPanel>
         <TabPanel>
           <TestingPane />
