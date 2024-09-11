@@ -37,52 +37,52 @@ export const keyTexture = (opts) => {
 
   //draw gradient to simulate sculpting
   let gradient;
-  if (key === "KC_SPC") {
-    //convex
-    gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-    gradient.addColorStop(0, "rgba(0,0,0,0.15)");
-    gradient.addColorStop(0.5, "rgba(128,128,128,0.0)");
-    gradient.addColorStop(1, "rgba(255,255,255,0.15)");
-  } else {
-    //concave
-    //simulate slight curve with gradient on face
-    gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-    gradient.addColorStop(0, "rgba(255,255,255,0.2)");
-    gradient.addColorStop(0.4, "rgba(255,255,255,0.0)");
-    gradient.addColorStop(0.6, "rgba(0,0,0,0)");
-    gradient.addColorStop(1, "rgba(0,0,0,0.15)");
-  }
+  // if (key === "KC_SPC") {
+  //   //convex
+  //   gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+  //   gradient.addColorStop(0, "rgba(0,0,0,0.15)");
+  //   gradient.addColorStop(0.5, "rgba(128,128,128,0.0)");
+  //   gradient.addColorStop(1, "rgba(255,255,255,0.15)");
+  // } else {
+  //   //concave
+  //   //simulate slight curve with gradient on face
+  //   gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+  //   gradient.addColorStop(0, "rgba(255,255,255,0.2)");
+  //   gradient.addColorStop(0.4, "rgba(255,255,255,0.0)");
+  //   gradient.addColorStop(0.6, "rgba(0,0,0,0)");
+  //   gradient.addColorStop(1, "rgba(0,0,0,0.15)");
+  // }
 
   //bottom edge highlight
-  let shineOpacity = 0.4;
-  let shineRight = ctx.createLinearGradient(0, 0, canvas.width, 0);
-  shineRight.addColorStop(0, `rgba(255,255,255,${0 * shineOpacity})`);
-  shineRight.addColorStop(0.03, `rgba(255,255,255,${0 * shineOpacity})`);
-  shineRight.addColorStop(0.07, `rgba(255,255,255,${0.6 * shineOpacity})`);
-  shineRight.addColorStop(0.8, `rgba(255,255,255,${0.6 * shineOpacity})`);
-  shineRight.addColorStop(0.95, `rgba(255,255,255,${0 * shineOpacity})`);
-
-  //side edge highlight
-  let shineBottom = ctx.createLinearGradient(0, 0, 0, canvas.height);
-  let highlightRatio = (canvas.width - pxPerU * 0.04) / canvas.width;
-  shineBottom.addColorStop(0, `rgba(255,255,255,${0 * shineOpacity})`);
-  shineBottom.addColorStop(0.03, `rgba(255,255,255,${0 * shineOpacity})`);
-  shineBottom.addColorStop(0.15, `rgba(255,255,255,${0.5 * shineOpacity})`);
-  shineBottom.addColorStop(0.5, `rgba(255,255,255,${0.7 * shineOpacity})`);
-  shineBottom.addColorStop(0.85, `rgba(255,255,255,${1.1 * shineOpacity})`);
-  shineBottom.addColorStop(0.9, `rgba(255,255,255,${0.7 * shineOpacity})`);
-  shineBottom.addColorStop(0.95, `rgba(255,255,255,${0 * shineOpacity})`);
-  shineBottom.addColorStop(1, `rgba(255,255,255,${0 * shineOpacity})`);
-
-  //draw gradients
-  ctx.fillStyle = gradient;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  ctx.fillStyle = shineRight;
-  ctx.fillRect(0, canvas.height * 0.97, canvas.width, canvas.height);
-
-  ctx.fillStyle = shineBottom;
-  ctx.fillRect(canvas.width * highlightRatio, 0, canvas.width, canvas.height);
+  // let shineOpacity = 0.4;
+  // let shineRight = ctx.createLinearGradient(0, 0, canvas.width, 0);
+  // shineRight.addColorStop(0, `rgba(255,255,255,${0 * shineOpacity})`);
+  // shineRight.addColorStop(0.03, `rgba(255,255,255,${0 * shineOpacity})`);
+  // shineRight.addColorStop(0.07, `rgba(255,255,255,${0.6 * shineOpacity})`);
+  // shineRight.addColorStop(0.8, `rgba(255,255,255,${0.6 * shineOpacity})`);
+  // shineRight.addColorStop(0.95, `rgba(255,255,255,${0 * shineOpacity})`);
+  //
+  // //side edge highlight
+  // let shineBottom = ctx.createLinearGradient(0, 0, 0, canvas.height);
+  // let highlightRatio = (canvas.width - pxPerU * 0.04) / canvas.width;
+  // shineBottom.addColorStop(0, `rgba(255,255,255,${0 * shineOpacity})`);
+  // shineBottom.addColorStop(0.03, `rgba(255,255,255,${0 * shineOpacity})`);
+  // shineBottom.addColorStop(0.15, `rgba(255,255,255,${0.5 * shineOpacity})`);
+  // shineBottom.addColorStop(0.5, `rgba(255,255,255,${0.7 * shineOpacity})`);
+  // shineBottom.addColorStop(0.85, `rgba(255,255,255,${1.1 * shineOpacity})`);
+  // shineBottom.addColorStop(0.9, `rgba(255,255,255,${0.7 * shineOpacity})`);
+  // shineBottom.addColorStop(0.95, `rgba(255,255,255,${0 * shineOpacity})`);
+  // shineBottom.addColorStop(1, `rgba(255,255,255,${0 * shineOpacity})`);
+  //
+  // //draw gradients
+  // ctx.fillStyle = gradient;
+  // ctx.fillRect(0, 0, canvas.width, canvas.height);
+  //
+  // ctx.fillStyle = shineRight;
+  // ctx.fillRect(0, canvas.height * 0.97, canvas.width, canvas.height);
+  //
+  // ctx.fillStyle = shineBottom;
+  // ctx.fillRect(canvas.width * highlightRatio, 0, canvas.width, canvas.height);
 
   let l = LEGENDS[legend];
   let mainChar = l?.chars[key] || "";
@@ -181,7 +181,10 @@ export const keyTexture = (opts) => {
 
   //document.body.appendChild(canvas);
   // texture.colorSpace = THREE.SRGBColorSpace;
+  texture.minFilter = THREE.LinearFilter;
+  texture.magFilter = THREE.LinearFilter;
+  texture.colorSpace = THREE.LinearSRGBColorSpace;
+  // texture.minFilter = THREE.LinearMipMapLinearFilter;  // 더 부드러운 텍스처 필터링
   texture.needsUpdate = true;
-  texture.minFilter = THREE.LinearMipMapLinearFilter;  // 더 부드러운 텍스처 필터링
   return texture;
 };
