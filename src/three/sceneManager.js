@@ -7,7 +7,6 @@ import {disableHighlight, enableHighlight} from "./key/materials";
 import ThreeUtil from "../util/three";
 import GUI from "lil-gui";
 import RoundedMatPad from "./mat";
-import { gsap } from 'gsap';
 
 export default class SceneManager extends Collection {
   constructor(options) {
@@ -125,42 +124,11 @@ export default class SceneManager extends Collection {
     this.camera.position.x = 0;
     const params = {
       resetCamera: () => {
-        const targetPosition = { x: 0, y: 30, z: 0 }; // 카메라가 이동할 목표 위치
-        const targetRotation = { x: 0, y: 0, z: 0 }; // 카메라가 회전할 목표 값 (라디안 값)
-        const targetLookAt = { x: 0, y: 0, z: 0 }; // 카메라가 바라볼 대상
-
-        // 카메라 위치 애니메이션
-        gsap.to(this.camera.position, {
-          x: targetPosition.x,
-          y: targetPosition.y,
-          z: targetPosition.z,
-          duration: 2, // 2초 동안 애니메이션
-          ease: "power2.inOut", // 부드러운 이징 효과
-          onUpdate: () => {
-            this.camera.lookAt(new THREE.Vector3(targetLookAt.x, targetLookAt.y, targetLookAt.z)); // 대상 바라보도록 설정
-          }
-        });
-
-        // 카메라 회전 애니메이션 (좌우 포함)
-        gsap.to(this.camera.rotation, {
-          x: targetRotation.x, // X축 회전 (상하 회전)
-          y: targetRotation.y, // Y축 회전 (좌우 회전) - 애니메이션 추가됨
-          z: targetRotation.z, // Z축 회전
-          duration: 2, // 2초 동안 애니메이션
-          ease: "power2.inOut"
-        });
-
-        // OrbitControls 애니메이션
-        gsap.to(this.controls.target, {
-          x: targetLookAt.x,
-          y: targetLookAt.y,
-          z: targetLookAt.z,
-          duration: 2, // 2초 동안 애니메이션
-          ease: "power2.inOut",
-          onUpdate: () => {
-            this.controls.update(); // 컨트롤 업데이트
-          }
-        });
+        this.camera.position.set(0, 30, 0); // 초기 위치로 설정
+        this.camera.lookAt(new THREE.Vector3(0, 0, 0)); // (0, 0, 0)을 바라보도록 설정
+        this.camera.rotation.set(0, 0, 0); // 카메라의 회전값을 초기화
+        this.controls.target.set(0, 0, 0); // 컨트롤이 바라보는 대상 초기화
+        this.controls.update(); // 컨트롤 업데이트
       }
     };    
     this.gui.add(params, 'resetCamera').name('뷰 초기화');
