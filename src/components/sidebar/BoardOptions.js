@@ -19,14 +19,13 @@ import icon60hhkb from "../../assets/icons/icon-60-hhkb.png";
 
 import * as caseActions from "../../store/slices/case";
 import * as settingsActions from "../../store/slices/settings";
-import {selectMat, toggleFixBackground} from "../../store/slices/settings";
+import {toggleFixBackground} from "../../store/slices/settings";
 import * as keyActions from "../../store/slices/keys";
 import ToggleField from "../elements/ToggleField";
 
 export default function BoardOptions() {
     const dispatch = useDispatch();
 
-    const hasMat = useSelector(selectMat);
     const layout = useSelector(caseActions.selectLayout);
     const legendType = useSelector(keyActions.selectLegendType);
     const legendPrimaryStyle = useSelector(keyActions.selectLegendPrimaryStyle);
@@ -39,35 +38,9 @@ export default function BoardOptions() {
     const material = useSelector(caseActions.selectMaterial);
     const sceneColor = useSelector(settingsActions.selectSceneColor);
     const fixBackground = useSelector(settingsActions.selectFixBackground);
-    const handleImageUpload = (event) => {
-        const file = event.target.files[0];
-        if (!file) return;
 
-        const validTypes = ["image/jpeg", "image/png", "image/webp"];
-        if (!validTypes.includes(file.type)) {
-            alert("지원하지 않는 파일 형식입니다. JPG, PNG 또는 WEBP 파일을 선택하세요.");
-            return;
-        }
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            const img = new Image();
-            img.src = e.target.result;
-
-            img.onload = () => {
-                dispatch(settingsActions.setMatIamge(img.src));
-            };
-        };
-        reader.readAsDataURL(file);
-    };
     return (
         <>
-            <CollapsibleSection title="장패드 연구실" open={false}>
-                <input
-                    type="file"
-                    accept="image/jpeg, image/png, image/webp"
-                    onChange={handleImageUpload}
-                />
-            </CollapsibleSection>
             <CollapsibleSection title="기본설정" open={true}>
                 <SelectField
                     label="배열"
