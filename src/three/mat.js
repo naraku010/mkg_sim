@@ -1,4 +1,11 @@
 import * as THREE from 'three';
+import DMKDeicide from '../assets/mat/DMK_Deicide.webp';
+import DMKUnicorn from '../assets/mat/DMK_Unicorn.webp';
+import GMKEuler from '../assets/mat/GMK_Euler.webp';
+import GMKFoundation from '../assets/mat/GMK_Foundation.webp';
+import GMKMaestro from '../assets/mat/GMK_Maestro.webp';
+import KNCKeysRunGo from '../assets/mat/KNC_Keys_Run_Go.webp';
+
 class RoundedRectangleGeometry extends THREE.BufferGeometry {
     constructor(width, height, depth = 0.1) {
         super();
@@ -73,7 +80,7 @@ export default class RoundedMatPad {
             texture.wrapT = THREE.ClampToEdgeWrapping;
             texture.colorSpace = THREE.SRGBColorSpace;
             const image = texture.image;
-            const scale = 30 / image.width;  // 이미지 스케일 조정
+            const scale = 30 / image.width * 1.5;  // 이미지 스케일 조정
             const width = image.width * scale;
             const height = image.height * scale;
             const geometry = new RoundedRectangleGeometry(width, height);
@@ -92,10 +99,19 @@ export default class RoundedMatPad {
     makeGUI(imageUrl = this.imageUrl) {
         const target = this;
         const folder = this.gui.addFolder('장패드');
+        const images = {
+            'DMK Deicide': DMKDeicide,
+            'DMK Unicorn': DMKUnicorn,
+            'GMK Euler': GMKEuler,
+            'GMK Foundation': GMKFoundation,
+            'GMK Maestro Girl': GMKMaestro,
+            'KNC Keys Run Go': KNCKeysRunGo
+        };
         const params = {
-            scale: 1,
+            scale: 1.5,
             positionX: 0,
             positionY: 0,
+            selectedImage: '',
             uploadImage: () => {
                 // 파일 업로드를 위한 input 엘리먼트를 동적으로 생성하고 클릭
                 const input = document.createElement('input');
@@ -106,7 +122,7 @@ export default class RoundedMatPad {
                     if (file) {
                         const reader = new FileReader();
                         reader.onload = (e) => {
-                            target.destroy(); // 기존 메쉬 제거
+                            target.destroy();// 기존 메쉬 제거
                             target.imageUrl = e.target.result;
                             target.loadImageAndCreatePad();
                         };
@@ -116,17 +132,22 @@ export default class RoundedMatPad {
                 input.click();
             }
         };
-        folder.add(params, 'scale', 0.1, 5).onChange((value) => {
+        folder.add(params, 'selectedImage', Object.keys(images)).name('Swagkey Deskmat').onChange((value) => {
+            this.imageUrl = images[value];
+            target.destroy();
+            this.loadImageAndCreatePad();
+        });
+        folder.add(params, 'scale', 0.1, 5).name('크기조절').onChange((value) => {
             if (this.mesh) {
-                this.mesh.scale.set(value, value, 1); // 스케일 조정
+                this.mesh.scale.set(value, value, 1.5); // 스케일 조정
             }
         });
-        folder.add(params, 'positionX', -50, 50).onChange((value) => {
+        folder.add(params, 'positionX', -50, 50).name('좌우 위치').onChange((value) => {
             if (this.mesh) {
                 this.mesh.position.x = value; // X 위치 조정
             }
         });
-        folder.add(params, 'positionY', -50, 50).onChange((value) => {
+        folder.add(params, 'positionY', -50, 50).name('상하 위치').onChange((value) => {
             if (this.mesh) {
                 this.mesh.position.z = value; // Z 위치 조정
             }
