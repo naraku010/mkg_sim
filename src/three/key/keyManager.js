@@ -76,20 +76,20 @@ export default class KeyManager extends Collection {
     document.addEventListener("keydown", (e) => {
       let code = KeyUtil.getKeyCode(e.code);
       let key = this.getKey(code);
-      let s = this.getKey(code + "_s");
+      // let s = this.getKey(code + "_s");
       if (!key) return;
       if (this.editing && this.paintWithKeys) {
         this.paintKey(code);
       }
-      s.setState(SWITCHSTATE.MOVING_DOWN);
+      // s.setState(SWITCHSTATE.MOVING_DOWN);
       key.setState(KEYSTATES.MOVING_DOWN);
     });
     document.addEventListener("keyup", (e) => {
       let code = KeyUtil.getKeyCode(e.code);
       let key = this.getKey(code);
-      let s = this.getKey(code + "_s");
+      // let s = this.getKey(code + "_s");
       if (!key) return;
-      s.setState(SWITCHSTATE.MOVING_UP);
+      // s.setState(SWITCHSTATE.MOVING_UP);
       key.setState(KEYSTATES.MOVING_UP);
     });
   }
@@ -145,14 +145,15 @@ export default class KeyManager extends Collection {
         code: code,
       });
       this.add(K);
-      let S = new Switch({
-        dimensions: dimensions,
-        container: this.group,
-        isIso: this.layoutFull?.is_iso,
-        colorway: this.colorway,
-        code: code + "_s",
-      });
-      this.add(S);
+      // let S = new Switch({
+      //   dimensions: dimensions,
+      //   container: this.group,
+      //   isIso: this.layoutFull?.is_iso,
+      //   colorway: this.colorway,
+      //   code: code + "_s",
+      // });
+      // this.add(S);
+
       seen.push(code);
     }
   }

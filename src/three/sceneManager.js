@@ -27,6 +27,8 @@ export default class SceneManager extends Collection {
     });
     this.renderer.colorSpace = THREE.LinearSRGBColorSpace;
     this.renderer.toneMapping = THREE.NoToneMapping;
+    this.renderer.shadowMap.enabled = true; // 그림자 맵 활성화
+    this.renderer.shadowMap.type = THREE.PCFSoftShadowMap; // 그림자 부드러움 효과
     // this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
     // this.renderer.toneMappingExposure = .5;
     this.renderer.localClippingEnabled = true;
@@ -42,7 +44,8 @@ export default class SceneManager extends Collection {
     this.setupControls();
     this.setupLights();
     // 시발 장패드
-    // this.setupMat();
+    this.setupGUI();
+    this.setupMat();
     // this.setupMat();
     this.resize();
 
@@ -112,7 +115,7 @@ export default class SceneManager extends Collection {
     this.renderer.setSize(this.w, this.h);
   }
   setupMat() {
-    this.mat = new RoundedMatPad(this.scene, 45, 20, 1, 'path_to_your_image.jpg');
+    this.mat = new RoundedMatPad(this.scene, this.gui);
   }
   setupCamera() {
     this.camera = new THREE.PerspectiveCamera(60, this.w / this.h, 1, 1000);
@@ -129,6 +132,9 @@ export default class SceneManager extends Collection {
     this.controls.maxDistance = 40;
     this.controls.target = new THREE.Vector3(0, 0, 0);
   }
+  setupGUI() {
+    this.gui = new GUI();
+  }
   setupLights() {
     let ambiant = new THREE.AmbientLight("#fdfbd3", 1);
     this.scene.add(ambiant);
@@ -139,43 +145,34 @@ export default class SceneManager extends Collection {
     primaryLight.target.updateMatrixWorld();
     this.scene.add(primaryLight, primaryLight.target);
 
-    let shadowLight = new THREE.DirectionalLight("#FFFFFF", 0.5);
-    shadowLight.position.set(10, 3, -10);
-    shadowLight.shadow.mapSize.width = 4096;
-    shadowLight.shadow.mapSize.height = 4096;
-    shadowLight.shadow.camera.near = 1;
-    shadowLight.shadow.camera.far = 6;
-    shadowLight.target.position.set(0, 0, 0);
-    shadowLight.target.updateMatrixWorld();
-    this.scene.add(shadowLight, shadowLight.target);
-
     const primaryLightHelper = new DirectionalLightHelper(primaryLight, 5);  // Helper 크기 지정
     primaryLightHelper.visible = false;
     this.scene.add(primaryLightHelper);
 
-    const gui = new GUI();
 // AmbientLight 조절
-    const ambientLightFolder = gui.addFolder('Ambient Light');
-    ambientLightFolder.add(ambiant, 'intensity', 0, 4, 0.1).name('조명강도');
-
-    const primaryLightFolder = gui.addFolder('Primary Light');
-    primaryLightFolder.add(primaryLight, 'intensity', 0, 10, 0.1).name('조명강도');
-    primaryLightFolder.addColor({ color: primaryLight.color.getHex() }, 'color').name('조명색상').onChange((value) => {
-      primaryLight.color.setHex(value);
-    });
-    const positionFolder = gui.addFolder('조명 위치');
-    positionFolder.add(primaryLight.position, 'x', -50, 50, 0.1).name('X');
-    positionFolder.add(primaryLight.position, 'y', -50, 50, 0.1).name('Y');
-    positionFolder.add(primaryLight.position, 'z', -50, 50, 0.1).name('Z');
-
-    let helperControls = {
-      toggleHelper: function() {
-        primaryLightHelper.visible = false;
-      }
-    };
+//     const ambientLightFolder = gui.addFolder('Ambient Light');
+//     ambientLightFolder.add(ambiant, 'intensity', 0, 4, 0.1).name('조명강도');
+//
+//     const primaryLightFolder = gui.addFolder('Primary Light');
+//     primaryLightFolder.add(primaryLight, 'intensity', 0, 10, 0.1).name('조명강도');
+//     primaryLightFolder.addColor({ color: primaryLight.color.getHex() }, 'color').name('조명색상').onChange((value) => {
+//       primaryLight.color.setHex(value);
+//     });
+//     const positionFolder = gui.addFolder('조명 위치');
+//     positionFolder.add(primaryLight.position, 'x', -50, 50, 0.1).name('X');
+//     positionFolder.add(primaryLight.position, 'y', -50, 50, 0.1).name('Y');
+//     positionFolder.add(primaryLight.position, 'z', -50, 50, 0.1).name('Z');
+//
+//     let helperVisible = false; // 초기 가시성 상태
+//     let helperControls = {
+//       toggleHelper: function() {
+//         helperVisible = !helperVisible;
+//         primaryLightHelper.visible = helperVisible;
+//       }
+//     };
 
 // GUI에 토글 버튼 추가
-    gui.add(helperControls, 'toggleHelper').name('조명 가이드 보기');
+//     gui.add(helperControls, 'toggleHelper').name('조명 가이드 보기');
 
     //lighthelpers
     //lighthelpers

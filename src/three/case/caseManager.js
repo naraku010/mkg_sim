@@ -147,7 +147,7 @@ export default class CaseManager {
         this.loader = new TextureLoader();
         this.loadTextures();
         this.createEnvCubeMap();
-        // this.createCaseShadow();
+        this.createCaseShadow();
         // this.createBadge();
         this.createPlate();
         this.createCase();
@@ -252,6 +252,7 @@ export default class CaseManager {
             -0.5,
             this.depth / 2 - this.bezel
         );
+        this.plate.castShadow = true;
         this.group.add(this.plate);
     }
 

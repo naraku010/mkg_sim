@@ -38,7 +38,7 @@ export default function BoardOptions() {
     const style = useSelector(caseActions.selectStyle);
     const material = useSelector(caseActions.selectMaterial);
     const sceneColor = useSelector(settingsActions.selectSceneColor);
-    const fixBackground = useSelector(settingsActions.toggleFixBackground);
+    const fixBackground = useSelector(settingsActions.selectFixBackground);
     const handleImageUpload = (event) => {
         const file = event.target.files[0];
         if (!file) return;

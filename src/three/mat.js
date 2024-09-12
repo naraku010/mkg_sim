@@ -59,11 +59,13 @@ class RoundedRectangleGeometry extends THREE.BufferGeometry {
 
 
 export default class RoundedMatPad {
-    constructor(scene, imageUrl) {
+    constructor(scene, gui) {
         this.scene = scene;
-        this.imageUrl = imageUrl;
+        this.gui = gui;
+        this.imageUrl = null;
         this.mesh = null;
-        this.loadImageAndCreatePad();
+        this.makeGUI();
+        // this.loadImageAndCreatePad();
     }
 
     loadImageAndCreatePad() {
@@ -91,13 +93,57 @@ export default class RoundedMatPad {
                 side: THREE.DoubleSide
             });
             this.mesh = new THREE.Mesh(geometry, material);
-
             this.mesh.position.z = 2;
             this.mesh.rotation.x = -Math.PI / 2;
+            this.mesh.receiveShadow = true; // 그림자 수신 활성화
+            this.mesh.castShadow = true; // 그림자 투사 활성화 (선택적)
             this.scene.add(this.mesh);
         });
     }
-
+    makeGUI(imageUrl = this.imageUrl) {
+        const target = this;
+        const folder = this.gui.addFolder('장패드');
+        const params = {
+            scale: 1,
+            positionX: 0,
+            positionY: 0,
+            uploadImage: () => {
+                // 파일 업로드를 위한 input 엘리먼트를 동적으로 생성하고 클릭
+                const input = document.createElement('input');
+                input.type = 'file';
+                input.accept = 'image/jpeg, image/png, image/webp';
+                input.onchange = (event) => {
+                    const file = event.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = (e) => {
+                            target.destroy(); // 기존 메쉬 제거
+                            target.imageUrl = e.target.result;
+                            target.loadImageAndCreatePad();
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                };
+                input.click();
+            }
+        };
+        folder.add(params, 'scale', 0.1, 5).onChange((value) => {
+            if (this.mesh) {
+                this.mesh.scale.set(value, value, 1); // 스케일 조정
+            }
+        });
+        folder.add(params, 'positionX', -50, 50).onChange((value) => {
+            if (this.mesh) {
+                this.mesh.position.x = value; // X 위치 조정
+            }
+        });
+        folder.add(params, 'positionY', -50, 50).onChange((value) => {
+            if (this.mesh) {
+                this.mesh.position.z = value; // Z 위치 조정
+            }
+        });
+        folder.add(params, 'uploadImage').name('Upload Image');
+    }
     destroy() {
         if (this.mesh) {
             this.scene.remove(this.mesh);
