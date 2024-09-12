@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-import FabricNormal from '../assets/texture/normal/fabric_normal.jpg'
 class RoundedRectangleGeometry extends THREE.BufferGeometry {
     constructor(width, height, depth = 0.1) {
         super();
@@ -65,31 +64,21 @@ export default class RoundedMatPad {
         this.imageUrl = null;
         this.mesh = null;
         this.makeGUI();
-        // this.loadImageAndCreatePad();
     }
 
     loadImageAndCreatePad() {
         const loader = new THREE.TextureLoader();
-        const normalMap = loader.load(FabricNormal, (texture) => {
-            // 노멀 맵의 반복을 조정하여 질감을 촘촘하게 만듭니다.
-            texture.wrapS = THREE.RepeatWrapping;
-            texture.wrapT = THREE.RepeatWrapping;
-            texture.repeat.set(15, 15);  // 텍스처 반복 횟수를 높입니다.
-        });
         loader.load(this.imageUrl, (texture) => {
             texture.wrapS = THREE.ClampToEdgeWrapping;
             texture.wrapT = THREE.ClampToEdgeWrapping;
+            texture.colorSpace = THREE.SRGBColorSpace;
             const image = texture.image;
             const scale = 30 / image.width;  // 이미지 스케일 조정
-
             const width = image.width * scale;
             const height = image.height * scale;
             const geometry = new RoundedRectangleGeometry(width, height);
-            const material = new THREE.MeshStandardMaterial({
+            const material = new THREE.MeshBasicMaterial({
                 map: texture, // 기본 텍스처
-                normalMap: normalMap, // 노멀 맵
-                roughness: 0.9, // 높은 거칠기로 면의 질감 표현
-                metalness: 0.05, // 거의 금속성 없음
                 side: THREE.DoubleSide // 양면 모두 렌더링
             });
             this.mesh = new THREE.Mesh(geometry, material);
