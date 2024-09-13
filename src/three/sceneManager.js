@@ -25,12 +25,12 @@ export default class SceneManager extends Collection {
       alpha: true,
       antialias: true,
     });
+    // THREE.ColorManagement.legacyMode = false;
     this.renderer.colorSpace = THREE.LinearSRGBColorSpace;
-    this.renderer.toneMapping = THREE.NoToneMapping;
     this.renderer.shadowMap.enabled = true; // 그림자 맵 활성화
     this.renderer.shadowMap.type = THREE.PCFSoftShadowMap; // 그림자 부드러움 효과
     // this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    // this.renderer.toneMappingExposure = .5;
+    // this.renderer.toneMappingExposure = 1;
     this.renderer.localClippingEnabled = true;
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.el.appendChild(this.renderer.domElement);
@@ -53,6 +53,14 @@ export default class SceneManager extends Collection {
     this.mouse = new THREE.Vector2(-1000, -1000);
     this.raycaster = new THREE.Raycaster();
     this.raycaster.layers.set(1);
+    //
+    // this.composer = new EffectComposer(this.renderer);
+    // const renderPass = new RenderPass(this.scene, this.camera);
+    // renderPass.clearColor = new THREE.Color('black');
+    // renderPass.clearAlpha = 1;
+    // this.composer.addPass(renderPass);
+    // const unrealBloomPass = new UnrealBloomPass([this.w, this.h], 1.5, 0.4, 0.85);
+    // this.composer.addPass(unrealBloomPass);
 
     //bind global events
     window.addEventListener("resize", (e) => this.resize(e), false);
@@ -160,38 +168,29 @@ export default class SceneManager extends Collection {
     primaryLightHelper.visible = false;
     this.scene.add(primaryLightHelper);
 
-// AmbientLight 조절
-//     const ambientLightFolder = gui.addFolder('Ambient Light');
-//     ambientLightFolder.add(ambiant, 'intensity', 0, 4, 0.1).name('조명강도');
-//
-//     const primaryLightFolder = gui.addFolder('Primary Light');
-//     primaryLightFolder.add(primaryLight, 'intensity', 0, 10, 0.1).name('조명강도');
-//     primaryLightFolder.addColor({ color: primaryLight.color.getHex() }, 'color').name('조명색상').onChange((value) => {
-//       primaryLight.color.setHex(value);
-//     });
-//     const positionFolder = gui.addFolder('조명 위치');
-//     positionFolder.add(primaryLight.position, 'x', -50, 50, 0.1).name('X');
-//     positionFolder.add(primaryLight.position, 'y', -50, 50, 0.1).name('Y');
-//     positionFolder.add(primaryLight.position, 'z', -50, 50, 0.1).name('Z');
-//
-//     let helperVisible = false; // 초기 가시성 상태
-//     let helperControls = {
-//       toggleHelper: function() {
-//         helperVisible = !helperVisible;
-//         primaryLightHelper.visible = helperVisible;
-//       }
-//     };
+    // AmbientLight 조절
+    const lightFolder = this.gui.addFolder('조명').close();
+    lightFolder.add(ambiant, 'intensity', 0, 4, 0.1).name('배경조명 강도');
 
-// GUI에 토글 버튼 추가
-//     gui.add(helperControls, 'toggleHelper').name('조명 가이드 보기');
+    lightFolder.add(primaryLight, 'intensity', 0, 10, 0.1).name('직접조명 강도');
+    lightFolder.addColor({ color: primaryLight.color.getHex() }, 'color').name('조명색상').onChange((value) => {
+      primaryLight.color.setHex(value);
+    });
 
-    //lighthelpers
-    //lighthelpers
-    // let slh = new THREE.DirectionalLightHelper(shadowLight, 2);
-    // let plh = new THREE.DirectionalLightHelper(primaryLight, 2);
-    // slh.update();
-    // plh.update();
-    // this.scene.add(slh, plh);
+    lightFolder.add(primaryLight.position, 'x', -50, 50, 0.1).name('좌우');
+    lightFolder.add(primaryLight.position, 'z', -50, 50, 0.1).name('위아래');
+    lightFolder.add(primaryLight.position, 'y', -50, 50, 0.1).name('상하');
+
+    let helperVisible = false; // 초기 가시성 상태
+    let helperControls = {
+      toggleHelper: function() {
+        helperVisible = !helperVisible;
+        primaryLightHelper.visible = helperVisible;
+      }
+    };
+    // GUI에 토글 버튼 추가
+    lightFolder.add(helperControls, 'toggleHelper').name('조명 가이드 보기');
+
   }
   mouseClick(e) {
     if (!this.editing) return;
@@ -261,5 +260,6 @@ export default class SceneManager extends Collection {
       this.takeScreenshot = false;
     }
     requestAnimationFrame(this.tick.bind(this));
+    // this.composer.render();
   }
 }
