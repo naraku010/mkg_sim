@@ -152,7 +152,7 @@ export default class RoundedMatPad {
                 this.mesh.position.z = value; // Z 위치 조정
             }
         });
-        folder.add(params, 'uploadImage').name('Upload Image');
+        folder.add(params, 'uploadImage').name('장패드 이미지 업로드');
     }
     destroy() {
         if (this.mesh) {
