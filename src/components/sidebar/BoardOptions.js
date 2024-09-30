@@ -104,7 +104,6 @@ export default function BoardOptions() {
                         {label: "룬문자", value: "rune"},
                         {label: "히라가나", value: "hiragana"},
                         {label: "가타카나", value: "katakana"},
-                        {label: "중국어", value: "chinese"},
                     ]}
                     handler={(val) => {
                         dispatch(keyActions.setLegendSecondaryStyle(val));

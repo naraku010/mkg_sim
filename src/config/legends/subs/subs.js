@@ -1,12 +1,10 @@
 import hiragana from "./hiragana.json";
 import katakana from "./katakana.json";
 import hangul from "./hangul.json";
-import chinese from "./chinese.json";
 import rune from "./rune.json";
 import cyrillic from "./cyrillic.json";
 
 const SUBS = {
-  chinese: chinese,
   hangul: hangul,
   hiragana: hiragana,
   katakana: katakana,
