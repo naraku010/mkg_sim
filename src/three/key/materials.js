@@ -64,11 +64,10 @@ const getMaterialSet = (opts) => {
         reflectivity: .1,           // 더 높은 반사도
         envMapIntensity: 1,        // 더 강한 환경 맵 반사
     };
-    let top = new THREE.MeshPhysicalMaterial({
+    let top = new THREE.MeshStandardMaterial({
         map: legendTexture,
-        ...options,
-        // lightMap: lightMap,
-        // lightMapIntensity: 0,
+        emissive: new THREE.Color(0x000000),  // 자발광 없음
+        emissiveIntensity: 0,                 // 자발광 강도 0으로 설정
     });
     // let top = new THREE.MeshPhysicalMaterial({
     //     map: legendTexture,

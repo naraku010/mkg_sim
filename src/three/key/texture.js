@@ -137,9 +137,6 @@ export const keyTexture = (opts) => {
   texture = new THREE.CanvasTexture(canvas);
 
 
-  texture.minFilter = THREE.LinearFilter;
-  texture.magFilter = THREE.LinearFilter;
-  texture.colorSpace = THREE.LinearSRGBColorSpace;
   texture.needsUpdate = true;
   return texture;
 };

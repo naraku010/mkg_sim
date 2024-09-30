@@ -155,11 +155,8 @@ export default class SceneManager extends Collection {
     this.gui = new GUI();
   }
   setupLights() {
-    let ambiant = new THREE.AmbientLight("#fdfbd3", 1);
-    this.scene.add(ambiant);
-
-    let primaryLight = new THREE.DirectionalLight("#ffffff", 2.5);
-    primaryLight.position.set(0, 10, 0);
+    let primaryLight = new THREE.DirectionalLight("#ffffff", 3.5);
+    primaryLight.position.set(0, 30, 0);
     primaryLight.target.position.set(0, 0, 0);
     primaryLight.target.updateMatrixWorld();
     this.scene.add(primaryLight, primaryLight.target);
@@ -170,8 +167,6 @@ export default class SceneManager extends Collection {
 
     // AmbientLight 조절
     const lightFolder = this.gui.addFolder('조명').close();
-    lightFolder.add(ambiant, 'intensity', 0, 4, 0.1).name('배경조명 강도');
-
     lightFolder.add(primaryLight, 'intensity', 0, 10, 0.1).name('직접조명 강도');
     lightFolder.addColor({ color: primaryLight.color.getHex() }, 'color').name('조명색상').onChange((value) => {
       primaryLight.color.setHex(value);
