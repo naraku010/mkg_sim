@@ -46,6 +46,12 @@ const setMaterialIndexes = (mesh, side, top, isoent) => {
 
 // Generate top and side materials for a single color set
 const getMaterialSet = (opts) => {
+    const hexToRgba = (hex, alpha) => {
+        let r = parseInt(hex.slice(1, 3), 16);
+        let g = parseInt(hex.slice(3, 5), 16);
+        let b = parseInt(hex.slice(5, 7), 16);
+        return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    };
     let currentState = store.getState();
     let key = `mat${opts.background}`;
     let legendTexture = keyTexture(opts);
@@ -65,8 +71,10 @@ const getMaterialSet = (opts) => {
         envMapIntensity: 1,        // 더 강한 환경 맵 반사
     };
     let top = new THREE.MeshPhysicalMaterial({
+        // color: opts.background,
         map: legendTexture,
-        // color: new THREE.Color(hexToRgba(opts.background, .1)),
+        transparent: true,       // 텍스처의 투명도 적용
+        opacity: 1.0,            // 전체 불투명도 설정
         ...options// 자발광 강도 0으로 설정
     });
     // let top = new THREE.MeshPhysicalMaterial({
@@ -77,7 +85,7 @@ const getMaterialSet = (opts) => {
     // });
 
     top.needsUpdate = true
-    top.map.minFilter = THREE.LinearFilter;
+    // top.map.minFilter = THREE.LinearFilter;
     // if (computed_materials[key]) {
     //     return [computed_materials[key].clone(), top];
     // }
@@ -93,8 +101,8 @@ const getMaterialSet = (opts) => {
         top.transparent = side.transparent = true;
         top.opacity = side.opacity = 0.55;
     }
-    top.castShadow = side.receiveShadow = false;
-    top.receiveShadow = side.receiveShadow = true;
+    // top.castShadow = side.receiveShadow = false;
+    // top.receiveShadow = side.receiveShadow = true;
     // side.needsUpdate = true;
     computed_materials[key] = side;
     return [side, top];

@@ -3,6 +3,7 @@ import LEGENDS from "../../config/legends/primary/primary";
 import SUBS from "../../config/legends/subs/subs";
 import KeyUtil from "../../util/keyboard";
 
+const MIP_COUNT = 0;
 const darkenColor = (color, amount) => {
   let usePound = false;
   if (color[0] === "#") {
@@ -21,57 +22,40 @@ const darkenColor = (color, amount) => {
 
   return (usePound ? "#" : "") + (r.toString(16).padStart(2, "0")) + (g.toString(16).padStart(2, "0")) + (b.toString(16).padStart(2, "0"));
 };
-// 텍스처를 고해상도로 생성하고 그라데이션을 제거
+//genertates a texture with canvas for top of key
 export const keyTexture = (opts) => {
   let w = opts.w;
   let h = opts.h;
   let legend = opts.legend;
   let sublegend = opts.sub;
   let key = opts.code;
+  var texture;
   let pxPerU = 128;
-  const pixelRatio = window.devicePixelRatio || 1;  // 고해상도를 위한 픽셀 비율 사용
   let subColor = opts.subColor || opts.color;
   let fg = opts.color;
-
-  // ISO Enter 키 처리
+  let bg = opts.background;
+  //iso enter add extra .25 for overhang
   let isIsoEnter = key === "KC_ENT" && h > 1;
   if (isIsoEnter) {
     w = w + 0.25;
   }
 
-  // 캔버스 생성 및 해상도 조정
   let canvas = document.createElement("canvas");
-  canvas.width = pxPerU * w * pixelRatio;  // 픽셀 비율 적용
-  canvas.height = pxPerU * h * pixelRatio;  // 픽셀 비율 적용
+  canvas.height = pxPerU * h;
+  canvas.width = pxPerU * w;
+
+
+  //let canvas = new OffscreenCanvas(pxPerU * w, pxPerU * h);
 
   let ctx = canvas.getContext("2d");
-
-  //draw gradient to simulate sculpting
-  let gradient;
-  if (key === "KC_SPC") {
-    //convex
-    gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-    gradient.addColorStop(0, "rgba(0,0,0,0.15)");
-    gradient.addColorStop(0.5, "rgba(128,128,128,0.0)");
-    gradient.addColorStop(1, "rgba(255,255,255,0.15)");
-  } else {
-    //concave
-    //simulate slight curve with gradient on face
-    gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-    gradient.addColorStop(0, "rgba(255,255,255,0.2)");
-    gradient.addColorStop(0.4, "rgba(255,255,255,0.0)");
-    gradient.addColorStop(0.6, "rgba(0,0,0,0)");
-    gradient.addColorStop(1, "rgba(0,0,0,0.15)");
-  }
-
-  // 배경색 그리기
-  ctx.fillStyle = darkenColor(opts.background, .15);
-  ctx.fillRect(0, 0, canvas.width / pixelRatio, canvas.height / pixelRatio);
+  //draw base color
+  ctx.fillStyle = darkenColor(bg, 0.04);
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   let l = LEGENDS[legend];
   let mainChar = l?.chars[key] || "";
 
-  // 1u Backspace 및 Enter 처리
+  // 1u bs and enter
   if (key === "KC_BSPC" && w <= 1) {
     mainChar = l?.chars["KC_BSISO"];
   }
@@ -79,22 +63,22 @@ export const keyTexture = (opts) => {
     mainChar = l?.chars["KC_ENISO"];
   }
 
-  let modWord = !l.encoded && mainChar.length > 1;
+  let modWord = !l.encoded && mainChar.length > 1; //mods use multi chacter words instead of symbols (sa)
   let subChar = SUBS[sublegend]?.chars[key] || "";
 
-  // 유니코드 값 처리 (커스텀 폰트를 위한 인코딩)
+  //convert to unicode value if encoded for custom fonts
   mainChar =
-      l.encoded && mainChar.length > 1
-          ? String.fromCharCode(parseInt(mainChar, 16))
-          : mainChar;
+    l.encoded && mainChar.length > 1
+      ? String.fromCharCode(parseInt(mainChar, 16))
+      : mainChar;
 
-  // 폰트 크기 설정
+  //font size
   let fontScaler = 1;
-  if (mainChar["top"]) fontScaler = 1 / 2;  // 숫자 키 등 두 개의 문자
-  if (!mainChar["top"] && modWord) fontScaler = 1 / 4;  // 텍스트가 있는 키
+  if (mainChar["top"]) fontScaler = 1 / 2; //number keys 2 characters stacked
+  if (!mainChar["top"] && modWord) fontScaler = 1 / 4; // keys with full words for modifer text i.e. "Enter", "Alt", "Home"
   let fontSize = l.fontsize * (fontScaler + 0.25);
 
-  // 폰트 스타일 설정
+  //set font style
   if (modWord) {
     ctx.font = `700 ${fontSize}px ${l.fontFamily}`;
   } else {
@@ -108,7 +92,6 @@ export const keyTexture = (opts) => {
   } else {
     ctx.textAlign = "left";
   }
-
   let ent_off_x = 0;
   let ent_off_y = 0;
   if (isIsoEnter) {
@@ -116,19 +99,18 @@ export const keyTexture = (opts) => {
     ent_off_y = 6;
   }
 
-  // 텍스트 그리기
   if (mainChar["top"]) {
     ctx.fillText(mainChar.top, l.offsetX, l.offsetY + l.yOffsetTop);
     ctx.fillText(mainChar.bottom, l.offsetX, l.offsetY + l.yOffsetBottom);
   } else {
     ctx.fillText(
-        mainChar,
-        l.offsetX + ent_off_x,
-        l.fontsize + (KeyUtil.isAlpha(key) ? l.offsetY : l.yOffsetMod) + ent_off_y
+      mainChar,
+      l.offsetX + ent_off_x,
+      l.fontsize + (KeyUtil.isAlpha(key) ? l.offsetY : l.yOffsetMod) + ent_off_y
     );
   }
 
-  // 서브 텍스트 그리기
+  // //sub characters
   if (sublegend && subChar && l.subsSupported) {
     let sub = SUBS[sublegend];
     let multiplier = sub.fontSizeMultiplier * 0.35;
@@ -142,12 +124,11 @@ export const keyTexture = (opts) => {
     }
   }
 
-  // 고해상도 텍스처 생성
-  let texture = new THREE.CanvasTexture(canvas);
-  texture.minFilter = THREE.LinearMipmapLinearFilter;  // 고해상도 축소 필터링
-  texture.magFilter = THREE.LinearFilter;  // 고해상도 확대 필터링
-  texture.generateMipmaps = true;  // Mipmap 생성
-  texture.needsUpdate = true;
+  texture = new THREE.CanvasTexture(canvas);
 
+
+  texture.minFilter = texture.magFilter = THREE.LinearFilter;
+  // texture.colorSpace = THREE.LinearSRGBColorSpace;
+  texture.needsUpdate = true;
   return texture;
 };
