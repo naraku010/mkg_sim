@@ -32,7 +32,7 @@ export default class HDRBackgroundManager {
             }
 
             // 배경 및 환경맵 설정
-            this.scene.background = texture;
+            // this.scene.background = texture;
             this.scene.environment = texture;
 
             // 현재 텍스처 참조
@@ -103,7 +103,7 @@ export default class HDRBackgroundManager {
 
     makeGUI() {
         const target = this;
-        const folder = this.gui.addFolder('HDR 배경');
+        const folder = this.gui.addFolder('HDR 조명');
         const hdrOptions = {
             'PureSky': PureSky,
             'Cloudy': Cloudy,
