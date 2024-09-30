@@ -117,7 +117,7 @@ export default class HDRBackgroundManager {
         };
 
         // HDR 선택 GUI
-        folder.add(params, 'selectedHDR', Object.keys(hdrOptions)).name('HDR 선택').onChange((value) => {
+        folder.add(params, 'selectedHDR', Object.keys(hdrOptions)).name('HDR 조명 선택').onChange((value) => {
             target.hdrUrl = hdrOptions[value];
             target.loadHDRAndSetBackground();
             target.removeAllLights();
@@ -129,7 +129,7 @@ export default class HDRBackgroundManager {
                 target.clearBackground();
                 target.setupLights(); // 새로운 조명과 GUI 생성
             }
-        }, 'clear').name('배경 지우기');
+        }, 'clear').name('HDR 조명 지우기');
 
         folder.open();
     }
