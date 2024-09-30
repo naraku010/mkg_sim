@@ -24,7 +24,7 @@ const starting_colorway_options = [
   "red_samurai",
 ];
 
-const starting_layout_options = ["60iso"];
+const starting_layout_options = ["80wk7u"];
 
 let randomItem = (arr) => {
   return arr[Math.floor(Math.random() * arr.length)];

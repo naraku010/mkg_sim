@@ -46,8 +46,23 @@ export const keyTexture = (opts) => {
 
   let ctx = canvas.getContext("2d");
 
-  // 고해상도 스케일링 적용
-  ctx.scale(pixelRatio, pixelRatio);
+  //draw gradient to simulate sculpting
+  let gradient;
+  if (key === "KC_SPC") {
+    //convex
+    gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+    gradient.addColorStop(0, "rgba(0,0,0,0.15)");
+    gradient.addColorStop(0.5, "rgba(128,128,128,0.0)");
+    gradient.addColorStop(1, "rgba(255,255,255,0.15)");
+  } else {
+    //concave
+    //simulate slight curve with gradient on face
+    gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+    gradient.addColorStop(0, "rgba(255,255,255,0.2)");
+    gradient.addColorStop(0.4, "rgba(255,255,255,0.0)");
+    gradient.addColorStop(0.6, "rgba(0,0,0,0)");
+    gradient.addColorStop(1, "rgba(0,0,0,0.15)");
+  }
 
   // 배경색 그리기
   ctx.fillStyle = darkenColor(opts.background, .15);
