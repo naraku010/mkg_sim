@@ -327,7 +327,7 @@ export default class CaseManager {
     updateCaseMaterial(color = this.color, finish = this.finish) {
         let materials = [];
         let options = MATERIAL_OPTIONS[finish];
-        options.lightMap = this.ao;
+        // options.lightMap = this.ao;
         if (finish !== "matte") {
             options.envMap = this.cubemap;
             // options.roughnessMap = this.roughnessMap;
@@ -348,7 +348,7 @@ export default class CaseManager {
             ...options,
             color: color,
         });
-
+        this.case.material.needsUpdate = true;
         materials.push(materialPrimary, materialSecondary);
         this.case.material = materials;
     }
