@@ -66,6 +66,7 @@ const getMaterialSet = (opts) => {
     };
     let top = new THREE.MeshPhysicalMaterial({
         map: legendTexture,
+        // color: new THREE.Color(hexToRgba(opts.background, .1)),
         ...options// 자발광 강도 0으로 설정
     });
     // let top = new THREE.MeshPhysicalMaterial({
