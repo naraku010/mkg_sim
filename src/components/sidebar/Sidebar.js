@@ -1,21 +1,16 @@
-import React, { useState } from "react";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import React, {useState} from "react";
+import {Tab, TabList, TabPanel, Tabs} from "react-tabs";
 import TestingPane from "./TestingPane";
 import OptionsPane from "./OptionsPane";
 import styles from "./Sidebar.module.scss";
 import ColorwayEditor from "../colorway/ColorwayEditor";
-import { ReactComponent as Logo } from "../../assets/logo.svg";
-import { ReactComponent as Name } from "../../assets/logo_text.svg";
+import {ReactComponent as Logo} from "../../assets/logo.svg";
+import {ReactComponent as Name} from "../../assets/logo_text.svg";
 import "./tabs.scss";
 import GoogleAdvertise from "../google/GoogleAdvertise";
-import {TextureLoader} from "three/src/loaders/TextureLoader.js";
-import * as settingsActions from "../../store/slices/settings";
-import {  useDispatch } from "react-redux";
 
 export default function Sidebar() {
   const [tabIndex, setTabIndex] = useState(0);
-  const dispatch = useDispatch();
-
 
   return (
     <div id="sidebar" className={styles.sidebar}>

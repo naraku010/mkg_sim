@@ -10,7 +10,6 @@
 
   &__tab-list {
     padding: 0;
-    margin: 0;
     margin: 0.5rem $sidebar-padding 0 $sidebar-padding !important;
     display: flex;
     justify-content: space-between;
@@ -24,11 +23,9 @@
 
   &__tab {
     @include smallcaps();
-    display: inline-block;
     list-style: none;
     position: relative;
     padding: 0.75rem 1rem;
-    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,7 +47,6 @@
   }
 
   &__tab-panel {
-    display: flex;
     flex-direction: column;
     flex-grow: 1;
     display: none;
