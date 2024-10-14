@@ -65,15 +65,15 @@ export default class HDRBackgroundManager {
         // 기존 조명을 모두 제거
         this.removeAllLights();
 
-        const ambientLight = new THREE.AmbientLight(0xffffff, .7);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 1);
         this.scene.add(ambientLight);
 
-        const primaryLight = new THREE.DirectionalLight(0xdddddd, .5);
+        const primaryLight = new THREE.DirectionalLight(0xdddddd, 1);
         primaryLight.position.set(5, 10, 10);
         primaryLight.target.position.set(0, -10, -10);
         this.scene.add(primaryLight);
 
-        const shadowLight = new THREE.DirectionalLight(0xffffff, .2);
+        const shadowLight = new THREE.DirectionalLight(0xffffff, 4);
         shadowLight.position.set(-4, 3, -10);
         shadowLight.target.position.set(0, 0, 0);
         shadowLight.castShadow = true;  // 필요 시 그림자 활성화
