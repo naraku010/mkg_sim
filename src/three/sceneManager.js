@@ -24,16 +24,9 @@ export default class SceneManager extends Collection {
 
         this.renderer = new THREE.WebGLRenderer({
             alpha: true,
+            logarithmicDepthBuffer: true,
             antialias: true,
         });
-        // THREE.ColorManagement.legacyMode = false;
-        this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-        this.renderer.toneMappingExposure = .8;
-        this.renderer.colorSpace = THREE.LinearSRGBColorSpace;
-        this.renderer.shadowMap.enabled = true; // 그림자 맵 활성화
-        this.renderer.shadowMap.type = THREE.PCFSoftShadowMap; // 그림자 부드러움 효과
-        // this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-        // this.renderer.toneMappingExposure = 1;
         this.renderer.localClippingEnabled = true;
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.el.appendChild(this.renderer.domElement);

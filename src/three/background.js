@@ -17,7 +17,7 @@ export default class HDRBackgroundManager {
         this.currentTexture = null;
         this.lights = []; // 조명을 관리하는 배열
         this.lightFolder = null; // 조명 폴더 참조 변수
-        this.makeGUI();
+        // this.makeGUI();
         this.setupLights();
     }
 
@@ -65,40 +65,25 @@ export default class HDRBackgroundManager {
         // 기존 조명을 모두 제거
         this.removeAllLights();
 
-        // 새로운 조명 설정
-        const primaryLight = new THREE.DirectionalLight("#ffffff", 3.5);
-        primaryLight.position.set(0, 30, 0);
-        primaryLight.target.position.set(0, 0, 0);
-        primaryLight.target.updateMatrixWorld();
-        this.scene.add(primaryLight, primaryLight.target);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 2);
+        this.scene.add(ambientLight);
 
-        const primaryLightHelper = new DirectionalLightHelper(primaryLight, 5);  // Helper 크기 지정
-        primaryLightHelper.visible = false;
-        this.scene.add(primaryLightHelper);
+        const primaryLight = new THREE.DirectionalLight(0xdddddd, .7);
+        primaryLight.position.set(5, 10, 10);
+        primaryLight.target.position.set(0, -10, -10);
+        primaryLight.castShadow = true;  // 그림자 추가 가능
+        this.scene.add(primaryLight);
 
-        // 조명 배열에 추가
-        this.lights.push(primaryLight, primaryLightHelper);
+        const shadowLight = new THREE.DirectionalLight(0xffffff, .2);
+        shadowLight.position.set(-4, 3, -10);
+        shadowLight.target.position.set(0, 0, 0);
+        shadowLight.castShadow = true;  // 필요 시 그림자 활성화
+        this.scene.add(shadowLight);
 
-        // 조명 GUI 폴더 생성
         this.lightFolder = this.gui.addFolder('조명');
-        this.lightFolder.add(primaryLight, 'intensity', 0, 10, 0.1).name('직접조명 강도');
-        this.lightFolder.addColor({ color: primaryLight.color.getHex() }, 'color').name('조명색상').onChange((value) => {
-            primaryLight.color.setHex(value);
-        });
-
-        this.lightFolder.add(primaryLight.position, 'x', -50, 50, 0.1).name('좌우');
-        this.lightFolder.add(primaryLight.position, 'z', -50, 50, 0.1).name('위아래');
-        this.lightFolder.add(primaryLight.position, 'y', -50, 50, 0.1).name('상하');
-
-        let helperVisible = false; // 초기 가시성 상태
-        const helperControls = {
-            toggleHelper: function () {
-                helperVisible = !helperVisible;
-                primaryLightHelper.visible = helperVisible;
-            }
-        };
-        // GUI에 토글 버튼 추가
-        this.lightFolder.add(helperControls, 'toggleHelper').name('조명 가이드 보기');
+        this.lightFolder.add(ambientLight, 'intensity', 0, 10, 0.1).name('Ambient 강도');
+        this.lightFolder.add(ambientLight, 'intensity', 0, 10, 0.1).name('Primary 강도');
+        
     }
 
     makeGUI() {

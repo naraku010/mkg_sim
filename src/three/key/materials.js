@@ -5,12 +5,8 @@ import {initial_settings} from "../../store/startup";
 import {TextureLoader} from "three/src/loaders/TextureLoader.js";
 import ambiantOcclusionPath from "../../assets/dist/shadow-key-noise.png";
 import lightMapPath from "../../assets/materials/white.png";
-import absNormalMapPath from "../../assets/texture/normal/abs.jpg";
-import pbtNormalMapPath from "../../assets/texture/normal/pbt.jpg";
 
 const loader = new TextureLoader();
-const absNormalMap = loader.load(absNormalMapPath);
-const pbtNormalMap = loader.load(pbtNormalMapPath);
 
 const ambiantOcclusionMap = loader.load(ambiantOcclusionPath);
 ambiantOcclusionMap.wrapS = THREE.RepeatWrapping;
@@ -46,64 +42,27 @@ const setMaterialIndexes = (mesh, side, top, isoent) => {
 
 // Generate top and side materials for a single color set
 const getMaterialSet = (opts) => {
-    const hexToRgba = (hex, alpha) => {
-        let r = parseInt(hex.slice(1, 3), 16);
-        let g = parseInt(hex.slice(3, 5), 16);
-        let b = parseInt(hex.slice(5, 7), 16);
-        return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-    };
     let currentState = store.getState();
     let key = `mat${opts.background}`;
     let legendTexture = keyTexture(opts);
-    let options = currentState.keys.legendType === 'pbt' ? {
-        roughness: .9,              // PBT는 더 높은 거칠기
-        metalness: 0,                // 금속성 없음
-        clearcoat: .2,              // 적당한 클리어코트 반짝임
-        clearcoatRoughness: .8,     // 거칠기 반영
-        reflectivity: .05,           // 적당한 반사도
-        envMapIntensity: 1,        // 환경 맵 반사 강도
-    } : {
-        roughness: .5,              // ABS는 더 낮은 거칠기
-        metalness: 0,                // 금속성 없음
-        clearcoat: .2,                // 강한 클리어코트로 반짝임 효과
-        clearcoatRoughness: .4,    // 매끄러운 표면
-        reflectivity: .1,           // 더 높은 반사도
-        envMapIntensity: 1,        // 더 강한 환경 맵 반사
-    };
-    let top = new THREE.MeshPhysicalMaterial({
-        // color: opts.background,
+    let top = new THREE.MeshLambertMaterial({
         map: legendTexture,
-        transparent: true,       // 텍스처의 투명도 적용
-        opacity: 1.0,            // 전체 불투명도 설정
-        ...options// 자발광 강도 0으로 설정
+        lightMap: lightMap,
+        lightMapIntensity: 0,
     });
-    // let top = new THREE.MeshPhysicalMaterial({
-    //     map: legendTexture,
-    //     metalness: 0,
-    //     // color: opts.background,
-    //     // ...options
-    // });
-
+    top.map.minFilter = THREE.LinearFilter;
     top.needsUpdate = true
-    // top.map.minFilter = THREE.LinearFilter;
-    // if (computed_materials[key]) {
-    //     return [computed_materials[key].clone(), top];
-    // }
-    // if (computed_materials[key]) {
-    //   return [computed_materials[key].clone(), top];
-    // }
-    let side = new THREE.MeshPhysicalMaterial({
+    let side = new THREE.MeshStandardMaterial({
         color: opts.background,
-        ...options,
+        aoMapIntensity: 0.4,
+        lightMap: lightMap,
+        lightMapIntensity: 0,
     });
     if( currentState.keys.legendType === 'trn') {
         top.blending = side.blending = THREE.NormalBlending;
         top.transparent = side.transparent = true;
         top.opacity = side.opacity = 0.55;
     }
-    // top.castShadow = side.receiveShadow = false;
-    // top.receiveShadow = side.receiveShadow = true;
-    // side.needsUpdate = true;
     computed_materials[key] = side;
     return [side, top];
 };

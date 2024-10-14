@@ -27,7 +27,6 @@ export default function BoardOptions() {
     const dispatch = useDispatch();
 
     const layout = useSelector(caseActions.selectLayout);
-    const legendType = useSelector(keyActions.selectLegendType);
     const legendPrimaryStyle = useSelector(keyActions.selectLegendPrimaryStyle);
 
     const legendSecondaryStyle = useSelector(
@@ -80,18 +79,6 @@ export default function BoardOptions() {
                     ]}
                     handler={(val) => {
                         dispatch(keyActions.setLegendPrimaryStyle(val));
-                    }}
-                />
-                <SelectField
-                    label="키캡 재질"
-                    selected={legendType}
-                    options={[
-                        {label: "PBT", value: "pbt"},
-                        {label: "ABS", value: "abs"},
-                        {label: "투명", value: "trn"},
-                    ]}
-                    handler={(val) => {
-                        dispatch(keyActions.setLegendType(val));
                     }}
                 />
                 <SelectField
