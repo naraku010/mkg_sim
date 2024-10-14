@@ -65,16 +65,15 @@ export default class HDRBackgroundManager {
         // 기존 조명을 모두 제거
         this.removeAllLights();
 
-        const ambientLight = new THREE.AmbientLight(0xffffff, 2);
+        const ambientLight = new THREE.AmbientLight(0xffffff, .7);
         this.scene.add(ambientLight);
 
-        const primaryLight = new THREE.DirectionalLight(0xdddddd, .7);
-        primaryLight.position.set(5, 10, 10);
+        const primaryLight = new THREE.DirectionalLight(0xdddddd, 1);
+        primaryLight.position.set(5, 20, 10);
         primaryLight.target.position.set(0, -10, -10);
-        primaryLight.castShadow = true;  // 그림자 추가 가능
         this.scene.add(primaryLight);
 
-        const shadowLight = new THREE.DirectionalLight(0xffffff, .2);
+        const shadowLight = new THREE.DirectionalLight(0xffffff, 2);
         shadowLight.position.set(-4, 3, -10);
         shadowLight.target.position.set(0, 0, 0);
         shadowLight.castShadow = true;  // 필요 시 그림자 활성화
@@ -83,6 +82,8 @@ export default class HDRBackgroundManager {
         this.lightFolder = this.gui.addFolder('조명');
         this.lightFolder.add(ambientLight, 'intensity', 0, 10, 0.1).name('Ambient 강도');
         this.lightFolder.add(ambientLight, 'intensity', 0, 10, 0.1).name('Primary 강도');
+        this.lightFolder.add(shadowLight, 'intensity', 0, 10, 0.1).name('Shadow 강도');
+
         
     }
 
