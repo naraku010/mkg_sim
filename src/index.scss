@@ -63,3 +63,8 @@ body.intersecting-key.editing #canvas-wrapper {
     cursor: grabbing;
   }
 }
+@media only screen and (max-width: 768px) {
+  .lil-gui {
+    display: none !important;
+  }
+}
