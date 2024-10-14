@@ -18,22 +18,20 @@ export default class SceneManager extends Collection {
         this.el = options.el || document.body;
         this.init();
     }
-
+    sRGBEncoding
     init() {
         this.scene = new THREE.Scene();
-
         this.renderer = new THREE.WebGLRenderer({
             alpha: true,
             logarithmicDepthBuffer: true,
             antialias: true,
         });
+        this.renderer.gammaFactor = 2.2;
+        this.renderer. outputColorSpace= THREE.SRGBColorSpace;
+        this.renderer.toneMapping = THREE.NoToneMapping;
         this.renderer.localClippingEnabled = true;
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.el.appendChild(this.renderer.domElement);
-
-        //css renderer for dom elements in the scene
-        // this.cssRenderer = new CSS3DRenderer();
-        // this.el.appendChild(this.cssRenderer.domElement);
 
         //main setup
         this.setupGUI();

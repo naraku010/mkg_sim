@@ -7,7 +7,6 @@ import LAYOUTS from "../../config/layouts/layouts";
 import { subscribe } from "redux-subscriber";
 import { initial_settings } from "../../store/startup";
 import { Key, KEYSTATES } from "./key";
-import { Switch, SWITCHSTATE } from "./switch";
 import Collection from "../collection";
 
 export default class KeyManager extends Collection {
@@ -19,7 +18,7 @@ export default class KeyManager extends Collection {
   }
 
   setup() {
-    this.group = new THREE.Group(); // 최신 버전에서 Object3D 대신 Group 사용
+    this.group = new THREE.Object3D();
     this.group.name = "KEYS";
     this.editing = false;
     this.paintWithKeys = false;
@@ -48,11 +47,9 @@ export default class KeyManager extends Collection {
   get width() {
     return this.layoutFull.width;
   }
-
   get depth() {
     return this.layoutFull.height;
   }
-
   get angleOffset() {
     return Math.sin(Util.toRad(this.angle)) * this.depth;
   }
@@ -76,20 +73,16 @@ export default class KeyManager extends Collection {
     document.addEventListener("keydown", (e) => {
       let code = KeyUtil.getKeyCode(e.code);
       let key = this.getKey(code);
-      // let s = this.getKey(code + "_s");
       if (!key) return;
       if (this.editing && this.paintWithKeys) {
         this.paintKey(code);
       }
-      // s.setState(SWITCHSTATE.MOVING_DOWN);
       key.setState(KEYSTATES.MOVING_DOWN);
     });
     document.addEventListener("keyup", (e) => {
       let code = KeyUtil.getKeyCode(e.code);
       let key = this.getKey(code);
-      // let s = this.getKey(code + "_s");
       if (!key) return;
-      // s.setState(SWITCHSTATE.MOVING_UP);
       key.setState(KEYSTATES.MOVING_UP);
     });
   }
@@ -145,14 +138,6 @@ export default class KeyManager extends Collection {
         code: code,
       });
       this.add(K);
-      // let S = new Switch({
-      //   dimensions: dimensions,
-      //   container: this.group,
-      //   isIso: this.layoutFull?.is_iso,
-      //   colorway: this.colorway,
-      //   code: code + "_s",
-      // });
-      // this.add(S);
 
       seen.push(code);
     }

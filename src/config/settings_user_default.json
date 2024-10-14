@@ -20,7 +20,7 @@
     "bezel": 1,
     "layout": "60iso",
     "profile": "high",
-    "material": "glossy"
+    "material": "lowglossy"
   },
   "keys": {
     "visible": true,
