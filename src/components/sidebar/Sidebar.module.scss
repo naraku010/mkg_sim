@@ -30,23 +30,39 @@
 }
 
 .logoWrapper {
+  display: flex;
+  flex-direction: row; /* 세로로 정렬 (수평 가운데 정렬일 경우 row로 변경 가능) */
+  align-items: center;    /* 수평 가운데 정렬 */
+  justify-content: left;
   svg {
     transform: rotate(0deg);
-    max-height: 80px;
+    max-height: 60px;
     max-width: 60px;
     margin-right: 1rem;
-    g {
-      fill: var(--compliment);
-    }
-    polygon:nth-child(1) {
-      fill: transparent;
-    }
-    polygon:nth-child(2) {
-      fill: var(--accent);
-    }
-    polygon:nth-child(4),
-    polygon:nth-child(3) {
+    //polygon:nth-child(1) {
+    //  fill: transparent;
+    //}
+    //polygon:nth-child(2) {
+    //  fill: var(--accent);
+    //}
+    //polygon:nth-child(4),
+    //polygon:nth-child(3) {
+    //  fill: var(--accent-transparent);
+    //}
+  }
+  svg:nth-child(1) {
+    & > path {
       fill: var(--accent-transparent);
+    }
+    g {
+      path {
+        fill: var(--accent);
+      }
+    }
+  }
+  svg:nth-child(2) {
+    path {
+      fill: var(--accent);
     }
   }
   svg:nth-child(2) {
@@ -55,10 +71,11 @@
     max-width: none;
     max-height: none;
   }
+
   h1 {
     display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
+    flex-direction: row; /* 로고와 이름을 세로로 배치 */
+    align-items: center;    /* 가운데 정렬 */
     // font-size: 1.8rem;
     // margin-bottom: 0.25em;
     // font-family: "arial rounded mt bold";
