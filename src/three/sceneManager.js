@@ -38,10 +38,10 @@ export default class SceneManager extends Collection {
         // 클리핑 활성화 (필요 시 유지)
         // this.renderer.localClippingEnabled = true;
 
-        // this.renderer.gammaFactor = 2.2;
+        this.renderer.gammaFactor = 2.2;
         this.renderer.physicallyCorrectLights = true; // 물리적으로 정확한 조명 사용
-        this.renderer.toneMapping = THREE.ACESFilmicToneMapping; // 사실적 톤 매핑
-        this.renderer.toneMappingExposure = 1.0; // 노출 값 조정
+        this.renderer.toneMapping = THREE.ReinhardToneMapping; // 사실적 톤 매핑
+        this.renderer.toneMappingExposure = 1.5; // 노출 값 조정
         this.renderer.outputColorSpace= THREE.SRGBColorSpace;
         this.renderer.localClippingEnabled = true;
         this.renderer.setPixelRatio(window.devicePixelRatio);
