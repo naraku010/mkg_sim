@@ -84,12 +84,12 @@ const MATERIAL_OPTIONS = {
         envMapIntensity: 1, // 주변 반사 환경을 좀 더 강하게 설정
     },
     glossy: {
-        metalness: .6,  // 금속성 최대치
-        roughness: .05, // 표면을 매끄럽게 설정
-        reflectivity: .9, // 매우 높은 반사율
-        clearcoat: .6, // 유광 효과를 위한 코팅
-        clearcoatRoughness: .1, // 코팅의 거칠기를 낮게 설정
-        envMapIntensity: 1, // 주변 반사 환경을 좀 더 강하게 설정
+        metalness: 0.5,         // 금속성을 살짝 높여 반사를 강화
+        roughness: 0.1,         // 표면 거칠기를 낮춰 매끄러운 표현 증가
+        reflectivity: 0.8,      // 반사율을 조금 더 높여 광택 강화
+        clearcoat: 0.5,         // 유광 코팅을 살짝 강화
+        clearcoatRoughness: 0.15, // 코팅 거칠기를 낮춰 부드러운 광택 표현
+        envMapIntensity: 1,     // 환경맵 강도를 높여 반사 효과를 강조
     },
     lowglossy: {
         metalness: .7,          // 금속성은 유지
