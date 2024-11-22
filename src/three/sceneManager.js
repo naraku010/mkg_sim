@@ -7,6 +7,8 @@ import ThreeUtil from "../util/three";
 import GUI from "lil-gui";
 import RoundedMatPad from "./mat";
 import HDRBackgroundManager from "./background";
+import InDoorHDR from '../assets/hdr/studio.hdr';
+import {RGBELoader} from "three-stdlib";
 
 export default class SceneManager extends Collection {
     constructor(options) {
@@ -18,21 +20,34 @@ export default class SceneManager extends Collection {
         this.el = options.el || document.body;
         this.init();
     }
-    sRGBEncoding
     init() {
         this.scene = new THREE.Scene();
         this.renderer = new THREE.WebGLRenderer({
             alpha: true,
-            logarithmicDepthBuffer: true,
             antialias: true,
         });
-        this.renderer.gammaFactor = 2.2;
-        this.renderer. outputColorSpace= THREE.SRGBColorSpace;
-        this.renderer.toneMapping = THREE.NoToneMapping;
+        // this.renderer.setPixelRatio(window.devicePixelRatio); // 디스플레이 품질 설정
+        // this.renderer.setSize(window.innerWidth, window.innerHeight); // 캔버스 크기 설정
+        // this.renderer.physicallyCorrectLights = true; // 물리적으로 정확한 조명 사용
+        // this.renderer.toneMapping = THREE.ACESFilmicToneMapping; // 사실적 톤 매핑
+        // this.renderer.toneMappingExposure = 1.0; // 노출 값 조정
+        // this.renderer.outputColorSpace = THREE.SRGBColorSpace; // sRGB 색 공간 사용
+        // this.renderer.shadowMap.enabled = true; // 그림자 활성화
+        // this.renderer.shadowMap.type = THREE.PCFSoftShadowMap; // 부드러운 그림자 설정
+
+        // 클리핑 활성화 (필요 시 유지)
+        // this.renderer.localClippingEnabled = true;
+
+        // this.renderer.gammaFactor = 2.2;
+        this.renderer.physicallyCorrectLights = true; // 물리적으로 정확한 조명 사용
+        this.renderer.toneMapping = THREE.ACESFilmicToneMapping; // 사실적 톤 매핑
+        this.renderer.toneMappingExposure = 1.0; // 노출 값 조정
+        this.renderer.outputColorSpace= THREE.SRGBColorSpace;
         this.renderer.localClippingEnabled = true;
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.el.appendChild(this.renderer.domElement);
 
+        this.renderer.localClippingEnabled = true;
         //main setup
         this.setupGUI();
         this.setupCamera();
@@ -42,7 +57,25 @@ export default class SceneManager extends Collection {
         this.setupBackground();
         // this.setupMat();
         this.resize();
+        const loader = new RGBELoader();
+        loader.load(InDoorHDR, (texture) => {
+            texture.mapping = THREE.EquirectangularReflectionMapping; // 구형으로 매핑
 
+            // 이전 텍스처 제거
+            if (this.currentTexture) {
+                this.currentTexture.dispose();
+            }
+
+            // 배경 및 환경맵 설정
+            this.scene.background = null;
+            this.scene.environment = texture;
+
+            // 현재 텍스처 참조
+            this.currentTexture = texture;
+
+            // 장면 다시 렌더링
+            this.renderer.render(this.scene, this.camera);
+        });
         //mouse and raycaster
         this.mouse = new THREE.Vector2(-1000, -1000);
         this.raycaster = new THREE.Raycaster();
@@ -126,12 +159,12 @@ export default class SceneManager extends Collection {
 
     setupCamera() {
         this.camera = new THREE.PerspectiveCamera(60, this.w / this.h, 1, 1000);
-        this.camera.position.y = 30;
-        this.camera.position.z = 0;
+        this.camera.position.y = 15;
+        this.camera.position.z = 15;
         this.camera.position.x = 0;
         const params = {
             resetCamera: () => {
-                this.camera.position.set(0, 30, 0); // 초기 위치로 설정
+                this.camera.position.set(0, 15, 15); // 초기 위치로 설정
                 this.camera.lookAt(new THREE.Vector3(0, 0, 0)); // (0, 0, 0)을 바라보도록 설정
                 this.camera.rotation.set(0, 0, 0); // 카메라의 회전값을 초기화
                 this.controls.target.set(0, 0, 0); // 컨트롤이 바라보는 대상 초기화

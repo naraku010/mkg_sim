@@ -64,27 +64,27 @@ export default class HDRBackgroundManager {
     setupLights() {
         // 기존 조명을 모두 제거
         this.removeAllLights();
+        //
+        // const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+        // this.scene.add(ambientLight);
 
-        const ambientLight = new THREE.AmbientLight(0xffffff, 1);
-        this.scene.add(ambientLight);
+        // const primaryLight = new THREE.DirectionalLight(0xdddddd, 1);
+        // primaryLight.position.set(5, 10, 10);
+        // primaryLight.target.position.set(0, -10, -10);
+        // this.scene.add(primaryLight);
+        //
+        // const shadowLight = new THREE.DirectionalLight(0xffffff, 4);
+        // shadowLight.position.set(-4, 3, -10);
+        // shadowLight.target.position.set(0, 0, 0);
+        // shadowLight.castShadow = true;  // 필요 시 그림자 활성화
+        // this.scene.add(shadowLight);
 
-        const primaryLight = new THREE.DirectionalLight(0xdddddd, 1);
-        primaryLight.position.set(5, 10, 10);
-        primaryLight.target.position.set(0, -10, -10);
-        this.scene.add(primaryLight);
+        // this.lightFolder = this.gui.addFolder('조명');
+        // this.lightFolder.add(ambientLight, 'intensity', 0, 10, 0.1).name('Ambient 강도');
+        // this.lightFolder.add(primaryLight, 'intensity', 0, 10, 0.1).name('Primary 강도');
+        // this.lightFolder.add(shadowLight, 'intensity', 0, 10, 0.1).name('Shadow 강도');
 
-        const shadowLight = new THREE.DirectionalLight(0xffffff, 4);
-        shadowLight.position.set(-4, 3, -10);
-        shadowLight.target.position.set(0, 0, 0);
-        shadowLight.castShadow = true;  // 필요 시 그림자 활성화
-        this.scene.add(shadowLight);
 
-        this.lightFolder = this.gui.addFolder('조명');
-        this.lightFolder.add(ambientLight, 'intensity', 0, 10, 0.1).name('Ambient 강도');
-        this.lightFolder.add(primaryLight, 'intensity', 0, 10, 0.1).name('Primary 강도');
-        this.lightFolder.add(shadowLight, 'intensity', 0, 10, 0.1).name('Shadow 강도');
-
-        
     }
 
     makeGUI() {

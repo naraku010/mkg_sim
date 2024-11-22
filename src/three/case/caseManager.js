@@ -71,12 +71,12 @@ const MATERIAL_OPTIONS = {
         envMapIntensity: 0.1,
     },
     matte: {
-        metalness: 0,
-        roughness: 1,
-        clearcoat: 0,
-        aoMapIntensity: 0,
-        clearcoatRoughness: 1,
-        lightMapIntensity: 0.2,
+        metalness: 0,             // 금속성 없음 (스프레이 재질은 비금속)
+        roughness: 0.6,           // 약간 거친 표면
+        clearcoat: 0.1,           // 얇은 코팅 효과 추가
+        aoMapIntensity: 0.2,      // 주변광 강도 약간 증가
+        clearcoatRoughness: 0.9,  // 코팅 표면 거칠기 설정
+        lightMapIntensity: 0.3,   // 빛의 영향을 약간 더 받도록 설정
     },
     brushed: {
         metalness: 0.4,
@@ -89,7 +89,7 @@ const MATERIAL_OPTIONS = {
         reflectivity: 1, // 매우 높은 반사율
         clearcoat: 1, // 유광 효과를 위한 코팅
         clearcoatRoughness: .1, // 코팅의 거칠기를 낮게 설정
-        envMapIntensity: 1.0, // 주변 반사 환경을 좀 더 강하게 설정
+        envMapIntensity: 1, // 주변 반사 환경을 좀 더 강하게 설정
     },
     glossy: {
         metalness: .6,  // 금속성 최대치
@@ -97,16 +97,16 @@ const MATERIAL_OPTIONS = {
         reflectivity: .9, // 매우 높은 반사율
         clearcoat: .6, // 유광 효과를 위한 코팅
         clearcoatRoughness: .1, // 코팅의 거칠기를 낮게 설정
-        envMapIntensity: 1.0, // 주변 반사 환경을 좀 더 강하게 설정
+        envMapIntensity: 1, // 주변 반사 환경을 좀 더 강하게 설정
     },
     lowglossy: {
-        metalness: .4,  // 금속성 최대치
-        aoMapIntensity: 0.25,
-        roughness: .05, // 표면을 매끄럽게 설정
-        reflectivity: .1, // 매우 높은 반사율
-        clearcoat: .4, // 유광 효과를 위한 코팅
-        clearcoatRoughness: 1.2, // 코팅의 거칠기를 낮게 설정
-        envMapIntensity: .2, // 주변 반사 환경을 좀 더 강하게 설정
+        metalness: 0.2,         // 금속성 약간 낮게 설정
+        aoMapIntensity: 0.3,    // AO 강도 약간 증가
+        roughness: 0.2,         // 표면의 거칠기 증가 (조금 매끄럽게)
+        reflectivity: 0.3,      // 반사율을 낮추어 부드러운 반사
+        clearcoat: 0.2,         // 유광 코팅 약간 줄임
+        clearcoatRoughness: 0.8, // 코팅의 거칠기 조금 더 부드럽게
+        envMapIntensity: 0.8,   // 환경 반사 강도를 조금 줄임
     }
 };
 
@@ -329,7 +329,7 @@ export default class CaseManager {
         let options = MATERIAL_OPTIONS[finish];
         // options.lightMap = this.ao;
         if (finish !== "matte") {
-            options.envMap = this.cubemap;
+            // options.envMap = this.cubemap;
             // options.roughnessMap = this.roughnessMap;
             // options.map = this.albedoMap;
         }
