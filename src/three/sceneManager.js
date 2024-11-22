@@ -62,12 +62,13 @@ export default class SceneManager extends Collection {
             texture.mapping = THREE.EquirectangularReflectionMapping; // 구형으로 매핑
 
             // 이전 텍스처 제거
+            texture.colorSpace = THREE.SRGBColorSpace;
+
+            // 배경 및 환경맵 설정
             if (this.currentTexture) {
                 this.currentTexture.dispose();
             }
-
-            // 배경 및 환경맵 설정
-            this.scene.background = null;
+            this.scene.background = null; // 배경 비우기
             this.scene.environment = texture;
 
             // 현재 텍스처 참조

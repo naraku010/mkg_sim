@@ -6,11 +6,11 @@ import Util from "../../util/math";
 import case_1 from "./case_1";
 import case_2 from "./case_2";
 import case_3 from "./case_3";
-// import badge from "./badge";
 import ColorUtil from "../../util/color";
 import {lightTexture} from "./lightTexture";
 
 import {TextureLoader} from "three/src/loaders/TextureLoader.js";
+import metalPath from "../../assets/texture/metal/metal_texture.jpg"
 import shadowPath from "../../assets/dist/shadow-key-noise.png";
 import noisePath from "../../assets/dist/noise.png";
 import brushedRoughness from "../../assets/dist/brushed-metal_roughness-512.png";
@@ -38,14 +38,6 @@ import nz from "../../assets/dist/nz.jpg";
 import px from "../../assets/dist/px.jpg";
 import py from "../../assets/dist/py.jpg";
 import pz from "../../assets/dist/pz.jpg";
-
-import metal_ambientOcclusion from '../../assets/texture/metal/ambientOcclusion.jpg';
-import metal_basecolor from '../../assets/texture/metal/basecolor.jpg';
-import metal_normal from '../../assets/texture/metal/normal.jpg';
-import metal_roughness from '../../assets/texture/metal/roughness.jpg';
-import metal_metallic from '../../assets/texture/metal/metallic.jpg';
-import metal_height from '../../assets/texture/metal/height.jpg';
-
 
 const shadow_paths = {
     shadow_path_100,
@@ -100,13 +92,13 @@ const MATERIAL_OPTIONS = {
         envMapIntensity: 1, // 주변 반사 환경을 좀 더 강하게 설정
     },
     lowglossy: {
-        metalness: 0.2,         // 금속성 약간 낮게 설정
-        aoMapIntensity: 0.3,    // AO 강도 약간 증가
-        roughness: 0.2,         // 표면의 거칠기 증가 (조금 매끄럽게)
-        reflectivity: 0.3,      // 반사율을 낮추어 부드러운 반사
-        clearcoat: 0.2,         // 유광 코팅 약간 줄임
-        clearcoatRoughness: 0.8, // 코팅의 거칠기 조금 더 부드럽게
-        envMapIntensity: 0.8,   // 환경 반사 강도를 조금 줄임
+        metalness: .7,          // 금속성은 유지
+        aoMapIntensity: .4,     // AO 강도 유지
+        roughness: .3,          // 거칠기를 약간 증가시켜 빛 반사를 분산
+        clearcoat: .3,          // 약간의 유광 코팅 추가
+        clearcoatRoughness: 0.6, // 코팅의 거칠기를 부드럽게 설정
+        reflectivity: 0.4,       // 부드러운 반사 효과
+        envMapIntensity: 0.8,    // 환경 반사 강도 조정
     }
 };
 
@@ -147,7 +139,7 @@ export default class CaseManager {
         this.loader = new TextureLoader();
         this.loadTextures();
         this.createEnvCubeMap();
-        this.createCaseShadow();
+        // this.createCaseShadow();
         // this.createBadge();
         this.createPlate();
         this.createCase();
@@ -175,7 +167,7 @@ export default class CaseManager {
             this.layoutName = state.case.layout;
             this.layout = LAYOUTS[state.case.layout];
             this.updateCaseGeometry();
-            this.createCaseShadow();
+            // this.createCaseShadow();
             // this.createBadge();
             this.createPlate();
         });
@@ -226,12 +218,7 @@ export default class CaseManager {
         this.ao.rotation = Math.PI / 2;
         this.lightTexture = lightTexture(ColorUtil.getAccent());
 
-        this.metal.aoTexture = this.loader.load(metal_ambientOcclusion);
-        this.metal.baseColorTexture = this.loader.load(metal_basecolor);
-        this.metal.normalTexture = this.loader.load(metal_normal);
-        this.metal.roughnessTexture = this.loader.load(metal_roughness);
-        this.metal.metallicTexture = this.loader.load(metal_metallic);
-        this.metal.displacementTexture = this.loader.load(metal_height);
+
     }
 
     createPlate() {
@@ -257,6 +244,8 @@ export default class CaseManager {
     }
 
     createEnvCubeMap() {
+        const textureLoader = new THREE.TextureLoader();
+        this.metalMap = textureLoader.load(metalPath);
         this.cubemap = new THREE.CubeTextureLoader().load([py, ny, pz, nz, px, nx]);
     }
 
@@ -282,7 +271,6 @@ export default class CaseManager {
 // 그림자 메쉬 생성
         this.shadow = new THREE.Mesh(
             new THREE.PlaneGeometry(sh_w, sh_h),
-            shadowMat
         );
 
 // 그림자 위치 및 회전 설정
@@ -294,6 +282,7 @@ export default class CaseManager {
 
     getCaseMesh(layout = this.layout, style = this.style) {
         let mesh;
+        console.log(style);
         if (this.layoutName.indexOf('ergo') > -1) {
             mesh = case_3(layout, this.color);
         } else {
@@ -328,14 +317,17 @@ export default class CaseManager {
         let materials = [];
         let options = MATERIAL_OPTIONS[finish];
         // options.lightMap = this.ao;
-        if (finish !== "matte") {
-            // options.envMap = this.cubemap;
-            // options.roughnessMap = this.roughnessMap;
-            // options.map = this.albedoMap;
-        }
+        // if (finish !== "matte") {
+        //     options.envMap = this.cubemap;
+        //     // options.roughnessMap = this.roughnessMap;
+        //     // options.map = this.albedoMap;
+        // }
         if (finish === "tra") {
             options.transparent = true;
             options.opacity = 0.5;
+        }
+        if (finish.includes('glossy')) {
+            options.normalMap = this.metalMap;
         }
         //create materials
         let materialPrimary = new THREE.MeshPhysicalMaterial({
