@@ -5,15 +5,15 @@
   "designer": "",
   "swatches": {
     "base": {
-      "background": "#c9cdd6",
-      "color": "#7f9ab7"
+      "background": "#afb9ce",
+      "color": "#8094a9"
     },
     "mods": {
-      "background": "#8aa7c3",
+      "background": "#6b92b3",
       "color": "#c9cdd6"
     },
     "accent": {
-      "background": "#a4a4d1",
+      "background": "#9090d4",
       "color": "#c9cdd6"
     }
   },
