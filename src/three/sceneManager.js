@@ -129,7 +129,6 @@ export default class SceneManager extends Collection {
             this.editing = state.colorways.editing;
         });
     }
-
     get w() {
         return this.el.offsetWidth;
     }
