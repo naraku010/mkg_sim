@@ -45,7 +45,7 @@ const getMaterialSet = (opts) => {
     let currentState = store.getState();
     let key = `mat${opts.background}`;
     let legendTexture = keyTexture(opts);
-    let top = new THREE.MeshPhysicalMaterial({
+    let top = new THREE.MeshLambertMaterial({
         map: legendTexture,
         color: 0xffffff,
         flatShading: true,
@@ -54,7 +54,7 @@ const getMaterialSet = (opts) => {
     });
     top.map.minFilter = top.map.magFilter = THREE.LinearFilter;
     top.needsUpdate = true
-    let side = new THREE.MeshPhysicalMaterial({
+    let side = new THREE.MeshStandardMaterial({
         color: opts.background,
         aoMapIntensity: 0.4,
         lightMap: lightMap,
