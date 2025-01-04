@@ -1,0 +1,35 @@
+{
+    "id": "mkg_gmk_delta",
+    "label": "GMK Delta",
+    "manufacturer": "",
+    "designer": "듀얼샷",
+    "swatches": {
+        "base": {
+            "background": "#e7e8e9",
+            "color": "#121212"
+        },
+        "mods": {
+            "background": "#121212",
+            "color": "#5dceba"
+        },
+        "accent": {
+            "background": "#5dceba",
+            "color": "#121212"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_D": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_LEFT": "accent",
+        "KC_DOWN": "accent",
+        "KC_RGHT": "accent",
+        "KC_UP": "accent"
+    }
+}

@@ -1,0 +1,75 @@
+{
+    "id": "mkg_gmk_futurefunk",
+    "label": "GMK Futurefunk",
+    "manufacturer": "",
+    "swatches": {
+        "base": {
+            "background": "#f7f2ea",
+            "color": "#2e1a47"
+        },
+        "mods": {
+            "background": "#2e1a47",
+            "color": "#f7f2ea"
+        },
+        "accent": {
+            "background": "#2e1a47",
+            "color": "#f04e98"
+        },
+        "swatch1": {
+            "background": "#2e1a47",
+            "color": "#f8bed6"
+        },
+        "swatch2": {
+            "background": "#2e1a47",
+            "color": "#f6eb61"
+        },
+        "swatch3": {
+            "background": "#2e1a47",
+            "color": "#a4dbe8"
+        },
+        "swatch4": {
+            "background": "#f04e98",
+            "color": "#2e1a47"
+        },
+        "swatch5": {
+            "background": "#f6eb61",
+            "color": "#2e1a47"
+        }
+    },
+    "override": {
+        "KC_ENT": "swatch5",
+        "KC_ESC": "swatch4",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_SPC": "base",
+        "KC_UP": "mods",
+        "KC_DOWN": "mods",
+        "KC_LEFT": "mods",
+        "KC_RGHT": "mods",
+        "KC_PENT": "accent",
+        "KC_TAB": "swatch1",
+        "KC_CAPS": "swatch2",
+        "KC_LSFT": "swatch3",
+        "KC_LCTL": "accent",
+        "KC_LGUI": "swatch1",
+        "KC_LALT": "swatch2",
+        "KC_RALT": "swatch2",
+        "KC_RGUI": "swatch1",
+        "KC_RCTL": "accent",
+        "KC_BSPC": "accent",
+        "KC_RSFT": "swatch3",
+        "KC_PSCR": "accent",
+        "KC_SLCK": "accent",
+        "KC_PAUSE": "accent",
+        "KC_INS": "swatch1",
+        "KC_HOME": "swatch1",
+        "KC_PGUP": "swatch1",
+        "KC_DEL": "swatch2",
+        "KC_END": "swatch2",
+        "KC_PGDN": "swatch2"
+    },
+    "designer": "듀얼샷"
+}

@@ -12,7 +12,7 @@ def to_snake_case(snake_str):
     components = snake_str.lower().replace('-', ' ').split()
     return '_'.join(components)
 
-colorways = 'usercolorways6'
+colorways = 'usercolorways7'
 # JSON 파일 경로
 input_json = 'input.json'  # 여기에 JSON 파일 경로를 입력하세요
 output_folder = f'./{colorways}'  # 저장할 폴더

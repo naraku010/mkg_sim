@@ -1,0 +1,53 @@
+{
+    "id": "mkg_gmk_japanese_desko",
+    "label": "GMK Japanese Desko",
+    "manufacturer": "",
+    "designer": "듀얼샷",
+    "swatches": {
+        "base": {
+            "background": "#f7f2ea",
+            "color": "#171718"
+        },
+        "mods": {
+            "background": "#cacaca",
+            "color": "#171718"
+        },
+        "accent": {
+            "background": "#aadb1e",
+            "color": "#171718"
+        },
+        "swatch1": {
+            "background": "#489fdf",
+            "color": "#171718"
+        },
+        "swatch2": {
+            "background": "#f8485e",
+            "color": "#171718"
+        }
+    },
+    "override": {
+        "KC_ENT": "mods",
+        "KC_ESC": "mods",
+        "KC_GESC": "accent",
+        "KC_LCTL": "swatch2",
+        "KC_RALT": "swatch1",
+        "KC_RSFT": "accent",
+        "KC_A": "base",
+        "KC_S": "base",
+        "KC_D": "base",
+        "KC_W": "base",
+        "KC_P": "base",
+        "KC_L": "base",
+        "KC_SCLN": "base",
+        "KC_DOT": "base",
+        "KC_LGUI": "mods",
+        "KC_LALT": "swatch1",
+        "KC_LSFT": "accent",
+        "KC_RCTL": "swatch2",
+        "KC_RGUI": "mods",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}
