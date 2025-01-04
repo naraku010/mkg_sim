@@ -49,7 +49,7 @@ const getMaterialSet = (opts) => {
         map: legendTexture,
         flatShading: true,
         metalness: 0.1,  // 메탈 느낌을 약간 추가
-        roughness: 0.2,  // 표면을 더 매끄럽게 만들어 빛을 더 잘 반사하게
+        roughness: 0.5,  // 표면을 더 매끄럽게 만들어 빛을 더 잘 반사하게
         aoMapIntensity: 0.4,  // AO Map 적용
         envMapIntensity: 1,  // 반사 강도
     });
