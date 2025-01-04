@@ -1,3 +1,4 @@
+import layout_at from "./layout_at_default.json";
 import layout_40 from "./layout_40_default.json";
 import layout_60 from "./layout_60_default.json";
 import layout_60_iso from "./layout_60_ISO.json";
@@ -20,6 +21,7 @@ import layout_95 from "./layout_95_default.json";
 import layout_100 from "./layout_100_default.json";
 
 const LAYOUTS = {
+  "at": layout_at,
   40: layout_40,
   60: layout_60,
   65: layout_65,

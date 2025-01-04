@@ -80,6 +80,26 @@ export default (layoutName, layoutJson, bezel) => {
     let arrows = getPathArrows(sx + 15.25, sy + 6.2, gutter);
 
     switch (layoutName) {
+        case "at":
+            holes.push(
+                getSquarePath(sx, sy, 2, 5, gutter),
+                getPathFromPoints(sx + 2.2, sy, [
+                    {x: 15, y: 0},
+                    {x: 0, y: 5},
+                    {x: -1.25, y: 0},
+                    {x: 0, y: -1},
+                    {x: -1, y: 0},
+                    {x: 0, y: 1},
+                    {x: -10.5, y: 0},
+                    {x: 0, y: -1},
+                    {x: -1, y: 0},
+                    {x: 0, y: 1},
+                    {x: -1.25, y: 0},
+                    {x: 0, y: -5},
+                ]),
+                getSquarePath(sx + 17.4, sy, 4, 5, gutter)
+            );
+            break;
         case "100":
             holes.push(esc, f1, f5, f9, nav, arrows);
             holes.push(getSquarePath(sx, sy + 1.25, 15, 5, gutter));

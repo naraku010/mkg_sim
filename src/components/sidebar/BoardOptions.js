@@ -14,6 +14,7 @@ import icon75 from "../../assets/icons/icon-75.png";
 import icon80 from "../../assets/icons/icon-80.png";
 import icon95 from "../../assets/icons/icon-95.png";
 import icon100 from "../../assets/icons/icon-100.png";
+import iconat from "../../assets/icons/icon-at.png";
 import icon60wkl from "../../assets/icons/icon-60-wkl.png";
 import icon60hhkb from "../../assets/icons/icon-60-hhkb.png";
 
@@ -60,6 +61,7 @@ export default function BoardOptions() {
                         {label: "70%", value: "70", img: icon75},
                         {label: "70% WKL", value: "70wkl", img: icon75},
                         {label: "75%", value: "75", img: icon75},
+                        {label: "AT", value: "at", img: iconat},
                         {label: "80%", value: "80", img: icon80},
                         {label: "80% WK 7U", value: "80wk7u", img: icon80},
                         {label: "80% WKL", value: "80wkl", img: icon80},

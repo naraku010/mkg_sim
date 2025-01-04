@@ -1,3 +1,4 @@
+import keymap_at from "./keymap_at_default.json";
 import keymap_numpad from "./keymap_numpad.json";
 import keymap_40_ortho from "./keymap_40_ortho.json";
 import keymap_50_ortho from "./keymap_50_ortho.json";
@@ -20,6 +21,7 @@ import keymap_95 from "./keymap_95_default.json";
 import keymap_100 from "./keymap_100_default.json";
 
 const KEYMAPS = {
+  "at": keymap_at,
   numpad: keymap_numpad,
   "40ortho": keymap_40_ortho,
   "50ortho": keymap_50_ortho,

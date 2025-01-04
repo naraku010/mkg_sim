@@ -63,6 +63,7 @@
     "KC_PMNS",
     "KC_PSLS",
     "KC_PAST",
+    "KC_PEQL",
     "KC_DEL"
   ],
   "mods_alpha": [
@@ -86,6 +87,7 @@
     "MO(4)"
   ],
   "numpad": [
+    "KC_PEQL",
     "KC_PENT",
     "KC_PPLS",
     "KC_NLCK",
