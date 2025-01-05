@@ -7,10 +7,12 @@ import {
 } from "../../store/slices/colorways";
 import * as settingsActions from "../../store/slices/settings";
 import { selectColorway } from "../../store/slices/colorways";
+import * as caseActions from "../../store/slices/case";
 
 export default function Colorway(props) {
   const dispatch = useDispatch();
   const backgroundColorFix = useSelector(settingsActions.selectFixBackground);
+  const autoColor = useSelector(caseActions.selectAutoColor);
   const base_bg = props.colorway?.swatches?.base?.background || "#ffffff";
   const base_fg = props.colorway?.swatches?.base?.color || "#000000";
   const mods_bg = props.colorway?.swatches?.mods?.background || base_bg;
@@ -24,6 +26,9 @@ export default function Colorway(props) {
     let c = accent_bg;
     if (c && !backgroundColorFix) {
       dispatch(settingsActions.setSceneColor(c));
+    }
+    if (c && autoColor) {
+      dispatch(caseActions.setPrimaryColor(c));
     }
   };
 

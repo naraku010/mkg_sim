@@ -64,7 +64,7 @@ const getPathArrows = (sx, sy, gutter) => {
 
 export default (layoutName, layoutJson, bezel) => {
     let holes = [];
-    let gutter = 0.05;
+    let gutter = 0.01;
     let w = layoutJson.width;
     let h = layoutJson.height;
     let sx = bezel; //start x
@@ -220,10 +220,29 @@ export default (layoutName, layoutJson, bezel) => {
             break;
         case "65ergo":
             holes.push(
-                getSquarePath(sx+0.3, sy, 1, 1, gutter),
-                getSquarePath(sx+0.2, sy+1, 1, 1, gutter),
-                getSquarePath(sx+0.1, sy+2, 1, 1, gutter),
-                getSquarePath(sx, sy+3, 1, 1, gutter),
+                getPathFromPoints(sx+0.28, sy, [
+                    {x: 0, y: 0},
+                    {x: 1, y: 0},
+                    {x: 0, y: 1},
+                    {x: -.1, y: 0},
+                    {x: 0, y: 1},
+                    {x: -.1, y: 0},
+                    {x: 0, y: 1},
+                    {x: -.1, y: 0},
+                    {x: 0, y: 1},
+
+                    {x: -1, y: 0},
+                    {x: 0, y: -1},
+                    {x: .1, y: 0},
+                    {x: 0, y: -1},
+                    {x: .1, y: 0},
+                    {x: 0, y: -1},
+                    {x: .1, y: 0},
+                ]),
+                // getSquarePath(sx+0.3, sy, 1, 1, gutter),
+                // getSquarePath(sx+0.2, sy+1, 1, 1, gutter),
+                // getSquarePath(sx+0.1, sy+2, 1, 1, gutter),
+                // getSquarePath(sx, sy+3, 1, 1, gutter),
             );
             holes.push(
                 getPathFromPoints(sx+1.7, sy, [
@@ -251,7 +270,7 @@ export default (layoutName, layoutJson, bezel) => {
                     {x: -.2, y: -.9},
                     {x: 4.5, y: -.8},
                 ]),
-                getPathFromPoints(sx+1.4, sy, [
+                getPathFromPoints(sx + 1.4, sy, [
                     {x: 3, y: 0},
                     {x: 4.45, y: .7},
                     {x: -.2, y: 1.1},

@@ -162,7 +162,6 @@ export default class CaseManager {
             this.style = state.case.style;
             this.updateCaseGeometry();
         });
-
         subscribe("case.layout", (state) => {
             this.layoutName = state.case.layout;
             this.layout = LAYOUTS[state.case.layout];

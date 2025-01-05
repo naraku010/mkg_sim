@@ -20,7 +20,6 @@ import icon60hhkb from "../../assets/icons/icon-60-hhkb.png";
 
 import * as caseActions from "../../store/slices/case";
 import * as settingsActions from "../../store/slices/settings";
-import {toggleFixBackground} from "../../store/slices/settings";
 import * as keyActions from "../../store/slices/keys";
 import ToggleField from "../elements/ToggleField";
 
@@ -38,6 +37,7 @@ export default function BoardOptions() {
     const material = useSelector(caseActions.selectMaterial);
     const sceneColor = useSelector(settingsActions.selectSceneColor);
     const fixBackground = useSelector(settingsActions.selectFixBackground);
+    const autoColor = useSelector(caseActions.selectAutoColor);
 
     return (
         <>
@@ -137,7 +137,12 @@ export default function BoardOptions() {
                 <ToggleField
                     value={fixBackground}
                     label={"배경색 고정"}
-                    handler={() => dispatch(toggleFixBackground())}
+                    handler={() => dispatch(settingsActions.toggleFixBackground())}
+                />
+                <ToggleField
+                    value={!autoColor}
+                    label={"하우징색 고정"}
+                    handler={() => dispatch(caseActions.toggleAutoColor())}
                 />
                 <div className={styles.row}>
                     <div className={styles.fieldColor}>
@@ -146,7 +151,6 @@ export default function BoardOptions() {
                             color={primaryColor}
                             handler={(color) => {
                                 dispatch(caseActions.setPrimaryColor(color.hex));
-                                dispatch(caseActions.setAutoColor(false));
                             }}
                         />
                     </div>
@@ -157,7 +161,6 @@ export default function BoardOptions() {
                             color={sceneColor}
                             handler={(color) => {
                                 dispatch(settingsActions.setSceneColor(color.hex));
-                                dispatch(settingsActions.setSceneAutoColor(false));
                             }}
                         />
                     </div>

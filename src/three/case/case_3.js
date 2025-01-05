@@ -5,8 +5,8 @@ import holes from "./holes";
 export default (layout, color) => {
   color = color || "#cccccc";
   let cornerRadius = 0;
-  let bevel = 0.04;
-  let bezel = 0.25;
+  let bevel = 0.015;
+  let bezel = 0.2;
   let height = 1;
   let width = layout.width + bezel * 2;
   let depth = layout.height + bezel * 2;
