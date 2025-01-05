@@ -54,6 +54,7 @@ export default function BoardOptions() {
                         {label: "60%", value: "60", img: icon60},
                         {label: "60% ISO", value: "60iso", img: icon60},
                         {label: "60% WKL", value: "60wkl", img: icon60wkl},
+                        {label: "60% TRUE HHKB", value: "60truehhkb", img: icon60hhkb},
                         {label: "60% HHKB", value: "60hhkb", img: icon60hhkb},
                         {label: "60% TSANGAN", value: "60tsangan", img: icon60},
                         {label: "65%", value: "65", img: icon65},

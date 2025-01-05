@@ -311,6 +311,20 @@ export default (layoutName, layoutJson, bezel) => {
                 ])
             );
             break;
+        case "60truehhkb":
+            holes.push(
+                getPathFromPoints(sx , sy - gutter, [
+                    {x: 15 + gutter * 2, y: 0},
+                    {x: 0, y: 4 + gutter * 2},
+                    {x: -2.5, y: 0},
+                    {x: 0, y: 1},
+                    {x: -11 - gutter * 2, y: 0},
+                    {x: 0, y: -1},
+                    {x: -1.5, y: 0},
+                    {x: 0, y: -4 - gutter * 2},
+                ])
+            );
+            break;
         case "60wkl":
             holes.push(
                 getPathFromPoints(sx, sy, [
