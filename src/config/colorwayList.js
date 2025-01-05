@@ -125,7 +125,7 @@ import mkg_g4 from "./usercolorways2/mkg_emma_base.json"
 import mkg_g5 from "./usercolorways2/mkg_nori.json"
 import mkg_g6 from "./usercolorways2/mkg_nori_alpha.json"
 import mkg_g7 from "./usercolorways2/mkg_parcel.json"
-import mkg_g8 from "./usercolorways2/mkg_poko.json"
+import mkg_g8 from "./usercolorways2/mkg_poco.json"
 import mkg_g9 from "./usercolorways2/mkg_sandstorm.json"
 import mkg_g10 from "./usercolorways2/mkg_soul_blossom.json"
 import mkg_g11 from "./usercolorways2/mkg_spark_mod.json"
@@ -494,7 +494,7 @@ export const USERCOLORWAYS = {
     mkg_nori: mkg_g5,
     mkg_nori_alpha: mkg_g6,
     mkg_parcel: mkg_g7,
-    mkg_poko: mkg_g8,
+    mkg_poco: mkg_g8,
     mkg_sandstorm: mkg_g9,
     mkg_soul_blossom: mkg_g10,
     mkg_spark_mod: mkg_g11,
