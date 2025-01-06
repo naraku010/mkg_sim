@@ -160,7 +160,7 @@ export default class SceneManager extends Collection {
         this.ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
         this.scene.add(this.ambientLight);
 
-        this.rectLight = new THREE.RectAreaLight(0xffffff, 2.5, 20, 15);
+        this.rectLight = new THREE.RectAreaLight(0xffffff, 2.5, 20, 20);
         this.rectLight.position.set(0, 10, 0);  // 천장 높이라고 가정
         // 아래 바라보도록 설정
         this.rectLight.lookAt(0, 0, 0);
