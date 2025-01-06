@@ -203,6 +203,7 @@ export default class SceneManager extends Collection {
             .onChange((value) => {
                 this.rectLight.color.set(value);
             });
+
         rectFolder
             .add(this, 'showRectLightHelper')
             .name('헬퍼 표시')
