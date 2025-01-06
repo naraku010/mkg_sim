@@ -9,6 +9,8 @@ import RoundedMatPad from "./mat";
 import HDRBackgroundManager from "./background";
 import {RectAreaLightHelper} from 'three/examples/jsm/helpers/RectAreaLightHelper.js';
 import {RectAreaLightUniformsLib} from 'three/examples/jsm/lights/RectAreaLightUniformsLib.js'
+import InDoorHDR from '../assets/hdr/studio.hdr';
+import {RGBELoader} from "three-stdlib";
 
 export default class SceneManager extends Collection {
     constructor(options) {
@@ -39,10 +41,8 @@ export default class SceneManager extends Collection {
 
         // 클리핑 활성화 (필요 시 유지)
         // this.renderer.localClippingEnabled = true;
-
-        this.renderer.gammaFactor = 2.2;
         this.renderer.toneMapping = THREE.ReinhardToneMapping;  // or ACESFilmicToneMapping
-        this.renderer.toneMappingExposure = 0.7;
+        this.renderer.toneMappingExposure = 0.2;
         this.renderer.physicallyCorrectLights = true; // 물리적으로 정확한 조명 사용
         this.renderer.outputColorSpace= THREE.SRGBColorSpace;
         this.renderer.localClippingEnabled = true;
@@ -60,29 +60,31 @@ export default class SceneManager extends Collection {
         // this.setupMat();
         this.resize();
         this.addLights();
-        // const loader = new RGBELoader();
-        // const pmremGenerator = new THREE.PMREMGenerator(this.renderer);
-        // pmremGenerator.compileEquirectangularShader();
-        // loader.load(InDoorHDR, (texture) => {
-        //     texture.mapping = THREE.EquirectangularReflectionMapping; // 구형으로 매핑
-        //
-        //     // 이전 텍스처 제거
-        //     texture.colorSpace = THREE.SRGBColorSpace;
-        //
-        //     // 배경 및 환경맵 설정
-        //     if (this.currentTexture) {
-        //         this.currentTexture.dispose();
-        //     }
-        //     this.scene.background = null; // 배경 비우기
-        //     this.scene.environment = texture;
-        //
-        //     // 현재 텍스처 참조
-        //     this.currentTexture = texture;
-        //     const envMap = pmremGenerator.fromEquirectangular(texture).texture;
-        //     this.scene.environment = envMap;
-        //     // 장면 다시 렌더링
-        //     this.renderer.render(this.scene, this.camera);
-        // });
+        const loader = new RGBELoader();
+        const pmremGenerator = new THREE.PMREMGenerator(this.renderer);
+        pmremGenerator.compileEquirectangularShader();
+        loader.load(InDoorHDR, (hdrTexture) => {
+            hdrTexture.mapping = THREE.EquirectangularReflectionMapping;
+            hdrTexture.colorSpace = THREE.SRGBColorSpace;
+
+            // 이전 텍스처 제거
+            const envMap = pmremGenerator.fromEquirectangular(hdrTexture).texture;
+
+            // 배경 및 환경맵 설정
+            if (this.currentTexture) {
+                this.currentTexture.dispose();
+            }
+
+            this.scene.background = null; // 배경 비우기
+            this.scene.environment = envMap;
+
+            // 현재 텍스처 참조
+            this.currentTexture = hdrTexture;
+
+            // 장면 다시 렌더링
+            this.renderer.render(this.scene, this.camera);
+            this.renderer.toneMappingExposure = 0.2;
+        });
         //mouse and raycaster
         this.mouse = new THREE.Vector2(-1000, -1000);
         this.raycaster = new THREE.Raycaster();
@@ -160,7 +162,7 @@ export default class SceneManager extends Collection {
         this.ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
         this.scene.add(this.ambientLight);
 
-        this.rectLight = new THREE.RectAreaLight(0xffffff, 2.5, 20, 20);
+        this.rectLight = new THREE.RectAreaLight(0xffffff, 10, 20, 20);
         this.rectLight.position.set(0, 10, 0);  // 천장 높이라고 가정
         // 아래 바라보도록 설정
         this.rectLight.lookAt(0, 0, 0);
