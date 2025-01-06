@@ -42,7 +42,7 @@ export default class SceneManager extends Collection {
         // 클리핑 활성화 (필요 시 유지)
         // this.renderer.localClippingEnabled = true;
         this.renderer.toneMapping = THREE.ReinhardToneMapping;  // or ACESFilmicToneMapping
-        this.renderer.toneMappingExposure = 0.2;
+        this.renderer.toneMappingExposure = .6;
         this.renderer.physicallyCorrectLights = true; // 물리적으로 정확한 조명 사용
         this.renderer.outputColorSpace= THREE.SRGBColorSpace;
         this.renderer.localClippingEnabled = true;
@@ -57,9 +57,8 @@ export default class SceneManager extends Collection {
         // 시발 장패드
         this.setupMat();
         this.setupBackground();
-        // this.setupMat();
         this.resize();
-        this.addLights();
+        // this.addLights();
         const loader = new RGBELoader();
         const pmremGenerator = new THREE.PMREMGenerator(this.renderer);
         pmremGenerator.compileEquirectangularShader();
@@ -67,23 +66,19 @@ export default class SceneManager extends Collection {
             hdrTexture.mapping = THREE.EquirectangularReflectionMapping;
             hdrTexture.colorSpace = THREE.SRGBColorSpace;
 
-            // 이전 텍스처 제거
-            const envMap = pmremGenerator.fromEquirectangular(hdrTexture).texture;
-
             // 배경 및 환경맵 설정
             if (this.currentTexture) {
                 this.currentTexture.dispose();
             }
 
             this.scene.background = null; // 배경 비우기
-            this.scene.environment = envMap;
+            this.scene.environment = hdrTexture;
 
             // 현재 텍스처 참조
             this.currentTexture = hdrTexture;
 
             // 장면 다시 렌더링
             this.renderer.render(this.scene, this.camera);
-            this.renderer.toneMappingExposure = 0.2;
         });
         //mouse and raycaster
         this.mouse = new THREE.Vector2(-1000, -1000);
@@ -159,10 +154,7 @@ export default class SceneManager extends Collection {
     addLights() {
         // RectAreaLight(색상, 강도, 가로width, 세로height)
         // 면의 크기를 조절해서 원하는 크기의 형광등을 시뮬레이션
-        this.ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
-        this.scene.add(this.ambientLight);
-
-        this.rectLight = new THREE.RectAreaLight(0xffffff, 10, 20, 20);
+        this.rectLight = new THREE.RectAreaLight(0xffffff, 3, 20, 20);
         this.rectLight.position.set(0, 10, 0);  // 천장 높이라고 가정
         // 아래 바라보도록 설정
         this.rectLight.lookAt(0, 0, 0);
@@ -178,9 +170,9 @@ export default class SceneManager extends Collection {
         const rectFolder = this.gui.addFolder('조명');
 
         // 위치
-        rectFolder.add(this.rectLight.position, 'x', -5, 10, 0.1).name('위치 X');
-        rectFolder.add(this.rectLight.position, 'y', 0, 10, 0.1).name('위치 Y');
-        rectFolder.add(this.rectLight.position, 'z', -5, 10, 0.1).name('위치 Z');
+        rectFolder.add(this.rectLight.position, 'x', -5, 30, 0.1).name('위치 X');
+        rectFolder.add(this.rectLight.position, 'y', 0, 30, 0.1).name('위치 Y');
+        rectFolder.add(this.rectLight.position, 'z', -5, 30, 0.1).name('위치 Z');
         rectFolder
             .add(this.rectLight.rotation, 'x', -Math.PI, Math.PI, 0.01)
             .name('회전 X');

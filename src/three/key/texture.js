@@ -161,6 +161,8 @@ export const keyTexture = (opts) => {
 
   texture.colorSpace = THREE.SRGBColorSpace;
   texture.minFilter = THREE.NearestMipmapNearestFilter;
+  texture.magFilter = THREE.NearestFilter; // 원하는 필터 설정
+  texture.generateMipmaps = true;
   texture.needsUpdate = true;
   return texture;
 };

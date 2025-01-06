@@ -55,9 +55,10 @@ const getMaterialSet = (opts) => {
     top.needsUpdate = true
     let side = new THREE.MeshPhysicalMaterial({
         color: opts.background,
-        aoMapIntensity: 0.4,
         metalness: 0,  // 메탈 느낌을 약간 추가
-        roughness: 0.8,  // 표면을 더 매끄럽게 만들어 빛을 더 잘 반사하게
+        roughness: 1,  // 표면을 더 매끄럽게 만들어 빛을 더 잘 반사하게
+        transmission: 0.0,
+        thickness: 0.0,
     });
     if( currentState.keys.legendType === 'trn') {
         top.blending = side.blending = THREE.NormalBlending;
