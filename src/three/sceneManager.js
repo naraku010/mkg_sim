@@ -157,6 +157,9 @@ export default class SceneManager extends Collection {
     addLights() {
         // RectAreaLight(색상, 강도, 가로width, 세로height)
         // 면의 크기를 조절해서 원하는 크기의 형광등을 시뮬레이션
+        this.ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+        this.scene.add(this.ambientLight);
+
         this.rectLight = new THREE.RectAreaLight(0xffffff, 2.5, 20, 15);
         this.rectLight.position.set(0, 10, 0);  // 천장 높이라고 가정
         // 아래 바라보도록 설정
@@ -176,7 +179,15 @@ export default class SceneManager extends Collection {
         rectFolder.add(this.rectLight.position, 'x', -5, 10, 0.1).name('위치 X');
         rectFolder.add(this.rectLight.position, 'y', 0, 10, 0.1).name('위치 Y');
         rectFolder.add(this.rectLight.position, 'z', -5, 10, 0.1).name('위치 Z');
-
+        rectFolder
+            .add(this.rectLight.rotation, 'x', -Math.PI, Math.PI, 0.01)
+            .name('회전 X');
+        rectFolder
+            .add(this.rectLight.rotation, 'y', -Math.PI, Math.PI, 0.01)
+            .name('회전 Y');
+        rectFolder
+            .add(this.rectLight.rotation, 'z', -Math.PI, Math.PI, 0.01)
+            .name('회전 Z');
         // 강도
         rectFolder.add(this.rectLight, 'intensity', 0, 30, 0.1).name('밝기');
 
