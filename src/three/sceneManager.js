@@ -171,7 +171,6 @@ export default class SceneManager extends Collection {
         this.camera.aspect = this.w / this.h;
         this.camera.updateProjectionMatrix();
         this.renderer.setSize(this.w, this.h);
-        this.composer.setSize( this.w, this.h );
     }
 
     addLights() {
@@ -342,6 +341,6 @@ export default class SceneManager extends Collection {
             this.takeScreenshot = false;
         }
         requestAnimationFrame(this.tick.bind(this));
-        // this.composer.render();
+        this.composer.render();
     }
 }
