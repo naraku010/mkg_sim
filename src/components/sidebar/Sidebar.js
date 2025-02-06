@@ -21,7 +21,6 @@ export default function Sidebar() {
             <Name />
           </h1>
         </div>
-        <GoogleAdvertise client="ca-pub-8399187337788337" slot="8506739735" format="auto" responsive="true"/>
       </div>
       <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>
