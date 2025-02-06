@@ -67,16 +67,16 @@ export default class SceneManager extends Collection {
         // 시발 장패드
         this.setupMat();
         this.setupBackground();
-        this.composer = new EffectComposer(this.renderer);
-        this.composer.addPass(new RenderPass(this.scene, this.camera));
-
-        const bloomPass = new UnrealBloomPass(
-            new THREE.Vector2(this.w, this.h),
-            0.5,   // 강도 (필요에 따라 조정)
-            0.4,   // 반경
-            0.85   // 스레숄드
-        );
-        this.composer.addPass(bloomPass);
+        // this.composer = new EffectComposer(this.renderer);
+        // this.composer.addPass(new RenderPass(this.scene, this.camera));
+        //
+        // const bloomPass = new UnrealBloomPass(
+        //     new THREE.Vector2(this.w, this.h),
+        //     0.5,   // 강도 (필요에 따라 조정)
+        //     0.4,   // 반경
+        //     0.85   // 스레숄드
+        // );
+        // this.composer.addPass(bloomPass);
         this.resize();
         // this.addLights();
         // const pmremGenerator = new THREE.PMREMGenerator(this.renderer);
@@ -101,8 +101,6 @@ export default class SceneManager extends Collection {
         // });
         //mouse and raycaster
         this.mouse = new THREE.Vector2(-1000, -1000);
-        this.raycaster = new THREE.Raycaster();
-        this.raycaster.layers.set(1);
         //
 
 
@@ -171,7 +169,7 @@ export default class SceneManager extends Collection {
         this.camera.aspect = this.w / this.h;
         this.camera.updateProjectionMatrix();
         this.renderer.setSize(this.w, this.h);
-        this.composer.setSize( this.w, this.h );
+        // this.composer.setSize( this.w, this.h );
     }
 
     addLights() {
@@ -323,8 +321,8 @@ export default class SceneManager extends Collection {
     render() {
         this.update();
         this.controls.update();
-        this.raycaster.setFromCamera(this.mouse, this.camera);
-        this.checkIntersections();
+        // this.raycaster.setFromCamera(this.mouse, this.camera);
+        // this.checkIntersections();
         this.renderer.render(this.scene, this.camera);
         // let x = this.camera.position.x;
         // let y = this.camera.position.y;
@@ -342,6 +340,6 @@ export default class SceneManager extends Collection {
             this.takeScreenshot = false;
         }
         requestAnimationFrame(this.tick.bind(this));
-        this.composer.render();
+        // this.composer.render();
     }
 }
