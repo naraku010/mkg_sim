@@ -74,17 +74,6 @@ export default function BoardOptions() {
                     }}
                 />
                 <SelectField
-                    label="키캡 종류"
-                    selected={legendPrimaryStyle}
-                    options={[
-                        {label: "체리", value: "cherry"},
-                        {label: "SA", value: "sa", secondaryLabel: "(no subs)"},
-                    ]}
-                    handler={(val) => {
-                        dispatch(keyActions.setLegendPrimaryStyle(val));
-                    }}
-                />
-                <SelectField
                     label="옵션 언어"
                     selected={legendSecondaryStyle}
                     options={[
@@ -121,18 +110,6 @@ export default function BoardOptions() {
                     ]}
                     handler={(val) => {
                         dispatch(caseActions.setMaterial(val));
-                    }}
-                />
-                <SelectField
-                    name="case_texture"
-                    label="하우징 마감"
-                    selected={style}
-                    options={[
-                        {label: "둥근 형태", value: "CASE_1"},
-                        {label: "각진 형태", value: "CASE_2"},
-                    ]}
-                    handler={(val) => {
-                        dispatch(caseActions.setStyle(val));
                     }}
                 />
                 <ToggleField
