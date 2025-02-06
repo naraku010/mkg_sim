@@ -9,8 +9,10 @@ import RoundedMatPad from "./mat";
 import HDRBackgroundManager from "./background";
 import {RectAreaLightHelper} from 'three/examples/jsm/helpers/RectAreaLightHelper.js';
 import {RectAreaLightUniformsLib} from 'three/examples/jsm/lights/RectAreaLightUniformsLib.js'
-import InDoorHDR from '../assets/hdr/studio.hdr';
-import {RGBELoader} from "three-stdlib";
+import {UnrealBloomPass} from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
+import {EffectComposer} from "three/examples/jsm/postprocessing/EffectComposer";
+import {RenderPass} from "three/examples/jsm/postprocessing/RenderPass";
+
 
 export default class SceneManager extends Collection {
     constructor(options) {
@@ -21,8 +23,16 @@ export default class SceneManager extends Collection {
         this.scale = options.scale || 1;
         this.el = options.el || document.body;
         this.showRectLightHelper = false;
+        this.lightParams = {
+            speed: 0.02, // 조명 이동 속도
+            radius: 15,  // 조명 궤적 반지름 (궤도 크기)
+            height: 10,  // 조명의 최대 높이
+            animate: true, // 애니메이션 활성화 여부
+        };
+        this.theta = 0; // 각도 (0 ~ π)
         this.init();
     }
+
     init() {
         RectAreaLightUniformsLib.init();
         this.scene = new THREE.Scene();
@@ -41,51 +51,61 @@ export default class SceneManager extends Collection {
 
         // 클리핑 활성화 (필요 시 유지)
         // this.renderer.localClippingEnabled = true;
-        this.renderer.toneMapping = THREE.ReinhardToneMapping;  // or ACESFilmicToneMapping
-        this.renderer.toneMappingExposure = .6;
+        this.renderer.toneMapping = THREE.ACESFilmicToneMapping;  // or ACESFilmicToneMapping
+        this.renderer.toneMappingExposure = 5;
         this.renderer.physicallyCorrectLights = true; // 물리적으로 정확한 조명 사용
-        this.renderer.outputColorSpace= THREE.SRGBColorSpace;
-        this.renderer.localClippingEnabled = true;
+        this.renderer.outputColorSpace = THREE.SRGBColorSpace;
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.el.appendChild(this.renderer.domElement);
 
         this.renderer.localClippingEnabled = true;
         //main setup
         this.setupGUI();
+        this.addLights();
         this.setupCamera();
         this.setupControls();
         // 시발 장패드
         this.setupMat();
         this.setupBackground();
+        this.composer = new EffectComposer(this.renderer);
+        this.composer.addPass(new RenderPass(this.scene, this.camera));
+
+        const bloomPass = new UnrealBloomPass(
+            new THREE.Vector2(this.w, this.h),
+            0.5,   // 강도 (필요에 따라 조정)
+            0.4,   // 반경
+            0.85   // 스레숄드
+        );
+        this.composer.addPass(bloomPass);
         this.resize();
         // this.addLights();
-        const loader = new RGBELoader();
-        const pmremGenerator = new THREE.PMREMGenerator(this.renderer);
-        pmremGenerator.compileEquirectangularShader();
-        loader.load(InDoorHDR, (hdrTexture) => {
-            hdrTexture.mapping = THREE.EquirectangularReflectionMapping;
-            hdrTexture.colorSpace = THREE.SRGBColorSpace;
-
-            // 배경 및 환경맵 설정
-            if (this.currentTexture) {
-                this.currentTexture.dispose();
-            }
-
-            this.scene.background = null; // 배경 비우기
-            this.scene.environment = hdrTexture;
-
-            // 현재 텍스처 참조
-            this.currentTexture = hdrTexture;
-
-            // 장면 다시 렌더링
-            this.renderer.render(this.scene, this.camera);
-        });
+        // const pmremGenerator = new THREE.PMREMGenerator(this.renderer);
+        // pmremGenerator.compileEquirectangularShader();
+        // loader.load(InDoorHDR, (hdrTexture) => {
+        //     hdrTexture.mapping = THREE.EquirectangularReflectionMapping;
+        //     hdrTexture.colorSpace = THREE.SRGBColorSpace;
+        //
+        //     // 배경 및 환경맵 설정
+        //     if (this.currentTexture) {
+        //         this.currentTexture.dispose();
+        //     }
+        //
+        //     this.scene.background = null; // 배경 비우기
+        //     this.scene.environment = hdrTexture;
+        //
+        //     // 현재 텍스처 참조
+        //     this.currentTexture = hdrTexture;
+        //
+        //     // 장면 다시 렌더링
+        //     this.renderer.render(this.scene, this.camera);
+        // });
         //mouse and raycaster
         this.mouse = new THREE.Vector2(-1000, -1000);
         this.raycaster = new THREE.Raycaster();
         this.raycaster.layers.set(1);
         //
-        // this.composer = new EffectComposer(this.renderer);
+
+
         // const renderPass = new RenderPass(this.scene, this.camera);
         // renderPass.clearColor = new THREE.Color('black');
         // renderPass.clearAlpha = 1;
@@ -133,6 +153,7 @@ export default class SceneManager extends Collection {
             this.editing = state.colorways.editing;
         });
     }
+
     get w() {
         return this.el.offsetWidth;
     }
@@ -150,12 +171,16 @@ export default class SceneManager extends Collection {
         this.camera.aspect = this.w / this.h;
         this.camera.updateProjectionMatrix();
         this.renderer.setSize(this.w, this.h);
+        this.composer.setSize( this.w, this.h );
     }
+
     addLights() {
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.1); // 부드러운 전체 조명 추가
+        this.scene.add(ambientLight);
         // RectAreaLight(색상, 강도, 가로width, 세로height)
         // 면의 크기를 조절해서 원하는 크기의 형광등을 시뮬레이션
-        this.rectLight = new THREE.RectAreaLight(0xffffff, 3, 20, 20);
-        this.rectLight.position.set(0, 10, 0);  // 천장 높이라고 가정
+        this.rectLight = new THREE.RectAreaLight(0xf5f5f5, .5, 15, 15);
+        this.rectLight.position.set(0, 30, 0);  // 천장 높이라고 가정
         // 아래 바라보도록 설정
         this.rectLight.lookAt(0, 0, 0);
 
@@ -165,32 +190,24 @@ export default class SceneManager extends Collection {
         this.rectLightHelper = new RectAreaLightHelper(this.rectLight);
         // this.scene.add(this.rectLightHelper);
         this.setupLightGUI();
+
     }
+
     setupLightGUI() {
         const rectFolder = this.gui.addFolder('조명');
 
         // 위치
-        rectFolder.add(this.rectLight.position, 'x', -5, 30, 0.1).name('위치 X');
-        rectFolder.add(this.rectLight.position, 'y', 0, 30, 0.1).name('위치 Y');
-        rectFolder.add(this.rectLight.position, 'z', -5, 30, 0.1).name('위치 Z');
-        rectFolder
-            .add(this.rectLight.rotation, 'x', -Math.PI, Math.PI, 0.01)
-            .name('회전 X');
-        rectFolder
-            .add(this.rectLight.rotation, 'y', -Math.PI, Math.PI, 0.01)
-            .name('회전 Y');
-        rectFolder
-            .add(this.rectLight.rotation, 'z', -Math.PI, Math.PI, 0.01)
-            .name('회전 Z');
-        // 강도
-        rectFolder.add(this.rectLight, 'intensity', 0, 30, 0.1).name('밝기');
+        rectFolder.add(this.rectLight.position, 'x', -5, 80, 0.1).name('위치 X');
+        rectFolder.add(this.rectLight.position, 'y', 0, 80, 0.1).name('위치 Y');
+        rectFolder.add(this.rectLight.position, 'z', -5, 80, 0.1).name('위치 Z');
 
+        rectFolder.add(this.rectLight, 'intensity', 0, 30, 0.1).name('밝기');
         // 면조명 폭, 높이
-        rectFolder.add(this.rectLight, 'width', 0.1, 30, 0.1).name('폭');
-        rectFolder.add(this.rectLight, 'height', 0.1, 30, 0.1).name('높이');
+        rectFolder.add(this.rectLight, 'width', 0.1, 80, 0.1).name('폭');
+        rectFolder.add(this.rectLight, 'height', 0.1, 80, 0.1).name('높이');
 
         // 색상
-        const rectParams = { color: this.rectLight.color.getHex() };
+        const rectParams = {color: this.rectLight.color.getHex()};
         rectFolder
             .addColor(rectParams, 'color')
             .name('조명색상')
@@ -319,6 +336,7 @@ export default class SceneManager extends Collection {
 
     tick() {
         this.render();
+
         if (this.takeScreenshot) {
             ThreeUtil.getSceneScreenshot(this.renderer);
             this.takeScreenshot = false;

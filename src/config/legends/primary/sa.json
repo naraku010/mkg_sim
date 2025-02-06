@@ -6,11 +6,11 @@
   "centered": true,
   "encoded": false,
   "offsetX": 36,
-  "offsetY": 28,
-  "yOffsetTop": 20,
+  "offsetY": 50,
+  "yOffsetTop": 80,
   "yOffsetBottom": 80,
-  "yOffsetMod": 15,
-  "fontsize": 60,
+  "yOffsetMod": 30,
+  "fontsize": 120,
   "chars": {
     "KC_0": {
       "top": ")",

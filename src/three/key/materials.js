@@ -5,12 +5,17 @@ import {initial_settings} from "../../store/startup";
 import {TextureLoader} from "three/src/loaders/TextureLoader.js";
 import ambiantOcclusionPath from "../../assets/dist/shadow-key-noise.png";
 import lightMapPath from "../../assets/materials/white.png";
-
+import pbtMapPath from "../../assets/texture/normal/abs.jpg";
 const loader = new TextureLoader();
 
 const ambiantOcclusionMap = loader.load(ambiantOcclusionPath);
 ambiantOcclusionMap.wrapS = THREE.RepeatWrapping;
 ambiantOcclusionMap.wrapT = THREE.RepeatWrapping;
+
+const pbtMap = loader.load(pbtMapPath);
+pbtMap.wrapS = THREE.RepeatWrapping;
+pbtMap.wrapT = THREE.RepeatWrapping;
+
 
 const lightMap = loader.load(lightMapPath);
 lightMap.wrapS = THREE.RepeatWrapping;
@@ -47,16 +52,22 @@ const getMaterialSet = (opts) => {
     let legendTexture = keyTexture(opts);
     let top = new THREE.MeshPhysicalMaterial({
         map: legendTexture,
-        flatShading: true,
-        metalness: 0,  // 메탈 느낌을 약간 추가
-        roughness: 1,  // 표면을 더 매끄럽게 만들어 빛을 더 잘 반사하게
+        normalMap: pbtMap,
+        aoMap: lightMap,
+        aoMapIntensity: .5,
+        metalness: 0,  // 약간의 반사 효과 추가
+        roughness: 1,  // 매끄러운 표면 유지
+        transmission: 0.0,
+        thickness: 0.0,
     });
     top.map.minFilter = top.map.magFilter = THREE.LinearFilter;
-    top.needsUpdate = true
+    top.needsUpdate = true;
     let side = new THREE.MeshPhysicalMaterial({
         color: opts.background,
+        aoMap: lightMap,
+        aoMapIntensity: .5,
         metalness: 0,  // 메탈 느낌을 약간 추가
-        roughness: 1,  // 표면을 더 매끄럽게 만들어 빛을 더 잘 반사하게
+        roughness: .8,  // 표면을 더 매끄럽게 만들어 빛을 더 잘 반사하게
         transmission: 0.0,
         thickness: 0.0,
     });

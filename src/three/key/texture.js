@@ -3,166 +3,123 @@ import LEGENDS from "../../config/legends/primary/primary";
 import SUBS from "../../config/legends/subs/subs";
 import KeyUtil from "../../util/keyboard";
 
-//genertates a texture with canvas for top of key
+// 캔버스 텍스쳐를 생성하는 함수 (키 상단용)
 export const keyTexture = (opts) => {
-  let w = opts.w;
-  let h = opts.h;
-  let legend = opts.legend;
-  let sublegend = opts.sub;
-  let key = opts.code;
-  var texture;
-  let pxPerU = 128;
-  let subColor = opts.subColor || opts.color;
-  let fg = opts.color;
-  let bg = opts.background;
+    let w = opts.w;
+    let h = opts.h;
+    let legend = opts.legend;
+    let sublegend = opts.sub;
+    let key = opts.code;
+    let texture;
+    // 기본 1U 당 픽셀 수 (옵션으로 덮어쓰기 가능)
+    let pxPerU = opts.pxPerU || 256;
+    let subColor = opts.subColor || opts.color;
+    let fg = opts.color;
+    let bg = opts.background;
 
-  //iso enter add extra .25 for overhang
-  let isIsoEnter = key === "KC_ENT" && h > 1;
-  if (isIsoEnter) {
-    w = w + 0.25;
-  }
-
-  let canvas = document.createElement("canvas");
-  canvas.height = pxPerU * h;
-  canvas.width = pxPerU * w;
-
-  //let canvas = new OffscreenCanvas(pxPerU * w, pxPerU * h);
-
-  let ctx = canvas.getContext("2d");
-  //draw base color
-  ctx.fillStyle = bg;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  //draw gradient to simulate sculpting
-  // let gradient;
-  // if (key === "KC_SPC") {
-  //   //convex
-  //   gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
-  //   gradient.addColorStop(0, "rgba(0,0,0,0.15)");
-  //   gradient.addColorStop(0.5, "rgba(128,128,128,0.0)");
-  //   gradient.addColorStop(1, "rgba(255,255,255,0.15)");
-  // } else {
-  //   //concave
-  //   //simulate slight curve with gradient on face
-  //   gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
-  //   gradient.addColorStop(0, "rgba(255,255,255,0.2)");
-  //   gradient.addColorStop(0.4, "rgba(255,255,255,0.0)");
-  //   gradient.addColorStop(0.6, "rgba(0,0,0,0)");
-  //   gradient.addColorStop(1, "rgba(0,0,0,0.15)");
-  // }
-  //
-  // //bottom edge highlight
-  // let shineOpacity = 0.4;
-  // let shineRight = ctx.createLinearGradient(0, 0, canvas.width, 0);
-  // shineRight.addColorStop(0, `rgba(255,255,255,${0 * shineOpacity})`);
-  // shineRight.addColorStop(0.03, `rgba(255,255,255,${0 * shineOpacity})`);
-  // shineRight.addColorStop(0.07, `rgba(255,255,255,${0.6 * shineOpacity})`);
-  // shineRight.addColorStop(0.8, `rgba(255,255,255,${0.6 * shineOpacity})`);
-  // shineRight.addColorStop(0.95, `rgba(255,255,255,${0 * shineOpacity})`);
-  //
-  // //side edge highlight
-  // let shineBottom = ctx.createLinearGradient(0, 0, 0, canvas.height);
-  // let highlightRatio = (canvas.width - pxPerU * 0.04) / canvas.width;
-  // shineBottom.addColorStop(0, `rgba(255,255,255,${0 * shineOpacity})`);
-  // shineBottom.addColorStop(0.03, `rgba(255,255,255,${0 * shineOpacity})`);
-  // shineBottom.addColorStop(0.15, `rgba(255,255,255,${0.5 * shineOpacity})`);
-  // shineBottom.addColorStop(0.5, `rgba(255,255,255,${0.7 * shineOpacity})`);
-  // shineBottom.addColorStop(0.85, `rgba(255,255,255,${1.1 * shineOpacity})`);
-  // shineBottom.addColorStop(0.9, `rgba(255,255,255,${0.7 * shineOpacity})`);
-  // shineBottom.addColorStop(0.95, `rgba(255,255,255,${0 * shineOpacity})`);
-  // shineBottom.addColorStop(1, `rgba(255,255,255,${0 * shineOpacity})`);
-  //
-  // //draw gradients
-  // ctx.fillStyle = gradient;
-  // ctx.fillRect(0, 0, canvas.width, canvas.height);
-  //
-  // ctx.fillStyle = shineRight;
-  // ctx.fillRect(0, canvas.height * 0.97, canvas.width, canvas.height);
-  //
-  // ctx.fillStyle = shineBottom;
-  // ctx.fillRect(canvas.width * highlightRatio, 0, canvas.width, canvas.height);
-
-  let l = LEGENDS[legend];
-  let mainChar = l?.chars[key] || "";
-
-  // 1u bs and enter
-  if (key === "KC_BSPC" && w <= 1) {
-    mainChar = l?.chars["KC_BSISO"];
-  }
-  if ((key === "KC_ENT" && w <= 1) || isIsoEnter) {
-    mainChar = l?.chars["KC_ENISO"];
-  }
-
-  let modWord = !l.encoded && mainChar.length > 1; //mods use multi chacter words instead of symbols (sa)
-  let subChar = SUBS[sublegend]?.chars[key] || "";
-
-  //convert to unicode value if encoded for custom fonts
-  mainChar =
-    l.encoded && mainChar.length > 1
-      ? String.fromCharCode(parseInt(mainChar, 16))
-      : mainChar;
-
-  //font size
-  let fontScaler = 1;
-  if (mainChar["top"]) fontScaler = 1 / 2; //number keys 2 characters stacked
-  if (!mainChar["top"] && modWord) fontScaler = 1 / 4; // keys with full words for modifer text i.e. "Enter", "Alt", "Home"
-  let fontSize = l.fontsize * (fontScaler + 0.25);
-
-  //set font style
-  if (modWord) {
-    ctx.font = `700 ${fontSize}px ${l.fontFamily}`;
-  } else {
-    ctx.font = `${fontSize}px ${l.fontFamily}`;
-  }
-  ctx.fillStyle = fg;
-
-  if (l.centered) {
-    ctx.textAlign = "center";
-    l.offsetX = (w * pxPerU) / 2;
-  } else {
-    ctx.textAlign = "left";
-  }
-  let ent_off_x = 0;
-  let ent_off_y = 0;
-  if (isIsoEnter) {
-    ent_off_x = 15;
-    ent_off_y = 6;
-  }
-
-  if (mainChar["top"]) {
-    ctx.fillText(mainChar.top, l.offsetX, l.offsetY + l.yOffsetTop);
-    ctx.fillText(mainChar.bottom, l.offsetX, l.offsetY + l.yOffsetBottom);
-  } else {
-    ctx.fillText(
-      mainChar,
-      l.offsetX + ent_off_x,
-      l.fontsize + (KeyUtil.isAlpha(key) ? l.offsetY : l.yOffsetMod) + ent_off_y
-    );
-  }
-
-  // //sub characters
-  if (sublegend && subChar && l.subsSupported) {
-    let sub = SUBS[sublegend];
-    let multiplier = sub.fontSizeMultiplier * 0.35;
-    ctx.fillStyle = subColor || fg;
-    ctx.font = `bold ${pxPerU * multiplier}px ${sub.fontFamily}`;
-    if (subChar?.top) {
-      ctx.fillText(subChar.top, pxPerU * 0.55, pxPerU * 0.4);
-      ctx.fillText(subChar.bottom, pxPerU * 0.55, pxPerU * 0.8);
-    } else {
-      ctx.fillText(subChar, pxPerU * 0.55, pxPerU * 0.8);
+    // isometric enter(엔터키)일 경우 오버행 보정
+    let isIsoEnter = key === "KC_ENT" && h > 1;
+    if (isIsoEnter) {
+        w = w + 0.25;
     }
-  }
 
-  texture = new THREE.CanvasTexture(canvas);
+    // devicePixelRatio 적용 (고해상도 디스플레이 대응)
+    const dpr = window.devicePixelRatio || 1;
+    const canvas = document.createElement("canvas");
+    canvas.width = pxPerU * w * dpr;
+    canvas.height = pxPerU * h * dpr;
+    const ctx = canvas.getContext("2d");
+    ctx.scale(dpr, dpr);
 
+    // 기본 배경 색 채우기
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, pxPerU * w, pxPerU * h);
 
-  //document.body.appendChild(canvas);
+    // 글자 정보 설정
+    let l = LEGENDS[legend];
+    let mainChar = l?.chars[key] || "";
 
-  texture.colorSpace = THREE.SRGBColorSpace;
-  texture.minFilter = THREE.NearestMipmapNearestFilter;
-  texture.magFilter = THREE.NearestFilter; // 원하는 필터 설정
-  texture.generateMipmaps = true;
-  texture.needsUpdate = true;
-  return texture;
+    // 1U 백스페이스나 엔터 보정
+    if (key === "KC_BSPC" && w <= 1) {
+        mainChar = l?.chars["KC_BSISO"];
+    }
+    if ((key === "KC_ENT" && w <= 1) || isIsoEnter) {
+        mainChar = l?.chars["KC_ENISO"];
+    }
+
+    let modWord = !l.encoded && mainChar.length > 1; // modifier 키는 기호 대신 전체 단어 사용
+    let subChar = SUBS[sublegend]?.chars[key] || "";
+
+    // 커스텀 폰트 사용 시 unicode 변환
+    mainChar =
+        l.encoded && mainChar.length > 1
+            ? String.fromCharCode(parseInt(mainChar, 16))
+            : mainChar;
+
+    // 폰트 크기 결정
+    let fontScaler = 1;
+    if (mainChar.top) fontScaler = 1 / 2; // 예: 숫자키의 상/하단 텍스트
+    if (!mainChar.top && modWord) fontScaler = 1 / 4; // 예: "Enter", "Alt" 등
+    let fontSize = l.fontsize * (fontScaler + 0.25);
+
+    // 폰트 스타일 설정
+    if (modWord) {
+        ctx.font = `700 ${fontSize}px ${l.fontFamily}`;
+    } else {
+        ctx.font = `${fontSize}px ${l.fontFamily}`;
+    }
+    ctx.fillStyle = fg;
+
+    // 텍스트 정렬 및 오프셋
+    if (l.centered) {
+        ctx.textAlign = "center";
+        l.offsetX = (pxPerU * w) / 2;
+    } else {
+        ctx.textAlign = "left";
+    }
+    let ent_off_x = 0;
+    let ent_off_y = 0;
+    if (isIsoEnter) {
+        ent_off_x = 15;
+        ent_off_y = 6;
+    }
+
+    // 메인 글자 그리기
+    if (mainChar.top) {
+        ctx.fillText(mainChar.top, l.offsetX, l.offsetY + l.yOffsetTop);
+        ctx.fillText(mainChar.bottom, l.offsetX, l.offsetY + l.yOffsetBottom);
+    } else {
+        ctx.fillText(
+            mainChar,
+            l.offsetX + ent_off_x,
+            l.fontsize + (KeyUtil.isAlpha(key) ? l.offsetY : l.yOffsetMod) + ent_off_y
+        );
+    }
+
+    // 서브 글자 (보조 레전드) 처리
+    if (sublegend && subChar && l.subsSupported) {
+        let sub = SUBS[sublegend];
+        let multiplier = sub.fontSizeMultiplier * 0.35;
+        ctx.fillStyle = subColor || fg;
+        ctx.font = `bold ${pxPerU * multiplier}px ${sub.fontFamily}`;
+        if (subChar.top) {
+            ctx.fillText(subChar.top, pxPerU * 0.55, pxPerU * 0.4);
+            ctx.fillText(subChar.bottom, pxPerU * 0.55, pxPerU * 0.8);
+        } else {
+            ctx.fillText(subChar, pxPerU * 0.55, pxPerU * 0.8);
+        }
+    }
+
+    // 캔버스를 텍스쳐로 변환
+    texture = new THREE.CanvasTexture(canvas);
+    // texture.format = THREE.RGBAFormat;  // 알파 채널 유지
+    texture.colorSpace = THREE.SRGBColorSpace;
+    texture.minFilter = THREE.LinearFilter; // 블러 방지
+    texture.magFilter = THREE.NearestFilter; // 픽셀 단위로 선명하게
+    texture.generateMipmaps = false;
+    texture.anisotropy = opts.renderer
+        ? opts.renderer.capabilities.getMaxAnisotropy()
+        : 16; // 기본값 16 적용
+    texture.needsUpdate = true;
+    return texture;
 };
