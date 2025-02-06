@@ -180,7 +180,7 @@ export default class SceneManager extends Collection {
         // RectAreaLight(색상, 강도, 가로width, 세로height)
         // 면의 크기를 조절해서 원하는 크기의 형광등을 시뮬레이션
         this.rectLight = new THREE.RectAreaLight(0xf5f5f5, .5, 15, 15);
-        this.rectLight.position.set(0, 30, 0);  // 천장 높이라고 가정
+        this.rectLight.position.set(0, 15, 0);  // 천장 높이라고 가정
         // 아래 바라보도록 설정
         this.rectLight.lookAt(0, 0, 0);
 
