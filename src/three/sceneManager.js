@@ -234,13 +234,13 @@ export default class SceneManager extends Collection {
     }
 
     setupCamera() {
-        this.camera = new THREE.PerspectiveCamera(60, this.w / this.h, 1, 1000);
+        this.camera = new THREE.PerspectiveCamera(55, this.w / this.h, 1, 1000);
         this.camera.position.y = 15;
         this.camera.position.z = 15;
         this.camera.position.x = 0;
         const params = {
             resetCamera: () => {
-                this.camera.position.set(0, 15, 15); // 초기 위치로 설정
+                this.camera.position.set(0, 15, 25); // 초기 위치로 설정
                 this.camera.lookAt(new THREE.Vector3(0, 0, 0)); // (0, 0, 0)을 바라보도록 설정
                 this.camera.rotation.set(0, 0, 0); // 카메라의 회전값을 초기화
                 this.controls.target.set(0, 0, 0); // 컨트롤이 바라보는 대상 초기화
