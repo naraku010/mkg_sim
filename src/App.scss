@@ -108,7 +108,8 @@ canvas {
                     </filter>\
                     <rect width="100" height="100" filter="url(#noise)" opacity="0.03"/>\
                 </svg>');
-    background-size: cover, 10px 10px;
+    background-size: cover, 100px 100px;
+    background-blend-mode: overlay;
     &:active {
       cursor: grabbing;
     }
