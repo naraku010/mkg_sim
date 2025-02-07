@@ -69,7 +69,7 @@ const getInitialState = () => {
     initial.colorways.active = randomItem(starting_colorway_options);
     initial.keys.legendSecondaryStyle = "";
   }
-  initial.case.layout = "80wk";
+  initial.case.layout = "80";
   return initial;
 };
 
