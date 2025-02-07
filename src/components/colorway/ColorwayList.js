@@ -38,7 +38,7 @@ export default function ColorwayList(props) {
         <Colorway key={s.id} colorway={s} custom={true} setTab={props.setTab}/>
     ));
 
-    const userNewColorwayTiles = filteredColorways(KC_COLORWAYS).map((s) => (
+    const userNewColorwayTiles = filteredColorways(KC_COLORWAYS).sort().map((s) => (
         <Colorway key={KC_COLORWAYS[s]?.id} colorway={KC_COLORWAYS[s]}/>
     ));
 
