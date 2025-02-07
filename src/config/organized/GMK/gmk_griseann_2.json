@@ -1,0 +1,41 @@
+{
+    "id": "gmk_griseann_2",
+    "label": "GRISEANN 2",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#171718",
+            "color": "#f7f2ea",
+            "subColor": "#96d364"
+        },
+        "mods": {
+            "background": "#171718",
+            "color": "#f7f2ea"
+        },
+        "accent": {
+            "background": "#171718",
+            "color": "#f7f2ea"
+        },
+        "swatch1": {
+            "background": "#171718",
+            "color": "#f7f2ea",
+            "subColor": "#171718"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F": "swatch1",
+        "KC_G": "swatch1",
+        "KC_H": "swatch1",
+        "KC_J": "swatch1",
+        "KC_K": "swatch1",
+        "KC_V": "swatch1",
+        "KC_B": "swatch1",
+        "KC_X": "swatch1",
+        "KC_GRAVE": "swatch1",
+        "KC_DOT": "swatch1"
+    }
+}

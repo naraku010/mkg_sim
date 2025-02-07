@@ -1,0 +1,34 @@
+{
+    "id": "gmk_rudy",
+    "label": "rudy",
+    "manufacturer": "GMK",
+    "swatches": {
+        "base": {
+            "background": "#e1dbd1",
+            "color": "#1f3855"
+        },
+        "mods": {
+            "background": "#1f3855",
+            "color": "#e1dbd1"
+        },
+        "accent": {
+            "background": "#d2aa6d",
+            "color": "#e1dbd1"
+        }
+    },
+    "override": {
+        "KC_SPC": "accent",
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_LEFT": "accent",
+        "KC_RGHT": "accent",
+        "KC_PENT": "accent"
+    }
+}

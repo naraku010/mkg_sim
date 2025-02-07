@@ -1,26 +1,26 @@
 {
-  "id": "mkg_tako",
-  "label": "Tako",
-  "manufacturer": "",
-  "designer": "엘기현고경표",
-  "swatches": {
-    "base": {
-      "background": "#f7f2ea",
-      "color": "#463f67"
+    "id": "mkg_tako",
+    "label": "Tako",
+    "manufacturer": "GMK",
+    "designer": "엘기현고경표",
+    "swatches": {
+        "base": {
+            "background": "#f7f2ea",
+            "color": "#463f67"
+        },
+        "mods": {
+            "background": "#463f67",
+            "color": "#ffb756"
+        },
+        "accent": {
+            "background": "#ffb756",
+            "color": "#463f67"
+        }
     },
-    "mods": {
-      "background": "#463f67",
-      "color": "#ffb756"
-    },
-    "accent": {
-      "background": "#ffb756",
-      "color": "#463f67"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_SPC": "base"
-  }
 }

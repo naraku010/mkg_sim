@@ -1,32 +1,31 @@
 {
-  "id": "mkg_phantom",
-  "label": "phantom",
-  "manufacturer": "",
-  "designer": "",
-  "swatches": {
-    "base": {
-      "background": "#2e1a47",
-      "color": "#eed484"
+    "id": "mkg_phantom",
+    "label": "phantom",
+    "manufacturer": "TUT",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#2e1a47",
+            "color": "#eed484"
+        },
+        "mods": {
+            "background": "#2e1a47",
+            "color": "#eed484"
+        },
+        "accent": {
+            "background": "#eed484",
+            "color": "#2e1a47"
+        }
     },
-    "mods": {
-      "background": "#2e1a47",
-      "color": "#eed484"
-    },
-    "accent": {
-      "background": "#eed484",
-      "color": "#2e1a47"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "accent",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_LEFT": "accent",
+        "KC_RGHT": "accent",
+        "KC_PENT": "accent"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_SPC": "accent",
-    "KC_UP": "accent",
-    "KC_DOWN": "accent",
-    "KC_LEFT": "accent",
-    "KC_RGHT": "accent",
-    "KC_PENT": "accent"
-  }
 }
-

@@ -1,27 +1,12 @@
 import { get_qs_values } from "./qs";
 import { loadState } from "./localStorage";
-import { subOptions } from "../config/legends/subs/subs";
-import COLORWAYS from "../config/colorways/colorways";
-import { USERCOLORWAYS_NEW } from "../config/colorwayList";
 import settings from "../config/settings_user_default.json";
+import {KC_COLORWAYS} from "../config/organized/keycaps";
 
 const starting_colorway_options = [
-  "cafe",
-  "mecha",
-  "lunar",
-  "jamon",
-  "bento",
-  "olivia",
-  "striker",
-  "bushido",
-  "oblivion",
-  "nautilus",
-  "vilebloom",
-  "handarbeit",
-  "hammerhead",
-  "modern_dolch",
-  "blue_samurai",
-  "red_samurai",
+  "gmk_yeeti",
+  "gmk_futurefunk",
+  "gmk_delta",
 ];
 
 const starting_layout_options = ["80wk7u"];
@@ -84,7 +69,7 @@ const getInitialState = () => {
   if (qs && typeof qs["colorway"] === "object") {
     accent = qs["colorway"].swatches.accent.background;
   } else {
-    accent = COLORWAYS[initial?.colorways?.active]?.swatches?.accent?.background || USERCOLORWAYS_NEW[initial?.colorways?.active]?.swatches?.accent?.background;
+    accent = KC_COLORWAYS[initial?.colorways?.active]?.swatches?.accent?.background;
   }
   initial.settings.sceneColor = accent;
   return initial;

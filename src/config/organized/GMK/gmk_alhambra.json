@@ -1,0 +1,36 @@
+{
+    "id": "gmk_alhambra",
+    "label": "Alhambra",
+    "manufacturer": "GMK",
+    "swatches": {
+        "base": {
+            "background": "#e8e7e0",
+            "color": "#98968d"
+        },
+        "mods": {
+            "background": "#98968d",
+            "color": "#e8e7e0"
+        },
+        "accent": {
+            "background": "#b89d6c",
+            "color": "#e8e7e0"
+        }
+    },
+    "override": {
+        "KC_SPC": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_ESC": "accent",
+        "KC_ENT": "accent",
+        "KC_PENT": "accent",
+        "KC_Z": "base",
+        "KC_X": "base",
+        "KC_A": "base",
+        "KC_S": "base",
+        "KC_O": "base",
+        "KC_J": "base",
+        "KC_I": "base"
+    }
+}

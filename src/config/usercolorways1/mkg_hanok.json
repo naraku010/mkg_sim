@@ -1,35 +1,35 @@
 {
-  "id": "mkg_hanok",
-  "label": "Hanok",
-  "manufacturer": "",
-  "designer": "",
-  "swatches": {
-    "base": {
-      "background": "#d8d2c3",
-      "color": "#353738"
+    "id": "mkg_hanok",
+    "label": "Hanok",
+    "manufacturer": "GMK",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#d8d2c3",
+            "color": "#353738"
+        },
+        "mods": {
+            "background": "#513a2a",
+            "color": "#d8d2c3"
+        },
+        "accent": {
+            "background": "#393b3b",
+            "color": "#d8d2c3"
+        }
     },
-    "mods": {
-      "background": "#513a2a",
-      "color": "#d8d2c3"
-    },
-    "accent": {
-      "background": "#393b3b",
-      "color": "#d8d2c3"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_LEFT": "accent",
+        "KC_RGHT": "accent",
+        "KC_PENT": "accent"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_SPC": "base",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods",
-    "KC_UP": "accent",
-    "KC_DOWN": "accent",
-    "KC_LEFT": "accent",
-    "KC_RGHT": "accent",
-    "KC_PENT": "accent"
-  }
 }

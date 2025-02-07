@@ -1,0 +1,102 @@
+{
+    "id": "epbt_dreamscape",
+    "label": "Dreamscape",
+    "manufacturer": "ePBT",
+    "designer": "라너구",
+    "swatches": {
+        "base": {
+            "background": "#f3f7fc",
+            "color": "#a0a3a9"
+        },
+        "mods": {
+            "background": "#f1bec5",
+            "color": "#f3f7fc"
+        },
+        "accent": {
+            "background": "#c195ae",
+            "color": "#fcffff"
+        },
+        "swatch-4": {
+            "background": "#c1adfc",
+            "color": "#f3f7fc"
+        },
+        "swatch-2": {
+            "background": "#90bde9",
+            "color": "#f3f7fc"
+        },
+        "swatch-3": {
+            "background": "#dfebf2",
+            "color": "#94a9b6"
+        }
+    },
+    "override": {
+        "KC_ESC": "mods",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_F5": "swatch-4",
+        "KC_F6": "swatch-4",
+        "KC_F7": "swatch-2",
+        "KC_F8": "swatch-3",
+        "KC_SCLN": "base",
+        "KC_PSCR": "base",
+        "KC_SLCK": "base",
+        "KC_PAUSE": "base",
+        "KC_RSFT": "base",
+        "KC_LSFT": "accent",
+        "KC_UP": "base",
+        "KC_F1": "mods",
+        "KC_F2": "mods",
+        "KC_GRAVE": "mods",
+        "KC_1": "mods",
+        "KC_2": "mods",
+        "KC_Q": "mods",
+        "KC_F3": "accent",
+        "KC_F4": "accent",
+        "KC_3": "accent",
+        "KC_4": "accent",
+        "KC_W": "accent",
+        "KC_E": "accent",
+        "KC_A": "accent",
+        "KC_S": "accent",
+        "KC_Z": "accent",
+        "KC_LCTL": "accent",
+        "KC_LGUI": "accent",
+        "KC_LALT": "swatch-4",
+        "KC_RALT": "base",
+        "KC_RCTL": "base",
+        "KC_LEFT": "base",
+        "KC_RGHT": "base",
+        "KC_DOWN": "base",
+        "KC_PGDN": "base",
+        "KC_ENT": "base",
+        "KC_PGUP": "base",
+        "KC_DEL": "base",
+        "KC_BSPC": "base",
+        "KC_X": "swatch-4",
+        "KC_C": "swatch-4",
+        "KC_D": "swatch-4",
+        "KC_F": "swatch-4",
+        "KC_R": "swatch-4",
+        "KC_T": "swatch-4",
+        "KC_5": "swatch-4",
+        "KC_6": "swatch-4",
+        "KC_7": "swatch-2",
+        "KC_8": "swatch-3",
+        "KC_Y": "swatch-2",
+        "KC_U": "swatch-3",
+        "KC_G": "swatch-2",
+        "KC_V": "swatch-2",
+        "KC_I": "swatch-3",
+        "KC_9": "swatch-3",
+        "KC_F9": "swatch-3",
+        "KC_J": "swatch-3",
+        "KC_H": "swatch-3",
+        "KC_B": "swatch-3",
+        "KC_N": "swatch-3",
+        "KC_RGUI": "base",
+        "KC_APP": "base",
+        "KC_INS": "base",
+        "KC_HOME": "base",
+        "KC_END": "base"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "id": "pbtfans_twist_r2",
+    "label": "Twist R2",
+    "manufacturer": "PBTFans",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#555f67",
+            "color": "#c5c7ca",
+            "subColor": "#d6a23e"
+        },
+        "mods": {
+            "background": "#555f67",
+            "color": "#c5c7ca"
+        },
+        "accent": {
+            "background": "#d6a23e",
+            "color": "#555f67"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_LEFT": "accent",
+        "KC_RGHT": "accent"
+    }
+}

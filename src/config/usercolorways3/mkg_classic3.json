@@ -1,29 +1,29 @@
 {
-  "id": "mkg_classic3",
-  "label": "Classic-3",
-  "manufacturer": "Armorsuit",
-  "designer": "KGJun",
-  "swatches": {
-    "base": {
-      "background": "#bbbbbb",
-      "color": "#183171"
+    "id": "mkg_classic3",
+    "label": "Classic-3",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#bbbbbb",
+            "color": "#183171"
+        },
+        "mods": {
+            "background": "#a4aec9",
+            "color": "#183171"
+        },
+        "accent": {
+            "background": "#183171",
+            "color": "#a4aec9"
+        }
     },
-    "mods": {
-      "background": "#a4aec9",
-      "color": "#183171"
-    },
-    "accent": {
-      "background": "#183171",
-      "color": "#a4aec9"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods"
-  }
 }

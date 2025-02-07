@@ -1,0 +1,46 @@
+{
+    "id": "gmk_ntd",
+    "label": "NTD",
+    "designer": "엘기현고경표",
+    "swatches": {
+        "base": {
+            "background": "#b2b4b2",
+            "color": "#512179"
+        },
+        "mods": {
+            "background": "#45494e",
+            "color": "#a7a4e0"
+        },
+        "accent": {
+            "background": "#512179",
+            "color": "#a7a4e0"
+        },
+        "swatch-1": {
+            "background": "#dd1126",
+            "color": "#171718"
+        },
+        "swatch-2": {
+            "background": "#ebd400",
+            "color": "#171718"
+        },
+        "swatch-3": {
+            "background": "#00773a",
+            "color": "#171718"
+        },
+        "swatch-4": {
+            "background": "#0084c2",
+            "color": "#171718"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_UP": "swatch-4",
+        "KC_LEFT": "swatch-3",
+        "KC_DOWN": "swatch-2",
+        "KC_RGHT": "swatch-1",
+        "KC_SPC": "base"
+    },
+    "manufacturer": "GMK"
+}

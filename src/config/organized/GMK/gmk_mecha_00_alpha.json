@@ -1,0 +1,37 @@
+{
+    "id": "gmk_mecha_00_alpha",
+    "label": "MECHA_00 Alpha",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#fec723",
+            "color": "#171718"
+        },
+        "mods": {
+            "background": "#e2e0e1",
+            "color": "#171718"
+        },
+        "accent": {
+            "background": "#1c1c1c",
+            "color": "#f85b57"
+        },
+        "swatch1": {
+            "background": "#1c1c1c",
+            "color": "#e2e0e1"
+        }
+    },
+    "override": {
+        "KC_ENT": "mods",
+        "KC_ESC": "swatch1",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_UP": "swatch1",
+        "KC_DOWN": "swatch1",
+        "KC_RGHT": "swatch1",
+        "KC_LEFT": "swatch1"
+    }
+}

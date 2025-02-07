@@ -1,0 +1,51 @@
+{
+    "id": "gmk_parcel",
+    "label": "Parcel",
+    "manufacturer": "GMK",
+    "designer": "Verdi",
+    "swatches": {
+        "base": {
+            "background": "#f7f2ea",
+            "color": "#314e82"
+        },
+        "mods": {
+            "background": "#f7f2ea",
+            "color": "#dd1126"
+        },
+        "accent": {
+            "background": "#dd1126",
+            "color": "#314e82"
+        },
+        "swatch-1": {
+            "background": "#314e82",
+            "color": "#dd1126"
+        }
+    },
+    "override": {
+        "KC_GESC": "accent",
+        "KC_P": "base",
+        "KC_A": "base",
+        "KC_R": "base",
+        "KC_C": "base",
+        "KC_E": "base",
+        "KC_L": "base",
+        "KC_K": "base",
+        "KC_BSPC": "mods",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_UP": "swatch-1",
+        "KC_LEFT": "swatch-1",
+        "KC_DOWN": "swatch-1",
+        "KC_ESC": "swatch-1",
+        "KC_ENT": "swatch-1",
+        "KC_RGHT": "swatch-1",
+        "KC_PENT": "swatch-1",
+        "KC_PSLS": "base",
+        "KC_PAST": "base",
+        "KC_PMNS": "base",
+        "KC_PPLS": "base",
+        "KC_LCTL": "base"
+    }
+}

@@ -1,26 +1,25 @@
 {
-  "id": "mkg_sandstorm",
-  "label": "Sandstorm",
-  "manufacturer": "GMK",
-  "designer": "Verdi",
-  "swatches": {
-    "base": {
-      "background": "#ad9a79",
-      "color": "#cbccbe"
+    "id": "mkg_sandstorm",
+    "label": "Sandstorm",
+    "manufacturer": "GMK",
+    "designer": "Verdi",
+    "swatches": {
+        "base": {
+            "background": "#ad9a79",
+            "color": "#cbccbe"
+        },
+        "mods": {
+            "background": "#ad9a79",
+            "color": "#cbccbe"
+        },
+        "accent": {
+            "background": "#cbccbe",
+            "color": "#171718"
+        }
     },
-    "mods": {
-      "background": "#ad9a79",
-      "color": "#cbccbe"
-    },
-    "accent": {
-      "background": "#cbccbe",
-      "color": "#171718"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent"
-  }
 }
-

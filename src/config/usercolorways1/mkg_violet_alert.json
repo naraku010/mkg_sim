@@ -1,55 +1,55 @@
 {
-  "id": "mkg_violet_alert",
-  "label": "Violet Alert",
-  "manufacturer": "KKB",
-  "designer": "귤마시따",
-  "swatches": {
-    "base": {
-      "background": "#e1dbd1",
-      "color": "#47243c"
+    "id": "mkg_violet_alert",
+    "label": "Violet Alert",
+    "manufacturer": "GMK",
+    "designer": "귤마시따",
+    "swatches": {
+        "base": {
+            "background": "#e1dbd1",
+            "color": "#47243c"
+        },
+        "mods": {
+            "background": "#aca693",
+            "color": "#47243c"
+        },
+        "accent": {
+            "background": "#47243c",
+            "color": "#f7f2ea"
+        }
     },
-    "mods": {
-      "background": "#aca693",
-      "color": "#47243c"
-    },
-    "accent": {
-      "background": "#47243c",
-      "color": "#f7f2ea"
+    "override": {
+        "KC_ENT": "mods",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_SPCE": "base",
+        "KC_ESC": "accent",
+        "KC_DEL": "mods",
+        "KC_1": "accent",
+        "KC_2": "accent",
+        "KC_3": "accent",
+        "KC_4": "accent",
+        "KC_5": "accent",
+        "KC_6": "accent",
+        "KC_7": "accent",
+        "KC_8": "accent",
+        "KC_9": "accent",
+        "KC_0": "accent",
+        "KC_EQL": "accent",
+        "KC_MINS": "accent",
+        "KC_BSPC": "accent",
+        "KC_LALT": "mods",
+        "KC_RALT": "mods",
+        "KC_LEFT": "mods",
+        "KC_DOWN": "mods",
+        "KC_RGHT": "mods",
+        "KC_LGUI": "mods",
+        "KC_LCTL": "mods",
+        "KC_BSLS": "base",
+        "KC_UP": "mods",
+        "KC_HOME": "accent",
+        "KC_A": "base",
+        "KC_GRAVE": "accent",
+        "KC_INS": "accent",
+        "KC_PGUP": "accent"
     }
-  },
-  "override": {
-    "KC_ENT": "mods",
-    "KC_GESC": "accent",
-    "KC_SPC": "base",
-    "KC_SPCE": "base",
-    "KC_ESC": "accent",
-    "KC_DEL": "mods",
-    "KC_1": "accent",
-    "KC_2": "accent",
-    "KC_3": "accent",
-    "KC_4": "accent",
-    "KC_5": "accent",
-    "KC_6": "accent",
-    "KC_7": "accent",
-    "KC_8": "accent",
-    "KC_9": "accent",
-    "KC_0": "accent",
-    "KC_EQL": "accent",
-    "KC_MINS": "accent",
-    "KC_BSPC": "accent",
-    "KC_LALT": "mods",
-    "KC_RALT": "mods",
-    "KC_LEFT": "mods",
-    "KC_DOWN": "mods",
-    "KC_RGHT": "mods",
-    "KC_LGUI": "mods",
-    "KC_LCTL": "mods",
-    "KC_BSLS": "base",
-    "KC_UP": "mods",
-    "KC_HOME": "accent",
-    "KC_A": "base",
-    "KC_GRAVE": "accent",
-    "KC_INS": "accent",
-    "KC_PGUP": "accent"
-  }
 }

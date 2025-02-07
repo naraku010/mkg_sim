@@ -1,0 +1,48 @@
+{
+    "id": "gmk_thinkcaps",
+    "label": "Thinkcaps",
+    "manufacturer": "GMK",
+    "designer": "듀얼샷",
+    "swatches": {
+        "base": {
+            "background": "#171718",
+            "color": "#e1dbd1"
+        },
+        "mods": {
+            "background": "#393b3b",
+            "color": "#e1dbd1"
+        },
+        "accent": {
+            "background": "#3c4864",
+            "color": "#e1dbd1"
+        },
+        "swatch1": {
+            "background": "#bc251e",
+            "color": "#e1dbd1",
+            "subColor": "#e1dbd1"
+        },
+        "swatch2": {
+            "background": "#00773a",
+            "color": "#e1dbd1"
+        },
+        "swatch3": {
+            "background": "#0084c2",
+            "color": "#e1dbd1"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_LCTL": "swatch1",
+        "KC_LSFT": "swatch2",
+        "KC_RSFT": "swatch2",
+        "KC_LALT": "swatch3",
+        "KC_RALT": "swatch3",
+        "KC_RCTL": "swatch1",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

@@ -1,85 +1,85 @@
 {
-  "id": "mkg_aifei_love_story",
-  "label": "Aifei Love Story",
-  "manufacturer": "Aifei",
-  "designer": "KGJun",
-  "swatches": {
-    "base": {
-      "background": "#1c1b23",
-      "color": "#644c4c"
+    "id": "mkg_aifei_love_story",
+    "label": "Aifei Love Story",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#1c1b23",
+            "color": "#644c4c"
+        },
+        "mods": {
+            "background": "#644c4c",
+            "color": "#1c1b23"
+        },
+        "accent": {
+            "background": "#f08f48",
+            "color": "#1c1b23"
+        },
+        "swatch-1": {
+            "background": "#8e8e46",
+            "color": "#dfdaa2"
+        },
+        "swatch-2": {
+            "background": "#8e8e46",
+            "color": "#f08f48"
+        },
+        "swatch-3": {
+            "background": "#644c4c",
+            "color": "#f7f2ea"
+        },
+        "swatch-4": {
+            "background": "#1c1b23",
+            "color": "#f08f48"
+        }
     },
-    "mods": {
-      "background": "#644c4c",
-      "color": "#1c1b23"
-    },
-    "accent": {
-      "background": "#f08f48",
-      "color": "#1c1b23"
-    },
-    "swatch-1": {
-      "background": "#8e8e46",
-      "color": "#dfdaa2"
-    },
-    "swatch-2": {
-      "background": "#8e8e46",
-      "color": "#f08f48"
-    },
-    "swatch-3": {
-      "background": "#644c4c",
-      "color": "#f7f2ea"
-    },
-    "swatch-4": {
-      "background": "#1c1b23",
-      "color": "#f08f48"
+    "override": {
+        "KC_ENT": "mods",
+        "KC_ESC": "swatch-1",
+        "KC_GESC": "accent",
+        "KC_DOT": "swatch-1",
+        "KC_SLSH": "swatch-1",
+        "KC_SCLN": "swatch-1",
+        "KC_QUOT": "swatch-1",
+        "KC_LBRC": "swatch-1",
+        "KC_RBRC": "swatch-1",
+        "KC_COMM": "swatch-1",
+        "KC_BSLS": "mods",
+        "KC_F1": "mods",
+        "KC_F2": "mods",
+        "KC_F3": "mods",
+        "KC_F4": "mods",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_F10": "mods",
+        "KC_F9": "mods",
+        "KC_F11": "mods",
+        "KC_F12": "mods",
+        "KC_1": "accent",
+        "KC_2": "accent",
+        "KC_3": "accent",
+        "KC_4": "accent",
+        "KC_5": "accent",
+        "KC_7": "accent",
+        "KC_8": "accent",
+        "KC_6": "accent",
+        "KC_9": "accent",
+        "KC_MINS": "accent",
+        "KC_EQL": "accent",
+        "KC_0": "accent",
+        "KC_PSCR": "swatch-2",
+        "KC_SLCK": "swatch-2",
+        "KC_PAUSE": "swatch-2",
+        "KC_INS": "swatch-3",
+        "KC_DEL": "swatch-3",
+        "KC_END": "swatch-3",
+        "KC_HOME": "swatch-3",
+        "KC_PGUP": "swatch-3",
+        "KC_PGDN": "swatch-3",
+        "KC_GRAVE": "swatch-4",
+        "KC_LGUI": "swatch-3",
+        "KC_RGUI": "swatch-3"
     }
-  },
-  "override": {
-    "KC_ENT": "mods",
-    "KC_ESC": "swatch-1",
-    "KC_GESC": "accent",
-    "KC_DOT": "swatch-1",
-    "KC_SLSH": "swatch-1",
-    "KC_SCLN": "swatch-1",
-    "KC_QUOT": "swatch-1",
-    "KC_LBRC": "swatch-1",
-    "KC_RBRC": "swatch-1",
-    "KC_COMM": "swatch-1",
-    "KC_BSLS": "mods",
-    "KC_F1": "mods",
-    "KC_F2": "mods",
-    "KC_F3": "mods",
-    "KC_F4": "mods",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods",
-    "KC_F10": "mods",
-    "KC_F9": "mods",
-    "KC_F11": "mods",
-    "KC_F12": "mods",
-    "KC_1": "accent",
-    "KC_2": "accent",
-    "KC_3": "accent",
-    "KC_4": "accent",
-    "KC_5": "accent",
-    "KC_7": "accent",
-    "KC_8": "accent",
-    "KC_6": "accent",
-    "KC_9": "accent",
-    "KC_MINS": "accent",
-    "KC_EQL": "accent",
-    "KC_0": "accent",
-    "KC_PSCR": "swatch-2",
-    "KC_SLCK": "swatch-2",
-    "KC_PAUSE": "swatch-2",
-    "KC_INS": "swatch-3",
-    "KC_DEL": "swatch-3",
-    "KC_END": "swatch-3",
-    "KC_HOME": "swatch-3",
-    "KC_PGUP": "swatch-3",
-    "KC_PGDN": "swatch-3",
-    "KC_GRAVE": "swatch-4",
-    "KC_LGUI": "swatch-3",
-    "KC_RGUI": "swatch-3"
-  }
 }

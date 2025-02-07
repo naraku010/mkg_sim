@@ -1,0 +1,39 @@
+{
+    "id": "gmk_manhattan_cafe",
+    "label": "Manhattan Cafe",
+    "manufacturer": "GMK",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#3d4750",
+            "color": "#d9d7ca"
+        },
+        "mods": {
+            "background": "#cbc17e",
+            "color": "#3d4750"
+        },
+        "accent": {
+            "background": "#d9d7ca",
+            "color": "#3d4750"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_SPC": "accent",
+        "KC_PENT": "accent",
+        "KC_INS": "base",
+        "KC_HOME": "base",
+        "KC_PGUP": "base",
+        "KC_PGDN": "base",
+        "KC_END": "base",
+        "KC_DEL": "base",
+        "KC_P0": "mods",
+        "KC_BSLS": "mods"
+    }
+}

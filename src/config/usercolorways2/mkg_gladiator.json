@@ -1,31 +1,31 @@
 {
-  "id": "mkg_gladiator",
-  "label": "Gladiator",
-  "manufacturer": "",
-  "designer": "KGJun",
-  "swatches": {
-    "base": {
-      "background": "#1d5559",
-      "color": "#e5d6bc"
+    "id": "mkg_gladiator",
+    "label": "Gladiator",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#1d5559",
+            "color": "#e5d6bc"
+        },
+        "mods": {
+            "background": "#151515",
+            "color": "#e5d6bc"
+        },
+        "accent": {
+            "background": "#e5d6bc",
+            "color": "#151515"
+        }
     },
-    "mods": {
-      "background": "#151515",
-      "color": "#e5d6bc"
-    },
-    "accent": {
-      "background": "#e5d6bc",
-      "color": "#151515"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_SLCK": "mods"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_SPC": "base",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods",
-    "KC_SLCK": "mods"
-  }
 }

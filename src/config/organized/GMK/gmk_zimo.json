@@ -1,0 +1,41 @@
+{
+    "id": "gmk_zimo",
+    "label": "Zimo",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#d1c8bb",
+            "color": "#171718"
+        },
+        "mods": {
+            "background": "#d1c8bb",
+            "color": "#171718"
+        },
+        "accent": {
+            "background": "#118240",
+            "color": "#d1c8bb"
+        },
+        "swatch1": {
+            "background": "#1d66a0",
+            "color": "#d1c8bb"
+        },
+        "swatch2": {
+            "background": "#b92920",
+            "color": "#d1c8bb"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "swatch1",
+        "KC_GESC": "accent",
+        "KC_F5": "accent",
+        "KC_F6": "accent",
+        "KC_F7": "accent",
+        "KC_F8": "accent",
+        "KC_UP": "swatch2",
+        "KC_DOWN": "swatch2",
+        "KC_RGHT": "swatch2",
+        "KC_LEFT": "swatch2"
+    }
+}

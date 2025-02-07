@@ -1,82 +1,82 @@
 {
-  "id": "mkg_spark_light",
-  "label": "Spark light",
-  "manufacturer": "",
-  "designer": "귤마시따",
-  "swatches": {
-    "base": {
-      "background": "#f3fdf2",
-      "color": "#313948"
+    "id": "mkg_spark_light",
+    "label": "Spark light",
+    "manufacturer": "PBTFans",
+    "designer": "귤마시따",
+    "swatches": {
+        "base": {
+            "background": "#f3fdf2",
+            "color": "#313948"
+        },
+        "mods": {
+            "background": "#ecf5fd",
+            "color": "#313948"
+        },
+        "accent": {
+            "background": "#313948",
+            "color": "#f3fdf2"
+        },
+        "swatch-1": {
+            "background": "#ff5252",
+            "color": "#313948"
+        },
+        "swatch-2": {
+            "background": "#388eff",
+            "color": "#313948"
+        },
+        "swatch-3": {
+            "background": "#a17bdb",
+            "color": "#313948"
+        },
+        "swatch-4": {
+            "background": "#ee68b6",
+            "color": "#313948"
+        }
     },
-    "mods": {
-      "background": "#ecf5fd",
-      "color": "#313948"
-    },
-    "accent": {
-      "background": "#313948",
-      "color": "#f3fdf2"
-    },
-    "swatch-1": {
-      "background": "#ff5252",
-      "color": "#313948"
-    },
-    "swatch-2": {
-      "background": "#388eff",
-      "color": "#313948"
-    },
-    "swatch-3": {
-      "background": "#a17bdb",
-      "color": "#313948"
-    },
-    "swatch-4": {
-      "background": "#ee68b6",
-      "color": "#313948"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_SPCE": "base",
+        "KC_ESC": "accent",
+        "KC_DEL": "mods",
+        "KC_1": "base",
+        "KC_2": "base",
+        "KC_3": "base",
+        "KC_4": "base",
+        "KC_5": "base",
+        "KC_6": "base",
+        "KC_7": "base",
+        "KC_8": "base",
+        "KC_9": "base",
+        "KC_0": "base",
+        "KC_EQL": "base",
+        "KC_MINS": "base",
+        "KC_BSPC": "mods",
+        "KC_LALT": "swatch-2",
+        "KC_RALT": "swatch-2",
+        "KC_LEFT": "accent",
+        "KC_DOWN": "accent",
+        "KC_RGHT": "accent",
+        "KC_LCTL": "swatch-4",
+        "KC_BSLS": "base",
+        "KC_UP": "accent",
+        "KC_HOME": "mods",
+        "KC_A": "base",
+        "KC_GRAVE": "mods",
+        "KC_INS": "mods",
+        "KC_PGUP": "mods",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_T": "base",
+        "KC_DOT": "base",
+        "KC_RSFT": "swatch-1",
+        "KC_LSFT": "swatch-1",
+        "KC_APP": "accent",
+        "KC_RCTL": "swatch-4",
+        "KC_LGUI": "swatch-3",
+        "KC_RGUI": "swatch-3"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_GESC": "accent",
-    "KC_SPC": "base",
-    "KC_SPCE": "base",
-    "KC_ESC": "accent",
-    "KC_DEL": "mods",
-    "KC_1": "base",
-    "KC_2": "base",
-    "KC_3": "base",
-    "KC_4": "base",
-    "KC_5": "base",
-    "KC_6": "base",
-    "KC_7": "base",
-    "KC_8": "base",
-    "KC_9": "base",
-    "KC_0": "base",
-    "KC_EQL": "base",
-    "KC_MINS": "base",
-    "KC_BSPC": "mods",
-    "KC_LALT": "swatch-2",
-    "KC_RALT": "swatch-2",
-    "KC_LEFT": "accent",
-    "KC_DOWN": "accent",
-    "KC_RGHT": "accent",
-    "KC_LCTL": "swatch-4",
-    "KC_BSLS": "base",
-    "KC_UP": "accent",
-    "KC_HOME": "mods",
-    "KC_A": "base",
-    "KC_GRAVE": "mods",
-    "KC_INS": "mods",
-    "KC_PGUP": "mods",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods",
-    "KC_T": "base",
-    "KC_DOT": "base",
-    "KC_RSFT": "swatch-1",
-    "KC_LSFT": "swatch-1",
-    "KC_APP": "accent",
-    "KC_RCTL": "swatch-4",
-    "KC_LGUI": "swatch-3",
-    "KC_RGUI": "swatch-3"
-  }
 }

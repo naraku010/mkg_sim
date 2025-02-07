@@ -1,0 +1,29 @@
+{
+    "id": "gmk_jags",
+    "label": "Jags",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#c8d0d6",
+            "color": "#f5f7f9"
+        },
+        "mods": {
+            "background": "#929ca2",
+            "color": "#f5f7f9"
+        },
+        "accent": {
+            "background": "#5ba39b",
+            "color": "#f5f7f9"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

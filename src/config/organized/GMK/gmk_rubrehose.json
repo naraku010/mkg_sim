@@ -1,0 +1,57 @@
+{
+    "id": "gmk_rubrehose",
+    "label": "Rubrehose",
+    "manufacturer": "GMK",
+    "designer": "듀얼샷",
+    "swatches": {
+        "base": {
+            "background": "#ccc6b3",
+            "color": "#3e3832"
+        },
+        "mods": {
+            "background": "#a4a69d",
+            "color": "#3e3832",
+            "subColor": "#3e3832"
+        },
+        "accent": {
+            "background": "#ee519a",
+            "color": "#3e3832"
+        },
+        "swatch1": {
+            "background": "#27b8e4",
+            "color": "#3e3832"
+        },
+        "swatch2": {
+            "background": "#7cd251",
+            "color": "#3e3832"
+        },
+        "swatch3": {
+            "background": "#9c77e8",
+            "color": "#3e3832"
+        },
+        "swatch4": {
+            "background": "#fbc024",
+            "color": "#3e3832"
+        },
+        "swatch5": {
+            "background": "#e74c5e",
+            "color": "#3e3832"
+        }
+    },
+    "override": {
+        "KC_ENT": "swatch2",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_BSPC": "swatch4",
+        "KC_CAPS": "swatch3",
+        "KC_LCTL": "swatch5",
+        "KC_LALT": "swatch1",
+        "KC_RALT": "swatch1",
+        "KC_RCTL": "swatch5",
+        "KC_DOWN": "mods",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

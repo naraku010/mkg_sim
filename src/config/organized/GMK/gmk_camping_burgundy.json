@@ -1,0 +1,34 @@
+{
+    "id": "gmk_camping_burgundy",
+    "label": "Camping Burgundy",
+    "manufacturer": "GMK",
+    "swatches": {
+        "base": {
+            "background": "rgb(238, 226, 208)",
+            "color": "#713f3e"
+        },
+        "mods": {
+            "background": "#713f3e",
+            "color": "rgb(238, 226, 208)"
+        },
+        "accent": {
+            "background": "#5b7c5b",
+            "color": "rgb(238, 226, 208)"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "accent",
+        "KC_LEFT": "accent",
+        "KC_DOWN": "accent",
+        "KC_RGHT": "accent",
+        "KC_UP": "accent",
+        "KC_PENT": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

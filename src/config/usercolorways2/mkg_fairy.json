@@ -1,31 +1,31 @@
 {
-  "id": "mkg_fairy",
-  "label": "Fairy",
-  "manufacturer": "",
-  "designer": "Yeony",
-  "swatches": {
-    "base": {
-      "background": "#d4d3f4",
-      "color": "#807bbc"
+    "id": "mkg_fairy",
+    "label": "Fairy",
+    "manufacturer": "PBTFans",
+    "designer": "Yeony",
+    "swatches": {
+        "base": {
+            "background": "#d4d3f4",
+            "color": "#807bbc"
+        },
+        "mods": {
+            "background": "#7b7ccf",
+            "color": "#c1c9df"
+        },
+        "accent": {
+            "background": "#7b7ccf",
+            "color": "#c1c9df"
+        }
     },
-    "mods": {
-      "background": "#7b7ccf",
-      "color": "#c1c9df"
-    },
-    "accent": {
-      "background": "#7b7ccf",
-      "color": "#c1c9df"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_PENT": "accent"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_SPC": "base",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods",
-    "KC_PENT": "accent"
-  }
 }

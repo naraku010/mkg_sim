@@ -1,29 +1,29 @@
 {
-  "id": "mkg_nama",
-  "label": "Nama",
-  "manufacturer": "Keykobo",
-  "designer": "KGJun",
-  "swatches": {
-    "base": {
-      "background": "#885c51",
-      "color": "#5b4541"
+    "id": "mkg_nama",
+    "label": "Nama",
+    "manufacturer": "ePBT",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#885c51",
+            "color": "#5b4541"
+        },
+        "mods": {
+            "background": "#885c51",
+            "color": "#5b4541"
+        },
+        "accent": {
+            "background": "#5b4541",
+            "color": "#885c51"
+        }
     },
-    "mods": {
-      "background": "#885c51",
-      "color": "#5b4541"
-    },
-    "accent": {
-      "background": "#5b4541",
-      "color": "#885c51"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_RGHT": "accent",
+        "KC_LEFT": "accent"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_UP": "accent",
-    "KC_DOWN": "accent",
-    "KC_RGHT": "accent",
-    "KC_LEFT": "accent"
-  }
 }

@@ -1,0 +1,94 @@
+{
+    "id": "domikey_love_story",
+    "label": "Love Story",
+    "manufacturer": "Domikey",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#414d41",
+            "color": "#685342"
+        },
+        "mods": {
+            "background": "#685342",
+            "color": "#171718"
+        },
+        "accent": {
+            "background": "#a5977b",
+            "color": "#533d44"
+        },
+        "swatch-1": {
+            "background": "#c17a42",
+            "color": "#171718"
+        },
+        "swatch-2": {
+            "background": "#171718",
+            "color": "#d9d1b8"
+        },
+        "swatch-3": {
+            "background": "#d9d1b8",
+            "color": "#414d41"
+        },
+        "swatch-4": {
+            "background": "#685342",
+            "color": "#d9d1b8"
+        },
+        "swatch-5": {
+            "background": "#171718",
+            "color": "#685342"
+        }
+    },
+    "override": {
+        "KC_ENT": "mods",
+        "KC_ESC": "swatch-2",
+        "KC_GESC": "accent",
+        "KC_SPC": "mods",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_LCTL": "swatch-1",
+        "KC_LGUI": "swatch-1",
+        "KC_LALT": "swatch-1",
+        "KC_RALT": "swatch-1",
+        "KC_RGUI": "swatch-1",
+        "KC_APP": "swatch-1",
+        "KC_RCTL": "swatch-1",
+        "KC_PSCR": "swatch-5",
+        "KC_SLCK": "swatch-5",
+        "KC_PAUSE": "swatch-5",
+        "KC_1": "swatch-3",
+        "KC_2": "swatch-3",
+        "KC_3": "swatch-3",
+        "KC_4": "swatch-3",
+        "KC_5": "swatch-3",
+        "KC_6": "swatch-3",
+        "KC_7": "swatch-3",
+        "KC_8": "swatch-3",
+        "KC_9": "swatch-3",
+        "KC_0": "swatch-3",
+        "KC_MINS": "swatch-3",
+        "KC_EQL": "swatch-3",
+        "KC_F1": "mods",
+        "KC_F2": "mods",
+        "KC_F3": "mods",
+        "KC_F4": "mods",
+        "KC_F9": "mods",
+        "KC_F11": "mods",
+        "KC_F10": "mods",
+        "KC_F12": "mods",
+        "KC_BSLS": "mods",
+        "KC_LBRC": "swatch-2",
+        "KC_RBRC": "swatch-2",
+        "KC_QUOT": "swatch-2",
+        "KC_SCLN": "swatch-2",
+        "KC_DOT": "swatch-2",
+        "KC_SLSH": "swatch-2",
+        "KC_COMM": "swatch-2",
+        "KC_INS": "swatch-4",
+        "KC_HOME": "swatch-4",
+        "KC_PGUP": "swatch-4",
+        "KC_PGDN": "swatch-4",
+        "KC_END": "swatch-4",
+        "KC_DEL": "swatch-4"
+    }
+}

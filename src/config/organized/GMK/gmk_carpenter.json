@@ -1,0 +1,41 @@
+{
+    "id": "gmk_carpenter",
+    "label": "Carpenter",
+    "manufacturer": "GMK",
+    "designer": "Yeony",
+    "swatches": {
+        "base": {
+            "background": "#bdac99",
+            "color": "#7f6b5c"
+        },
+        "mods": {
+            "background": "#d8cbbb",
+            "color": "#7f6b5c"
+        },
+        "accent": {
+            "background": "#725b4e",
+            "color": "#d9c2b5"
+        }
+    },
+    "override": {
+        "KC_SPC": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_ESC": "accent",
+        "KC_ENT": "accent",
+        "KC_PENT": "accent",
+        "KC_Z": "base",
+        "KC_X": "base",
+        "KC_A": "base",
+        "KC_S": "base",
+        "KC_O": "base",
+        "KC_J": "base",
+        "KC_I": "base",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_LEFT": "accent",
+        "KC_RGHT": "accent"
+    }
+}

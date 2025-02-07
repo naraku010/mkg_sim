@@ -1,25 +1,25 @@
 {
-  "id": "mkg_chladni",
-  "label": "Chladni",
-  "manufacturer": "GMK",
-  "designer": "KGJun",
-  "swatches": {
-    "base": {
-      "background": "#482f2f",
-      "color": "#ece3cd"
+    "id": "mkg_chladni",
+    "label": "Chladni",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#482f2f",
+            "color": "#ece3cd"
+        },
+        "mods": {
+            "background": "#482f2f",
+            "color": "#ece3cd"
+        },
+        "accent": {
+            "background": "#482f2f",
+            "color": "#ece3cd"
+        }
     },
-    "mods": {
-      "background": "#482f2f",
-      "color": "#ece3cd"
-    },
-    "accent": {
-      "background": "#482f2f",
-      "color": "#ece3cd"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent"
-  }
 }

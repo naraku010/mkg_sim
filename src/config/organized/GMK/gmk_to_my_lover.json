@@ -1,0 +1,39 @@
+{
+    "id": "gmk_to_my_lover",
+    "label": "To my lover",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#d4d3cd",
+            "color": "#ac555c"
+        },
+        "mods": {
+            "background": "#ac555c",
+            "color": "#f7f2ea"
+        },
+        "accent": {
+            "background": "#d1b7bb",
+            "color": "#ac555c"
+        }
+    },
+    "override": {
+        "KC_ENT": "mods",
+        "KC_ESC": "mods",
+        "KC_GESC": "accent",
+        "KC_SPC": "accent",
+        "KC_Z": "accent",
+        "KC_X": "accent",
+        "KC_A": "accent",
+        "KC_Q": "accent",
+        "KC_1": "accent",
+        "KC_F11": "accent",
+        "KC_RBRC": "accent",
+        "KC_QUOT": "accent",
+        "KC_SLSH": "accent",
+        "KC_DOT": "accent",
+        "KC_BSLS": "mods",
+        "KC_F12": "mods",
+        "KC_GRAVE": "mods"
+    }
+}

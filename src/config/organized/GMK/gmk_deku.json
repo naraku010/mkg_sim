@@ -1,0 +1,38 @@
+{
+    "id": "gmk_deku",
+    "label": "Deku",
+    "manufacturer": "GMK",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#2a8286",
+            "subColor": "#e5e1de",
+            "color": "#e5e1de"
+        },
+        "mods": {
+            "background": "#e5e1de",
+            "subColor": "#2a8286",
+            "color": "#2a8286"
+        },
+        "accent": {
+            "background": "#b03231",
+            "subColor": "#e5e1de",
+            "color": "#e5e1de"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_DOWN": "accent",
+        "KC_UP": "accent",
+        "KC_LEFT": "accent",
+        "KC_RGHT": "accent",
+        "KC_PENT": "accent",
+        "KC_SPC": "accent"
+    }
+}

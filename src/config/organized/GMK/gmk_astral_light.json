@@ -1,0 +1,25 @@
+{
+    "id": "gmk_astral_light",
+    "label": "Astral Light",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#c1ceee",
+            "color": "#566385"
+        },
+        "mods": {
+            "background": "#c1ceee",
+            "color": "#566385"
+        },
+        "accent": {
+            "background": "#c2dbe7",
+            "color": "#566385"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent"
+    }
+}

@@ -1,35 +1,35 @@
 {
-  "id": "mkg_daifuku",
-  "label": "daifuku",
-  "manufacturer": "",
-  "designer": "",
-  "swatches": {
-    "base": {
-      "background": "#f1dbd8",
-      "color": "#9b696e"
+    "id": "mkg_daifuku",
+    "label": "daifuku",
+    "manufacturer": "GMK",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#f1dbd8",
+            "color": "#9b696e"
+        },
+        "mods": {
+            "background": "#9b696e",
+            "color": "#f1dbd8"
+        },
+        "accent": {
+            "background": "#e29a9f",
+            "color": "#f1dbd8"
+        }
     },
-    "mods": {
-      "background": "#9b696e",
-      "color": "#f1dbd8"
-    },
-    "accent": {
-      "background": "#e29a9f",
-      "color": "#f1dbd8"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_SPC": "base",
+        "KC_LEFT": "accent",
+        "KC_DOWN": "accent",
+        "KC_UP": "accent",
+        "KC_RGHT": "accent",
+        "KC_PENT": "accent"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods",
-    "KC_SPC": "base",
-    "KC_LEFT": "accent",
-    "KC_DOWN": "accent",
-    "KC_UP": "accent",
-    "KC_RGHT": "accent",
-    "KC_PENT": "accent"
-  }
 }

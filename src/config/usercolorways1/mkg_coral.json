@@ -1,26 +1,26 @@
 {
-  "id": "mkg_coral",
-  "label": "Coral",
-  "manufacturer": "",
-  "designer": "엘기현고경표",
-  "swatches": {
-    "base": {
-      "background": "#e1dbd1",
-      "color": "#ff6f61"
+    "id": "mkg_coral",
+    "label": "Coral",
+    "manufacturer": "GMK",
+    "designer": "엘기현고경표",
+    "swatches": {
+        "base": {
+            "background": "#e1dbd1",
+            "color": "#ff6f61"
+        },
+        "mods": {
+            "background": "#ff6f61",
+            "color": "#e1dbd1"
+        },
+        "accent": {
+            "background": "#98dddf",
+            "color": "#ff6f61"
+        }
     },
-    "mods": {
-      "background": "#ff6f61",
-      "color": "#e1dbd1"
-    },
-    "accent": {
-      "background": "#98dddf",
-      "color": "#ff6f61"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_SPC": "base"
-  }
 }

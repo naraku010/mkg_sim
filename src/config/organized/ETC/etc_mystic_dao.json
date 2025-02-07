@@ -1,0 +1,26 @@
+{
+    "id": "etc_mystic_dao",
+    "label": "MYSTIC DAO",
+    "manufacturer": "ETC",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#c6964f",
+            "color": "#50473a"
+        },
+        "mods": {
+            "background": "#c6964f",
+            "color": "#50473a"
+        },
+        "accent": {
+            "background": "#50473a",
+            "color": "#c6964f"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "accent"
+    }
+}

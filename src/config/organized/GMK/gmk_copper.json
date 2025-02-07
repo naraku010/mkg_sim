@@ -1,0 +1,29 @@
+{
+    "id": "gmk_copper",
+    "label": "Copper",
+    "manufacturer": "GMK",
+    "designer": "Endeavour",
+    "swatches": {
+        "base": {
+            "background": "#b46a55",
+            "color": "#422f29"
+        },
+        "mods": {
+            "background": "#422f29",
+            "color": "#b46a55"
+        },
+        "accent": {
+            "background": "#7ebab5",
+            "color": "#422f29"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

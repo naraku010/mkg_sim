@@ -1,0 +1,30 @@
+{
+    "id": "maxkey_calm_depths",
+    "label": "Calm Depths",
+    "manufacturer": "MAXKEY",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#2b3651",
+            "color": "#19b6c5"
+        },
+        "mods": {
+            "background": "#4c5761",
+            "color": "#19b6c5"
+        },
+        "accent": {
+            "background": "#4c5761",
+            "color": "#19b6c5"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

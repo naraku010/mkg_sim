@@ -1,0 +1,29 @@
+{
+    "id": "gmk_boho",
+    "label": "Boho",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#c6c3bf",
+            "color": "#171718"
+        },
+        "mods": {
+            "background": "#464642",
+            "color": "#c6c3bf"
+        },
+        "accent": {
+            "background": "#805b4a",
+            "color": "#c6c3bf"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

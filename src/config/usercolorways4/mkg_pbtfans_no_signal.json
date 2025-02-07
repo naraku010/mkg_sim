@@ -1,7 +1,7 @@
 {
     "id": "mkg_pbtfans_no_signal",
     "label": "PBTFANS No Signal",
-    "manufacturer": "",
+    "manufacturer": "PBTFans",
     "designer": "KGJun",
     "swatches": {
         "base": {

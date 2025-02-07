@@ -1,0 +1,29 @@
+{
+    "id": "gmk_cream_matcha",
+    "label": "Cream Matcha",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#81a560",
+            "color": "#d5c9ad"
+        },
+        "mods": {
+            "background": "#d5c9ad",
+            "color": "#81a560"
+        },
+        "accent": {
+            "background": "#d5c9ad",
+            "color": "#81a560"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

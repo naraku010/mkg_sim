@@ -1,0 +1,35 @@
+{
+    "id": "gmk_3run",
+    "label": "3Run",
+    "manufacturer": "GMK",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#f7f2ea",
+            "color": "#222222"
+        },
+        "mods": {
+            "background": "#dfd72b",
+            "color": "#222222"
+        },
+        "accent": {
+            "background": "#28b0a6",
+            "color": "#222222"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_LEFT": "accent",
+        "KC_RGHT": "accent",
+        "KC_PENT": "accent"
+    }
+}

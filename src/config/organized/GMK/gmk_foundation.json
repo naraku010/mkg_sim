@@ -1,0 +1,53 @@
+{
+    "id": "gmk_foundation",
+    "label": "Foundation",
+    "manufacturer": "GMK",
+    "designer": "엘기현고경표",
+    "swatches": {
+        "base": {
+            "background": "#e1dbd1",
+            "color": "#91867a"
+        },
+        "mods": {
+            "background": "#91867a",
+            "color": "#e1dbd1"
+        },
+        "accent": {
+            "background": "#393b3b",
+            "color": "#e1dbd1"
+        },
+        "swatch-1": {
+            "background": "#7fa580",
+            "color": "#e1dbd1"
+        },
+        "swatch-2": {
+            "background": "#bc251e",
+            "color": "#e1dbd1"
+        },
+        "swatch-3": {
+            "background": "#ee6900",
+            "color": "#e1dbd1"
+        },
+        "swatch-4": {
+            "background": "#c87e74",
+            "color": "#e1dbd1"
+        },
+        "swatch-5": {
+            "background": "#00627a",
+            "color": "#e1dbd1"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_LSFT": "swatch-1",
+        "KC_RSFT": "swatch-1",
+        "KC_LCTL": "swatch-2",
+        "KC_LGUI": "swatch-3",
+        "KC_LALT": "swatch-5",
+        "KC_RALT": "swatch-5",
+        "MO(1)": "swatch-4",
+        "KC_SPC": "base"
+    }
+}

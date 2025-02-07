@@ -1,41 +1,41 @@
 {
-  "id": "mkg_dandy",
-  "label": "Dandy",
-  "manufacturer": "",
-  "designer": "KGJun",
-  "swatches": {
-    "base": {
-      "background": "#748572",
-      "color": "#b9b4aa"
+    "id": "mkg_dandy",
+    "label": "Dandy",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#748572",
+            "color": "#b9b4aa"
+        },
+        "mods": {
+            "background": "#748572",
+            "color": "#b9b4aa"
+        },
+        "accent": {
+            "background": "#b9b4aa",
+            "color": "#748572"
+        }
     },
-    "mods": {
-      "background": "#748572",
-      "color": "#b9b4aa"
-    },
-    "accent": {
-      "background": "#b9b4aa",
-      "color": "#748572"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F1": "base",
+        "KC_F2": "base",
+        "KC_F3": "base",
+        "KC_F4": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_F9": "base",
+        "KC_F10": "base",
+        "KC_F11": "base",
+        "KC_F12": "base",
+        "KC_PSCR": "mods",
+        "KC_SLCK": "mods",
+        "KC_PAUSE": "mods",
+        "KC_SPC": "base"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_F1": "base",
-    "KC_F2": "base",
-    "KC_F3": "base",
-    "KC_F4": "base",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods",
-    "KC_F9": "base",
-    "KC_F10": "base",
-    "KC_F11": "base",
-    "KC_F12": "base",
-    "KC_PSCR": "mods",
-    "KC_SLCK": "mods",
-    "KC_PAUSE": "mods",
-    "KC_SPC": "base"
-  }
 }

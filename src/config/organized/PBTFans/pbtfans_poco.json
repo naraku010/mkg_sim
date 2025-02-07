@@ -1,0 +1,26 @@
+{
+    "id": "pbtfans_poco",
+    "label": "Poco",
+    "manufacturer": "PBTFans",
+    "designer": "Yeony",
+    "swatches": {
+        "base": {
+            "background": "#fdf1e8",
+            "color": "#2243c6"
+        },
+        "mods": {
+            "background": "#fcd7e1",
+            "color": "#2243c6"
+        },
+        "accent": {
+            "background": "#2243c6",
+            "color": "#ffd1de"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base"
+    }
+}

@@ -1,7 +1,7 @@
 {
     "id": "mkg_dcs_soware",
     "label": "DCS Soware",
-    "manufacturer": "",
+    "manufacturer": "DCS",
     "designer": "oblomov",
     "swatches": {
         "base": {

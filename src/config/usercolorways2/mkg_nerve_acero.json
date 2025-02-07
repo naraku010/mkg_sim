@@ -1,29 +1,29 @@
 {
-  "id": "mkg_nerve_acero",
-  "label": "Nerve(Acero)",
-  "manufacturer": "",
-  "designer": "KGJun",
-  "swatches": {
-    "base": {
-      "background": "#d2d3d6",
-      "color": "#7c4a9e"
+    "id": "mkg_nerve_acero",
+    "label": "Nerve(Acero)",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#d2d3d6",
+            "color": "#7c4a9e"
+        },
+        "mods": {
+            "background": "#7d7f7e",
+            "color": "#e7ea3c"
+        },
+        "accent": {
+            "background": "#7d7f7e",
+            "color": "#e7ea3c"
+        }
     },
-    "mods": {
-      "background": "#7d7f7e",
-      "color": "#e7ea3c"
-    },
-    "accent": {
-      "background": "#7d7f7e",
-      "color": "#e7ea3c"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods"
-  }
 }

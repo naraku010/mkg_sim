@@ -1,0 +1,29 @@
+{
+    "id": "gmk_yuru",
+    "label": "Yuru",
+    "manufacturer": "GMK",
+    "designer": "듀얼샷",
+    "swatches": {
+        "base": {
+            "background": "#e1dbd1",
+            "color": "#712f3e"
+        },
+        "mods": {
+            "background": "#712f3e",
+            "color": "#e1dbd1"
+        },
+        "accent": {
+            "background": "#88d4cc",
+            "color": "#e1dbd1"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

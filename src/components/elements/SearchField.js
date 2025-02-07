@@ -26,7 +26,7 @@ export default function SearchField(props) {
       <input
         aria-label="Colorway Search"
         type="search"
-        placeholder="Search"
+        placeholder="(브랜드, 키캡명)"
         value={value}
         onChange={handelChange}
       />

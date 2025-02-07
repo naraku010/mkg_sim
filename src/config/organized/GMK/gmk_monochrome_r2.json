@@ -1,0 +1,29 @@
+{
+    "id": "gmk_monochrome_r2",
+    "label": "Monochrome R2",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#e5e5e5",
+            "color": "#171718"
+        },
+        "mods": {
+            "background": "#171718",
+            "color": "#e5e5e5"
+        },
+        "accent": {
+            "background": "#dd1126",
+            "color": "#e5e5e5"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

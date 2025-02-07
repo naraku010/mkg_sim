@@ -3,8 +3,7 @@ import Colorway from "./Colorway";
 import Button from "../elements/Button";
 import styles from "./ColorwayList.module.scss";
 import {useSelector, useDispatch} from "react-redux";
-import COLORWAYS from "../../config/colorways/colorways";
-import {USERCOLORWAYS, USERCOLORWAYS_NEW} from "../../config/colorwayList";
+
 import CollapsibleSection from "../containers/CollapsibleSection";
 import SearchField from "../elements/SearchField";
 import ColorUtil from "../../util/color";
@@ -15,6 +14,7 @@ import {
 } from "../../store/slices/colorways";
 
 import {ReactComponent as PlusIcon} from "../../assets/icons/icon_plus.svg";
+import {KC_COLORWAYS} from "../../config/organized/keycaps";
 
 export default function ColorwayList(props) {
     const dispatch = useDispatch();
@@ -22,13 +22,15 @@ export default function ColorwayList(props) {
     const [filter, setFilter] = useState("");
 
     const filteredColorways = (obj) => {
-        return Object.keys(obj)
+        const df = Object.keys(obj)
             .sort()
             .filter((cw) => {
                 return filter.length
                     ? cw.toLowerCase().includes(filter.toLowerCase())
                     : true;
             });
+
+        return df;
     };
 
 
@@ -36,16 +38,8 @@ export default function ColorwayList(props) {
         <Colorway key={s.id} colorway={s} custom={true} setTab={props.setTab}/>
     ));
 
-    const colorwayTiles = filteredColorways(COLORWAYS).map((s) => (
-        <Colorway key={COLORWAYS[s]?.id} colorway={COLORWAYS[s]}/>
-    ));
-
-    const userColorwayTiles = filteredColorways(USERCOLORWAYS).map((s) => (
-        <Colorway key={USERCOLORWAYS[s]?.id} colorway={USERCOLORWAYS[s]}/>
-    ));
-
-    const userNewColorwayTiles = filteredColorways(USERCOLORWAYS_NEW).map((s) => (
-        <Colorway key={USERCOLORWAYS_NEW[s]?.id} colorway={USERCOLORWAYS_NEW[s]}/>
+    const userNewColorwayTiles = filteredColorways(KC_COLORWAYS).map((s) => (
+        <Colorway key={KC_COLORWAYS[s]?.id} colorway={KC_COLORWAYS[s]}/>
     ));
 
 
@@ -56,7 +50,7 @@ export default function ColorwayList(props) {
     };
 
     return (
-        <CollapsibleSection title="하우징 색상" open={true}>
+        <CollapsibleSection title="키캡 종류" open={true}>
             <div>
                 <div className={styles.group}>
                     <SearchField
@@ -84,38 +78,22 @@ export default function ColorwayList(props) {
                     {customColorwayTiles}
                 </ul>
                 <div aria-hidden="true" className={styles.newListLabel}>
-                    <span>신상 색상</span>
-                </div>
-                <ul className={styles.list} aria-label="기키갤 제공 색상">
-                    {userNewColorwayTiles}
-                </ul>
-                <div aria-hidden="true" className={styles.listLabel}>
                     <span>업로드 색상</span>
                 </div>
-                <ul className={styles.list} aria-label="기키갤 제공 색상">
-                    {userColorwayTiles}
+                <ul className={styles.list} aria-label="제공 색상">
+                    {userNewColorwayTiles}
                 </ul>
-                {customColorwayTiles.length ? (
-                    <div aria-hidden="true" className={styles.listLabel}>
-                        <span>기존 색상</span>
-                    </div>
-                ) : null}
-                {colorwayTiles.length ? (
-                    <ul className={styles.list} aria-label="community colorways list">
-                        {colorwayTiles}
-                    </ul>
-                ) : (
-                    <p
-                        style={{
-                            fontSize: "16px",
-                            padding: "1em",
-                            margin: "0",
-                            width: "100%",
-                        }}
-                    >
-                        데이터 없음
-                    </p>
-                )}{" "}
+                {/*<div aria-hidden="true" className={styles.listLabel}>*/}
+                {/*    <span>업로드 색상</span>*/}
+                {/*</div>*/}
+                {/*<ul className={styles.list} aria-label="기키갤 제공 색상">*/}
+                {/*    {userColorwayTiles}*/}
+                {/*</ul>*/}
+                {/*{customColorwayTiles.length ? (*/}
+                {/*    <div aria-hidden="true" className={styles.listLabel}>*/}
+                {/*        <span>기존 색상</span>*/}
+                {/*    </div>*/}
+                {/*) : null}*/}
             </div>
         </CollapsibleSection>
     );

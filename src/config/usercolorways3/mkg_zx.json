@@ -1,60 +1,60 @@
 {
-  "id": "mkg_zx",
-  "label": "ZX",
-  "manufacturer": "GMK",
-  "designer": "KGJun",
-  "swatches": {
-    "base": {
-      "background": "#5f676a",
-      "color": "#e1e0e1"
+    "id": "mkg_zx",
+    "label": "ZX",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#5f676a",
+            "color": "#e1e0e1"
+        },
+        "mods": {
+            "background": "#5f676a",
+            "color": "#e1e0e1"
+        },
+        "accent": {
+            "background": "#5f676a",
+            "color": "#e1e0e1"
+        },
+        "swatch1": {
+            "background": "#e43b3e",
+            "color": "#171718"
+        },
+        "swatch2": {
+            "background": "#e4c043",
+            "color": "#171718"
+        },
+        "swatch3": {
+            "background": "#77ba59",
+            "color": "#171718"
+        },
+        "swatch4": {
+            "background": "#66cfcb",
+            "color": "#171718"
+        }
     },
-    "mods": {
-      "background": "#5f676a",
-      "color": "#e1e0e1"
-    },
-    "accent": {
-      "background": "#5f676a",
-      "color": "#e1e0e1"
-    },
-    "swatch1": {
-      "background": "#e43b3e",
-      "color": "#171718"
-    },
-    "swatch2": {
-      "background": "#e4c043",
-      "color": "#171718"
-    },
-    "swatch3": {
-      "background": "#77ba59",
-      "color": "#171718"
-    },
-    "swatch4": {
-      "background": "#66cfcb",
-      "color": "#171718"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_A": "swatch1",
+        "KC_W": "swatch1",
+        "KC_3": "swatch1",
+        "KC_Z": "swatch2",
+        "KC_S": "swatch2",
+        "KC_E": "swatch2",
+        "KC_4": "swatch2",
+        "KC_5": "swatch3",
+        "KC_R": "swatch3",
+        "KC_D": "swatch3",
+        "KC_X": "swatch3",
+        "KC_C": "swatch4",
+        "KC_F": "swatch4",
+        "KC_T": "swatch4",
+        "KC_6": "swatch4",
+        "KC_LEFT": "mods",
+        "KC_UP": "mods",
+        "KC_DOWN": "mods",
+        "KC_RGHT": "mods"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_A": "swatch1",
-    "KC_W": "swatch1",
-    "KC_3": "swatch1",
-    "KC_Z": "swatch2",
-    "KC_S": "swatch2",
-    "KC_E": "swatch2",
-    "KC_4": "swatch2",
-    "KC_5": "swatch3",
-    "KC_R": "swatch3",
-    "KC_D": "swatch3",
-    "KC_X": "swatch3",
-    "KC_C": "swatch4",
-    "KC_F": "swatch4",
-    "KC_T": "swatch4",
-    "KC_6": "swatch4",
-    "KC_LEFT": "mods",
-    "KC_UP": "mods",
-    "KC_DOWN": "mods",
-    "KC_RGHT": "mods"
-  }
 }

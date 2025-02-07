@@ -1,0 +1,58 @@
+{
+    "id": "gmk_trader_boomer",
+    "label": "Trader Boomer",
+    "manufacturer": "GMK",
+    "designer": "듀얼샷",
+    "swatches": {
+        "base": {
+            "background": "#a1a098",
+            "color": "#e1dbd1"
+        },
+        "mods": {
+            "background": "#86887c",
+            "color": "#e1dbd1"
+        },
+        "accent": {
+            "background": "#edba23",
+            "color": "#171718"
+        },
+        "swatch1": {
+            "background": "#3d823f",
+            "color": "#171718",
+            "subColor": "#171718"
+        },
+        "swatch2": {
+            "background": "#ae372a",
+            "color": "#171718",
+            "subColor": "#171718"
+        },
+        "swatch3": {
+            "background": "#19767b",
+            "color": "#171718",
+            "subColor": "#171718"
+        }
+    },
+    "override": {
+        "KC_ENT": "swatch1",
+        "KC_ESC": "swatch2",
+        "KC_GESC": "accent",
+        "KC_F1": "swatch1",
+        "KC_F2": "accent",
+        "KC_F3": "accent",
+        "KC_F4": "accent",
+        "KC_F5": "accent",
+        "KC_F6": "accent",
+        "KC_F7": "accent",
+        "KC_F8": "accent",
+        "KC_F9": "accent",
+        "KC_F10": "accent",
+        "KC_F11": "accent",
+        "KC_F12": "accent",
+        "KC_PSCR": "swatch1",
+        "KC_PAUSE": "swatch2",
+        "KC_LALT": "swatch1",
+        "KC_RGUI": "mods",
+        "KC_RALT": "swatch1",
+        "KC_APP": "swatch3"
+    }
+}

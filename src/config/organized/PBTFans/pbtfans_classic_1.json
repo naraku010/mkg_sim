@@ -1,0 +1,58 @@
+{
+    "id": "pbtfans_classic_1",
+    "label": "Classic_1",
+    "manufacturer": "PBTFans",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#f3efec",
+            "color": "#171718"
+        },
+        "mods": {
+            "background": "#d3cdc1",
+            "color": "#171718"
+        },
+        "accent": {
+            "background": "#d3cdc1",
+            "color": "#171718"
+        },
+        "swatch1": {
+            "background": "#097941",
+            "color": "#171718"
+        },
+        "swatch2": {
+            "background": "#d10028",
+            "color": "#171718"
+        },
+        "swatch3": {
+            "background": "#fdd83f",
+            "color": "#171718"
+        },
+        "swatch4": {
+            "background": "#0c67ba",
+            "color": "#171718"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_LSFT": "swatch1",
+        "KC_RSFT": "swatch1",
+        "KC_UP": "swatch1",
+        "KC_APP": "swatch1",
+        "KC_LCTL": "swatch2",
+        "KC_RCTL": "swatch2",
+        "KC_LEFT": "swatch2",
+        "KC_LGUI": "swatch3",
+        "KC_RGUI": "swatch3",
+        "KC_DOWN": "swatch3",
+        "KC_LALT": "swatch4",
+        "KC_RALT": "swatch4",
+        "KC_RGHT": "swatch4"
+    }
+}

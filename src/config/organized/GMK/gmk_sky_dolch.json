@@ -1,0 +1,30 @@
+{
+    "id": "gmk_sky_dolch",
+    "label": "Sky Dolch",
+    "manufacturer": "GMK",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#67635b",
+            "color": "#4ea19d"
+        },
+        "mods": {
+            "background": "#393b3b",
+            "color": "#4ea19d"
+        },
+        "accent": {
+            "background": "#393b3b",
+            "color": "#4ea19d"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_SPC": "base"
+    }
+}

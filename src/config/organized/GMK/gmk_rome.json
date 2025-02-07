@@ -1,0 +1,34 @@
+{
+    "id": "gmk_rome",
+    "label": "Rome",
+    "manufacturer": "GMK",
+    "swatches": {
+        "base": {
+            "background": "#151515",
+            "color": "#fdf2ea"
+        },
+        "mods": {
+            "background": "#fdf2ea",
+            "color": "#60232d"
+        },
+        "accent": {
+            "background": "#772c37",
+            "color": "#fdf2ea"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "accent",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_LEFT": "accent",
+        "KC_RGHT": "accent",
+        "KC_PENT": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

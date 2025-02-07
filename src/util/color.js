@@ -1,5 +1,3 @@
-import COLORWAYS from "../config/colorways/colorways";
-import {USERCOLORWAYS,USERCOLORWAYS_NEW} from "../config/colorwayList";
 import initial_settings from "../config/settings_user_default.json";
 import { updateCustomColorway } from "../store/slices/colorways";
 import * as colorConvert from "color-convert";
@@ -7,6 +5,7 @@ import colorwayTemplate from "../config/colorways/colorway_template.json";
 import { subscribe } from "redux-subscriber";
 import store from "../store/store";
 import Util from "./math";
+import {KC_COLORWAYS} from "../config/organized/keycaps";
 
 const accentOptions = [
   {
@@ -62,7 +61,7 @@ export default class ColorUtil {
 
   static getColorway(cw_name) {
     cw_name = cw_name || initial_settings.colorways.active;
-    let cw = COLORWAYS[cw_name] || USERCOLORWAYS[cw_name] || USERCOLORWAYS_NEW[cw_name];
+    let cw = KC_COLORWAYS[cw_name];
     return cw || this.getUserColorway(cw_name) || "";
   }
 

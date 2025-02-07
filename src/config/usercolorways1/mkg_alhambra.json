@@ -1,7 +1,7 @@
 {
     "id": "mkg_alhambra",
     "label": "Alhambra",
-    "manufacturer": "Unknown",
+    "manufacturer": "GMK",
     "swatches": {
         "base": {
             "background": "#e8e7e0",

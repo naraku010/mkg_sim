@@ -1,0 +1,37 @@
+{
+    "id": "pbtfans_spark",
+    "label": "Spark",
+    "manufacturer": "PBTFans",
+    "designer": "Yeony",
+    "swatches": {
+        "base": {
+            "background": "#293742",
+            "color": "#f4fffd"
+        },
+        "mods": {
+            "background": "#536d84",
+            "color": "#f4fffd"
+        },
+        "accent": {
+            "background": "#536d84",
+            "color": "#f4fffd"
+        }
+    },
+    "override": {
+        "KC_SPC": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_ESC": "accent",
+        "KC_ENT": "accent",
+        "KC_PENT": "accent",
+        "KC_Z": "base",
+        "KC_X": "base",
+        "KC_A": "base",
+        "KC_S": "base",
+        "KC_O": "base",
+        "KC_J": "base",
+        "KC_I": "base"
+    }
+}

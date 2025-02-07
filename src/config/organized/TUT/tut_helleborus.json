@@ -1,0 +1,29 @@
+{
+    "id": "tut_helleborus",
+    "label": "Helleborus",
+    "manufacturer": "TUT",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#161324",
+            "color": "#dce0a5"
+        },
+        "mods": {
+            "background": "#1c1023",
+            "color": "#dce0a5"
+        },
+        "accent": {
+            "background": "#58183d",
+            "color": "#dce0a5"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

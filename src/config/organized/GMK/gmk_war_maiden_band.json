@@ -1,0 +1,29 @@
+{
+    "id": "gmk_war_maiden_band",
+    "label": "War Maiden band",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#b2a9a0",
+            "color": "#2f251c"
+        },
+        "mods": {
+            "background": "#552323",
+            "color": "#ababa9"
+        },
+        "accent": {
+            "background": "#552323",
+            "color": "#ababa9"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

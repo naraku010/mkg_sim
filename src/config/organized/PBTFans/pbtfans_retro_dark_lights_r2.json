@@ -1,0 +1,54 @@
+{
+    "id": "pbtfans_retro_dark_lights_r2",
+    "label": "Retro Dark Lights R2",
+    "manufacturer": "PBTFans",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#2f3336",
+            "color": "#6b6d6e"
+        },
+        "mods": {
+            "background": "#151515",
+            "color": "#6b6d6e"
+        },
+        "accent": {
+            "background": "#5eaeff",
+            "color": "#ff26ff"
+        },
+        "swatch-1": {
+            "background": "#0b4626",
+            "color": "#106336"
+        },
+        "swatch-2": {
+            "background": "#5d2421",
+            "color": "#7d2d2b"
+        },
+        "swatch-3": {
+            "background": "#755d2b",
+            "color": "#997a38"
+        },
+        "swatch-4": {
+            "background": "#15385d",
+            "color": "#1c4b7d"
+        }
+    },
+    "override": {
+        "KC_ENT": "mods",
+        "KC_ESC": "mods",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_LEFT": "swatch-3",
+        "KC_DOWN": "swatch-4",
+        "KC_UP": "swatch-2",
+        "KC_RGHT": "swatch-1",
+        "KC_R": "swatch-2",
+        "KC_G": "swatch-1",
+        "KC_Y": "swatch-3",
+        "KC_B": "swatch-4"
+    }
+}

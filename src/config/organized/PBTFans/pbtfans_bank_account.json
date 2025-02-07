@@ -1,0 +1,33 @@
+{
+    "id": "pbtfans_bank_account",
+    "label": "Bank Account",
+    "manufacturer": "PBTFans",
+    "designer": "Yeony",
+    "swatches": {
+        "base": {
+            "background": "#fee9ba",
+            "color": "#2c4c2c"
+        },
+        "mods": {
+            "background": "#d6eaac",
+            "color": "#2c4c2c"
+        },
+        "accent": {
+            "background": "#d6eaac",
+            "color": "#2c4c2c"
+        }
+    },
+    "override": {
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_UP": "base",
+        "KC_DOWN": "base",
+        "KC_LEFT": "base",
+        "KC_RGHT": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

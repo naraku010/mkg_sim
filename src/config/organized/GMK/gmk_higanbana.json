@@ -1,0 +1,51 @@
+{
+    "id": "gmk_higanbana",
+    "label": "Higanbana",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#252525",
+            "color": "#651e1d"
+        },
+        "mods": {
+            "background": "#651e1d",
+            "color": "#252525"
+        },
+        "accent": {
+            "background": "#651e1d",
+            "color": "#82731b"
+        },
+        "swatch1": {
+            "background": "#252525",
+            "color": "#82731b"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_GRAVE": "swatch1",
+        "KC_1": "swatch1",
+        "KC_2": "swatch1",
+        "KC_3": "swatch1",
+        "KC_4": "swatch1",
+        "KC_5": "swatch1",
+        "KC_6": "swatch1",
+        "KC_7": "swatch1",
+        "KC_8": "swatch1",
+        "KC_9": "swatch1",
+        "KC_0": "swatch1",
+        "KC_MINS": "swatch1",
+        "KC_EQL": "swatch1",
+        "KC_BSPC": "swatch1",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_RGHT": "accent",
+        "KC_LEFT": "accent"
+    }
+}

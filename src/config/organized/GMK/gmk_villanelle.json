@@ -1,0 +1,25 @@
+{
+    "id": "gmk_villanelle",
+    "label": "Villanelle",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#42111b",
+            "color": "#c8aec1"
+        },
+        "mods": {
+            "background": "#42111b",
+            "color": "#c8aec1"
+        },
+        "accent": {
+            "background": "#42111b",
+            "color": "#c8aec1"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent"
+    }
+}

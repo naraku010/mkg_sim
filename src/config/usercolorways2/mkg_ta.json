@@ -1,39 +1,39 @@
 {
-  "id": "mkg_ta",
-  "label": "ta royal alpha typewriter",
-  "manufacturer": "",
-  "designer": "",
-  "swatches": {
-    "base": {
-      "background": "#f5f4eb",
-      "color": "#449b58"
+    "id": "mkg_ta",
+    "label": "ta royal alpha typewriter",
+    "manufacturer": "GMK",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#f5f4eb",
+            "color": "#449b58"
+        },
+        "mods": {
+            "background": "#98ce37",
+            "color": "#f5f4eb"
+        },
+        "accent": {
+            "background": "#4ba25d",
+            "color": "#f5f4eb"
+        }
     },
-    "mods": {
-      "background": "#98ce37",
-      "color": "#f5f4eb"
-    },
-    "accent": {
-      "background": "#4ba25d",
-      "color": "#f5f4eb"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "accent",
+        "KC_GRAVE": "mods",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_BSLS": "mods",
+        "KC_PENT": "accent",
+        "KC_RGHT": "accent",
+        "KC_DOWN": "accent",
+        "KC_LEFT": "accent",
+        "KC_UP": "accent",
+        "KC_LGUI": "accent",
+        "KC_RGUI": "accent"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_SPC": "accent",
-    "KC_GRAVE": "mods",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods",
-    "KC_BSLS": "mods",
-    "KC_PENT": "accent",
-    "KC_RGHT": "accent",
-    "KC_DOWN": "accent",
-    "KC_LEFT": "accent",
-    "KC_UP": "accent",
-    "KC_LGUI": "accent",
-    "KC_RGUI": "accent"
-  }
 }

@@ -1,0 +1,29 @@
+{
+    "id": "gmk_blurple",
+    "label": "Blurple",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#757998",
+            "color": "#d3d1d2"
+        },
+        "mods": {
+            "background": "#909ad0",
+            "color": "#d3d1d2"
+        },
+        "accent": {
+            "background": "#d3d1d2",
+            "color": "#909ad0"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_F5": "mods"
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "id": "epbt_coffee_latte",
+    "label": "Coffee Latte",
+    "manufacturer": "ePBT",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#927765",
+            "color": "#dcd3c6"
+        },
+        "mods": {
+            "background": "#5b5351",
+            "color": "#927765"
+        },
+        "accent": {
+            "background": "#dcd3c6",
+            "color": "#bea38b"
+        },
+        "swatch1": {
+            "background": "#bea38b",
+            "color": "#5b5351"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "swatch1",
+        "KC_GESC": "accent",
+        "KC_SPC": "swatch1",
+        "KC_CAPS": "swatch1",
+        "KC_TAB": "swatch1",
+        "KC_F1": "swatch1",
+        "KC_F2": "swatch1",
+        "KC_F3": "swatch1",
+        "KC_F4": "swatch1",
+        "KC_F9": "swatch1",
+        "KC_F10": "swatch1",
+        "KC_F11": "swatch1",
+        "KC_F12": "swatch1",
+        "KC_GRAVE": "accent",
+        "KC_1": "accent",
+        "KC_2": "accent",
+        "KC_3": "accent",
+        "KC_4": "accent",
+        "KC_5": "accent",
+        "KC_6": "accent",
+        "KC_7": "accent",
+        "KC_8": "accent",
+        "KC_9": "accent",
+        "KC_0": "accent",
+        "KC_MINS": "accent",
+        "KC_EQL": "accent",
+        "KC_BSPC": "accent",
+        "KC_DEL": "accent",
+        "KC_END": "accent",
+        "KC_PGDN": "accent",
+        "KC_PGUP": "accent",
+        "KC_HOME": "accent",
+        "KC_INS": "accent",
+        "KC_PSCR": "accent",
+        "KC_SLCK": "accent",
+        "KC_PAUSE": "accent"
+    }
+}

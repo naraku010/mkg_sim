@@ -1,29 +1,26 @@
 {
-  "id": "mkg_olive_noir",
-  "label": "Olive Noir",
-  "manufacturer": "",
-  "designer": "Verdi",
-  "swatches": {
-    "base": {
-      "background": "#45433b",
-      "color": "#8e916d"
+    "id": "mkg_olive_noir",
+    "label": "Olive Noir",
+    "manufacturer": "GMK",
+    "designer": "Verdi",
+    "swatches": {
+        "base": {
+            "background": "#45433b",
+            "color": "#8e916d"
+        },
+        "mods": {
+            "background": "#45433b",
+            "color": "#8e916d"
+        },
+        "accent": {
+            "background": "#8e916d",
+            "color": "#45433b"
+        }
     },
-    "mods": {
-      "background": "#45433b",
-      "color": "#8e916d"
-    },
-    "accent": {
-      "background": "#8e916d",
-      "color": "#45433b"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_PENT": "accent"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_PENT": "accent"
-  }
 }
-
-
-

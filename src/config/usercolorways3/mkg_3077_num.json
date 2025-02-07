@@ -1,46 +1,46 @@
 {
-  "id": "mkg_3077_num",
-  "label": "3077(Num Row)",
-  "manufacturer": "GMK",
-  "designer": "KGJun",
-  "swatches": {
-    "base": {
-      "background": "#c3bfbe",
-      "color": "#171718"
+    "id": "mkg_3077_num",
+    "label": "3077(Num Row)",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#c3bfbe",
+            "color": "#171718"
+        },
+        "mods": {
+            "background": "#969593",
+            "color": "#171718"
+        },
+        "accent": {
+            "background": "#493b38",
+            "color": "#f7f2ea"
+        }
     },
-    "mods": {
-      "background": "#969593",
-      "color": "#171718"
-    },
-    "accent": {
-      "background": "#493b38",
-      "color": "#f7f2ea"
+    "override": {
+        "KC_ENT": "mods",
+        "KC_ESC": "mods",
+        "KC_GESC": "accent",
+        "KC_GRAVE": "accent",
+        "KC_1": "accent",
+        "KC_2": "accent",
+        "KC_3": "accent",
+        "KC_4": "accent",
+        "KC_5": "accent",
+        "KC_7": "accent",
+        "KC_6": "accent",
+        "KC_8": "accent",
+        "KC_9": "accent",
+        "KC_0": "accent",
+        "KC_MINS": "accent",
+        "KC_EQL": "accent",
+        "KC_BSPC": "accent",
+        "KC_INS": "accent",
+        "KC_HOME": "accent",
+        "KC_PGUP": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
     }
-  },
-  "override": {
-    "KC_ENT": "mods",
-    "KC_ESC": "mods",
-    "KC_GESC": "accent",
-    "KC_GRAVE": "accent",
-    "KC_1": "accent",
-    "KC_2": "accent",
-    "KC_3": "accent",
-    "KC_4": "accent",
-    "KC_5": "accent",
-    "KC_7": "accent",
-    "KC_6": "accent",
-    "KC_8": "accent",
-    "KC_9": "accent",
-    "KC_0": "accent",
-    "KC_MINS": "accent",
-    "KC_EQL": "accent",
-    "KC_BSPC": "accent",
-    "KC_INS": "accent",
-    "KC_HOME": "accent",
-    "KC_PGUP": "accent",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods"
-  }
 }

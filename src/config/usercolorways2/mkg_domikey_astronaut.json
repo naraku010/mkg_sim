@@ -1,30 +1,29 @@
 {
-  "id": "mkg_domikey_astronaut",
-  "label": "Domikey Astronaut",
-  "manufacturer": "",
-  "designer": "",
-  "swatches": {
-    "base": {
-      "background": "#e0d9c9",
-      "color": "#7e7d79"
+    "id": "mkg_domikey_astronaut",
+    "label": "Domikey Astronaut",
+    "manufacturer": "Domikey",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#e0d9c9",
+            "color": "#7e7d79"
+        },
+        "mods": {
+            "background": "#686865",
+            "color": "#e0d9c9"
+        },
+        "accent": {
+            "background": "#7d413e",
+            "color": "#e0d9c9"
+        }
     },
-    "mods": {
-      "background": "#686865",
-      "color": "#e0d9c9"
-    },
-    "accent": {
-      "background": "#7d413e",
-      "color": "#e0d9c9"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_LEFT": "accent",
+        "KC_DOWN": "accent",
+        "KC_UP": "accent",
+        "KC_RGHT": "accent"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_LEFT": "accent",
-    "KC_DOWN": "accent",
-    "KC_UP": "accent",
-    "KC_RGHT": "accent"
-  }
 }
-

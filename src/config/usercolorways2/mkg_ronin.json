@@ -1,38 +1,38 @@
 {
-  "id": "mkg_ronin",
-  "label": "Ronin",
-  "manufacturer": "",
-  "designer": "KGJun",
-  "swatches": {
-    "base": {
-      "background": "#121731",
-      "color": "#c9bbae"
+    "id": "mkg_ronin",
+    "label": "Ronin",
+    "manufacturer": "PBTFans",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#121731",
+            "color": "#c9bbae"
+        },
+        "mods": {
+            "background": "#c9bbae",
+            "color": "#171718"
+        },
+        "accent": {
+            "background": "#682c30",
+            "color": "#c9bbae"
+        }
     },
-    "mods": {
-      "background": "#c9bbae",
-      "color": "#171718"
-    },
-    "accent": {
-      "background": "#682c30",
-      "color": "#c9bbae"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_LSFT": "mods",
+        "KC_R": "base",
+        "KC_O": "base",
+        "KC_N": "base",
+        "KC_I": "base",
+        "KC_RGHT": "mods",
+        "KC_C": "base",
+        "KC_LALT": "mods",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_SPC": "base",
-    "KC_LSFT": "mods",
-    "KC_R": "base",
-    "KC_O": "base",
-    "KC_N": "base",
-    "KC_I": "base",
-    "KC_RGHT": "mods",
-    "KC_C": "base",
-    "KC_LALT": "mods",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods"
-  }
 }

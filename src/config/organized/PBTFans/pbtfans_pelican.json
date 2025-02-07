@@ -1,0 +1,44 @@
+{
+    "id": "pbtfans_pelican",
+    "label": "Pelican",
+    "manufacturer": "PBTFans",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#e0c7ad",
+            "color": "#333333"
+        },
+        "mods": {
+            "background": "#343434",
+            "color": "#fdb5a4"
+        },
+        "accent": {
+            "background": "#dfa055",
+            "color": "#f7f2ea"
+        }
+    },
+    "override": {
+        "KC_ENT": "mods",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_1": "accent",
+        "KC_2": "accent",
+        "KC_3": "accent",
+        "KC_4": "accent",
+        "KC_5": "accent",
+        "KC_6": "accent",
+        "KC_EQL": "accent",
+        "KC_MINS": "accent",
+        "KC_0": "accent",
+        "KC_9": "accent",
+        "KC_8": "accent",
+        "KC_7": "accent",
+        "KC_GRAVE": "mods",
+        "KC_SPC": "base",
+        "KC_BSPC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

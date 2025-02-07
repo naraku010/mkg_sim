@@ -1,29 +1,29 @@
 {
-  "id": "mkg_sang",
-  "label": "Black Snail",
-  "manufacturer": "",
-  "designer": "엘기현고경표",
-  "swatches": {
-    "base": {
-      "background": "#171718",
-      "color": "#d8d2c3"
+    "id": "mkg_sang",
+    "label": "Black Snail",
+    "manufacturer": "GMK",
+    "designer": "엘기현고경표",
+    "swatches": {
+        "base": {
+            "background": "#171718",
+            "color": "#d8d2c3"
+        },
+        "mods": {
+            "background": "#171718",
+            "color": "#d8d2c3"
+        },
+        "accent": {
+            "background": "#171718",
+            "color": "#d8d2c3"
+        },
+        "swatch-1": {
+            "background": "#d8d2c3",
+            "color": "#171718"
+        }
     },
-    "mods": {
-      "background": "#171718",
-      "color": "#d8d2c3"
-    },
-    "accent": {
-      "background": "#171718",
-      "color": "#d8d2c3"
-    },
-    "swatch-1": {
-      "background": "#d8d2c3",
-      "color": "#171718"
+    "override": {
+        "KC_ENT": "swatch-1",
+        "KC_ESC": "swatch-1",
+        "KC_GESC": "accent"
     }
-  },
-  "override": {
-    "KC_ENT": "swatch-1",
-    "KC_ESC": "swatch-1",
-    "KC_GESC": "accent"
-  }
 }

@@ -1,0 +1,35 @@
+{
+    "id": "gmk_wavez",
+    "label": "Wavez",
+    "manufacturer": "GMK",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#0f313a",
+            "color": "#5bd50c"
+        },
+        "mods": {
+            "background": "#1d252b",
+            "color": "#5bd50c"
+        },
+        "accent": {
+            "background": "#5bd50c",
+            "color": "#1d252b"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_PENT": "accent",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_LEFT": "accent",
+        "KC_RGHT": "accent"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "id": "gmk_matsu",
+    "label": "Matsu",
+    "manufacturer": "GMK",
+    "designer": "엘기현고경표",
+    "swatches": {
+        "base": {
+            "background": "#d8d2c3",
+            "color": "#393b3b"
+        },
+        "mods": {
+            "background": "#393b3b",
+            "color": "#d8d2c3"
+        },
+        "accent": {
+            "background": "#e5a100",
+            "color": "#d8d2c3"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

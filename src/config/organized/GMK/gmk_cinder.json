@@ -1,0 +1,30 @@
+{
+    "id": "gmk_cinder",
+    "label": "Cinder",
+    "manufacturer": "GMK",
+    "designer": "엘기현고경표",
+    "swatches": {
+        "base": {
+            "background": "#505759",
+            "color": "#ff6900"
+        },
+        "mods": {
+            "background": "#505759",
+            "color": "#25282a"
+        },
+        "accent": {
+            "background": "#25282a",
+            "color": "#ff6900"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_SPC": "base",
+        "KC_ESC": "accent"
+    }
+}

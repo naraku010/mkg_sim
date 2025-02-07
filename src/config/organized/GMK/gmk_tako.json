@@ -1,0 +1,29 @@
+{
+    "id": "gmk_tako",
+    "label": "Tako",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#b6b4b0",
+            "color": "#31243d"
+        },
+        "mods": {
+            "background": "#31243d",
+            "color": "#9e6e33"
+        },
+        "accent": {
+            "background": "#9e6e33",
+            "color": "#eeeeee"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_F6": "mods"
+    }
+}

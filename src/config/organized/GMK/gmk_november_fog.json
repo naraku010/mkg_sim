@@ -1,0 +1,30 @@
+{
+    "id": "gmk_november_fog",
+    "label": "November Fog",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#c4c6c8",
+            "color": "#6f6761"
+        },
+        "mods": {
+            "background": "#9ea7a4",
+            "color": "#6f6761"
+        },
+        "accent": {
+            "background": "#6f6761",
+            "color": "#9ea7a4"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "id": "gmk_art",
+    "label": "Art",
+    "manufacturer": "GMK",
+    "designer": "엘기현고경표",
+    "swatches": {
+        "base": {
+            "background": "#e9e0d2",
+            "color": "#171718"
+        },
+        "mods": {
+            "background": "#e9e0d2",
+            "color": "#171718"
+        },
+        "accent": {
+            "background": "#ce0058",
+            "color": "#171718"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent"
+    }
+}

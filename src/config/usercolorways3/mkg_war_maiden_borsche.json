@@ -1,29 +1,29 @@
 {
-  "id": "mkg_war_maiden_borsche",
-  "label": "War Maiden (Brosche)",
-  "manufacturer": "KCH",
-  "designer": "KGJun",
-  "swatches": {
-    "base": {
-      "background": "#b2a9a0",
-      "color": "#2f251c"
+    "id": "mkg_war_maiden_borsche",
+    "label": "War Maiden (Brosche)",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#b2a9a0",
+            "color": "#2f251c"
+        },
+        "mods": {
+            "background": "#2d543c",
+            "color": "#ababa9"
+        },
+        "accent": {
+            "background": "#2d543c",
+            "color": "#ababa9"
+        }
     },
-    "mods": {
-      "background": "#2d543c",
-      "color": "#ababa9"
-    },
-    "accent": {
-      "background": "#2d543c",
-      "color": "#ababa9"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods"
-  }
 }

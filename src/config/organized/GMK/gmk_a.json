@@ -1,0 +1,31 @@
+{
+    "id": "gmk_a",
+    "label": "a",
+    "manufacturer": "GMK",
+    "designer": "듀얼샷",
+    "swatches": {
+        "base": {
+            "background": "#dee6ec",
+            "color": "#006687"
+        },
+        "mods": {
+            "background": "#006687",
+            "color": "#dee6ec"
+        },
+        "accent": {
+            "background": "#a33737",
+            "color": "#dee6ec"
+        }
+    },
+    "override": {
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_RALT": "mods",
+        "KC_LALT": "mods",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_ENT": "accent"
+    }
+}

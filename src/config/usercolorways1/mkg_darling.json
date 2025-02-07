@@ -1,26 +1,26 @@
 {
-  "id": "mkg_darling",
-  "label": "Darling",
-  "manufacturer": "",
-  "designer": "엘기현고경표",
-  "swatches": {
-    "base": {
-      "background": "#f4cdd4",
-      "color": "#bb1e10"
+    "id": "mkg_darling",
+    "label": "Darling",
+    "manufacturer": "GMK",
+    "designer": "엘기현고경표",
+    "swatches": {
+        "base": {
+            "background": "#f4cdd4",
+            "color": "#bb1e10"
+        },
+        "mods": {
+            "background": "#861a22",
+            "color": "#f4cdd4"
+        },
+        "accent": {
+            "background": "#f7f2ea",
+            "color": "#bb1e10"
+        }
     },
-    "mods": {
-      "background": "#861a22",
-      "color": "#f4cdd4"
-    },
-    "accent": {
-      "background": "#f7f2ea",
-      "color": "#bb1e10"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_SPC": "base"
-  }
 }

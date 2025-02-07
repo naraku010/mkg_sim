@@ -50,6 +50,11 @@ export default function Colorway(props) {
                 aria-label={"Apply colorway " + props.colorway?.label}
             >
                 <div className={styles.info}>
+                    {props.colorway?.manufacturer ?
+                        <p className={styles.manufacturer}>
+                            {props.colorway?.manufacturer}
+                        </p> : null
+                    }
                     <p className={styles.title}>
                         {props.colorway?.label || "신상 컬러"}
                     </p>

@@ -1,0 +1,39 @@
+{
+    "id": "gmk_olive_blanc",
+    "label": "Olive Blanc",
+    "manufacturer": "GMK",
+    "designer": "Verdi",
+    "swatches": {
+        "base": {
+            "background": "#eae5cf",
+            "color": "#8e916d"
+        },
+        "mods": {
+            "background": "#45433b",
+            "color": "#8e916d"
+        },
+        "accent": {
+            "background": "#8e916d",
+            "color": "#45433b"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_N": "base",
+        "KC_O": "base",
+        "KC_I": "base",
+        "KC_R": "base",
+        "KC_4": "base",
+        "KC_5": "base",
+        "KC_A": "base",
+        "KC_C": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_LCTL": "mods"
+    }
+}

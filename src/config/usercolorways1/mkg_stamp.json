@@ -1,52 +1,51 @@
 {
-  "id": "mkg_stamp",
-  "label": "Stamp",
-  "swatches": {
-    "base": {
-      "background": "#dcd3bf",
-      "color": "#423b56"
+    "id": "mkg_stamp",
+    "label": "Stamp",
+    "swatches": {
+        "base": {
+            "background": "#dcd3bf",
+            "color": "#423b56"
+        },
+        "mods": {
+            "background": "#d3b692",
+            "color": "#423b56"
+        },
+        "accent": {
+            "background": "#ae6d51",
+            "color": "#423b56"
+        },
+        "swatch-94506": {
+            "background": "#ea5212",
+            "color": "#423b56"
+        }
     },
-    "mods": {
-      "background": "#d3b692",
-      "color": "#423b56"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "swatch-94506",
+        "KC_GESC": "accent",
+        "KC_F5": "accent",
+        "KC_F6": "accent",
+        "KC_F7": "accent",
+        "KC_F8": "accent",
+        "KC_SPC": "accent",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_LEFT": "accent",
+        "KC_RGHT": "accent",
+        "KC_TAB": "base",
+        "KC_GRAVE": "mods",
+        "KC_1": "mods",
+        "KC_2": "mods",
+        "KC_3": "mods",
+        "KC_4": "mods",
+        "KC_5": "mods",
+        "KC_6": "mods",
+        "KC_7": "mods",
+        "KC_8": "mods",
+        "KC_9": "mods",
+        "KC_0": "mods",
+        "KC_MINS": "mods",
+        "KC_EQL": "mods"
     },
-    "accent": {
-      "background": "#ae6d51",
-      "color": "#423b56"
-    },
-    "swatch-94506": {
-      "background": "#ea5212",
-      "color": "#423b56"
-    }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "swatch-94506",
-    "KC_GESC": "accent",
-    "KC_F5": "accent",
-    "KC_F6": "accent",
-    "KC_F7": "accent",
-    "KC_F8": "accent",
-    "KC_SPC": "accent",
-    "KC_UP": "accent",
-    "KC_DOWN": "accent",
-    "KC_LEFT": "accent",
-    "KC_RGHT": "accent",
-    "KC_TAB": "base",
-    "KC_GRAVE": "mods",
-    "KC_1": "mods",
-    "KC_2": "mods",
-    "KC_3": "mods",
-    "KC_4": "mods",
-    "KC_5": "mods",
-    "KC_6": "mods",
-    "KC_7": "mods",
-    "KC_8": "mods",
-    "KC_9": "mods",
-    "KC_0": "mods",
-    "KC_MINS": "mods",
-    "KC_EQL": "mods",
-    "KC_GRAVE": "mods"
-  }
+    "manufacturer": "ePBT"
 }
-

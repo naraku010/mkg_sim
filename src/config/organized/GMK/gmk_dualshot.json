@@ -1,0 +1,63 @@
+{
+    "id": "gmk_dualshot",
+    "label": "Dualshot",
+    "manufacturer": "GMK",
+    "designer": "엘기현고경표",
+    "swatches": {
+        "base": {
+            "background": "#727474",
+            "color": "#393b3b"
+        },
+        "mods": {
+            "background": "#727474",
+            "color": "#393b3b"
+        },
+        "accent": {
+            "background": "#727474",
+            "color": "#dd1126"
+        },
+        "swatch-1": {
+            "background": "#727474",
+            "color": "#e5a100"
+        },
+        "swatch-2": {
+            "background": "#727474",
+            "color": "#00a4a9"
+        },
+        "swatch-3": {
+            "background": "#727474",
+            "color": "#0084c2"
+        },
+        "swatch-4": {
+            "background": "#dd1126",
+            "color": "#393b3b"
+        },
+        "swatch-5": {
+            "background": "#e5a100",
+            "color": "#393b3b"
+        },
+        "swatch-6": {
+            "background": "#00a4a9",
+            "color": "#393b3b"
+        },
+        "swatch-7": {
+            "background": "#0084c2",
+            "color": "#393b3b"
+        }
+    },
+    "override": {
+        "KC_ENT": "swatch-6",
+        "KC_ESC": "swatch-4",
+        "KC_GESC": "accent",
+        "KC_TAB": "swatch-5",
+        "KC_BSPC": "swatch-4",
+        "KC_BSLS": "swatch-5",
+        "KC_CAPS": "swatch-6",
+        "KC_LSFT": "swatch-7",
+        "KC_RSFT": "swatch-7",
+        "KC_UP": "swatch-4",
+        "KC_LEFT": "swatch-5",
+        "KC_DOWN": "swatch-6",
+        "KC_RGHT": "swatch-7"
+    }
+}

@@ -1,29 +1,29 @@
 {
-  "id": "mkg_davy_jones",
-  "label": "Davy Jones",
-  "manufacturer": "",
-  "designer": "KGJun",
-  "swatches": {
-    "base": {
-      "background": "#202531",
-      "color": "#f7f2ea"
+    "id": "mkg_davy_jones",
+    "label": "Davy Jones",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#202531",
+            "color": "#f7f2ea"
+        },
+        "mods": {
+            "background": "#202531",
+            "color": "#67bb87"
+        },
+        "accent": {
+            "background": "#67bb87",
+            "color": "#202531"
+        }
     },
-    "mods": {
-      "background": "#202531",
-      "color": "#67bb87"
-    },
-    "accent": {
-      "background": "#67bb87",
-      "color": "#202531"
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F8": "mods",
+        "KC_F7": "mods"
     }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F8": "mods",
-    "KC_F7": "mods"
-  }
 }

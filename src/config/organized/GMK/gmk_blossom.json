@@ -1,0 +1,29 @@
+{
+    "id": "gmk_blossom",
+    "label": "Blossom",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#b1909e",
+            "color": "#5f273e"
+        },
+        "mods": {
+            "background": "#5f273e",
+            "color": "#b1909e"
+        },
+        "accent": {
+            "background": "#55407b",
+            "color": "#b1909e"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

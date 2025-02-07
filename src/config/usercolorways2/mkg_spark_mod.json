@@ -1,71 +1,70 @@
-
 {
-  "id": "mkg_spark_color",
-  "label": "Spark color mod kit",
-  "manufacturer": "GMK",
-  "designer": "Yeony",
-  "swatches": {
-    "base": {
-      "background": "#293742",
-      "color": "#f4fffd"
+    "id": "mkg_spark_color",
+    "label": "Spark color mod kit",
+    "manufacturer": "PBTFans",
+    "designer": "Yeony",
+    "swatches": {
+        "base": {
+            "background": "#293742",
+            "color": "#f4fffd"
+        },
+        "mods": {
+            "background": "#536d84",
+            "color": "#f4fffd"
+        },
+        "accent": {
+            "background": "#536d84",
+            "color": "#f4fffd"
+        },
+        "swatch-1": {
+            "background": "#ff4753",
+            "color": "#293742"
+        },
+        "swatch-2": {
+            "background": "#f4fffd",
+            "color": "#293742"
+        },
+        "swatch-3": {
+            "background": "#7b5aec",
+            "color": "#293742"
+        },
+        "swatch-4": {
+            "background": "#2e90eb",
+            "color": "#293742"
+        },
+        "swatch-5": {
+            "background": "#bc4fd1",
+            "color": "#293742"
+        }
     },
-    "mods": {
-      "background": "#536d84",
-      "color": "#f4fffd"
-    },
-    "accent": {
-      "background": "#536d84",
-      "color": "#f4fffd"
-    },
-    "swatch-1": {
-      "background": "#ff4753",
-      "color": "#293742"
-    },
-    "swatch-2": {
-      "background": "#f4fffd",
-      "color": "#293742"
-    },
-    "swatch-3": {
-      "background": "#7b5aec",
-      "color": "#293742"
-    },
-    "swatch-4": {
-      "background": "#2e90eb",
-      "color": "#293742"
-    },
-    "swatch-5": {
-      "background": "#bc4fd1",
-      "color": "#293742"
+    "override": {
+        "KC_SPC": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_ESC": "accent",
+        "KC_ENT": "swatch-2",
+        "KC_PENT": "accent",
+        "KC_Z": "base",
+        "KC_X": "base",
+        "KC_A": "base",
+        "KC_S": "base",
+        "KC_O": "base",
+        "KC_J": "base",
+        "KC_I": "base",
+        "KC_LSFT": "swatch-1",
+        "KC_RSFT": "swatch-1",
+        "KC_LCTL": "swatch-5",
+        "KC_LGUI": "swatch-3",
+        "KC_RGUI": "swatch-3",
+        "KC_LALT": "swatch-4",
+        "KC_RALT": "swatch-4",
+        "KC_RCTL": "swatch-5",
+        "KC_APP": "swatch-2",
+        "KC_UP": "swatch-2",
+        "KC_LEFT": "swatch-2",
+        "KC_DOWN": "swatch-2",
+        "KC_RGHT": "swatch-2"
     }
-  },
-  "override": {
-    "KC_SPC": "base",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods",
-    "KC_ESC": "accent",
-    "KC_ENT": "swatch-2",
-    "KC_PENT": "accent",
-    "KC_Z": "base",
-    "KC_X": "base",
-    "KC_A": "base",
-    "KC_S": "base",
-    "KC_O": "base",
-    "KC_J": "base",
-    "KC_I": "base",
-    "KC_LSFT": "swatch-1",
-    "KC_RSFT": "swatch-1",
-    "KC_LCTL": "swatch-5",
-    "KC_LGUI": "swatch-3",
-    "KC_RGUI": "swatch-3",
-    "KC_LALT": "swatch-4",
-    "KC_RALT": "swatch-4",
-    "KC_RCTL": "swatch-5",
-    "KC_APP": "swatch-2",
-    "KC_UP": "swatch-2",
-    "KC_LEFT": "swatch-2",
-    "KC_DOWN": "swatch-2",
-    "KC_RGHT": "swatch-2"
-  }
 }

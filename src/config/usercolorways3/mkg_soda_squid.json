@@ -1,76 +1,76 @@
 {
-  "id": "mkg_soda_squid",
-  "label": "Soda Squid",
-  "manufacturer": "KAM",
-  "designer": "KGJun",
-  "swatches": {
-    "base": {
-      "background": "#c4c4c2",
-      "color": "#171718"
+    "id": "mkg_soda_squid",
+    "label": "Soda Squid",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#c4c4c2",
+            "color": "#171718"
+        },
+        "mods": {
+            "background": "#666666",
+            "color": "#cccccc"
+        },
+        "accent": {
+            "background": "#81b595",
+            "color": "#094a21"
+        },
+        "swatch1": {
+            "background": "#ced843",
+            "color": "#171718"
+        },
+        "swatch2": {
+            "background": "#3d28a9",
+            "color": "#171718"
+        },
+        "swatch3": {
+            "background": "#5d0bae",
+            "color": "#171718"
+        },
+        "swatch4": {
+            "background": "#78c951",
+            "color": "#171718"
+        },
+        "swatch5": {
+            "background": "#2bba50",
+            "color": "#171718"
+        },
+        "swatch6": {
+            "background": "#8027a9",
+            "color": "#171718"
+        }
     },
-    "mods": {
-      "background": "#666666",
-      "color": "#cccccc"
-    },
-    "accent": {
-      "background": "#81b595",
-      "color": "#094a21"
-    },
-    "swatch1": {
-      "background": "#ced843",
-      "color": "#171718"
-    },
-    "swatch2": {
-      "background": "#3d28a9",
-      "color": "#171718"
-    },
-    "swatch3": {
-      "background": "#5d0bae",
-      "color": "#171718"
-    },
-    "swatch4": {
-      "background": "#78c951",
-      "color": "#171718"
-    },
-    "swatch5": {
-      "background": "#2bba50",
-      "color": "#171718"
-    },
-    "swatch6": {
-      "background": "#8027a9",
-      "color": "#171718"
+    "override": {
+        "KC_ESC": "base",
+        "KC_GESC": "accent",
+        "KC_PSCR": "base",
+        "KC_SLCK": "base",
+        "KC_PAUSE": "base",
+        "KC_BSPC": "swatch1",
+        "KC_BSLS": "swatch1",
+        "KC_DEL": "swatch1",
+        "KC_END": "swatch1",
+        "KC_PGDN": "swatch1",
+        "KC_PGUP": "swatch1",
+        "KC_HOME": "swatch1",
+        "KC_INS": "swatch1",
+        "KC_GRAVE": "swatch2",
+        "KC_TAB": "swatch2",
+        "KC_CAPS": "swatch3",
+        "KC_ENT": "swatch4",
+        "KC_RSFT": "swatch5",
+        "KC_RALT": "swatch5",
+        "KC_RGUI": "swatch5",
+        "KC_APP": "swatch5",
+        "KC_RCTL": "swatch5",
+        "KC_LEFT": "swatch5",
+        "KC_DOWN": "swatch5",
+        "KC_RGHT": "swatch5",
+        "KC_UP": "swatch5",
+        "KC_LSFT": "swatch6",
+        "KC_LCTL": "swatch6",
+        "KC_LGUI": "swatch6",
+        "KC_LALT": "swatch6"
     }
-  },
-  "override": {
-    "KC_ESC": "base",
-    "KC_GESC": "accent",
-    "KC_PSCR": "base",
-    "KC_SLCK": "base",
-    "KC_PAUSE": "base",
-    "KC_BSPC": "swatch1",
-    "KC_BSLS": "swatch1",
-    "KC_DEL": "swatch1",
-    "KC_END": "swatch1",
-    "KC_PGDN": "swatch1",
-    "KC_PGUP": "swatch1",
-    "KC_HOME": "swatch1",
-    "KC_INS": "swatch1",
-    "KC_GRAVE": "swatch2",
-    "KC_TAB": "swatch2",
-    "KC_CAPS": "swatch3",
-    "KC_ENT": "swatch4",
-    "KC_RSFT": "swatch5",
-    "KC_RALT": "swatch5",
-    "KC_RGUI": "swatch5",
-    "KC_APP": "swatch5",
-    "KC_RCTL": "swatch5",
-    "KC_LEFT": "swatch5",
-    "KC_DOWN": "swatch5",
-    "KC_RGHT": "swatch5",
-    "KC_UP": "swatch5",
-    "KC_LSFT": "swatch6",
-    "KC_LCTL": "swatch6",
-    "KC_LGUI": "swatch6",
-    "KC_LALT": "swatch6"
-  }
 }

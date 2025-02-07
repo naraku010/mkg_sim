@@ -1,7 +1,7 @@
 {
     "id": "mkg_gmk_hyperfuse_origin_r2",
     "label": "GMK Hyperfuse Origin R2",
-    "manufacturer": "",
+    "manufacturer": "GMK",
     "swatches": {
         "base": {
             "background": "#b3b1ad",

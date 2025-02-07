@@ -1,0 +1,57 @@
+{
+    "id": "gmk_dark_olivia",
+    "label": "Dark Olivia",
+    "manufacturer": "GMK",
+    "swatches": {
+        "base": {
+            "background": "#2b2b2b",
+            "color": "#f1beb0"
+        },
+        "mods": {
+            "background": "#f1beb0",
+            "color": "#2b2b2b"
+        },
+        "accent": {
+            "background": "#f1beb0",
+            "color": "#2b2b2b"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_A": "base",
+        "KC_S": "base",
+        "KC_D": "base",
+        "KC_F": "base",
+        "KC_BSPC": "base",
+        "KC_LSFT": "base",
+        "KC_UP": "base",
+        "KC_DOWN": "base",
+        "KC_LEFT": "base",
+        "KC_RGHT": "base",
+        "KC_CAPS": "base",
+        "KC_TAB": "base",
+        "KC_LGUI": "base",
+        "KC_LCTL": "base",
+        "KC_LALT": "base",
+        "KC_RCTL": "base",
+        "KC_RALT": "base",
+        "KC_RSFT": "base",
+        "KC_PGDN": "base",
+        "KC_PGUP": "base",
+        "KC_DEL": "base",
+        "KC_INS": "base",
+        "KC_SLCK": "base",
+        "KC_PSCR": "base",
+        "KC_PAUSE": "base",
+        "KC_F2": "base",
+        "KC_F1": "base",
+        "KC_HOME": "base",
+        "KC_END": "base",
+        "KC_RGUI": "base",
+        "KC_APP": "base",
+        "MO(1)": "base"
+    }
+}
