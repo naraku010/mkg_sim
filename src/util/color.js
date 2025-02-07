@@ -43,7 +43,7 @@ export default class ColorUtil {
 
   static get colorway() {
     return (
-      this.getColorway(initial_settings.colorways.active)
+      this.cachedColorway ?? this.getColorway(initial_settings.colorways.active)
     );
   }
 
