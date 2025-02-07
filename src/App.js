@@ -21,7 +21,7 @@ export default function App() {
 
   const getSceneColor = () => {
     if(backgroundColorFix) {
-      return sceneColor;
+      return sceneColor ? sceneColor : '#404040';
     } else {
       return sceneAutoColor ? ColorUtil.getAccent(colorway_id) : sceneColor;
     }
