@@ -24,11 +24,9 @@ const getInitialState = () => {
   }
 
   //set random initial values
-  if (!qs) {
-    initial.colorways.active = randomItem(starting_colorway_options);
-    initial.case.layout = randomItem(starting_layout_options);
-    initial.keys.legendSecondaryStyle = "";
-  }
+  initial.colorways.active = randomItem(starting_colorway_options);
+  initial.case.layout = randomItem(starting_layout_options);
+  initial.keys.legendSecondaryStyle = "";
 
   if (saved_colorways && saved_colorways.active) {
     initial.colorways.active = saved_colorways.active;
