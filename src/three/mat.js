@@ -84,9 +84,11 @@ export default class RoundedMatPad {
             const width = image.width * scale;
             const height = image.height * scale;
             const geometry = new RoundedRectangleGeometry(width, height);
-            const material = new THREE.MeshBasicMaterial({
+            const material = new THREE.MeshStandardMaterial({
                 map: texture, // 기본 텍스처
-                side: THREE.DoubleSide // 양면 모두 렌더링
+                side: THREE.DoubleSide, // 양면 모두 렌더링
+                roughness: 0.8, // 거칠기 증가 (반사 감소)
+                metalness: 0.2, // 금속성 낮추기
             });
             this.mesh = new THREE.Mesh(geometry, material);
             this.mesh.position.z = 2;
