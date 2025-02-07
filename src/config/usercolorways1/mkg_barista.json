@@ -1,0 +1,34 @@
+{
+    "id": "mkg_barista",
+    "label": "Barista",
+    "manufacturer": "Unknown",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#221a17",
+            "color": "#cfc8c0"
+        },
+        "mods": {
+            "background": "#bab3a9",
+            "color": "#120b03"
+        },
+        "accent": {
+            "background": "#8e7c66",
+            "color": "#120b03"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "accent",
+        "KC_UP": "base",
+        "KC_DOWN": "base",
+        "KC_LEFT": "base",
+        "KC_RGHT": "base",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}
