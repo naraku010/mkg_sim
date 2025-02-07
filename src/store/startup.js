@@ -2,6 +2,7 @@ import { get_qs_values } from "./qs";
 import { loadState } from "./localStorage";
 import settings from "../config/settings_user_default.json";
 import {KC_COLORWAYS} from "../config/organized/keycaps";
+import ColorUtil from "../util/color";
 
 const starting_colorway_options = [
   "gmk_yeeti",
@@ -23,11 +24,6 @@ const getInitialState = () => {
     initial.colorways.custom = saved_colorways.settings;
   }
 
-  //set random initial values
-  initial.colorways.active = randomItem(starting_colorway_options);
-  initial.case.layout = randomItem(starting_layout_options);
-  initial.keys.legendSecondaryStyle = "";
-
   if (saved_colorways && saved_colorways.active) {
     initial.colorways.active = saved_colorways.active;
   }
@@ -40,6 +36,9 @@ const getInitialState = () => {
     initial.case.layout = qs["size"];
   }
   if (qs && qs["colorway"]) {
+
+    const d = ColorUtil.getColorway();
+
     if (typeof qs["colorway"] === "object") {
       if (!initial.colorways.custom.find((x) => x.id === qs["colorway"].id)) {
         initial.colorways.custom.push(qs["colorway"]);
@@ -69,7 +68,14 @@ const getInitialState = () => {
   } else {
     accent = KC_COLORWAYS[initial?.colorways?.active]?.swatches?.accent?.background;
   }
-  initial.settings.sceneColor = accent;
+  if(accent) {
+    initial.settings.sceneColor = accent;
+  } else {
+    //set random initial values
+    initial.colorways.active = randomItem(starting_colorway_options);
+    initial.case.layout = randomItem(starting_layout_options);
+    initial.keys.legendSecondaryStyle = "";
+  }
   return initial;
 };
 
