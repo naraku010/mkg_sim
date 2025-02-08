@@ -101,12 +101,9 @@ export default function BoardOptions() {
                     label="하우징 재질"
                     selected={material}
                     options={[
-                        {label: "PC(투명)", value: "tra"},
-                        {label: "매트", value: "matte"},
-                        {label: "무광", value: "brushed"},
-                        {label: "살짝광", value: "lowglossy"},
-                        {label: "유광", value: "glossy"},
-                        {label: "SUS PVD", value: "pvd"},
+                        {label: "아노다이징 (유광)", value: "anodizing"},
+                        {label: "아노다이징 (무광)", value: "anodizing2"},
+                        {label: "스프레이코팅", value: "spraycoat"},
                     ]}
                     handler={(val) => {
                         dispatch(caseActions.setMaterial(val));
