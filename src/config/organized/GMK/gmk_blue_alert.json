@@ -35,6 +35,9 @@
     "KC_MINS": "accent",
     "KC_EQL": "accent",
     "KC_BSPC": "accent",
-    "KC_HOME": "mods"
+    "KC_HOME": "accent",
+    "KC_GRAVE": "accent",
+    "KC_INS": "accent",
+    "KC_PGUP": "accent"
   }
 }
