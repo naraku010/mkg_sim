@@ -322,7 +322,7 @@ export default class CaseManager {
             const sprayCoatingMaterial = new THREE.MeshPhysicalMaterial({
                 color: color,
                 metalness: 0.7,             // 금속성 없음 (스프레이 재질은 비금속)
-                roughness: 1,           // 약간 거친 표면
+                roughness: 0.7,           // 약간 거친 표면
                 clearcoat: 0.5,           // 얇은 코팅 효과 추가
                 clearcoatRoughness: 0.4,  // 코팅 표면 거칠기 설정
                 lightMapIntensity: 0.3,   // 빛의 영향을 약간 더 받도록 설정
