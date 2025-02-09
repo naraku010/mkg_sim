@@ -7,7 +7,6 @@ import ColorwayEditor from "../colorway/ColorwayEditor";
 import {ReactComponent as Logo} from "../../assets/logo.svg";
 import {ReactComponent as Name} from "../../assets/logo_text.svg";
 import "./tabs.scss";
-import GoogleAdvertise from "../google/GoogleAdvertise";
 
 export default function Sidebar() {
   const [tabIndex, setTabIndex] = useState(0);

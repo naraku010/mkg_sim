@@ -101,6 +101,9 @@ export default class SceneManager extends Collection {
         // });
         //mouse and raycaster
         this.mouse = new THREE.Vector2(-1000, -1000);
+        this.raycaster = new THREE.Raycaster();
+        this.raycaster.layers.set(1);
+
         //
 
 
@@ -321,14 +324,14 @@ export default class SceneManager extends Collection {
     render() {
         this.update();
         this.controls.update();
-        // this.raycaster.setFromCamera(this.mouse, this.camera);
-        // this.checkIntersections();
+        this.raycaster.setFromCamera(this.mouse, this.camera);
+        this.checkIntersections();
         this.renderer.render(this.scene, this.camera);
         // let x = this.camera.position.x;
         // let y = this.camera.position.y;
         // let z = this.camera.position.z;
-        //this.camera.position.multiplyScalar(this.scale);
-        //this.cssRenderer.render(this.scene, this.camera);
+        // this.camera.position.multiplyScalar(this.scale);
+        // this.cssRenderer.render(this.scene, this.camera);
         //this.camera.position.set(x, y, z);
     }
 

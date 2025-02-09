@@ -21,24 +21,21 @@ export default function ColorwayList(props) {
     const customColorways = useSelector(selectColorways);
     const [filter, setFilter] = useState("");
 
-    const filteredColorways = (obj) => {
-        const df = Object.keys(obj)
-            .sort()
-            .filter((cw) => {
-                return filter.length
-                    ? cw.toLowerCase().includes(filter.toLowerCase())
-                    : true;
-            });
-
-        return df;
-    };
-
+  const filteredColorways = () => {
+    return Object.keys(KC_COLORWAYS)
+      .sort()
+      .filter((cw) => {
+        return filter.length
+          ? cw.toLowerCase().includes(filter.toLowerCase())
+          : true;
+      });
+  };
 
     const customColorwayTiles = customColorways.map((s) => (
         <Colorway key={s.id} colorway={s} custom={true} setTab={props.setTab}/>
     ));
 
-    const userNewColorwayTiles = filteredColorways(KC_COLORWAYS).sort().map((s) => (
+    const userNewColorwayTiles = filteredColorways().sort().map((s) => (
         <Colorway key={KC_COLORWAYS[s]?.id} colorway={KC_COLORWAYS[s]}/>
     ));
 
