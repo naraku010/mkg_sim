@@ -198,8 +198,15 @@ import gmk_zen_pond from './gmk_zen_pond.json';
 import gmk_zimo from './gmk_zimo.json';
 import gmk_zx from './gmk_zx.json';
 import gmk_blue_alert from './gmk_blue_alert.json';
+import gmk_oblivion from './gmk_oblivion.json';
+
+const NEW_COLOR = {
+    gmk_blue_alert: gmk_blue_alert,
+    gmk_oblivion: gmk_oblivion,
+}
 
 export const KC_GMK = {
+    ...NEW_COLOR,
     gmk_3077num_row: gmk_3077num_row,
     gmk_3077: gmk_3077,
     gmk_3run: gmk_3run,
@@ -228,7 +235,7 @@ export const KC_GMK = {
     gmk_blossom: gmk_blossom,
     gmk_blot: gmk_blot,
     gmk_blurple: gmk_blurple,
-    gmk_blue_alert: gmk_blue_alert,
+
     gmk_boho: gmk_boho,
     gmk_bordeaux: gmk_bordeaux,
     gmk_boulder: gmk_boulder,

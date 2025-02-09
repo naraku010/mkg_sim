@@ -1,0 +1,52 @@
+{
+  "id": "gmk_oblivion",
+  "label": "Oblivion",
+  "manufacturer": "GMK",
+  "designer": "Type-S",
+  "swatches": {
+    "base": {
+      "background": "#63696a",
+      "color": "#c8c3b8"
+    },
+    "mods": {
+      "background": "#464746",
+      "color": "#c8c3b8"
+    },
+    "accent": {
+      "background": "#464746",
+      "color": "#ea4221"
+    },
+    "swatch1": {
+      "background": "#464746",
+      "color": "#a698c5"
+    },
+    "swatch2": {
+      "background": "#464746",
+      "color": "#93c247"
+    },
+    "swatch3": {
+      "background": "#464746",
+      "color": "#ffac00"
+    },
+    "swatch4": {
+      "background": "#464746",
+      "color": "#1a8ab7"
+    }
+  },
+  "override": {
+    "KC_ENT": "swatch2",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_GRAVE": "mods",
+    "KC_TAB": "swatch1",
+    "KC_DEL": "swatch1",
+    "KC_CAPS": "swatch2",
+    "KC_RSFT": "swatch3",
+    "MO(1)": "swatch3",
+    "KC_LSFT": "swatch3",
+    "KC_LGUI": "swatch4",
+    "KC_RALT": "swatch4",
+    "KC_RGUI": "swatch4",
+    "KC_LALT": "swatch4"
+  }
+}
