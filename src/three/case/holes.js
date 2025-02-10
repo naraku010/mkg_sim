@@ -343,6 +343,38 @@ export default (layoutName, layoutJson, bezel) => {
                 ])
             );
             break;
+        case "40hhkb":
+            holes.push(
+                getPathFromPoints(sx - gutter, sy - gutter, [
+                    {x: 13 + gutter * 2, y: 0},
+                    {x: 0, y: 3 + gutter * 2},
+                    {x: -1.125, y: 0},
+                    {x: 0, y: 1},
+                    {x: -10.75 - gutter * 2, y: 0},
+                    {x: 0, y: -1},
+                    {x: -1.125, y: 0},
+                    {x: 0, y: -3 - gutter * 2},
+                ])
+            );
+            break;
+        case "40wkl":
+            holes.push(
+                getPathFromPoints(sx, sy, [
+                    {x: 13, y: 0},
+                    {x: 0, y: 4},
+                    {x: -1.25, y: 0},
+                    {x: 0, y: -1},
+                    {x: -1, y: 0},
+                    {x: 0, y: 1},
+                    {x: -8.5, y: 0},
+                    {x: 0, y: -1},
+                    {x: -1, y: 0},
+                    {x: 0, y: 1},
+                    {x: -1.25, y: 0},
+                    {x: 0, y: -4},
+                ])
+            );
+            break;
         case "numpad":
             holes.push(
                 getSquarePath(sx, sy, 4, 1, gutter),

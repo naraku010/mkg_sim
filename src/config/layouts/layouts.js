@@ -1,5 +1,8 @@
 import layout_at from "./layout_at_default.json";
 import layout_40 from "./layout_40_default.json";
+import layout_40_hhkb from "./layout_40_hhkb.json";
+import layout_40_wk from "./layout_40_wk.json";
+import layout_40_wkl from "./layout_40_wkl.json";
 import layout_60 from "./layout_60_default.json";
 import layout_60_iso from "./layout_60_ISO.json";
 import layout_60_true_hhkb from "./layout_60_true_hhkb.json";
@@ -24,6 +27,9 @@ import layout_100 from "./layout_100_default.json";
 const LAYOUTS = {
   "at": layout_at,
   40: layout_40,
+  "40wk": layout_40_wk,
+  "40wkl": layout_40_wkl,
+  "40hhkb": layout_40_hhkb,
   60: layout_60,
   65: layout_65,
   "65ergo": layout_65_ergo,

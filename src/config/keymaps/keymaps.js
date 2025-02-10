@@ -1,5 +1,8 @@
 import keymap_at from "./keymap_at_default.json";
 import keymap_numpad from "./keymap_numpad.json";
+import keymap_40_wk from "./keymap_40_wk.json";
+import keymap_40_wkl from "./keymap_40_wkl.json";
+import keymap_40_hhkb from "./keymap_40_hhkb.json";
 import keymap_40_ortho from "./keymap_40_ortho.json";
 import keymap_50_ortho from "./keymap_50_ortho.json";
 import keymap_40_leftnum from "./keymap_40_leftnum.json";
@@ -24,6 +27,9 @@ import keymap_100 from "./keymap_100_default.json";
 const KEYMAPS = {
   "at": keymap_at,
   numpad: keymap_numpad,
+  "40wk": keymap_40_wk,
+  "40wkl": keymap_40_wkl,
+  "40hhkb": keymap_40_hhkb,
   "40ortho": keymap_40_ortho,
   "50ortho": keymap_50_ortho,
   leftnum: keymap_40_leftnum,
