@@ -7,7 +7,7 @@ export default function ScreenShot() {
   return (
     <div
       role="button"
-      aria-label="take screenshot"
+      aria-label="캡쳐"
       className={styles.action}
       onMouseEnter={() => {
         setVisible(true);
@@ -23,7 +23,7 @@ export default function ScreenShot() {
       <CameraIcon />
       {visible && (
         <div role="tooltip" className={styles.tooltip}>
-          Take Screenshot
+          캡쳐
         </div>
       )}
     </div>
