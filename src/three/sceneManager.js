@@ -335,11 +335,11 @@ export default class SceneManager extends Collection {
         //this.camera.position.set(x, y, z);
     }
 
-    tick() {
+    async tick() {
         this.render();
 
         if (this.takeScreenshot) {
-            ThreeUtil.getSceneScreenshot(this.renderer);
+            await ThreeUtil.getHighResScreenshot(this.renderer, this.scene, this.camera);
             this.takeScreenshot = false;
         }
         requestAnimationFrame(this.tick.bind(this));
