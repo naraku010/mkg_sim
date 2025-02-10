@@ -1,49 +1,49 @@
 {
- "id": "bobafett",
- "label": "Boba Fett",
- "manufacturer": "",
- "swatches": {
-  "base": {
-   "background": "#dcdbd5",
-   "color": "#171718"
-  },
-  "mods": {
-   "background": "#798b79",
-   "color": "#171718"
-  },
-  "accent": {
-   "background": "#892935",
-   "color": "#171718"
-  },
-  "accent2": {
-   "background": "#ebac00",
-   "color": "#171718"
-  }
- },
- "override": {
-  "KC_ENT": "accent",
-  "KC_ESC": "accent",
-  "KC_GESC": "accent2",
-  "KC_UP": "accent",
-  "KC_DOWN": "accent",
-  "KC_LEFT": "accent",
-  "KC_RGHT": "accent",
-  "KC_F5": "mods",
-  "KC_F6": "mods",
-  "KC_F7": "mods",
-  "KC_F8": "mods",
-  "KC_SPC": "base",
-  "KC_PAUSE": "accent",
-  "KC_PSCR": "accent",
-  "KC_F1": "accent2",
-  "KC_F2": "accent2",
-  "KC_F3": "accent2",
-  "KC_F4": "accent2",
-  "KC_F9": "accent2",
-  "KC_F10": "accent2",
-  "KC_F11": "accent2",
-  "KC_F12": "accent2",
-  "KC_LGUI": "accent",
-  "KC_RGUI": "accent"
- }
+    "id": "bobafett",
+    "label": "Boba Fett",
+    "manufacturer": "GMK",
+    "swatches": {
+        "base": {
+            "background": "#dcdbd5",
+            "color": "#171718"
+        },
+        "mods": {
+            "background": "#798b79",
+            "color": "#171718"
+        },
+        "accent": {
+            "background": "#892935",
+            "color": "#171718"
+        },
+        "accent2": {
+            "background": "#ebac00",
+            "color": "#171718"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent2",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_LEFT": "accent",
+        "KC_RGHT": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_SPC": "base",
+        "KC_PAUSE": "accent",
+        "KC_PSCR": "accent",
+        "KC_F1": "accent2",
+        "KC_F2": "accent2",
+        "KC_F3": "accent2",
+        "KC_F4": "accent2",
+        "KC_F9": "accent2",
+        "KC_F10": "accent2",
+        "KC_F11": "accent2",
+        "KC_F12": "accent2",
+        "KC_LGUI": "accent",
+        "KC_RGUI": "accent"
+    }
 }

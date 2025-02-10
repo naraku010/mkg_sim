@@ -1,31 +1,31 @@
 {
- "id": "finer_things",
- "label": "Finer Things",
- "manufacturer": "",
- "designer": "",
- "swatches": {
-  "base": {
-   "background": "#85d0cb",
-   "color": "#ffffff"
-  },
-  "mods": {
-   "background": "#85d0cb",
-   "color": "#ffffff"
-  },
-  "accent": {
-   "background": "#ffffff",
-   "color": "#85d0cb"
-  }
- },
- "override": {
-  "KC_ENT": "accent",
-  "KC_PENT": "accent",
-  "KC_ESC": "accent",
-  "KC_GESC": "accent",
-  "KC_LEFT": "accent",
-  "KC_DOWN": "accent",
-  "KC_UP": "accent",
-  "KC_RGHT": "accent",
-  "KC_SPC": "accent"
- }
+    "id": "finer_things",
+    "label": "Finer Things",
+    "manufacturer": "GMK",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#85d0cb",
+            "color": "#ffffff"
+        },
+        "mods": {
+            "background": "#85d0cb",
+            "color": "#ffffff"
+        },
+        "accent": {
+            "background": "#ffffff",
+            "color": "#85d0cb"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_PENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_LEFT": "accent",
+        "KC_DOWN": "accent",
+        "KC_UP": "accent",
+        "KC_RGHT": "accent",
+        "KC_SPC": "accent"
+    }
 }

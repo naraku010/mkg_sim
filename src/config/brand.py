@@ -15,7 +15,8 @@ known_brands = [
     ("TUT", ["tut"]),
     ("JTK", ["jtk"]),
     ("MAXKEY", ["maxkey"]),
-    ("DCS", ["dcs"])
+    ("DCS", ["dcs"]),
+    ("Osume", ["osume"])
 ]
 
 # 차단할 사이트 접두사 리스트 (예: ebay. 로 시작하는 사이트 전부)
@@ -142,13 +143,11 @@ def process_file(fpath):
 # usercolorways1 ~ usercolorways7 폴더 내의 모든 JSON 파일을 순차(혹은 쓰레드)적으로 처리
 def update_json_files(base_path):
     file_paths = []
-    for i in range(1, 8):
-        folder = os.path.join(base_path, f"usercolorways{i}")
-        if not os.path.isdir(folder):
-            continue
-        for fname in os.listdir(folder):
-            if fname.endswith(".json"):
-                file_paths.append(os.path.join(folder, fname))
+
+    folder = os.path.join(base_path, f"colorways")
+    for fname in os.listdir(folder):
+        if fname.endswith(".json"):
+            file_paths.append(os.path.join(folder, fname))
 
     # 여기서는 쓰레드 풀로 동시에 처리해도 되고, 순차 처리해도 됨.
     # 동시 요청 부담이 걱정되면 아래 executor.map 대신 for문으로 순차 처리.

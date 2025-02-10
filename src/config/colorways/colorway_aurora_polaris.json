@@ -1,83 +1,83 @@
 {
- "id": "aurora_polaris",
- "label": "Aurora Polaris",
- "manufacturer": "",
- "designer": "",
- "swatches": {
-  "base": {
-   "background": "#171718",
-   "color": "#00b388"
-  },
-  "mods": {
-   "background": "#171718",
-   "color": "#00b388"
-  },
-  "accent": {
-   "background": "#00b388",
-   "color": "#171718"
-  },
-  "accent2": {
-   "background": "#171718",
-   "color": "#cb3d6e"
-  },
-  "accent3": {
-   "background": "#171718",
-   "color": "#5d437e"
-  },
-  "accent4": {
-   "background": "#171718",
-   "color": "#00589f"
-  },
-  "accent5": {
-   "background": "#171718",
-   "color": "#0084c2"
-  },
-  "accent6": {
-   "background": "#171718",
-   "color": "#00a4a9"
-  }
- },
- "override": {
-  "KC_ENT": "accent",
-  "KC_PENT": "accent",
-  "KC_ESC": "accent",
-  "KC_GESC": "accent",
-  "KC_SPC": "accent",
-  "KC_LEFT": "accent",
-  "KC_DOWN": "accent",
-  "KC_RGHT": "accent",
-  "KC_UP": "accent",
-  "KC_F5": "accent2",
-  "KC_F6": "accent2",
-  "KC_F7": "accent2",
-  "KC_F8": "accent2",
-  "KC_BSPC": "accent2",
-  "KC_INS": "accent2",
-  "KC_HOME": "accent2",
-  "KC_PGUP": "accent2",
-  "KC_PAUSE": "accent2",
-  "KC_SLCK": "accent2",
-  "KC_PSCR": "accent2",
-  "KC_NLCK": "accent2",
-  "KC_PSLS": "accent2",
-  "KC_PAST": "accent2",
-  "KC_PMNS": "accent2",
-  "KC_DEL": "accent3",
-  "KC_TAB": "accent3",
-  "KC_END": "accent3",
-  "KC_PGDN": "accent3",
-  "KC_PPLS": "accent3",
-  "KC_CAPS": "accent4",
-  "KC_LSFT": "accent5",
-  "KC_RSFT": "accent5",
-  "KC_LCTL": "accent6",
-  "KC_LGUI": "accent6",
-  "KC_LALT": "accent6",
-  "KC_RALT": "accent6",
-  "KC_RGUI": "accent6",
-  "KC_APP": "accent6",
-  "KC_RCTL": "accent6",
-  "KC_BSLS": "accent3",
-  "KC_GRAVE": "accent2"
- }
+    "id": "aurora_polaris",
+    "label": "Aurora Polaris",
+    "manufacturer": "GMK",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#171718",
+            "color": "#00b388"
+        },
+        "mods": {
+            "background": "#171718",
+            "color": "#00b388"
+        },
+        "accent": {
+            "background": "#00b388",
+            "color": "#171718"
+        },
+        "accent2": {
+            "background": "#171718",
+            "color": "#cb3d6e"
+        },
+        "accent3": {
+            "background": "#171718",
+            "color": "#5d437e"
+        },
+        "accent4": {
+            "background": "#171718",
+            "color": "#00589f"
+        },
+        "accent5": {
+            "background": "#171718",
+            "color": "#0084c2"
+        },
+        "accent6": {
+            "background": "#171718",
+            "color": "#00a4a9"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_PENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "accent",
+        "KC_LEFT": "accent",
+        "KC_DOWN": "accent",
+        "KC_RGHT": "accent",
+        "KC_UP": "accent",
+        "KC_F5": "accent2",
+        "KC_F6": "accent2",
+        "KC_F7": "accent2",
+        "KC_F8": "accent2",
+        "KC_BSPC": "accent2",
+        "KC_INS": "accent2",
+        "KC_HOME": "accent2",
+        "KC_PGUP": "accent2",
+        "KC_PAUSE": "accent2",
+        "KC_SLCK": "accent2",
+        "KC_PSCR": "accent2",
+        "KC_NLCK": "accent2",
+        "KC_PSLS": "accent2",
+        "KC_PAST": "accent2",
+        "KC_PMNS": "accent2",
+        "KC_DEL": "accent3",
+        "KC_TAB": "accent3",
+        "KC_END": "accent3",
+        "KC_PGDN": "accent3",
+        "KC_PPLS": "accent3",
+        "KC_CAPS": "accent4",
+        "KC_LSFT": "accent5",
+        "KC_RSFT": "accent5",
+        "KC_LCTL": "accent6",
+        "KC_LGUI": "accent6",
+        "KC_LALT": "accent6",
+        "KC_RALT": "accent6",
+        "KC_RGUI": "accent6",
+        "KC_APP": "accent6",
+        "KC_RCTL": "accent6",
+        "KC_BSLS": "accent3",
+        "KC_GRAVE": "accent2"
+    }
 }

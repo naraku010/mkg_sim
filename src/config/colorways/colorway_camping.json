@@ -1,34 +1,34 @@
 {
- "id": "camping",
- "label": "Camping",
- "manufacturer": "",
- "swatches": {
-  "base": {
-   "background": "rgb(238, 226, 208)",
-   "color": "rgb(91, 124, 91)"
-  },
-  "mods": {
-   "background": "rgb(91, 124, 91)",
-   "color": "rgb(238, 226, 208)"
-  },
-  "accent": {
-   "background": "#733636",
-   "color": "rgb(238, 226, 208)"
-  }
- },
- "override": {
-  "KC_ENT": "accent",
-  "KC_ESC": "accent",
-  "KC_GESC": "accent",
-  "KC_SPC": "accent",
-  "KC_F5": "mods",
-  "KC_F6": "mods",
-  "KC_F7": "mods",
-  "KC_F8": "mods",
-  "KC_UP": "accent",
-  "KC_DOWN": "accent",
-  "KC_LEFT": "accent",
-  "KC_RGHT": "accent",
-  "KC_PENT": "accent"
- }
+    "id": "camping",
+    "label": "Camping",
+    "manufacturer": "GMK",
+    "swatches": {
+        "base": {
+            "background": "rgb(238, 226, 208)",
+            "color": "rgb(91, 124, 91)"
+        },
+        "mods": {
+            "background": "rgb(91, 124, 91)",
+            "color": "rgb(238, 226, 208)"
+        },
+        "accent": {
+            "background": "#733636",
+            "color": "rgb(238, 226, 208)"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_LEFT": "accent",
+        "KC_RGHT": "accent",
+        "KC_PENT": "accent"
+    }
 }

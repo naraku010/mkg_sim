@@ -118,10 +118,10 @@ for manufacturer in manufacturers:
 top_imports = []   # 각 제조사 index.js를 import하는 문장들
 top_exports = []   # 통합 객체에 spread 하는 제조사 객체들
 
-for manufacturer in manufacturers:
-    object_name = f"KC_{manufacturer.upper()}"
-    top_imports.append(f"import {{ {object_name} }} from './{manufacturer}/index.js';")
-    top_exports.append(f"...{object_name}")
+# for manufacturer in manufacturers:
+#     object_name = f"KC_{manufacturer.upper()}"
+#     top_imports.append(f"import {{ {object_name} }} from './{manufacturer}/index.js';")
+#     top_exports.append(f"...{object_name}")
 
 top_content = "\n".join(top_imports) + "\n\n"
 top_content += "export const Keycaps = {\n  " + ",\n  ".join(top_exports) + "\n};\n\n"

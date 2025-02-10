@@ -1,30 +1,29 @@
 {
-    "id": "ashes",
-    "label": "Ashes",
+    "id": "gmk_nuclear_data",
+    "label": "Nuclear Data",
     "manufacturer": "GMK",
+    "designer": "GMK",
     "swatches": {
         "base": {
-            "background": "#575d64",
-            "color": "#cdd4de"
+            "background": "#005d35",
+            "color": "#e4dedd"
         },
         "mods": {
-            "background": "#cdd4de",
-            "color": "#575d64"
+            "background": "#005d35",
+            "color": "#e4dedd"
         },
         "accent": {
-            "background": "#171718",
-            "color": "#cdd4de"
+            "background": "#ff6800",
+            "color": "#e4dedd"
         }
     },
     "override": {
         "KC_ENT": "accent",
         "KC_ESC": "accent",
         "KC_GESC": "accent",
-        "KC_SPC": "accent",
         "KC_LEFT": "accent",
         "KC_DOWN": "accent",
         "KC_RGHT": "accent",
-        "KC_UP": "accent",
-        "KC_PENT": "accent"
+        "KC_UP": "accent"
     }
 }

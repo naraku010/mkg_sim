@@ -1,67 +1,67 @@
 {
- "id": "lunar",
- "label": "Lunar",
- "manufacturer": "",
- "designer": "",
- "swatches": {
-  "base": {
-   "background": "#727474",
-   "color": "#c6c9c7"
-  },
-  "mods": {
-   "background": "#393b3b",
-   "color": "#c6c9c7"
-  },
-  "accent": {
-   "background": "#e5a100",
-   "color": "#393b3b"
-  },
-  "accent2": {
-   "background": "#dd1126",
-   "color": "#c6c9c7"
-  }
- },
- "override": {
-  "KC_ENT": "accent",
-  "KC_ESC": "accent",
-  "KC_GESC": "accent",
-  "KC_PENT": "mods",
-  "KC_SPC": "accent",
-  "KC_LEFT": "accent",
-  "KC_DOWN": "accent",
-  "KC_UP": "accent",
-  "KC_RGHT": "accent",
-  "KC_LALT": "base",
-  "KC_LGUI": "base",
-  "KC_LCTL": "base",
-  "KC_LSFT": "base",
-  "KC_CAPS": "base",
-  "KC_TAB": "base",
-  "KC_RALT": "base",
-  "KC_RGUI": "base",
-  "KC_APP": "base",
-  "KC_RSFT": "base",
-  "KC_RCTL": "base",
-  "KC_BSPC": "base",
-  "KC_PSCR": "base",
-  "KC_SLCK": "base",
-  "KC_PAUSE": "base",
-  "KC_PGUP": "base",
-  "KC_HOME": "base",
-  "KC_INS": "base",
-  "KC_DEL": "base",
-  "KC_END": "base",
-  "KC_PGDN": "base",
-  "KC_P7": "mods",
-  "KC_P8": "mods",
-  "KC_P9": "mods",
-  "KC_P6": "mods",
-  "KC_P5": "mods",
-  "KC_P4": "mods",
-  "KC_P1": "mods",
-  "KC_P2": "mods",
-  "KC_P3": "mods",
-  "KC_PDOT": "mods",
-  "KC_P0": "mods"
- }
+    "id": "lunar",
+    "label": "Lunar",
+    "manufacturer": "DCS",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#727474",
+            "color": "#c6c9c7"
+        },
+        "mods": {
+            "background": "#393b3b",
+            "color": "#c6c9c7"
+        },
+        "accent": {
+            "background": "#e5a100",
+            "color": "#393b3b"
+        },
+        "accent2": {
+            "background": "#dd1126",
+            "color": "#c6c9c7"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_PENT": "mods",
+        "KC_SPC": "accent",
+        "KC_LEFT": "accent",
+        "KC_DOWN": "accent",
+        "KC_UP": "accent",
+        "KC_RGHT": "accent",
+        "KC_LALT": "base",
+        "KC_LGUI": "base",
+        "KC_LCTL": "base",
+        "KC_LSFT": "base",
+        "KC_CAPS": "base",
+        "KC_TAB": "base",
+        "KC_RALT": "base",
+        "KC_RGUI": "base",
+        "KC_APP": "base",
+        "KC_RSFT": "base",
+        "KC_RCTL": "base",
+        "KC_BSPC": "base",
+        "KC_PSCR": "base",
+        "KC_SLCK": "base",
+        "KC_PAUSE": "base",
+        "KC_PGUP": "base",
+        "KC_HOME": "base",
+        "KC_INS": "base",
+        "KC_DEL": "base",
+        "KC_END": "base",
+        "KC_PGDN": "base",
+        "KC_P7": "mods",
+        "KC_P8": "mods",
+        "KC_P9": "mods",
+        "KC_P6": "mods",
+        "KC_P5": "mods",
+        "KC_P4": "mods",
+        "KC_P1": "mods",
+        "KC_P2": "mods",
+        "KC_P3": "mods",
+        "KC_PDOT": "mods",
+        "KC_P0": "mods"
+    }
 }

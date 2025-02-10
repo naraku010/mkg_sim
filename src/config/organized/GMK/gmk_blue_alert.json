@@ -1,43 +1,43 @@
 {
-  "id": "gmk_blue_alert",
-  "label": "GMK Blue Alert",
-  "manufacturer": "GMK",
-  "designer": "비글이",
-  "swatches": {
-    "base": {
-      "background": "#D8D2C3",
-      "color": "#00589F"
+    "id": "gmk_blue_alert",
+    "label": "Blue Alert",
+    "manufacturer": "GMK",
+    "designer": "비글이",
+    "swatches": {
+        "base": {
+            "background": "#D8D2C3",
+            "color": "#00589F"
+        },
+        "mods": {
+            "background": "#ACA693",
+            "color": "#00589F"
+        },
+        "accent": {
+            "background": "#00589F",
+            "color": "#ACA693"
+        }
     },
-    "mods": {
-      "background": "#ACA693",
-      "color": "#00589F"
-    },
-    "accent": {
-      "background": "#00589F",
-      "color": "#ACA693"
+    "override": {
+        "KC_ENT": "mods",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_SPC": "base",
+        "KC_1": "accent",
+        "KC_2": "accent",
+        "KC_3": "accent",
+        "KC_4": "accent",
+        "KC_5": "accent",
+        "KC_6": "accent",
+        "KC_7": "accent",
+        "KC_8": "accent",
+        "KC_9": "accent",
+        "KC_0": "accent",
+        "KC_MINS": "accent",
+        "KC_EQL": "accent",
+        "KC_BSPC": "accent",
+        "KC_HOME": "accent",
+        "KC_GRAVE": "accent",
+        "KC_INS": "accent",
+        "KC_PGUP": "accent"
     }
-  },
-  "override": {
-    "KC_ENT": "mods",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_SPC": "base",
-    "KC_1": "accent",
-    "KC_2": "accent",
-    "KC_3": "accent",
-    "KC_4": "accent",
-    "KC_5": "accent",
-    "KC_6": "accent",
-    "KC_7": "accent",
-    "KC_8": "accent",
-    "KC_9": "accent",
-    "KC_0": "accent",
-    "KC_MINS": "accent",
-    "KC_EQL": "accent",
-    "KC_BSPC": "accent",
-    "KC_HOME": "accent",
-    "KC_GRAVE": "accent",
-    "KC_INS": "accent",
-    "KC_PGUP": "accent"
-  }
 }

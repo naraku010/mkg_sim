@@ -20,8 +20,8 @@ import pbtfans_sl_cipher from './pbtfans_sl_cipher.json';
 import pbtfans_soul_blossom from './pbtfans_soul_blossom.json';
 import pbtfans_spark from './pbtfans_spark.json';
 import pbtfans_spark_color_mod_kit from './pbtfans_spark_color_mod_kit.json';
-import pbtfans_spark_lightold from './pbtfans_spark_lightold.json';
 import pbtfans_spark_light from './pbtfans_spark_light.json';
+import pbtfans_spark_lightold from './pbtfans_spark_lightold.json';
 import pbtfans_twist_r2 from './pbtfans_twist_r2.json';
 import pbtfans_valhalla from './pbtfans_valhalla.json';
 import pbtfans_vibrato from './pbtfans_vibrato.json';
@@ -49,8 +49,8 @@ export const KC_PBTFANS = {
   pbtfans_soul_blossom: pbtfans_soul_blossom,
   pbtfans_spark: pbtfans_spark,
   pbtfans_spark_color_mod_kit: pbtfans_spark_color_mod_kit,
-  pbtfans_spark_lightold: pbtfans_spark_lightold,
   pbtfans_spark_light: pbtfans_spark_light,
+  pbtfans_spark_lightold: pbtfans_spark_lightold,
   pbtfans_twist_r2: pbtfans_twist_r2,
   pbtfans_valhalla: pbtfans_valhalla,
   pbtfans_vibrato: pbtfans_vibrato

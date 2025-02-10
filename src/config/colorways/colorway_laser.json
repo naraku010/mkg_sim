@@ -1,41 +1,41 @@
 {
- "id": "laser",
- "label": "Laser",
- "manufacturer": "",
- "swatches": {
-  "base": {
-   "background": "#311c7a",
-   "color": "#29a3d1"
-  },
-  "mods": {
-   "background": "#28234c",
-   "color": "#ce0244"
-  },
-  "accent": {
-   "background": "#ce0244",
-   "color": "#28234c"
-  },
-  "accent2": {
-   "background": "#311c7a",
-   "color": "#c25933"
-  }
- },
- "override": {
-  "KC_ENT": "accent",
-  "KC_ESC": "accent",
-  "KC_GESC": "accent",
-  "KC_F5": "mods",
-  "KC_F6": "mods",
-  "KC_F7": "mods",
-  "KC_F8": "mods",
-  "KC_SPC": "accent",
-  "KC_UP": "accent",
-  "KC_DOWN": "accent",
-  "KC_LEFT": "accent",
-  "KC_RGHT": "accent",
-  "KC_W": "accent2",
-  "KC_S": "accent2",
-  "KC_A": "accent2",
-  "KC_D": "accent2"
- }
+    "id": "laser",
+    "label": "Laser",
+    "manufacturer": "GMK",
+    "swatches": {
+        "base": {
+            "background": "#311c7a",
+            "color": "#29a3d1"
+        },
+        "mods": {
+            "background": "#28234c",
+            "color": "#ce0244"
+        },
+        "accent": {
+            "background": "#ce0244",
+            "color": "#28234c"
+        },
+        "accent2": {
+            "background": "#311c7a",
+            "color": "#c25933"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_SPC": "accent",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_LEFT": "accent",
+        "KC_RGHT": "accent",
+        "KC_W": "accent2",
+        "KC_S": "accent2",
+        "KC_A": "accent2",
+        "KC_D": "accent2"
+    }
 }

@@ -1,30 +1,30 @@
 {
- "id": "pono",
- "label": "Pono",
- "manufacturer": "",
- "designer": "",
- "swatches": {
-  "base": {
-   "background": "#393b3b",
-   "color": "#c87e74"
-  },
-  "mods": {
-   "background": "#393b3b",
-   "color": "#c87e74"
-  },
-  "accent": {
-   "background": "#c87e74",
-   "color": "#393b3b"
-  }
- },
- "override": {
-  "KC_ENT": "accent",
-  "KC_PENT": "accent",
-  "KC_ESC": "accent",
-  "KC_GESC": "accent",
-  "KC_UP": "accent",
-  "KC_DOWN": "accent",
-  "KC_LEFT": "accent",
-  "KC_RGHT": "accent"
- }
+    "id": "pono",
+    "label": "Pono",
+    "manufacturer": "GMK",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#393b3b",
+            "color": "#c87e74"
+        },
+        "mods": {
+            "background": "#393b3b",
+            "color": "#c87e74"
+        },
+        "accent": {
+            "background": "#c87e74",
+            "color": "#393b3b"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_PENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_LEFT": "accent",
+        "KC_RGHT": "accent"
+    }
 }

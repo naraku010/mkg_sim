@@ -1,35 +1,35 @@
 {
- "id": "muted",
- "label": "Muted",
- "manufacturer": "",
- "swatches": {
-  "base": {
-   "background": "#cfcfcd",
-   "color": "#242424"
-  },
-  "mods": {
-   "background": "#a4a5a6",
-   "color": "#242424"
-  },
-  "accent": {
-   "background": "#b1e4e3",
-   "color": "#242424"
-  },
-  "accent2": {
-   "background": "#958492",
-   "color": "#242424"
-  }
- },
- "override": {
-  "KC_ENT": "accent",
-  "KC_ESC": "accent",
-  "KC_GESC": "accent",
-  "KC_F5": "accent",
-  "KC_F6": "accent",
-  "KC_F7": "accent",
-  "KC_F8": "accent",
-  "KC_INS": "accent",
-  "KC_SPC": "accent2",
-  "KC_PENT": "accent2"
- }
+    "id": "muted",
+    "label": "Muted",
+    "manufacturer": "GMK",
+    "swatches": {
+        "base": {
+            "background": "#cfcfcd",
+            "color": "#242424"
+        },
+        "mods": {
+            "background": "#a4a5a6",
+            "color": "#242424"
+        },
+        "accent": {
+            "background": "#b1e4e3",
+            "color": "#242424"
+        },
+        "accent2": {
+            "background": "#958492",
+            "color": "#242424"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "accent",
+        "KC_F6": "accent",
+        "KC_F7": "accent",
+        "KC_F8": "accent",
+        "KC_INS": "accent",
+        "KC_SPC": "accent2",
+        "KC_PENT": "accent2"
+    }
 }

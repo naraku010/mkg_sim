@@ -1,34 +1,34 @@
 {
- "id": "taro",
- "label": "Taro",
- "manufacturer": "",
- "swatches": {
-  "base": {
-   "background": "#8E71A2",
-   "color": "#170B19"
-  },
-  "mods": {
-   "background": "#170B19",
-   "color": "#8E71A2"
-  },
-  "accent": {
-   "background": "#00a4a9",
-   "color": "#170B19"
-  },
-  "accent2": {
-   "background": "#f8c200",
-   "color": "#170B19"
-  }
- },
- "override": {
-  "KC_ENT": "accent2",
-  "KC_ESC": "accent2",
-  "KC_GESC": "accent",
-  "KC_LEFT": "accent",
-  "KC_DOWN": "accent",
-  "KC_UP": "accent",
-  "KC_RGHT": "accent",
-  "KC_PENT": "accent",
-  "KC_SPC": "base"
- }
+    "id": "taro",
+    "label": "Taro",
+    "manufacturer": "GMK",
+    "swatches": {
+        "base": {
+            "background": "#8E71A2",
+            "color": "#170B19"
+        },
+        "mods": {
+            "background": "#170B19",
+            "color": "#8E71A2"
+        },
+        "accent": {
+            "background": "#00a4a9",
+            "color": "#170B19"
+        },
+        "accent2": {
+            "background": "#f8c200",
+            "color": "#170B19"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent2",
+        "KC_ESC": "accent2",
+        "KC_GESC": "accent",
+        "KC_LEFT": "accent",
+        "KC_DOWN": "accent",
+        "KC_UP": "accent",
+        "KC_RGHT": "accent",
+        "KC_PENT": "accent",
+        "KC_SPC": "base"
+    }
 }

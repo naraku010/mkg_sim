@@ -1,45 +1,45 @@
 {
- "id": "islander",
- "label": "Islander",
- "manufacturer": "Infinikey",
- "designer": "",
- "swatches": {
-  "base": {
-   "background": "#d0cdc4",
-   "color": "#7a5b52"
-  },
-  "mods": {
-   "background": "#96c8c9",
-   "color": "#7a5b52"
-  },
-  "accent": {
-   "background": "#7a5b52",
-   "color": "#d0cdc4"
-  },
-  "accent2": {
-   "background": "#9ac9a5",
-   "color": "#7a5b52"
-  }
- },
- "override": {
-  "KC_ESC": "accent",
-  "KC_GESC": "accent",
-  "KC_TAB": "accent2",
-  "KC_CAPS": "accent2",
-  "KC_LALT": "accent2",
-  "KC_LGUI": "accent2",
-  "KC_LCTL": "accent2",
-  "KC_LSFT": "accent2",
-  "KC_SPC": "accent",
-  "KC_ENT": "accent",
-  "KC_F5": "mods",
-  "KC_F6": "mods",
-  "KC_F7": "mods",
-  "KC_F8": "mods",
-  "KC_LEFT": "accent",
-  "KC_DOWN": "accent",
-  "KC_UP": "accent",
-  "KC_RGHT": "accent",
-  "KC_PENT": "accent"
- }
+    "id": "islander",
+    "label": "Islander",
+    "manufacturer": "Domikey",
+    "designer": "",
+    "swatches": {
+        "base": {
+            "background": "#d0cdc4",
+            "color": "#7a5b52"
+        },
+        "mods": {
+            "background": "#96c8c9",
+            "color": "#7a5b52"
+        },
+        "accent": {
+            "background": "#7a5b52",
+            "color": "#d0cdc4"
+        },
+        "accent2": {
+            "background": "#9ac9a5",
+            "color": "#7a5b52"
+        }
+    },
+    "override": {
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_TAB": "accent2",
+        "KC_CAPS": "accent2",
+        "KC_LALT": "accent2",
+        "KC_LGUI": "accent2",
+        "KC_LCTL": "accent2",
+        "KC_LSFT": "accent2",
+        "KC_SPC": "accent",
+        "KC_ENT": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods",
+        "KC_LEFT": "accent",
+        "KC_DOWN": "accent",
+        "KC_UP": "accent",
+        "KC_RGHT": "accent",
+        "KC_PENT": "accent"
+    }
 }
