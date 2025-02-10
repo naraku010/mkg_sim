@@ -4,7 +4,6 @@ import { KC_EPBT } from './ePBT';
 import { KC_ETC } from './ETC';
 import { KC_GMK } from './GMK';
 import { KC_JTK } from './JTK';
-import { KC_MAXKEY } from './MAXKEY';
 import { KC_PBTFANS } from './PBTFans';
 import { KC_TUT } from './TUT';
 
@@ -15,7 +14,6 @@ export const KC_COLORWAYS = {
   ...KC_ETC,
   ...KC_GMK,
   ...KC_JTK,
-  ...KC_MAXKEY,
   ...KC_PBTFANS,
   ...KC_TUT
 };

@@ -1,9 +1,10 @@
-import jtk_arctic from './jtk_arctic.json';
-import jtk_fishing from './jtk_fishing.json';
-import jtk_lavender_violet from './jtk_lavender_violet.json';
+const modules = import.meta.glob('./*.json', {eager: true});
 
-export const KC_JTK = {
-  jtk_arctic: jtk_arctic,
-  jtk_fishing: jtk_fishing,
-  jtk_lavender_violet: jtk_lavender_violet
-};
+const KC_JTK = {};
+
+for (const path in modules) {
+  const key = path.replace('./', '').replace('.json', ''); // 파일명만 추출
+  KC_JTK[key] = modules[path];
+}
+
+export {KC_JTK};

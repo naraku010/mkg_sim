@@ -1,5 +1,10 @@
-import dcs_soware from './dcs_soware.json';
+const modules = import.meta.glob('./*.json', {eager: true});
 
-export const KC_DCS = {
-  dcs_soware: dcs_soware
-};
+const KC_DCS = {};
+
+for (const path in modules) {
+  const key = path.replace('./', '').replace('.json', ''); // 파일명만 추출
+  KC_DCS[key] = modules[path];
+}
+
+export {KC_DCS};
