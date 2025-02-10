@@ -6,14 +6,14 @@ import styles from "./action.module.scss";
 export default function PermalinkButton() {
   const node = useRef(null);
   const [visible, setVisible] = useState(false);
-  const [message, setMessage] = useState("갤에 자랑하러 가야지~");
+  const [message, setMessage] = useState("렌더링 링크 주소");
 
   const copyPermalink = () => {
     node.current.select();
     document.execCommand("copy");
     setMessage("permalink copied");
     setTimeout(() => {
-      setMessage("갤에 자랑하러 가야지~");
+      setMessage("렌더링 링크 주소");
     }, 1000);
   };
 
