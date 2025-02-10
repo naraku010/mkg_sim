@@ -1,0 +1,33 @@
+@use "sass:color";
+//spacing / pading
+$sidebar-width: 20em;
+$sidebar-padding: 1em;
+$scrollbar-width: 1em;
+$control-width: 5em;
+$section-padding: 1.5rem;
+
+//screen
+$h: 675px;
+$w: 1200px;
+$bezel: 12px;
+$base: #f1eadc;
+$accent: #f1eadc;
+$secondary: #f1eadc;
+$border-width: 2px;
+
+$primary-field-height: 35px;
+$primary-border-radius: 5px;
+
+$color-accent: #614dff;
+$color-main: #202024;
+$break: 900px;
+
+$color-light-1: color.scale($color-main, $lightness: 10%);
+$color-light-15: color.scale($color-main, $lightness: 20%);
+$color-light-2: color.scale($color-main, $lightness: 50%);
+$color-light-3: color.scale($color-main, $lightness: 75%);
+$color-light-4: color.scale($color-main, $lightness: 80%);
+
+$color-dark-1:  color.scale($color-main, $lightness: 7%);
+$color-dark-2:  color.scale($color-main, $lightness: 25%);
+$color-dark-3:  color.scale($color-main, $lightness: 30%);

@@ -1,5 +1,5 @@
-@import "./assets/variables";
-@import "./assets/mixins";
+@import "@styles/variables";
+@import "@styles/mixins";
 
 .App {
   font-family: "Inter var", sans-serif;
@@ -69,7 +69,7 @@
   }
   ::-webkit-scrollbar,
   &::-webkit-scrollbar {
-    width: $scrollbar-width / 2;
+    width: calc($scrollbar-width / 2);
     overflow: hidden;
   }
   ::-webkit-scrollbar-thumb,

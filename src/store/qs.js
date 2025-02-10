@@ -1,7 +1,6 @@
 import store from "./store";
 import { encodeColorway, decodeColorway } from "./encoder";
-
-const qs = require("query-string");
+import qs from "query-string";
 
 export const get_qs_values = () => {
   if (!document.location.search) return;

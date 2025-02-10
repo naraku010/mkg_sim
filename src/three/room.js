@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import store from "../store/store";
-import wallShadowPath from "../assets/dist/shadow-wall.png";
+import wallShadowPath from "@assets/dist/shadow-wall.png";
 import { TextureLoader } from "three/src/loaders/TextureLoader.js";
 import ThreeUtil from "../util/three";
 

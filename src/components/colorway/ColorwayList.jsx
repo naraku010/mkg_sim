@@ -1,0 +1,97 @@
+import React, {useState} from "react";
+import Colorway from "./Colorway";
+import Button from "../elements/Button";
+import styles from "./ColorwayList.module.scss";
+import {useSelector, useDispatch} from "react-redux";
+
+import CollapsibleSection from "../containers/CollapsibleSection";
+import SearchField from "../elements/SearchField";
+import ColorUtil from "../../util/color";
+import {
+    setColorway,
+    selectColorways,
+    addCustomColorway,
+} from "../../store/slices/colorways";
+
+import {ReactComponent as PlusIcon} from "@assets/icons/icon_plus.svg";
+import {KC_COLORWAYS} from "../../config/organized/keycaps";
+
+export default function ColorwayList(props) {
+    const dispatch = useDispatch();
+    const customColorways = useSelector(selectColorways);
+    const [filter, setFilter] = useState("");
+
+  const filteredColorways = () => {
+    return Object.keys(KC_COLORWAYS)
+      .sort()
+      .filter((cw) => {
+        return filter.length
+          ? cw.toLowerCase().includes(filter.toLowerCase())
+          : true;
+      });
+  };
+
+    const customColorwayTiles = customColorways.map((s) => (
+        <Colorway key={s.id} colorway={s} custom={true} setTab={props.setTab}/>
+    ));
+
+    const userNewColorwayTiles = filteredColorways().sort().map((s) => (
+        <Colorway key={KC_COLORWAYS[s]?.id} colorway={KC_COLORWAYS[s]}/>
+    ));
+
+
+    const addColorway = (e) => {
+        let cw = ColorUtil.getColorwayTemplate(customColorways?.length + 1 || 1);
+        dispatch(addCustomColorway(cw));
+        dispatch(setColorway(cw.id));
+    };
+
+    return (
+        <CollapsibleSection title="키캡 종류" open={true}>
+            <div>
+                <div className={styles.group}>
+                    <SearchField
+                        filter={(val) => {
+                            setFilter(val);
+                        }}
+                    />
+                    <Button
+                        title="Add"
+                        icon={<PlusIcon/>}
+                        className={styles.add}
+                        handler={addColorway}
+                        tabIndex="0"
+                    >
+                        <PlusIcon/>
+                        <span>새 색상 추가</span>
+                    </Button>
+                </div>
+                {customColorwayTiles.length ? (
+                    <div aria-hidden="true" className={styles.listLabel}>
+                        <span>나의 컬러</span>
+                    </div>
+                ) : null}
+                <ul className={styles.list} aria-label="my custom colorways list">
+                    {customColorwayTiles}
+                </ul>
+                <div aria-hidden="true" className={styles.newListLabel}>
+                    <span>업로드 색상</span>
+                </div>
+                <ul className={styles.list} aria-label="제공 색상">
+                    {userNewColorwayTiles}
+                </ul>
+                {/*<div aria-hidden="true" className={styles.listLabel}>*/}
+                {/*    <span>업로드 색상</span>*/}
+                {/*</div>*/}
+                {/*<ul className={styles.list} aria-label="기키갤 제공 색상">*/}
+                {/*    {userColorwayTiles}*/}
+                {/*</ul>*/}
+                {/*{customColorwayTiles.length ? (*/}
+                {/*    <div aria-hidden="true" className={styles.listLabel}>*/}
+                {/*        <span>기존 색상</span>*/}
+                {/*    </div>*/}
+                {/*) : null}*/}
+            </div>
+        </CollapsibleSection>
+    );
+}

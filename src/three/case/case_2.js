@@ -1,22 +1,20 @@
 import * as THREE from "three";
+import { mergeBufferGeometries } from "three-stdlib";
 import store from "../../store/store";
 import holes from "./holes";
 
-export default (layout, color) => {
-  // 기본값 설정
+const case_2 = (layout, color) => {
   color = color || "#cccccc";
-  let cornerRadius = 0.3; // 코너 반경을 아주 작게 설정
-  let bevel = 0.015;
-  let bezel = 0.2;
-  let height = 1;
-  let width = layout.width + bezel * 2;
-  let depth = layout.height + bezel * 2;
-  let size = store.getState().case.layout;
+  const cornerRadius = 0.3;
+  const bevel = 0.015;
+  const bezel = 0.2;
+  const height = 1; // 케이스 두께
+  const width = layout.width + bezel * 2;
+  const depth = layout.height + bezel * 2;
+  const size = store.getState().case.layout;
 
-  // Shape 생성
-  let shape = new THREE.Shape();
-
-  // 약간의 곡선 추가
+  // ── 메인 케이스 (홀 있음) ──
+  const shape = new THREE.Shape();
   shape.moveTo(cornerRadius, 0);
   shape.lineTo(width - cornerRadius, 0);
   shape.quadraticCurveTo(width, 0, width, cornerRadius);
@@ -26,123 +24,135 @@ export default (layout, color) => {
   shape.quadraticCurveTo(0, depth, 0, depth - cornerRadius);
   shape.lineTo(0, cornerRadius);
   shape.quadraticCurveTo(0, 0, cornerRadius, 0);
-
-  // 홀 추가
   shape.holes = holes(size, layout, bezel);
 
-  // Extrude 옵션
-  let extrudeOptions = {
+  const extrudeOptions = {
     depth: height,
     steps: 1,
-    bevelSegments: 1,
     bevelEnabled: true,
     bevelSize: bevel,
     bevelThickness: bevel,
+    bevelSegments: 1,
   };
 
-  // Geometry 생성
-  let geometry = new THREE.ExtrudeGeometry(shape, extrudeOptions);
+  let mainGeometry = new THREE.ExtrudeGeometry(shape, extrudeOptions);
 
-  // 그룹화 처리
-  function groupGeometry(geometry) {
-    // geometry.index가 없을 경우 처리
-    if (!geometry.index) {
-      console.warn("geometry.index is null, converting to non-indexed geometry...");
-      geometry = geometry.toNonIndexed();
-    }
+  // ── 하부 (바텀 커버, 홀 없음) ──
+  const bottomShape = new THREE.Shape();
+  bottomShape.moveTo(cornerRadius, 0);
+  bottomShape.lineTo(width - cornerRadius, 0);
+  bottomShape.quadraticCurveTo(width, 0, width, cornerRadius);
+  bottomShape.lineTo(width, depth - cornerRadius);
+  bottomShape.quadraticCurveTo(width, depth, width - cornerRadius, depth);
+  bottomShape.lineTo(cornerRadius, depth);
+  bottomShape.quadraticCurveTo(0, depth, 0, depth - cornerRadius);
+  bottomShape.lineTo(0, cornerRadius);
+  bottomShape.quadraticCurveTo(0, 0, cornerRadius, 0);
+  // 하부에는 홀 넣지 않음
 
-    geometry.clearGroups(); // 기존 그룹 제거
+  const bottomThickness = 0.1;
+  const bottomExtrudeOptions = {
+    depth: bottomThickness,
+    steps: 1,
+    bevelEnabled: true,
+    bevelSize: bevel,
+    bevelThickness: bevel,
+    bevelSegments: 1,
+  };
 
-    const faceCount = geometry.index ? geometry.index.count / 3 : geometry.attributes.position.count / 3; // 전체 face 수
-    const capFaces = faceCount / 2; // 상판/하판의 face 개수
+  let bottomGeometry = new THREE.ExtrudeGeometry(bottomShape, bottomExtrudeOptions);
 
-    // 상판 그룹 추가
-    geometry.addGroup(0, capFaces * 3, 0); // 첫 번째 재질 그룹 (상판/하판)
-    // 측면 그룹 추가
-    geometry.addGroup(capFaces * 3, (faceCount - capFaces) * 3, 1); // 두 번째 재질 그룹 (측면)
+  // ── 그룹화, UV 생성 함수 ──
+  function groupGeometry(geom) {
+    geom.clearGroups();
+    const faceCount = geom.index ? geom.index.count / 3 : geom.attributes.position.count / 3;
+    const capFaces = faceCount / 2;
+    // 그룹 0: 캡 (상판/하판)
+    geom.addGroup(0, capFaces * 3, 0);
+    // 그룹 1: 측면
+    geom.addGroup(capFaces * 3, (faceCount - capFaces) * 3, 1);
   }
 
-  // UV 매핑 생성 함수 - 상판/하판
-  function generateUVsForCaps(geometry) {
-    const positionAttribute = geometry.getAttribute("position");
-    const uvAttribute = [];
-
-    geometry.computeBoundingBox();
-    const boundingBox = geometry.boundingBox;
-
-    const min = boundingBox.min;
-    const max = boundingBox.max;
-
-    const range = new THREE.Vector3();
-    range.subVectors(max, min);
-
-    for (let i = 0; i < positionAttribute.count; i++) {
-      const x = positionAttribute.getX(i);
-      const y = positionAttribute.getY(i);
-
-      const u = (x - min.x) / range.x; // U 좌표
-      const v = (y - min.y) / range.y; // V 좌표
-
-      uvAttribute.push(u, v);
+  function generateUVsForCaps(geom) {
+    const posAttr = geom.getAttribute("position");
+    const uvArray = [];
+    geom.computeBoundingBox();
+    const bb = geom.boundingBox;
+    const min = bb.min;
+    const max = bb.max;
+    const range = new THREE.Vector3().subVectors(max, min);
+    for (let i = 0; i < posAttr.count; i++) {
+      const x = posAttr.getX(i);
+      const y = posAttr.getY(i);
+      const u = (x - min.x) / range.x;
+      const v = (y - min.y) / range.y;
+      uvArray.push(u, v);
     }
-
-    geometry.setAttribute("uv", new THREE.Float32BufferAttribute(uvAttribute, 2));
+    geom.setAttribute("uv", new THREE.Float32BufferAttribute(uvArray, 2));
   }
 
-  // UV 매핑 생성 함수 - 측면
-  function generateUVsForSides(geometry) {
-    const positionAttribute = geometry.getAttribute("position");
-    const uvAttribute = [];
-
-    geometry.computeBoundingBox();
-    const boundingBox = geometry.boundingBox;
-
-    const min = boundingBox.min;
-    const max = boundingBox.max;
-
-    const range = new THREE.Vector3();
-    range.subVectors(max, min);
-
-    for (let i = 0; i < positionAttribute.count; i++) {
-      const z = positionAttribute.getZ(i);
-      const y = positionAttribute.getY(i);
-
-      const u = (z - min.z) / range.z; // U 좌표
-      const v = (y - min.y) / range.y; // V 좌표
-
-      uvAttribute.push(u, v);
+  function generateUVsForSides(geom) {
+    const posAttr = geom.getAttribute("position");
+    const uvArray = [];
+    geom.computeBoundingBox();
+    const bb = geom.boundingBox;
+    const min = bb.min;
+    const max = bb.max;
+    const range = new THREE.Vector3().subVectors(max, min);
+    for (let i = 0; i < posAttr.count; i++) {
+      const z = posAttr.getZ(i);
+      const y = posAttr.getY(i);
+      const u = (z - min.z) / range.z;
+      const v = (y - min.y) / range.y;
+      uvArray.push(u, v);
     }
-
-    geometry.setAttribute("uv", new THREE.Float32BufferAttribute(uvAttribute, 2));
+    geom.setAttribute("uv", new THREE.Float32BufferAttribute(uvArray, 2));
   }
 
-  // 그룹화
-  groupGeometry(geometry);
+  // 그룹과 UV 생성 (메인/하부 각각)
+  groupGeometry(mainGeometry);
+  mainGeometry.computeBoundingBox();
+  mainGeometry.computeBoundingSphere();
+  generateUVsForCaps(mainGeometry);
+  generateUVsForSides(mainGeometry);
+  mainGeometry.computeVertexNormals();
 
-  // UV 매핑 생성
-  geometry.computeBoundingBox();
-  geometry.computeBoundingSphere();
+  groupGeometry(bottomGeometry);
+  bottomGeometry.computeBoundingBox();
+  bottomGeometry.computeBoundingSphere();
+  generateUVsForCaps(bottomGeometry);
+  generateUVsForSides(bottomGeometry);
+  bottomGeometry.computeVertexNormals();
 
-  // 상판/하판 UV 매핑
-  generateUVsForCaps(geometry);
+  // ── 메인, 하부 각각 변환 (원래 mesh 설정과 동일)
+  // 메인 케이스: x축 90도 회전, (-bezel, 0, -bezel) 위치
+  const mainMatrix = new THREE.Matrix4().compose(
+      new THREE.Vector3(-bezel, 0, -bezel),
+      new THREE.Quaternion().setFromEuler(new THREE.Euler(Math.PI / 2, 0, 0)),
+      new THREE.Vector3(1, 1, 1)
+  );
+  mainGeometry.applyMatrix4(mainMatrix);
 
-  // 측면 UV 매핑
-  generateUVsForSides(geometry);
+  // 하부: x축 90도 회전, (-bezel, -height, -bezel) 위치
+  const bottomMatrix = new THREE.Matrix4().compose(
+      new THREE.Vector3(-bezel, -height, -bezel),
+      new THREE.Quaternion().setFromEuler(new THREE.Euler(Math.PI / 2, 0, 0)),
+      new THREE.Vector3(1, 1, 1)
+  );
+  bottomGeometry.applyMatrix4(bottomMatrix);
 
-  // 법선 계산
-  geometry.computeVertexNormals();
+  // ── 두 지오메트리를 병합 ──
+  const mergedGeometry = mergeBufferGeometries([mainGeometry, bottomGeometry], true);
 
-  // 재질 생성
+  // 재질 생성 (캡, 측면)
   const materials = [
-    new THREE.MeshStandardMaterial({ color: color, roughness: 0.5, metalness: 0.1 }), // 상판/하판
-    new THREE.MeshStandardMaterial({ color: 0x999999, roughness: 0.5, metalness: 0.1 }) // 측면
+    new THREE.MeshStandardMaterial({ color: color, roughness: 0.5, metalness: 0.1 }),
+    new THREE.MeshStandardMaterial({ color: 0x999999, roughness: 0.5, metalness: 0.1 }),
   ];
 
-  // Mesh 생성
-  const mesh = new THREE.Mesh(geometry, materials);
+  const mesh = new THREE.Mesh(mergedGeometry, materials);
   mesh.name = "CASE";
-  mesh.rotation.x = Math.PI / 2;
-  mesh.position.set(-bezel, 0, -bezel);
 
   return mesh;
 };
+export default case_2;

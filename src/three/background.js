@@ -1,9 +1,9 @@
 import * as THREE from "three";
-import PureSky from "../assets/hdr/puresky.hdr";
-import Cloudy from "../assets/hdr/cloudy.hdr";
-import HillSunrise from "../assets/hdr/hill_sunrise.hdr";
-import Studio from "../assets/hdr/studio.hdr";
-import GoldenBay from "../assets/hdr/golden_bay.hdr";
+import PureSky from "@assetshdr/puresky.hdr";
+import Cloudy from "@assetshdr/cloudy.hdr";
+import HillSunrise from "@assetshdr/hill_sunrise.hdr";
+import Studio from "@assetshdr/studio.hdr";
+import GoldenBay from "@assetshdr/golden_bay.hdr";
 import { RGBELoader } from "three-stdlib";
 import { DirectionalLightHelper } from "three";
 

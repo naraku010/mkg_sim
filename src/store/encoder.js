@@ -3,7 +3,7 @@ encode colorway json for query string
 
 encoded example: cw_9aa5b6.393b3b-393b3b.fe5a90-fe5a90.393b3b_ENT.2-ESC.2-GESC.2_ID_LABEL
 
-decoded example: 
+decoded example:
 {
   "id": "ID",
   "label": "LABEL",
@@ -69,7 +69,11 @@ export const decodeColorway = (value) => {
   cw["swatches"] = decodeSwatches(sw_list, sw_keys);
   cw["override"] = decodeOverride(value[2].split("-"), sw_keys);
   cw.id = value[3].replace("-", "_");
-  cw.label = decodeURIComponent(value[4]);
+  try {
+    cw.label = decodeURIComponent(value[4]);
+  } catch(e) {
+    console.error('Malformed URI detected:', e);
+  }
   return cw;
 };
 

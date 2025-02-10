@@ -6,12 +6,8 @@ import {disableHighlight, enableHighlight} from "./key/materials";
 import ThreeUtil from "../util/three";
 import GUI from "lil-gui";
 import RoundedMatPad from "./mat";
-import HDRBackgroundManager from "./background";
 import {RectAreaLightHelper} from 'three/examples/jsm/helpers/RectAreaLightHelper.js';
 import {RectAreaLightUniformsLib} from 'three/examples/jsm/lights/RectAreaLightUniformsLib.js'
-import {UnrealBloomPass} from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
-import {EffectComposer} from "three/examples/jsm/postprocessing/EffectComposer";
-import {RenderPass} from "three/examples/jsm/postprocessing/RenderPass";
 
 
 export default class SceneManager extends Collection {
@@ -66,7 +62,6 @@ export default class SceneManager extends Collection {
         this.setupControls();
         // 시발 장패드
         this.setupMat();
-        this.setupBackground();
         // this.composer = new EffectComposer(this.renderer);
         // this.composer.addPass(new RenderPass(this.scene, this.camera));
         //
@@ -180,8 +175,8 @@ export default class SceneManager extends Collection {
         this.scene.add(ambientLight);
         // RectAreaLight(색상, 강도, 가로width, 세로height)
         // 면의 크기를 조절해서 원하는 크기의 형광등을 시뮬레이션
-        this.rectLight = new THREE.RectAreaLight(0xf5f5f5, .5, 15, 15);
-        this.rectLight.position.set(0, 15, 0);  // 천장 높이라고 가정
+        this.rectLight = new THREE.RectAreaLight(0xf5f5f5, 1, 15, 15);
+        this.rectLight.position.set(0, 20, 0);  // 천장 높이라고 가정
         // 아래 바라보도록 설정
         this.rectLight.lookAt(0, 0, 0);
 
@@ -196,16 +191,27 @@ export default class SceneManager extends Collection {
 
     setupLightGUI() {
         const rectFolder = this.gui.addFolder('조명');
+        rectFolder.close();
 
+        const lightAngle = { theta: 90, phi: 90 };
         // 위치
         rectFolder.add(this.rectLight.position, 'x', -5, 80, 0.1).name('위치 X');
         rectFolder.add(this.rectLight.position, 'y', 0, 80, 0.1).name('위치 Y');
         rectFolder.add(this.rectLight.position, 'z', -5, 80, 0.1).name('위치 Z');
+        rectFolder
+            .add(lightAngle, 'theta', 0, 360, 1)
+            .name('수평 각도')
+            .onChange(() => updateLightDirection(this.rectLight));
+
+        rectFolder
+            .add(lightAngle, 'phi', -90, 90, 1)
+            .name('수직 각도')
+            .onChange(() => updateLightDirection(this.rectLight));
 
         rectFolder.add(this.rectLight, 'intensity', 0, 30, 0.1).name('밝기');
         // 면조명 폭, 높이
-        rectFolder.add(this.rectLight, 'width', 0.1, 80, 0.1).name('폭');
-        rectFolder.add(this.rectLight, 'height', 0.1, 80, 0.1).name('높이');
+        rectFolder.add(this.rectLight, 'width', 0.1, 80, 0.1).name('조명크기_좌우폭');
+        rectFolder.add(this.rectLight, 'height', 0.1, 80, 0.1).name('조명크기_높이');
 
         // 색상
         const rectParams = {color: this.rectLight.color.getHex()};
@@ -226,14 +232,24 @@ export default class SceneManager extends Collection {
                     this.scene.remove(this.rectLightHelper);
                 }
             });
+
+        function updateLightDirection(light) {
+            const radius = 10; // 조명의 거리 (원점으로부터)
+            const thetaRad = THREE.MathUtils.degToRad(lightAngle.theta);
+            const phiRad = THREE.MathUtils.degToRad(lightAngle.phi);
+
+            // Spherical 좌표계 변환 (조명을 구 형태로 움직임)
+            const x = radius * Math.sin(thetaRad) * Math.cos(phiRad);
+            const y = radius * Math.sin(phiRad);
+            const z = radius * Math.cos(thetaRad) * Math.cos(phiRad);
+
+            light.position.set(x, y, z);
+            light.lookAt(0, 0, 0); // 항상 원점을 바라보도록 설정
+        }
     }
 
     setupMat() {
         this.mat = new RoundedMatPad(this.scene, this.gui);
-    }
-
-    setupBackground() {
-        this.background = new HDRBackgroundManager(this.scene, this.camera, this.renderer, this.gui);
     }
 
     setupCamera() {
@@ -250,7 +266,7 @@ export default class SceneManager extends Collection {
                 this.controls.update(); // 컨트롤 업데이트
             }
         };
-        this.gui.add(params, 'resetCamera').name('뷰 초기화');
+        this.gui.add(params, 'resetCamera').name('카메라 원점');
 
     }
 

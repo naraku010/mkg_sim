@@ -39,9 +39,6 @@ const getPathF5 = (sx, sy, gutter) => {
 const getPathF9 = (sx, sy, gutter) => {
     return getSquarePath(sx, sy, 4, 1, gutter);
 };
-const getPathF13 = (sx, sy, gutter) => {
-    return getSquarePath(sx, sy, 1, 1, gutter);
-};
 const getPathPrint = (sx, sy, gutter) => {
     return getSquarePath(sx, sy, 3, 1, gutter);
 };
@@ -62,7 +59,7 @@ const getPathArrows = (sx, sy, gutter) => {
     ]);
 };
 
-export default (layoutName, layoutJson, bezel) => {
+function holes (layoutName, layoutJson, bezel) {
     let holes = [];
     let gutter = 0.01;
     let w = layoutJson.width;
@@ -74,7 +71,6 @@ export default (layoutName, layoutJson, bezel) => {
     let f1 = getPathF1(sx + 2, sy, gutter);
     let f5 = getPathF5(sx + 6.5, sy, gutter);
     let f9 = getPathF9(sx + 11, sy, gutter);
-    let f13 = getPathF13(sx + 15.5, sy, gutter);
     let print = getPathPrint(sx + 15.25, sy, gutter);
     let nav = getPathNav(sx + 15.25, sy + 1.25, gutter);
     let arrows = getPathArrows(sx + 15.25, sy + 6.2, gutter);
@@ -387,3 +383,4 @@ export default (layoutName, layoutJson, bezel) => {
     }
     return holes;
 };
+export default holes;

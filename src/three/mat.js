@@ -1,10 +1,10 @@
 import * as THREE from 'three';
-import DMKDeicide from '../assets/mat/DMK_Deicide.webp';
-import DMKUnicorn from '../assets/mat/DMK_Unicorn.webp';
-import GMKEuler from '../assets/mat/GMK_Euler.webp';
-import GMKFoundation from '../assets/mat/GMK_Foundation.webp';
-import GMKMaestro from '../assets/mat/GMK_Maestro.webp';
-import KNCKeysRunGo from '../assets/mat/KNC_Keys_Run_Go.webp';
+import DMKDeicide from '@assets/mat/DMK_Deicide.webp';
+import DMKUnicorn from '@assets/mat/DMK_Unicorn.webp';
+import GMKEuler from '@assets/mat/GMK_Euler.webp';
+import GMKFoundation from '@assets/mat/GMK_Foundation.webp';
+import GMKMaestro from '@assets/mat/GMK_Maestro.webp';
+import KNCKeysRunGo from '@assets/mat/KNC_Keys_Run_Go.webp';
 
 class RoundedRectangleGeometry extends THREE.BufferGeometry {
     constructor(width, height, depth = 0.1) {

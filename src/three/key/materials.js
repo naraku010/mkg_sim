@@ -3,9 +3,9 @@ import store from "../../store/store";
 import {keyTexture} from "./texture";
 import {initial_settings} from "../../store/startup";
 import {TextureLoader} from "three/src/loaders/TextureLoader.js";
-import ambiantOcclusionPath from "../../assets/dist/shadow-key-noise.png";
-import lightMapPath from "../../assets/materials/white.png";
-import pbtMapPath from "../../assets/texture/normal/abs.jpg";
+import ambiantOcclusionPath from "@assets/dist/shadow-key-noise.png";
+import lightMapPath from "@assets/materials/white.png";
+import pbtMapPath from "@assets/texture/normal/abs.jpg";
 const loader = new TextureLoader();
 
 const ambiantOcclusionMap = loader.load(ambiantOcclusionPath);
