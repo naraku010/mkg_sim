@@ -1,7 +1,7 @@
 {
-    "id": "gmk_war_maiden_band",
-    "label": "War Maiden band",
-    "manufacturer": "GMK",
+    "id": "kbm_war_maiden",
+    "label": "War Maiden",
+    "manufacturer": "KBM",
     "designer": "KGJun",
     "swatches": {
         "base": {
@@ -9,11 +9,11 @@
             "color": "#2f251c"
         },
         "mods": {
-            "background": "#552323",
+            "background": "#1d2e4a",
             "color": "#ababa9"
         },
         "accent": {
-            "background": "#552323",
+            "background": "#1d2e4a",
             "color": "#ababa9"
         }
     },

@@ -1,7 +1,7 @@
 {
-    "id": "gmk_war_maiden",
-    "label": "War Maiden",
-    "manufacturer": "GMK",
+    "id": "kbm_war_maiden_brosche",
+    "label": "War Maiden Brosche",
+    "manufacturer": "KBM",
     "designer": "KGJun",
     "swatches": {
         "base": {
@@ -9,11 +9,11 @@
             "color": "#2f251c"
         },
         "mods": {
-            "background": "#1d2e4a",
+            "background": "#2d543c",
             "color": "#ababa9"
         },
         "accent": {
-            "background": "#1d2e4a",
+            "background": "#2d543c",
             "color": "#ababa9"
         }
     },

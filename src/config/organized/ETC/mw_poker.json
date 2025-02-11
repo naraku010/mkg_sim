@@ -1,7 +1,7 @@
 {
-    "id": "gmk_mw_poker",
-    "label": "MW_Poker",
-    "manufacturer": "GMK",
+    "id": "mw_poker",
+    "label": "Poker",
+    "manufacturer": "MW",
     "designer": "",
     "swatches": {
         "base": {

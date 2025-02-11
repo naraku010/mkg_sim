@@ -1,7 +1,7 @@
 {
-    "id": "gmk_rome",
+    "id": "etc_rome",
     "label": "Rome",
-    "manufacturer": "GMK",
+    "manufacturer": "ETC",
     "swatches": {
         "base": {
             "background": "#151515",

@@ -1,20 +1,20 @@
 {
-    "id": "gmk_norialpha_kit",
-    "label": "Norialpha kit",
-    "manufacturer": "GMK",
+    "id": "keycobo_nori",
+    "label": "Nori",
+    "manufacturer": "Keycobo",
     "designer": "KGJun",
     "swatches": {
         "base": {
-            "background": "#d6d2c3",
-            "color": "#1d3c34"
+            "background": "#1d3c34",
+            "color": "#d6d2c3"
         },
         "mods": {
             "background": "#26282a",
             "color": "#679881"
         },
         "accent": {
-            "background": "#1d3c34",
-            "color": "#d6d2c3"
+            "background": "#d6d2c3",
+            "color": "#26282a"
         }
     },
     "override": {
@@ -25,10 +25,10 @@
         "KC_F6": "mods",
         "KC_F7": "mods",
         "KC_F8": "mods",
-        "KC_UP": "mods",
-        "KC_DOWN": "mods",
-        "KC_RGHT": "mods",
-        "KC_LEFT": "mods",
+        "KC_UP": "accent",
+        "KC_DOWN": "accent",
+        "KC_RGHT": "accent",
+        "KC_LEFT": "accent",
         "KC_SPC": "base"
     }
 }

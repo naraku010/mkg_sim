@@ -6,6 +6,7 @@ import { KC_GMK } from './GMK';
 import { KC_JTK } from './JTK';
 import { KC_PBTFANS } from './PBTFans';
 import { KC_TUT } from './TUT';
+import { KC_KEYCOBO } from './Keycobo';
 
 export const KC_COLORWAYS = {
   ...KC_DCS,
@@ -15,5 +16,6 @@ export const KC_COLORWAYS = {
   ...KC_GMK,
   ...KC_JTK,
   ...KC_PBTFANS,
-  ...KC_TUT
+  ...KC_TUT,
+  ...KC_KEYCOBO
 };
