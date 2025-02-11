@@ -59,6 +59,10 @@ const getMaterialSet = (opts) => {
         roughness: 1,  // 매끄러운 표면 유지
         transmission: 0.0,
         thickness: 0.0,
+        sheen: 0.1, // 플라스틱의 미세한 확산 반사만 적용
+        sheenColor: new THREE.Color(0xffffff),
+        sheenRoughness: 0.5, // 확산 반사가 너무 강하지 않도록 조절
+        envMapIntensity: 0.3,
     });
     top.map.minFilter = top.map.magFilter = THREE.LinearFilter;
     top.needsUpdate = true;
@@ -67,9 +71,13 @@ const getMaterialSet = (opts) => {
         aoMap: lightMap,
         aoMapIntensity: .5,
         metalness: 0,  // 메탈 느낌을 약간 추가
-        roughness: .8,  // 표면을 더 매끄럽게 만들어 빛을 더 잘 반사하게
+        roughness: 1,  // 표면을 더 매끄럽게 만들어 빛을 더 잘 반사하게
         transmission: 0.0,
         thickness: 0.0,
+        sheen: 0.1, // 플라스틱의 미세한 확산 반사만 적용
+        sheenColor: new THREE.Color(0xffffff),
+        sheenRoughness: 0.5, // 확산 반사가 너무 강하지 않도록 조절
+        envMapIntensity: 0.3,
     });
     if( currentState.keys.legendType === 'trn') {
         top.blending = side.blending = THREE.NormalBlending;

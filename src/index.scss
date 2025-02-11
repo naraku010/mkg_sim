@@ -55,7 +55,7 @@ body {
 
 //simulate hover on a canvas with a body class toggle
 body.intersecting-key.editing #canvas-wrapper {
-  cursor: url("/paintbrush.png") 0 47, auto !important;
+  cursor: url("@assets/paintbrush.png") 0 47, auto !important;
 }
 .grabable {
   cursor: grab;
