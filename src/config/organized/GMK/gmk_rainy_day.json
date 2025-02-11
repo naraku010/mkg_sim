@@ -1,0 +1,35 @@
+{
+  "id": "gmk_rainy_day",
+  "label": "Rainy Day",
+  "manufacturer": "GMK",
+  "designer": "비글이",
+  "swatches": {
+    "base": {
+      "background": "#aeb2b5",
+      "color": "#41474b"
+    },
+    "mods": {
+      "background": "#41474b",
+      "color": "#c5e9ea"
+    },
+    "accent": {
+      "background": "#c5e9ea",
+      "color": "#41474b"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent",
+    "KC_SPC": "base",
+    "KC_D": "base",
+    "KC_F5": "mods",
+    "KC_F6": "mods",
+    "KC_F7": "mods",
+    "KC_F8": "mods",
+    "KC_LEFT": "accent",
+    "KC_DOWN": "accent",
+    "KC_RGHT": "accent",
+    "KC_UP": "accent"
+  }
+}

@@ -1,7 +1,7 @@
 {
-    "id": "gmk_keykobo_cherries_alpha",
-    "label": "KeyKobo  Cherries Alpha",
-    "manufacturer": "GMK",
+    "id": "keykobo_cherries_alpha",
+    "label": "KeyKobo Cherries Alpha",
+    "manufacturer": "KeyKobo",
     "designer": "KGJun",
     "swatches": {
         "base": {
