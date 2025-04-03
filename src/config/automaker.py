@@ -12,7 +12,7 @@ def to_snake_case(snake_str):
     components = snake_str.lower().replace('-', ' ').split()
     return '_'.join(components)
 
-colorways = 'colorways'
+colorways = 'new_colorways'
 # JSON 파일 경로
 input_json = 'input.json'  # 여기에 JSON 파일 경로를 입력하세요
 output_folder = f'./{colorways}'  # 저장할 폴더
@@ -31,13 +31,12 @@ usercolorways_new = []
 
 # 배열로 처리
 for sub_item in data:
-    # label을 스네이크 케이스로 변환하여 파일명과 id 생성
-    label_snake_case = to_snake_case(sub_item['label'])
-    file_name = f"mkg_{label_snake_case}.json"
+    label_snake_case = to_snake_case(f"{sub_item['manufacturer']} {sub_item['label']}")
+    file_name = f"{label_snake_case}.json"
 
     # id 값을 파일명과 동일하게 수정
-    sub_item['id'] = f"mkg_{label_snake_case}"
-    sub_item['designer'] = '듀얼샷'
+    sub_item['id'] = f"{label_snake_case}"
+    sub_item['designer'] = 'KGJun'
 
     # 파일 저장 경로 설정
     file_path = os.path.join(output_folder, file_name)
@@ -47,7 +46,7 @@ for sub_item in data:
         json.dump(sub_item, outfile, ensure_ascii=False, indent=4)
 
     # import 문과 USERCOLORWAYS_NEW 항목 생성
-    variable_name = f"mkg_{label_snake_case}"
+    variable_name = f"{label_snake_case}"
     import_statements.append(f'import {variable_name} from "./{colorways}/{file_name}";')
     usercolorways_new.append(f'    {variable_name}: {variable_name}')
 

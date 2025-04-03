@@ -1,271 +1,266 @@
 [
   {
-    "id": "cw_wxovn",
-    "label": "GMK Godspeed",
-    "manufacturer": "",
+    "default": {
+      "id": "gmk_black_and_gold",
+      "label": "Black and gold",
+      "manufacturer": "GMK",
+      "designer": "",
+      "swatches": {
+        "base": {
+          "background": "#83b0d6",
+          "color": "#d8dcdd"
+        },
+        "mods": {
+          "background": "#83b0d6",
+          "color": "#d8dcdd"
+        },
+        "accent": {
+          "background": "#d8dcdd",
+          "color": "#83b0d6"
+        },
+        "swatch-1": {
+          "background": "#cceae7",
+          "color": "#83b0d6"
+        },
+        "swatch-2": {
+          "background": "#9bd0e1",
+          "color": "#d8dcdd"
+        },
+        "swatch-3": {
+          "background": "#9fcae5",
+          "color": "#d8dcdd"
+        }
+      },
+      "override": {
+        "KC_ENT": "base",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F1": "accent",
+        "KC_F2": "accent",
+        "KC_F3": "accent",
+        "KC_GRAVE": "accent",
+        "KC_1": "accent",
+        "KC_2": "accent",
+        "KC_3": "accent",
+        "KC_TAB": "accent",
+        "KC_Q": "accent",
+        "KC_W": "accent",
+        "KC_CAPS": "accent",
+        "KC_A": "accent",
+        "KC_LSFT": "accent",
+        "KC_LCTL": "accent",
+        "KC_PENT": "accent",
+        "KC_F4": "swatch-1",
+        "KC_4": "swatch-1",
+        "KC_E": "swatch-1",
+        "KC_S": "swatch-1",
+        "KC_Z": "swatch-1",
+        "KC_LGUI": "swatch-1",
+        "KC_PDOT": "accent",
+        "KC_PPLS": "swatch-1",
+        "KC_P3": "swatch-1",
+        "KC_P0": "swatch-1",
+        "KC_F5": "swatch-2",
+        "KC_5": "swatch-2",
+        "KC_R": "swatch-2",
+        "KC_D": "swatch-2",
+        "KC_X": "swatch-2",
+        "KC_LALT": "swatch-2",
+        "KC_F6": "swatch-3",
+        "KC_6": "swatch-3",
+        "KC_T": "swatch-3",
+        "KC_F": "swatch-3",
+        "KC_C": "swatch-3",
+        "KC_P6": "swatch-2",
+        "KC_P2": "swatch-2",
+        "KC_PMNS": "swatch-3",
+        "KC_P9": "swatch-3",
+        "KC_P5": "swatch-3",
+        "KC_P1": "swatch-3"
+      }
+    },
+    "designer": "Verdi",
+    "id": "cw_rbyfb",
+    "label": "BLACK & GOLD",
+    "manufacturer": "GMK",
+    "override": {
+      "KC_ENT": "base",
+      "KC_ESC": "accent",
+      "KC_GESC": "accent",
+      "KC_F1": "accent",
+      "KC_F2": "accent",
+      "KC_F3": "accent",
+      "KC_GRAVE": "accent",
+      "KC_1": "accent",
+      "KC_2": "accent",
+      "KC_3": "accent",
+      "KC_TAB": "accent",
+      "KC_Q": "accent",
+      "KC_W": "accent",
+      "KC_CAPS": "accent",
+      "KC_A": "accent",
+      "KC_LSFT": "accent",
+      "KC_LCTL": "accent",
+      "KC_PENT": "accent",
+      "KC_PDOT": "accent"
+    },
     "swatches": {
       "base": {
-        "background": "#eae6d1",
-        "color": "#777a81"
+        "background": "#2c2b2c",
+        "color": "#bf8f46"
       },
       "mods": {
-        "background": "#70a2c8",
-        "color": "#eae6d1"
+        "background": "#2c2b2c",
+        "color": "#bf8f46"
       },
       "accent": {
-        "background": "#eae174",
-        "color": "#777a81"
+        "background": "#2c2b2c",
+        "color": "#bf8f46"
+      }
+    }
+  },
+  {
+  "id": "cw_buhex",
+  "label": "Soju Blue",
+  "manufacturer": "Keycobo",
+  "designer": "KGJun",
+  "swatches": {
+    "base": {
+      "background": "#0c87af",
+      "color": "#f7f2ea"
+    },
+    "mods": {
+      "background": "#0c87af",
+      "color": "#f7f2ea"
+    },
+    "accent": {
+      "background": "#f7f2ea",
+      "color": "#0c87af"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent"
+  }
+},{
+  "id": "cw_kfo3u",
+  "label": "Orenji",
+  "manufacturer": "GMK",
+  "designer": "KGJun",
+  "swatches": {
+    "base": {
+      "background": "#f57b3c",
+      "color": "#f7f2ea"
+    },
+    "mods": {
+      "background": "#f57b3c",
+      "color": "#f7f2ea"
+    },
+    "accent": {
+      "background": "#f7f2ea",
+      "color": "#f57b3c"
+    }
+  },
+  "override": {
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent"
+  }
+},
+  {
+    "id": "cw_ivrp9",
+    "label": "Just Beachy",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+      "base": {
+        "background": "#c3b7a9",
+        "color": "#277383"
       },
-      "accent2": {
-        "background": "#c3282a",
-        "color": "#eae174"
+      "mods": {
+        "background": "#277383",
+        "color": "#75b3b7"
+      },
+      "accent": {
+        "background": "#49c5b1",
+        "color": "#eeeeee"
       }
     },
     "override": {
-      "KC_SPC": "base",
-      "KC_ENT": "accent",
-      "KC_PENT": "accent",
-      "KC_ESC": "accent2",
+      "KC_ENT": "mods",
+      "KC_ESC": "mods",
       "KC_GESC": "accent",
       "KC_F5": "mods",
       "KC_F6": "mods",
       "KC_F7": "mods",
-      "KC_F8": "mods",
-      "KC_LALT": "mods",
-      "KC_RALT": "mods",
-      "KC_J": "base",
-      "KC_RGHT": "mods",
-      "KC_UP": "mods",
-      "KC_LEFT": "mods",
-      "KC_DOWN": "mods",
-      "KC_E": "base",
-      "KC_A": "base",
-      "KC_S": "base",
-      "KC_D": "base",
-      "KC_F": "base",
-      "KC_G": "base",
-      "KC_H": "base",
-      "KC_K": "base",
-      "KC_L": "base",
-      "KC_SCLN": "base",
-      "KC_LGUI": "mods",
-      "KC_RGUI": "mods",
-      "KC_LCTL": "mods",
-      "KC_C": "base",
-      "KC_SLCK": "accent2",
-      "KC_PAUSE": "accent2",
-      "KC_DOT": "base",
-      "KC_PSCR": "accent2",
-      "KC_INS": "mods",
-      "KC_DEL": "accent"
-    },
-    "designer": "듀얼샷"
+      "KC_F8": "mods"
+    }
   },{
-
-  "id": "cw_wrmjx",
-  "label": "GMK Mudbeam",
+  "id": "cw_z1r7e",
+  "label": "Just Beachy alpha",
   "manufacturer": "GMK",
-  "designer": "Yeony",
+  "designer": "KGJun",
   "swatches": {
     "base": {
-      "background": "#d1bb9e",
-      "color": "#44474d"
+      "background": "#277383",
+      "color": "#75b3b7"
     },
     "mods": {
-      "background": "#44474d",
-      "color": "#edc42c"
+      "background": "#277383",
+      "color": "#75b3b7"
     },
     "accent": {
-      "background": "#edc42c",
-      "color": "#44474d"
-    },
-    "swatch1": {
-      "background": "#dd1126",
-      "color": "#d1bb9e"
+      "background": "#7ab6b7",
+      "color": "#277383"
     }
   },
   "override": {
-    "KC_ENT": "swatch1",
-    "KC_ESC": "swatch1",
-    "KC_GESC": "accent",
-    "KC_SPC": "base",
-    "KC_1": "base",
-    "KC_2": "base",
-    "KC_3": "base",
-    "KC_4": "base",
-    "KC_5": "base",
-    "KC_6": "base",
-    "KC_7": "base",
-    "KC_8": "base",
-    "KC_9": "base",
-    "KC_0": "base",
-    "KC_MINS": "base",
-    "KC_EQL": "base",
-    "KC_F5": "accent",
-    "KC_F6": "accent",
-    "KC_F7": "accent",
-    "KC_F8": "accent",
-    "KC_PSCR": "accent",
-    "KC_SLCK": "accent",
-    "KC_PAUSE": "accent",
-    "KC_UP": "accent",
-    "KC_LEFT": "accent",
-    "KC_DOWN": "accent",
-    "KC_RGHT": "accent",
-    "KC_F1": "mods",
-    "KC_F2": "mods",
-    "KC_F3": "mods",
-    "KC_F4": "mods",
-    "KC_F9": "mods",
-    "KC_F10": "mods",
-    "KC_F11": "mods",
-    "KC_F12": "mods"
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent"
   }
 },{
-
-  "id": "cw_ohr9m",
-  "label": "GMK Japanese Desko",
-  "manufacturer": "",
-  "designer": "",
+  "id": "cw_7rbtb",
+  "label": "Red Devils",
+  "manufacturer": "GMK",
+  "designer": "KGJun",
   "swatches": {
     "base": {
-      "background": "#f7f2ea",
-      "color": "#171718"
+      "background": "#ea2c45",
+      "color": "#f7f2ea"
     },
     "mods": {
-      "background": "#cacaca",
-      "color": "#171718"
-    },
-    "accent": {
-      "background": "#aadb1e",
-      "color": "#171718"
-    },
-    "swatch1": {
-      "background": "#489fdf",
-      "color": "#171718"
-    },
-    "swatch2": {
-      "background": "#f8485e",
-      "color": "#171718"
-    }
-  },
-  "override": {
-    "KC_ENT": "mods",
-    "KC_ESC": "mods",
-    "KC_GESC": "accent",
-    "KC_LCTL": "swatch2",
-    "KC_RALT": "swatch1",
-    "KC_RSFT": "accent",
-    "KC_A": "base",
-    "KC_S": "base",
-    "KC_D": "base",
-    "KC_W": "base",
-    "KC_P": "base",
-    "KC_L": "base",
-    "KC_SCLN": "base",
-    "KC_DOT": "base",
-    "KC_LGUI": "mods",
-    "KC_LALT": "swatch1",
-    "KC_LSFT": "accent",
-    "KC_RCTL": "swatch2",
-    "KC_RGUI": "mods",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods"
-  }
-},{
-
-  "id": "cw_54927",
-  "label": "GMK Futurefunk",
-  "manufacturer": "",
-  "swatches": {
-    "base": {
-      "background": "#f7f2ea",
-      "color": "#2e1a47"
-    },
-    "mods": {
-      "background": "#2e1a47",
+      "background": "#ea2c45",
       "color": "#f7f2ea"
     },
     "accent": {
-      "background": "#2e1a47",
-      "color": "#f04e98"
-    },
-    "swatch1": {
-      "background": "#2e1a47",
-      "color": "#f8bed6"
-    },
-    "swatch2": {
-      "background": "#2e1a47",
-      "color": "#f6eb61"
-    },
-    "swatch3": {
-      "background": "#2e1a47",
-      "color": "#a4dbe8"
-    },
-    "swatch4": {
-      "background": "#f04e98",
-      "color": "#2e1a47"
-    },
-    "swatch5": {
-      "background": "#f6eb61",
-      "color": "#2e1a47"
+      "background": "#ea2c45",
+      "color": "#f7f2ea"
     }
   },
   "override": {
-    "KC_ENT": "swatch5",
-    "KC_ESC": "swatch4",
-    "KC_GESC": "accent",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods",
-    "KC_SPC": "base",
-    "KC_UP": "mods",
-    "KC_DOWN": "mods",
-    "KC_LEFT": "mods",
-    "KC_RGHT": "mods",
-    "KC_PENT": "accent",
-    "KC_TAB": "swatch1",
-    "KC_CAPS": "swatch2",
-    "KC_LSFT": "swatch3",
-    "KC_LCTL": "accent",
-    "KC_LGUI": "swatch1",
-    "KC_LALT": "swatch2",
-    "KC_RALT": "swatch2",
-    "KC_RGUI": "swatch1",
-    "KC_RCTL": "accent",
-    "KC_BSPC": "accent",
-    "KC_RSFT": "swatch3",
-    "KC_PSCR": "accent",
-    "KC_SLCK": "accent",
-    "KC_PAUSE": "accent",
-    "KC_INS": "swatch1",
-    "KC_HOME": "swatch1",
-    "KC_PGUP": "swatch1",
-    "KC_DEL": "swatch2",
-    "KC_END": "swatch2",
-    "KC_PGDN": "swatch2"
+    "KC_ENT": "accent",
+    "KC_ESC": "accent",
+    "KC_GESC": "accent"
   }
 },{
-
-  "id": "cw_she7e",
-  "label": "GMK Yuru",
-  "manufacturer": "",
-  "designer": "",
+  "id": "cw_jgztv",
+  "label": "City Pop Neue",
+  "manufacturer": "GMK",
+  "designer": "KGJun",
   "swatches": {
     "base": {
-      "background": "#e1dbd1",
-      "color": "#712f3e"
+      "background": "#7aacac",
+      "color": "#007577"
     },
     "mods": {
-      "background": "#712f3e",
-      "color": "#e1dbd1"
+      "background": "#cb555d",
+      "color": "#7aacac"
     },
     "accent": {
-      "background": "#88d4cc",
-      "color": "#e1dbd1"
+      "background": "#0f4c64",
+      "color": "#cb555d"
     }
   },
   "override": {
@@ -277,71 +272,7 @@
     "KC_F7": "mods",
     "KC_F8": "mods"
   }
-},{
-
-  "id": "cw_xh21n",
-  "label": "GMK Delta",
-  "manufacturer": "",
-  "designer": "듀얼샷",
-  "swatches": {
-    "base": {
-      "background": "#e7e8e9",
-      "color": "#121212"
-    },
-    "mods": {
-      "background": "#121212",
-      "color": "#5dceba"
-    },
-    "accent": {
-      "background": "#5dceba",
-      "color": "#121212"
-    }
-  },
-  "override": {
-    "KC_ENT": "accent",
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_SPC": "base",
-    "KC_D": "base",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods",
-    "KC_LEFT": "accent",
-    "KC_DOWN": "accent",
-    "KC_RGHT": "accent",
-    "KC_UP": "accent"
-  }
-},{
-
-  "id": "cw_w17g5",
-  "label": "GMK a",
-  "manufacturer": "",
-  "designer": "듀얼샷",
-  "swatches": {
-    "base": {
-      "background": "#dee6ec",
-      "color": "#006687"
-    },
-    "mods": {
-      "background": "#006687",
-      "color": "#dee6ec"
-    },
-    "accent": {
-      "background": "#a33737",
-      "color": "#dee6ec"
-    }
-  },
-  "override": {
-    "KC_ESC": "accent",
-    "KC_GESC": "accent",
-    "KC_RALT": "mods",
-    "KC_LALT": "mods",
-    "KC_F5": "mods",
-    "KC_F6": "mods",
-    "KC_F7": "mods",
-    "KC_F8": "mods",
-    "KC_ENT": "accent"
-  }
 }
+
+
 ]

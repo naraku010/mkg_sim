@@ -1,17 +1,17 @@
-import mkg_gmk_godspeed from "./usercolorways7/mkg_gmk_godspeed.json";
-import mkg_gmk_mudbeam from "./usercolorways7/mkg_gmk_mudbeam.json";
-import mkg_gmk_japanese_desko from "./usercolorways7/mkg_gmk_japanese_desko.json";
-import mkg_gmk_futurefunk from "./usercolorways7/mkg_gmk_futurefunk.json";
-import mkg_gmk_yuru from "./usercolorways7/mkg_gmk_yuru.json";
-import mkg_gmk_delta from "./usercolorways7/mkg_gmk_delta.json";
-import mkg_gmk_a from "./usercolorways7/mkg_gmk_a.json";
+import gmk_black_gold from "./new_colorways/gmk_black_gold.json";
+import keycobo_soju_blue from "./new_colorways/keycobo_soju_blue.json";
+import gmk_orenji from "./new_colorways/gmk_orenji.json";
+import gmk_just_beachy from "./new_colorways/gmk_just_beachy.json";
+import gmk_just_beachy_alpha from "./new_colorways/gmk_just_beachy_alpha.json";
+import gmk_red_devils from "./new_colorways/gmk_red_devils.json";
+import gmk_city_pop_neue from "./new_colorways/gmk_city_pop_neue.json";
 
 export const COLORWAYS_NEW = {
-    mkg_gmk_godspeed: mkg_gmk_godspeed,
-    mkg_gmk_mudbeam: mkg_gmk_mudbeam,
-    mkg_gmk_japanese_desko: mkg_gmk_japanese_desko,
-    mkg_gmk_futurefunk: mkg_gmk_futurefunk,
-    mkg_gmk_yuru: mkg_gmk_yuru,
-    mkg_gmk_delta: mkg_gmk_delta,
-    mkg_gmk_a: mkg_gmk_a
+    gmk_black_gold: gmk_black_gold,
+    keycobo_soju_blue: keycobo_soju_blue,
+    gmk_orenji: gmk_orenji,
+    gmk_just_beachy: gmk_just_beachy,
+    gmk_just_beachy_alpha: gmk_just_beachy_alpha,
+    gmk_red_devils: gmk_red_devils,
+    gmk_city_pop_neue: gmk_city_pop_neue
 };
