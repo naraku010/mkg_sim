@@ -12,10 +12,10 @@ export default (layout, color) => {
   let depth = layout.height + bezel * 2;
   let size = store.getState().case.layout;
 
-  //create geometry
+  // create geometry
   let shape = new THREE.Shape();
 
-  //basic outline
+  // basic outline
   shape.moveTo(0, 0);
   shape.lineTo(width, 0);
   shape.lineTo(width, depth);
@@ -40,7 +40,7 @@ export default (layout, color) => {
 
   let positionAttribute = geometry.getAttribute("position");
 
-  // Update the vertices based on the new geometry format
+  // vertex 수정
   for (let i = 0; i < positionAttribute.count; i++) {
     let z = positionAttribute.getZ(i);
     let y = positionAttribute.getY(i);
@@ -56,19 +56,25 @@ export default (layout, color) => {
     }
   }
 
-  geometry.computeVertexNormals(); // To ensure normals are updated after modifying vertices
+  geometry.computeVertexNormals(); // normal 업데이트
 
-  // Materials for the case
+  // 변환 매트릭스 적용 (회전 + 위치 이동)
+  const matrix = new THREE.Matrix4().compose(
+      new THREE.Vector3(-bezel, 0, -bezel),
+      new THREE.Quaternion().setFromEuler(new THREE.Euler(Math.PI / 2, 0, 0)),
+      new THREE.Vector3(1, 1, 1)
+  );
+  geometry.applyMatrix4(matrix);
+
+  // 재질 설정
   let materials = [
-    new THREE.MeshBasicMaterial({ color: color }), // Top/bottom
-    new THREE.MeshBasicMaterial({ color: 0x000000 }), // Sides
+    new THREE.MeshBasicMaterial({ color: color }), // top/bottom
+    new THREE.MeshBasicMaterial({ color: 0x000000 }), // sides
   ];
 
-  // Create mesh
+  // 메쉬 생성
   let mesh = new THREE.Mesh(geometry, materials);
   mesh.name = "CASE";
-  mesh.rotation.x = Math.PI / 2;
-  mesh.position.set(-bezel, 0, -bezel);
 
   return mesh;
 };
