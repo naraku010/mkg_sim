@@ -1,0 +1,120 @@
+{
+    "default": {
+        "id": "gmk_black_and_gold",
+        "label": "Black and gold",
+        "manufacturer": "GMK",
+        "designer": "",
+        "swatches": {
+            "base": {
+                "background": "#83b0d6",
+                "color": "#d8dcdd"
+            },
+            "mods": {
+                "background": "#83b0d6",
+                "color": "#d8dcdd"
+            },
+            "accent": {
+                "background": "#d8dcdd",
+                "color": "#83b0d6"
+            },
+            "swatch-1": {
+                "background": "#cceae7",
+                "color": "#83b0d6"
+            },
+            "swatch-2": {
+                "background": "#9bd0e1",
+                "color": "#d8dcdd"
+            },
+            "swatch-3": {
+                "background": "#9fcae5",
+                "color": "#d8dcdd"
+            }
+        },
+        "override": {
+            "KC_ENT": "base",
+            "KC_ESC": "accent",
+            "KC_GESC": "accent",
+            "KC_F1": "accent",
+            "KC_F2": "accent",
+            "KC_F3": "accent",
+            "KC_GRAVE": "accent",
+            "KC_1": "accent",
+            "KC_2": "accent",
+            "KC_3": "accent",
+            "KC_TAB": "accent",
+            "KC_Q": "accent",
+            "KC_W": "accent",
+            "KC_CAPS": "accent",
+            "KC_A": "accent",
+            "KC_LSFT": "accent",
+            "KC_LCTL": "accent",
+            "KC_PENT": "accent",
+            "KC_F4": "swatch-1",
+            "KC_4": "swatch-1",
+            "KC_E": "swatch-1",
+            "KC_S": "swatch-1",
+            "KC_Z": "swatch-1",
+            "KC_LGUI": "swatch-1",
+            "KC_PDOT": "accent",
+            "KC_PPLS": "swatch-1",
+            "KC_P3": "swatch-1",
+            "KC_P0": "swatch-1",
+            "KC_F5": "swatch-2",
+            "KC_5": "swatch-2",
+            "KC_R": "swatch-2",
+            "KC_D": "swatch-2",
+            "KC_X": "swatch-2",
+            "KC_LALT": "swatch-2",
+            "KC_F6": "swatch-3",
+            "KC_6": "swatch-3",
+            "KC_T": "swatch-3",
+            "KC_F": "swatch-3",
+            "KC_C": "swatch-3",
+            "KC_P6": "swatch-2",
+            "KC_P2": "swatch-2",
+            "KC_PMNS": "swatch-3",
+            "KC_P9": "swatch-3",
+            "KC_P5": "swatch-3",
+            "KC_P1": "swatch-3"
+        }
+    },
+    "designer": "KGJun",
+    "id": "gmk_black_gold",
+    "label": "BLACK & GOLD",
+    "manufacturer": "GMK",
+    "override": {
+        "KC_ENT": "base",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F1": "accent",
+        "KC_F2": "accent",
+        "KC_F3": "accent",
+        "KC_GRAVE": "accent",
+        "KC_1": "accent",
+        "KC_2": "accent",
+        "KC_3": "accent",
+        "KC_TAB": "accent",
+        "KC_Q": "accent",
+        "KC_W": "accent",
+        "KC_CAPS": "accent",
+        "KC_A": "accent",
+        "KC_LSFT": "accent",
+        "KC_LCTL": "accent",
+        "KC_PENT": "accent",
+        "KC_PDOT": "accent"
+    },
+    "swatches": {
+        "base": {
+            "background": "#2c2b2c",
+            "color": "#bf8f46"
+        },
+        "mods": {
+            "background": "#2c2b2c",
+            "color": "#bf8f46"
+        },
+        "accent": {
+            "background": "#2c2b2c",
+            "color": "#bf8f46"
+        }
+    }
+}

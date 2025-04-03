@@ -1,0 +1,29 @@
+{
+    "id": "gmk_city_pop_neue",
+    "label": "City Pop Neue",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#7aacac",
+            "color": "#007577"
+        },
+        "mods": {
+            "background": "#cb555d",
+            "color": "#7aacac"
+        },
+        "accent": {
+            "background": "#0f4c64",
+            "color": "#cb555d"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

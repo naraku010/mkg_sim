@@ -1,0 +1,25 @@
+{
+    "id": "gmk_orenji",
+    "label": "Orenji",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#f57b3c",
+            "color": "#f7f2ea"
+        },
+        "mods": {
+            "background": "#f57b3c",
+            "color": "#f7f2ea"
+        },
+        "accent": {
+            "background": "#f7f2ea",
+            "color": "#f57b3c"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent"
+    }
+}

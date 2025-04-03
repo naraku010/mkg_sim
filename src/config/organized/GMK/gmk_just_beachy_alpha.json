@@ -1,0 +1,25 @@
+{
+    "id": "gmk_just_beachy_alpha",
+    "label": "Just Beachy alpha",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#277383",
+            "color": "#75b3b7"
+        },
+        "mods": {
+            "background": "#277383",
+            "color": "#75b3b7"
+        },
+        "accent": {
+            "background": "#7ab6b7",
+            "color": "#277383"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent"
+    }
+}

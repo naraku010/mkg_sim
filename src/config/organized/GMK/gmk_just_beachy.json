@@ -1,0 +1,29 @@
+{
+    "id": "gmk_just_beachy",
+    "label": "Just Beachy",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#c3b7a9",
+            "color": "#277383"
+        },
+        "mods": {
+            "background": "#277383",
+            "color": "#75b3b7"
+        },
+        "accent": {
+            "background": "#49c5b1",
+            "color": "#eeeeee"
+        }
+    },
+    "override": {
+        "KC_ENT": "mods",
+        "KC_ESC": "mods",
+        "KC_GESC": "accent",
+        "KC_F5": "mods",
+        "KC_F6": "mods",
+        "KC_F7": "mods",
+        "KC_F8": "mods"
+    }
+}

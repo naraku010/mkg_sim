@@ -1,0 +1,25 @@
+{
+    "id": "keycobo_soju_blue",
+    "label": "Soju Blue",
+    "manufacturer": "Keycobo",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#0c87af",
+            "color": "#f7f2ea"
+        },
+        "mods": {
+            "background": "#0c87af",
+            "color": "#f7f2ea"
+        },
+        "accent": {
+            "background": "#f7f2ea",
+            "color": "#0c87af"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent"
+    }
+}

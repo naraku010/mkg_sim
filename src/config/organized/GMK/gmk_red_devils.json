@@ -1,0 +1,25 @@
+{
+    "id": "gmk_red_devils",
+    "label": "Red Devils",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#ea2c45",
+            "color": "#f7f2ea"
+        },
+        "mods": {
+            "background": "#ea2c45",
+            "color": "#f7f2ea"
+        },
+        "accent": {
+            "background": "#ea2c45",
+            "color": "#f7f2ea"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent"
+    }
+}
