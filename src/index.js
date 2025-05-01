@@ -6,7 +6,9 @@ import store from "./store/store";
 import { Provider } from "react-redux";
 import reportWebVitals from './reportWebVitals';
 // import firebase from "./firebase"
+import { inject } from '@vercel/analytics';
 
+inject(); // 👈 이거 추가
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
