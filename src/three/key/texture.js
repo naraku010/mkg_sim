@@ -69,6 +69,11 @@ export const keyTexture = (opts) => {
         ctx.font = `${fontSize}px ${l.fontFamily}`;
     }
     ctx.fillStyle = fg;
+    
+    // 텍스트 렌더링 품질 향상
+    ctx.textRenderingOptimization = 'optimizeQuality';
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
 
     // 텍스트 정렬 및 오프셋
     if (l.centered) {
@@ -115,11 +120,13 @@ export const keyTexture = (opts) => {
     // texture.format = THREE.RGBAFormat;  // 알파 채널 유지
     texture.colorSpace = THREE.SRGBColorSpace;
     texture.minFilter = THREE.LinearFilter; // 블러 방지
-    texture.magFilter = THREE.NearestFilter; // 픽셀 단위로 선명하게
-    texture.generateMipmaps = false;
+    texture.magFilter = THREE.LinearFilter; // 자연스러운 필터링
+    texture.generateMipmaps = true; // 미맵 생성으로 자연스러운 다운샘플링
     texture.anisotropy = opts.renderer
-        ? opts.renderer.capabilities.getMaxAnisotropy()
-        : 16; // 기본값 16 적용
+        ? Math.min(opts.renderer.capabilities.getMaxAnisotropy(), 8) // 최대값 제한
+        : 8; // 기본값 8로 제한
+    texture.wrapS = THREE.ClampToEdgeWrapping;
+    texture.wrapT = THREE.ClampToEdgeWrapping;
     texture.needsUpdate = true;
     return texture;
 };

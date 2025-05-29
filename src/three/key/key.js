@@ -69,8 +69,8 @@ export class Key {
       this.is_iso_enter
     );
 
-    this.cap.castShadow = false;
-    this.cap.receiveShadow = false;
+    this.cap.castShadow = true;
+    this.cap.receiveShadow = true;
     this.cap.position.y = this.start_y;
     this.cap.position.x = this.x;
     this.cap.position.z = this.y;

@@ -290,6 +290,8 @@ export default class CaseManager {
     createCase() {
         this.case = this.getCaseMesh();
         this.updateCaseMaterial();
+        this.case.castShadow = true;
+        this.case.receiveShadow = true;
         this.group.add(this.case);
     }
 
@@ -310,35 +312,48 @@ export default class CaseManager {
         if (finish === "anodizing") {
             const anodizingMaterial = new THREE.MeshPhysicalMaterial({
                 color: color,
-                metalness: 0.7,             // 금속성 없음 (스프레이 재질은 비금속)
-                roughness: 0.4,           // 약간 거친 표면
-                clearcoat: 0.5,           // 얇은 코팅 효과 추가
-                clearcoatRoughness: 0.4,  // 코팅 표면 거칠기 설정
-                lightMapIntensity: 0.3,   // 빛의 영향을 약간 더 받도록 설정
-                envMapIntensity: 0.3, // 반사 강도
+                metalness: 0.8,
+                roughness: 0.3,
+                clearcoat: 0.2,
+                clearcoatRoughness: 0.8,
+                lightMapIntensity: 0.5,
+                envMapIntensity: 0.3,  // 환경 반사 조정
+                aoMapIntensity: 0.6,   // 주변광 차폐 강화
             });
             materials.push(anodizingMaterial, anodizingMaterial);
-        } else if (finish === "anodizing2") {
-            const sprayCoatingMaterial = new THREE.MeshPhysicalMaterial({
-                color: color,
-                metalness: 0.7,             // 금속성 없음 (스프레이 재질은 비금속)
-                roughness: 0.7,           // 약간 거친 표면
-                clearcoat: 0.5,           // 얇은 코팅 효과 추가
-                clearcoatRoughness: 0.4,  // 코팅 표면 거칠기 설정
-                lightMapIntensity: 0.3,   // 빛의 영향을 약간 더 받도록 설정
-                envMapIntensity: 0.3, // 반사 강도
-            });
-            materials.push(sprayCoatingMaterial, sprayCoatingMaterial);
         } else if (finish === "spraycoat") {
             const sprayCoatingMaterial = new THREE.MeshPhysicalMaterial({
                 color: color,
-                metalness: 0.3, // 약간의 금속성
-                roughness: 0.8, // 거친 표면
-                clearcoat: 1, // 표면에 투명한 코팅을 추가
-                clearcoatRoughness: 0.8, // 코팅 표면의 거칠기
-                envMapIntensity: 0.5, // 반사 강도
+                metalness: 0.0,
+                roughness: 0.9,
+                clearcoat: 0.2,
+                clearcoatRoughness: 0.9,
+                envMapIntensity: 0.1,  // 환경 반사 최소화
+                aoMapIntensity: 0.5,   // 주변광 차폐 강화
             });
             materials.push(sprayCoatingMaterial, sprayCoatingMaterial);
+        } else if (finish === "glossy") {
+            const glossyMaterial = new THREE.MeshPhysicalMaterial({
+                color: color,
+                metalness: 0.2,
+                roughness: 0.3,
+                clearcoat: 0.4,
+                clearcoatRoughness: 0.6,
+                envMapIntensity: 0.3,  // 환경 반사 조정
+                aoMapIntensity: 0.4,   // 주변광 차폐 조정
+            });
+            materials.push(glossyMaterial, glossyMaterial);
+        } else if (finish === "lowglossy") {
+            const lowGlossyMaterial = new THREE.MeshPhysicalMaterial({
+                color: color,
+                metalness: 0.3,
+                roughness: 0.5,
+                clearcoat: 0.3,
+                clearcoatRoughness: 0.7,
+                envMapIntensity: 0.4,  // 환경 반사 조정
+                aoMapIntensity: 0.5,   // 주변광 차폐 강화
+            });
+            materials.push(lowGlossyMaterial, lowGlossyMaterial);
         }
         this.case.material.needsUpdate = true;
         this.case.material = materials;

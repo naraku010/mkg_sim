@@ -94,6 +94,7 @@ export default class RoundedMatPad {
             this.mesh.position.z = 2;
             this.mesh.rotation.x = -Math.PI / 2;
             this.mesh.receiveShadow = true; // 그림자 수신 활성화
+            this.mesh.castShadow = true; // 그림자 캐스팅 활성화
             this.scene.add(this.mesh);
         });
     }
