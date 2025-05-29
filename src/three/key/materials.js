@@ -53,31 +53,40 @@ const getMaterialSet = (opts) => {
     let top = new THREE.MeshPhysicalMaterial({
         map: legendTexture,
         normalMap: pbtMap,
+        normalScale: new THREE.Vector2(0.4, 0.4),  // 노말맵 강도 조절
         aoMap: lightMap,
-        aoMapIntensity: .5,
-        metalness: 0,  // 약간의 반사 효과 추가
-        roughness: 1,  // 매끄러운 표면 유지
+        aoMapIntensity: 0.7,  // 주변광 차폐 강화
+        metalness: 0.05,  // 미세한 금속성 반사
+        roughness: 0.85,  // PBT 특유의 거칠기
         transmission: 0.0,
         thickness: 0.0,
-        sheen: 0.1, // 플라스틱의 미세한 확산 반사만 적용
+        clearcoat: 0.3,  // 약간의 코팅 효과
+        clearcoatRoughness: 0.4,  // 코팅의 거칠기
+        sheen: 0.15,  // 미세한 광택
         sheenColor: new THREE.Color(0xffffff),
-        sheenRoughness: 0.5, // 확산 반사가 너무 강하지 않도록 조절
-        envMapIntensity: 0.3,
+        sheenRoughness: 0.6,  // 광택의 거칠기
+        envMapIntensity: 0.4,  // 환경 반사 강도
+        ior: 1.5,  // 굴절률 (플라스틱 특성)
     });
     top.map.minFilter = top.map.magFilter = THREE.LinearFilter;
     top.needsUpdate = true;
     let side = new THREE.MeshPhysicalMaterial({
         color: opts.background,
+        normalMap: pbtMap,
+        normalScale: new THREE.Vector2(0.3, 0.3),  // 측면은 노말맵 강도 약화
         aoMap: lightMap,
-        aoMapIntensity: .5,
-        metalness: 0,  // 메탈 느낌을 약간 추가
-        roughness: 1,  // 표면을 더 매끄럽게 만들어 빛을 더 잘 반사하게
+        aoMapIntensity: 0.8,  // 측면의 주변광 차폐 강화
+        metalness: 0.05,
+        roughness: 0.9,  // 측면은 더 거칠게
         transmission: 0.0,
         thickness: 0.0,
-        sheen: 0.1, // 플라스틱의 미세한 확산 반사만 적용
+        clearcoat: 0.2,  // 측면은 코팅 효과 감소
+        clearcoatRoughness: 0.5,
+        sheen: 0.1,
         sheenColor: new THREE.Color(0xffffff),
-        sheenRoughness: 0.5, // 확산 반사가 너무 강하지 않도록 조절
+        sheenRoughness: 0.7,
         envMapIntensity: 0.3,
+        ior: 1.5,
     });
     if( currentState.keys.legendType === 'trn') {
         top.blending = side.blending = THREE.NormalBlending;
