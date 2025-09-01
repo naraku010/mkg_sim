@@ -1,0 +1,26 @@
+{
+    "id": "gmk_space_cadet_blue_base",
+    "label": "Space Cadet Blue Base",
+    "manufacturer": "GMK",
+    "designer": "KGJun",
+    "swatches": {
+        "base": {
+            "background": "#0073a2",
+            "color": "#eee2d0",
+            "subColor": "#eee2d0"
+        },
+        "mods": {
+            "background": "#0073a2",
+            "color": "#eee2d0"
+        },
+        "accent": {
+            "background": "#0073a2",
+            "color": "#eee2d0"
+        }
+    },
+    "override": {
+        "KC_ENT": "accent",
+        "KC_ESC": "accent",
+        "KC_GESC": "accent"
+    }
+}
